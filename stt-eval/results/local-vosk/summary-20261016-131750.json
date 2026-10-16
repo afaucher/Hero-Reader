@@ -1,0 +1,119 @@
+{
+  "args": {
+    "engines": [
+      "vosk-grammar",
+      "vosk"
+    ],
+    "speech_commands": "third_party\\data\\speech_commands",
+    "recordings": null,
+    "conditions": [
+      "clean",
+      "noise10",
+      "child"
+    ],
+    "trials": 300,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.25,
+    "trailing": 0.3,
+    "hot_score": 2.0,
+    "beam": 4,
+    "sound_alike": true,
+    "seed": 7,
+    "out": "results/local-vosk"
+  },
+  "summary": [
+    {
+      "engine": "vosk-grammar",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 96.28378378378379,
+      "wrong_word_pct": 0.6756756756756757,
+      "no_fire_pct": 3.0405405405405403,
+      "false_accept_pct": 5.405405405405405,
+      "latency_p50_ms": 572.3515000023182,
+      "latency_p90_ms": 702.2991600038949,
+      "early_fire_pct": 0.7017543859649122,
+      "rtf": 0.013198264081972918,
+      "load_s": 0.3368088999995962
+    },
+    {
+      "engine": "vosk-grammar",
+      "condition": "noise10",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 94.25675675675676,
+      "wrong_word_pct": 0.0,
+      "no_fire_pct": 5.743243243243243,
+      "false_accept_pct": 6.756756756756757,
+      "latency_p50_ms": 542.2962999894517,
+      "latency_p90_ms": 692.3477400012781,
+      "early_fire_pct": 0.35842293906810035,
+      "rtf": 0.013208679414449335,
+      "load_s": 0.3368088999995962
+    },
+    {
+      "engine": "vosk-grammar",
+      "condition": "child",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 93.58108108108108,
+      "wrong_word_pct": 0.0,
+      "no_fire_pct": 6.418918918918919,
+      "false_accept_pct": 8.108108108108109,
+      "latency_p50_ms": 582.2793999960414,
+      "latency_p90_ms": 712.244620001875,
+      "early_fire_pct": 0.0,
+      "rtf": 0.013288003825413994,
+      "load_s": 0.3368088999995962
+    },
+    {
+      "engine": "vosk",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 77.70270270270271,
+      "wrong_word_pct": 0.33783783783783783,
+      "no_fire_pct": 21.95945945945946,
+      "false_accept_pct": 1.3513513513513513,
+      "latency_p50_ms": 221.40574999054655,
+      "latency_p90_ms": 463.15076998958835,
+      "early_fire_pct": 13.478260869565217,
+      "rtf": 0.14130405715582128,
+      "load_s": 0.2730701999971643
+    },
+    {
+      "engine": "vosk",
+      "condition": "noise10",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 70.27027027027027,
+      "wrong_word_pct": 1.0135135135135136,
+      "no_fire_pct": 28.716216216216218,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 219.07530000549752,
+      "latency_p90_ms": 732.2845099980482,
+      "early_fire_pct": 10.576923076923077,
+      "rtf": 0.13462300125766374,
+      "load_s": 0.2730701999971643
+    },
+    {
+      "engine": "vosk",
+      "condition": "child",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 75.67567567567568,
+      "wrong_word_pct": 1.0135135135135136,
+      "no_fire_pct": 23.31081081081081,
+      "false_accept_pct": 1.3513513513513513,
+      "latency_p50_ms": 274.7935499988963,
+      "latency_p90_ms": 770.2531699980644,
+      "early_fire_pct": 8.035714285714286,
+      "rtf": 0.1448012667211413,
+      "load_s": 0.2730701999971643
+    }
+  ]
+}

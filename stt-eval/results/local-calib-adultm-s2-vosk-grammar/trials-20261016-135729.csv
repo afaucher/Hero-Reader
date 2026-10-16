@@ -1,0 +1,278 @@
+engine,condition,positive,word,speaker,onscreen,fired,outcome,latency_ms,speech_ms,text,file,events
+vosk-grammar,clean,True,no,20261016-134130,no three look help pig,no,hit,563,590,no,recordings\adultm\20261016-134130\no__r2.wav,"[[""no"", true, 563]]"
+vosk-grammar,clean,True,four,20261016-134130,four cup here like three,four,hit,542,610,four,recordings\adultm\20261016-134130\four__r1.wav,"[[""four"", true, 542]]"
+vosk-grammar,clean,True,ride,20261016-134130,dog ride pen run cap,ride,hit,702,450,ride,recordings\adultm\20261016-134130\ride__r1.wav,"[[""ride"", true, 702]]"
+vosk-grammar,clean,True,blue,20261016-134130,saw this blue said come,blue,hit,663,490,blue,recordings\adultm\20261016-134130\blue__r1.wav,"[[""blue"", true, 663]]"
+vosk-grammar,clean,True,but,20261016-134130,funny you this fox but,but,hit,72,840,but,recordings\adultm\20261016-134130\but__r1.wav,"[[""but"", true, 72]]"
+vosk-grammar,clean,True,was,20261016-134130,and was all down who,was,hit,242,910,was,recordings\adultm\20261016-134130\was__r1.wav,"[[""was"", true, 242]]"
+vosk-grammar,clean,True,cat,20261016-134130,are new i look cat,cat,hit,502,410,cat,recordings\adultm\20261016-134130\cat__r1.wav,"[[""cat"", true, 502]]"
+vosk-grammar,clean,True,pig,20261016-134130,where she pig bug down,pig,hit,293,620,pig,recordings\adultm\20261016-134130\pig__r1.wav,"[[""pig"", true, 293]]"
+vosk-grammar,clean,True,blue,20261016-134130,funny we blue want what,blue,hit,662,490,blue,recordings\adultm\20261016-134130\blue__r3.wav,"[[""blue"", true, 662]]"
+vosk-grammar,clean,True,top,20261016-134130,dog this four good top,top,hit,562,350,top,recordings\adultm\20261016-134130\top__r1.wav,"[[""top"", true, 562]]"
+vosk-grammar,clean,True,hen,20261016-134130,hen bug help wig log,hen,hit,412,740,hen,recordings\adultm\20261016-134130\hen__r2.wav,"[[""hen"", true, 412]]"
+vosk-grammar,clean,True,bat,20261016-134130,can up one ten bat,bat,hit,692,460,bat,recordings\adultm\20261016-134130\bat__r2.wav,"[[""bat"", true, 692]]"
+vosk-grammar,clean,True,cap,20261016-134130,cap want up too what,cap,hit,533,380,cap,recordings\adultm\20261016-134130\cap__r1.wav,"[[""cap"", true, 533]]"
+vosk-grammar,clean,True,she,20261016-134130,see she eat dog run,she,hit,622,820,she,recordings\adultm\20261016-134130\she__r1.wav,"[[""she"", true, 622]]"
+vosk-grammar,clean,True,saw,20261016-134130,dog saw can new hot,saw,hit,532,910,saw,recordings\adultm\20261016-134130\saw__r1.wav,"[[""saw"", true, 532]]"
+vosk-grammar,clean,True,bug,20261016-134130,bug this cup jump said,,none,,350,,recordings\adultm\20261016-134130\bug__r3.wav,[]
+vosk-grammar,clean,True,jump,20261016-134130,sun saw jump want pen,jump,hit,173,740,jump,recordings\adultm\20261016-134130\jump__r1.wav,"[[""jump"", true, 173]]"
+vosk-grammar,clean,True,cap,20261016-134130,and please pen cap who,cap,hit,672,480,cap,recordings\adultm\20261016-134130\cap__r2.wav,"[[""cap"", true, 672]]"
+vosk-grammar,clean,True,saw,20261016-134130,was my want saw one,saw,hit,433,480,saw,recordings\adultm\20261016-134130\saw__r2.wav,"[[""saw"", true, 433]]"
+vosk-grammar,clean,True,bug,20261016-134130,map bug help mat big,bug,hit,12,900,bug,recordings\adultm\20261016-134130\bug__r1.wav,"[[""bug"", true, 12]]"
+vosk-grammar,clean,True,dig,20261016-134130,dig what funny want yellow,dig,hit,552,360,dig,recordings\adultm\20261016-134130\dig__r2.wav,"[[""dig"", true, 552]]"
+vosk-grammar,clean,True,hot,20261016-134130,can mat sit hot hat,hot,hit,532,380,hot,recordings\adultm\20261016-134130\hot__r1.wav,"[[""hot"", true, 532]]"
+vosk-grammar,clean,True,yellow,20261016-134130,yellow look the dog but,yellow,hit,-237,1150,yellow,recordings\adultm\20261016-134130\yellow__r1.wav,"[[""yellow"", true, -237]]"
+vosk-grammar,clean,True,yes,20261016-134130,was yes like big down,yes,hit,542,370,yes,recordings\adultm\20261016-134130\yes__r2.wav,"[[""yes"", true, 542]]"
+vosk-grammar,clean,True,yes,20261016-134130,no hen yes here was,yes,hit,432,480,yes,recordings\adultm\20261016-134130\yes__r1.wav,"[[""yes"", true, 432]]"
+vosk-grammar,clean,True,here,20261016-134130,and bat look here pig,here,hit,482,430,here,recordings\adultm\20261016-134130\here__r2.wav,"[[""here"", true, 482]]"
+vosk-grammar,clean,True,big,20261016-134130,log the dig big sun,big,hit,492,420,big,recordings\adultm\20261016-134130\big__r2.wav,"[[""big"", true, 492]]"
+vosk-grammar,clean,True,down,20261016-134130,pen down like here four,down,hit,552,360,down,recordings\adultm\20261016-134130\down__r1.wav,"[[""down"", true, 552]]"
+vosk-grammar,clean,True,mat,20261016-134130,funny log sun mat can,mat,hit,213,940,mat,recordings\adultm\20261016-134130\mat__r2.wav,"[[""mat"", true, 213]]"
+vosk-grammar,clean,True,what,20261016-134130,little big the what my,what,hit,342,570,what,recordings\adultm\20261016-134130\what__r2.wav,"[[""what"", true, 342]]"
+vosk-grammar,clean,True,yellow,20261016-134130,yellow where look play one,yellow,hit,533,380,yellow,recordings\adultm\20261016-134130\yellow__r2.wav,"[[""yellow"", true, 533]]"
+vosk-grammar,clean,True,look,20261016-134130,look a hat play out,look,hit,282,1140,look,recordings\adultm\20261016-134130\look__r1.wav,"[[""look"", true, 282]]"
+vosk-grammar,clean,True,up,20261016-134130,up two cat little a,up,hit,622,290,up,recordings\adultm\20261016-134130\up__r2.wav,"[[""up"", true, 622]]"
+vosk-grammar,clean,True,mat,20261016-134130,mat jump no and said,mat,hit,722,430,mat,recordings\adultm\20261016-134130\mat__r1.wav,"[[""mat"", true, 722]]"
+vosk-grammar,clean,True,four,20261016-134130,funny four my fox two,four,hit,722,430,four,recordings\adultm\20261016-134130\four__r2.wav,"[[""four"", true, 722]]"
+vosk-grammar,clean,True,map,20261016-134130,map are cap jump yes,map,hit,543,370,map,recordings\adultm\20261016-134130\map__r1.wav,"[[""map"", true, 543]]"
+vosk-grammar,clean,True,run,20261016-134130,run wig blue the red,run,hit,502,410,run,recordings\adultm\20261016-134130\run__r2.wav,"[[""run"", true, 502]]"
+vosk-grammar,clean,True,one,20261016-134130,what but up one they,one,hit,113,800,one,recordings\adultm\20261016-134130\one__r1.wav,"[[""one"", true, 113]]"
+vosk-grammar,clean,True,we,20261016-134130,can like we here look,we,hit,623,290,we,recordings\adultm\20261016-134130\we__r1.wav,"[[""we"", true, 623]]"
+vosk-grammar,clean,True,blue,20261016-134130,blue big here my too,blue,hit,653,260,blue,recordings\adultm\20261016-134130\blue__r2.wav,"[[""blue"", true, 653]]"
+vosk-grammar,clean,True,too,20261016-134130,all too eat three with,too,hit,542,370,too,recordings\adultm\20261016-134130\too__r2.wav,"[[""too"", true, 542]]"
+vosk-grammar,clean,True,this,20261016-134130,was top my this mop,this,hit,633,760,this,recordings\adultm\20261016-134130\this__r1.wav,"[[""this"", true, 633]]"
+vosk-grammar,clean,True,no,20261016-134130,no cap now and three,no,hit,-927,2120,no,recordings\adultm\20261016-134130\no__r1.wav,"[[""no"", true, -927]]"
+vosk-grammar,clean,True,with,20261016-134130,with yes can here ride,with,hit,503,410,with,recordings\adultm\20261016-134130\with__r2.wav,"[[""with"", true, 503]]"
+vosk-grammar,clean,True,good,20261016-134130,down good dig want mop,good,hit,502,410,good,recordings\adultm\20261016-134130\good__r1.wav,"[[""good"", true, 502]]"
+vosk-grammar,clean,True,two,20261016-134130,a are funny two too,,none,,970,,recordings\adultm\20261016-134130\two__r2.wav,[]
+vosk-grammar,clean,True,look,20261016-134130,dog look ride pig on,look,hit,253,660,look,recordings\adultm\20261016-134130\look__r2.wav,"[[""look"", true, 253]]"
+vosk-grammar,clean,True,pen,20261016-134130,my hen dog pen all,pen,hit,602,550,pen,recordings\adultm\20261016-134130\pen__r1.wav,"[[""pen"", true, 602]]"
+vosk-grammar,clean,True,bat,20261016-134130,bat sit cap you please,bat,hit,733,420,bat,recordings\adultm\20261016-134130\bat__r1.wav,"[[""bat"", true, 733]]"
+vosk-grammar,clean,True,map,20261016-134130,map fox my little mat,map,hit,522,390,map,recordings\adultm\20261016-134130\map__r2.wav,"[[""map"", true, 522]]"
+vosk-grammar,clean,True,are,20261016-134130,hot saw who are bat,are,hit,572,340,are,recordings\adultm\20261016-134130\are__r2.wav,"[[""are"", true, 572]]"
+vosk-grammar,clean,True,new,20261016-134130,top blue eat mop new,new,hit,-18,930,new,recordings\adultm\20261016-134130\new__r1.wav,"[[""new"", true, -18]]"
+vosk-grammar,clean,True,come,20261016-134130,my pen come look no,come,hit,592,320,come,recordings\adultm\20261016-134130\come__r1.wav,"[[""come"", true, 592]]"
+vosk-grammar,clean,True,like,20261016-134130,dog said too like wig,like,hit,562,350,like,recordings\adultm\20261016-134130\like__r1.wav,"[[""like"", true, 562]]"
+vosk-grammar,clean,True,the,20261016-134130,i ten who the one,the,hit,503,890,the,recordings\adultm\20261016-134130\the__r1.wav,"[[""the"", true, 503]]"
+vosk-grammar,clean,True,log,20261016-134130,wig good log pen cat,log,hit,682,470,log,recordings\adultm\20261016-134130\log__r2.wav,"[[""log"", true, 682]]"
+vosk-grammar,clean,True,who,20261016-134130,hen with and who saw,who,hit,32,880,who,recordings\adultm\20261016-134130\who__r2.wav,"[[""who"", true, 32]]"
+vosk-grammar,clean,True,red,20261016-134130,out two map red bug,red,hit,492,420,red,recordings\adultm\20261016-134130\red__r1.wav,"[[""red"", true, 492]]"
+vosk-grammar,clean,True,four,20261016-134130,run mat log four saw,four,hit,552,360,four,recordings\adultm\20261016-134130\four__r3.wav,"[[""four"", true, 552]]"
+vosk-grammar,clean,True,i,20261016-134130,three sit i bat you,i,hit,-548,1700,i,recordings\adultm\20261016-134130\I__r1.wav,"[[""i"", true, -548]]"
+vosk-grammar,clean,True,sun,20261016-134130,i the cup sun little,sun,hit,412,740,sun,recordings\adultm\20261016-134130\sun__r2.wav,"[[""sun"", true, 412]]"
+vosk-grammar,clean,True,hot,20261016-134130,a cap big hot who,hot,hit,713,440,hot,recordings\adultm\20261016-134130\hot__r2.wav,"[[""hot"", true, 713]]"
+vosk-grammar,clean,True,go,20261016-134130,we look sun go down,go,hit,-248,1160,go,recordings\adultm\20261016-134130\go__r2.wav,"[[""go"", true, -248]]"
+vosk-grammar,clean,True,you,20261016-134130,you a look i ride,you,hit,663,490,you,recordings\adultm\20261016-134130\you__r1.wav,"[[""you"", true, 663]]"
+vosk-grammar,clean,True,want,20261016-134130,we like little this want,want,hit,422,730,want,recordings\adultm\20261016-134130\want__r2.wav,"[[""want"", true, 422]]"
+vosk-grammar,clean,True,ten,20261016-134130,help ten and bug two,ten,hit,513,400,ten,recordings\adultm\20261016-134130\ten__r2.wav,"[[""ten"", true, 513]]"
+vosk-grammar,clean,True,out,20261016-134130,red out jump bat two,out,hit,663,490,out,recordings\adultm\20261016-134130\out__r1.wav,"[[""out"", true, 663]]"
+vosk-grammar,clean,True,pen,20261016-134130,up pen a but my,pen,hit,593,560,pen,recordings\adultm\20261016-134130\pen__r2.wav,"[[""pen"", true, 593]]"
+vosk-grammar,clean,True,big,20261016-134130,map this big like jump,big,hit,-337,1250,big,recordings\adultm\20261016-134130\big__r1.wav,"[[""big"", true, -337]]"
+vosk-grammar,clean,True,sun,20261016-134130,see i bug top sun,sun,hit,212,940,sun,recordings\adultm\20261016-134130\sun__r1.wav,"[[""sun"", true, 212]]"
+vosk-grammar,clean,True,with,20261016-134130,with see blue four are,with,hit,572,340,with,recordings\adultm\20261016-134130\with__r1.wav,"[[""with"", true, 572]]"
+vosk-grammar,clean,True,log,20261016-134130,dig out go log cap,log,hit,82,1360,log,recordings\adultm\20261016-134130\log__r1.wav,"[[""log"", true, 82]]"
+vosk-grammar,clean,True,run,20261016-134130,run please no red one,run,hit,-407,1320,run,recordings\adultm\20261016-134130\run__r1.wav,"[[""run"", true, -407]]"
+vosk-grammar,clean,True,funny,20261016-134130,funny pig she cap mop,funny,hit,563,590,funny,recordings\adultm\20261016-134130\funny__r1.wav,"[[""funny"", true, 563]]"
+vosk-grammar,clean,True,want,20261016-134130,sit want this blue cat,want,hit,612,300,want,recordings\adultm\20261016-134130\want__r1.wav,"[[""want"", true, 612]]"
+vosk-grammar,clean,True,eat,20261016-134130,one eat three please are,eat,hit,632,280,eat,recordings\adultm\20261016-134130\eat__r1.wav,"[[""eat"", true, 632]]"
+vosk-grammar,clean,True,my,20261016-134130,bat but my this ride,my,hit,542,370,my,recordings\adultm\20261016-134130\my__r1.wav,"[[""my"", true, 542]]"
+vosk-grammar,clean,True,who,20261016-134130,play big map who one,who,hit,612,300,who,recordings\adultm\20261016-134130\who__r1.wav,"[[""who"", true, 612]]"
+vosk-grammar,clean,True,this,20261016-134130,but jump are this cup,this,hit,702,450,this,recordings\adultm\20261016-134130\this__r2.wav,"[[""this"", true, 702]]"
+vosk-grammar,clean,True,little,20261016-134130,all two little down hat,little,hit,632,520,little,recordings\adultm\20261016-134130\little__r1.wav,"[[""little"", true, 632]]"
+vosk-grammar,clean,True,hen,20261016-134130,please on cap they hen,hen,hit,392,1000,hen,recordings\adultm\20261016-134130\hen__r1.wav,"[[""hen"", true, 392]]"
+vosk-grammar,clean,True,can,20261016-134130,too but see bat can,can,hit,662,490,can,recordings\adultm\20261016-134130\can__r2.wav,"[[""can"", true, 662]]"
+vosk-grammar,clean,True,now,20261016-134130,now cap look here can,now,hit,583,330,now,recordings\adultm\20261016-134130\now__r1.wav,"[[""now"", true, 583]]"
+vosk-grammar,clean,True,but,20261016-134130,they like she four but,but,hit,722,430,but,recordings\adultm\20261016-134130\but__r2.wav,"[[""but"", true, 722]]"
+vosk-grammar,clean,True,jump,20261016-134130,new mop mat jump with,jump,hit,572,340,jump,recordings\adultm\20261016-134130\jump__r2.wav,"[[""jump"", true, 572]]"
+vosk-grammar,clean,True,mop,20261016-134130,mop ten like hat little,mop,hit,212,700,mop,recordings\adultm\20261016-134130\mop__r2.wav,"[[""mop"", true, 212]]"
+vosk-grammar,clean,True,and,20261016-134130,log can look said and,and,hit,492,420,and,recordings\adultm\20261016-134130\and__r2.wav,"[[""and"", true, 492]]"
+vosk-grammar,clean,True,said,20261016-134130,a bat said three cup,said,hit,-237,1150,said,recordings\adultm\20261016-134130\said__r1.wav,"[[""said"", true, -237]]"
+vosk-grammar,clean,True,please,20261016-134130,blue help jump dog please,please,hit,613,540,please,recordings\adultm\20261016-134130\please__r2.wav,"[[""please"", true, 613]]"
+vosk-grammar,clean,True,play,20261016-134130,look cup the a play,play,hit,613,540,play,recordings\adultm\20261016-134130\play__r2.wav,"[[""play"", true, 613]]"
+vosk-grammar,clean,True,funny,20261016-134130,four hot funny pen big,funny,hit,562,350,funny,recordings\adultm\20261016-134130\funny__r2.wav,"[[""funny"", true, 562]]"
+vosk-grammar,clean,True,now,20261016-134130,see hat one red now,now,hit,552,360,now,recordings\adultm\20261016-134130\now__r2.wav,"[[""now"", true, 552]]"
+vosk-grammar,clean,True,play,20261016-134130,too play who two but,play,hit,-48,960,play,recordings\adultm\20261016-134130\play__r1.wav,"[[""play"", true, -48]]"
+vosk-grammar,clean,True,was,20261016-134130,saw funny run was map,was,hit,502,410,was,recordings\adultm\20261016-134130\was__r2.wav,"[[""was"", true, 502]]"
+vosk-grammar,clean,True,they,20261016-134130,with they and pig see,they,hit,662,490,they,recordings\adultm\20261016-134130\they__r1.wav,"[[""they"", true, 662]]"
+vosk-grammar,clean,True,see,20261016-134130,sit funny sun see a,see,hit,503,410,see,recordings\adultm\20261016-134130\see__r2.wav,"[[""see"", true, 503]]"
+vosk-grammar,clean,True,i,20261016-134130,funny blue all down i,i,hit,643,510,i,recordings\adultm\20261016-134130\I__r2.wav,"[[""i"", true, 643]]"
+vosk-grammar,clean,True,what,20261016-134130,go yellow what two please,what,hit,23,1420,what,recordings\adultm\20261016-134130\what__r1.wav,"[[""what"", true, 23]]"
+vosk-grammar,clean,True,dig,20261016-134130,dig top but run cup,dig,hit,543,370,dig,recordings\adultm\20261016-134130\dig__r1.wav,"[[""dig"", true, 543]]"
+vosk-grammar,clean,True,little,20261016-134130,cat on run blue little,little,hit,572,580,little,recordings\adultm\20261016-134130\little__r2.wav,"[[""little"", true, 572]]"
+vosk-grammar,clean,True,fox,20261016-134130,help with fox here three,fox,hit,692,460,fox,recordings\adultm\20261016-134130\fox__r2.wav,"[[""fox"", true, 692]]"
+vosk-grammar,clean,True,and,20261016-134130,and log funny play down,and,hit,522,390,and,recordings\adultm\20261016-134130\and__r1.wav,"[[""and"", true, 522]]"
+vosk-grammar,clean,True,all,20261016-134130,all down run who they,all,hit,472,440,all,recordings\adultm\20261016-134130\all__r2.wav,"[[""all"", true, 472]]"
+vosk-grammar,clean,True,pig,20261016-134130,pig the run red up,pig,hit,423,490,pig,recordings\adultm\20261016-134130\pig__r2.wav,"[[""pig"", true, 423]]"
+vosk-grammar,clean,True,you,20261016-134130,ten they you the like,you,hit,682,470,you,recordings\adultm\20261016-134130\you__r2.wav,"[[""you"", true, 682]]"
+vosk-grammar,clean,True,ride,20261016-134130,pig ride sun play down,ride,hit,182,970,ride,recordings\adultm\20261016-134130\ride__r2.wav,"[[""ride"", true, 182]]"
+vosk-grammar,clean,True,fox,20261016-134130,want cap on fox down,fox,hit,623,530,fox,recordings\adultm\20261016-134130\fox__r1.wav,"[[""fox"", true, 623]]"
+vosk-grammar,clean,True,sit,20261016-134130,dig are sit help but,sit,hit,563,350,sit,recordings\adultm\20261016-134130\sit__r2.wav,"[[""sit"", true, 563]]"
+vosk-grammar,clean,True,on,20261016-134130,funny but pig on log,on,hit,533,380,on,recordings\adultm\20261016-134130\on__r1.wav,"[[""on"", true, 533]]"
+vosk-grammar,clean,True,cup,20261016-134130,up cup you too hot,cup,hit,653,260,cup,recordings\adultm\20261016-134130\cup__r1.wav,"[[""cup"", true, 653]]"
+vosk-grammar,clean,True,three,20261016-134130,funny hen hat three said,three,hit,503,410,three,recordings\adultm\20261016-134130\three__r2.wav,"[[""three"", true, 503]]"
+vosk-grammar,clean,True,go,20261016-134130,go blue we dig please,go,hit,33,1150,go,recordings\adultm\20261016-134130\go__r1.wav,"[[""go"", true, 33]]"
+vosk-grammar,clean,True,sit,20261016-134130,yellow look sit please red,sit,hit,563,350,sit,recordings\adultm\20261016-134130\sit__r1.wav,"[[""sit"", true, 563]]"
+vosk-grammar,clean,True,two,20261016-134130,jump my good blue two,two,hit,403,510,two,recordings\adultm\20261016-134130\two__r1.wav,"[[""two"", true, 403]]"
+vosk-grammar,clean,True,where,20261016-134130,bat fox i my where,where,hit,503,410,where,recordings\adultm\20261016-134130\where__r2.wav,"[[""where"", true, 503]]"
+vosk-grammar,clean,True,a,20261016-134130,like top blue a eat,a,hit,263,650,a,recordings\adultm\20261016-134130\a__r2.wav,"[[""a"", true, 263]]"
+vosk-grammar,clean,True,cup,20261016-134130,dig cup play what was,cup,hit,563,350,cup,recordings\adultm\20261016-134130\cup__r2.wav,"[[""cup"", true, 563]]"
+vosk-grammar,clean,True,good,20261016-134130,good three funny hot please,good,hit,352,560,good,recordings\adultm\20261016-134130\good__r2.wav,"[[""good"", true, 352]]"
+vosk-grammar,clean,True,one,20261016-134130,but one come four map,one,hit,82,830,one,recordings\adultm\20261016-134130\one__r2.wav,"[[""one"", true, 82]]"
+vosk-grammar,clean,True,said,20261016-134130,two was yes said ten,said,hit,502,410,said,recordings\adultm\20261016-134130\said__r2.wav,"[[""said"", true, 502]]"
+vosk-grammar,clean,True,out,20261016-134130,hat saw what out are,out,hit,562,590,out,recordings\adultm\20261016-134130\out__r2.wav,"[[""out"", true, 562]]"
+vosk-grammar,clean,True,red,20261016-134130,red who four see hen,red,hit,482,430,red,recordings\adultm\20261016-134130\red__r2.wav,"[[""red"", true, 482]]"
+vosk-grammar,clean,True,ten,20261016-134130,too blue new but ten,ten,hit,92,820,ten,recordings\adultm\20261016-134130\ten__r1.wav,"[[""ten"", true, 92]]"
+vosk-grammar,clean,True,too,20261016-134130,ten i too good cap,too,hit,622,770,too,recordings\adultm\20261016-134130\too__r1.wav,"[[""too"", true, 622]]"
+vosk-grammar,clean,True,new,20261016-134130,out look blue map new,new,hit,282,630,new,recordings\adultm\20261016-134130\new__r2.wav,"[[""new"", true, 282]]"
+vosk-grammar,clean,True,my,20261016-134130,my all hot up cap,my,hit,572,340,my,recordings\adultm\20261016-134130\my__r2.wav,"[[""my"", true, 572]]"
+vosk-grammar,clean,True,where,20261016-134130,on ride one help where,where,hit,732,420,where,recordings\adultm\20261016-134130\where__r1.wav,"[[""where"", true, 732]]"
+vosk-grammar,clean,True,like,20261016-134130,sun like we are a,like,hit,482,910,like,recordings\adultm\20261016-134130\like__r2.wav,"[[""like"", true, 482]]"
+vosk-grammar,clean,True,come,20261016-134130,good fox bat come with,come,hit,612,540,come,recordings\adultm\20261016-134130\come__r2.wav,"[[""come"", true, 612]]"
+vosk-grammar,clean,True,hat,20261016-134130,are eat big hat four,hat,hit,553,360,hat,recordings\adultm\20261016-134130\hat__r1.wav,"[[""hat"", true, 553]]"
+vosk-grammar,clean,True,all,20261016-134130,please here all what you,all,hit,612,300,all,recordings\adultm\20261016-134130\all__r1.wav,"[[""all"", true, 612]]"
+vosk-grammar,clean,True,we,20261016-134130,dig we here cat bat,we,hit,492,660,we,recordings\adultm\20261016-134130\we__r2.wav,"[[""we"", true, 492]]"
+vosk-grammar,clean,True,wig,20261016-134130,wig my here now out,wig,hit,172,740,wig,recordings\adultm\20261016-134130\wig__r2.wav,"[[""wig"", true, 172]]"
+vosk-grammar,clean,True,up,20261016-134130,please mop blue on up,up,hit,-678,1590,up,recordings\adultm\20261016-134130\up__r1.wav,"[[""up"", true, -678]]"
+vosk-grammar,clean,True,please,20261016-134130,sun are please come was,please,hit,693,460,please,recordings\adultm\20261016-134130\please__r1.wav,"[[""please"", true, 693]]"
+vosk-grammar,clean,True,dog,20261016-134130,yellow dog my cat good,dog,hit,312,600,dog,recordings\adultm\20261016-134130\dog__r1.wav,"[[""dog"", true, 312]]"
+vosk-grammar,clean,True,here,20261016-134130,a here pig top blue,here,hit,123,1050,here,recordings\adultm\20261016-134130\here__r1.wav,"[[""here"", true, 123]]"
+vosk-grammar,clean,True,wig,20261016-134130,up you look pen wig,wig,hit,43,870,wig,recordings\adultm\20261016-134130\wig__r1.wav,"[[""wig"", true, 43]]"
+vosk-grammar,clean,True,they,20261016-134130,they go dig two cap,they,hit,462,450,they,recordings\adultm\20261016-134130\they__r2.wav,"[[""they"", true, 462]]"
+vosk-grammar,clean,True,mop,20261016-134130,said mop saw come cat,mop,hit,542,370,mop,recordings\adultm\20261016-134130\mop__r1.wav,"[[""mop"", true, 542]]"
+vosk-grammar,clean,True,help,20261016-134130,help map where up sit,help,hit,132,780,help,recordings\adultm\20261016-134130\help__r1.wav,"[[""help"", true, 132]]"
+vosk-grammar,clean,True,top,20261016-134130,what down pen bat top,top,hit,-168,1320,top,recordings\adultm\20261016-134130\top__r2.wav,"[[""top"", true, -168]]"
+vosk-grammar,clean,True,on,20261016-134130,one who on go this,on,hit,553,360,on,recordings\adultm\20261016-134130\on__r2.wav,"[[""on"", true, 553]]"
+vosk-grammar,clean,True,are,20261016-134130,up out are little this,are,hit,253,660,are,recordings\adultm\20261016-134130\are__r1.wav,"[[""are"", true, 253]]"
+vosk-grammar,clean,True,down,20261016-134130,was log pig down one,down,hit,663,490,down,recordings\adultm\20261016-134130\down__r2.wav,"[[""down"", true, 663]]"
+vosk-grammar,clean,True,the,20261016-134130,cup hen ride the go,the,hit,633,280,the,recordings\adultm\20261016-134130\the__r2.wav,"[[""the"", true, 633]]"
+vosk-grammar,clean,True,hat,20261016-134130,here cup mop hat hot,hat,hit,543,370,hat,recordings\adultm\20261016-134130\hat__r2.wav,"[[""hat"", true, 543]]"
+vosk-grammar,clean,True,she,20261016-134130,up i she sun my,she,hit,583,330,she,recordings\adultm\20261016-134130\she__r2.wav,"[[""she"", true, 583]]"
+vosk-grammar,clean,True,three,20261016-134130,little sit a yellow three,three,hit,293,620,three,recordings\adultm\20261016-134130\three__r1.wav,"[[""three"", true, 293]]"
+vosk-grammar,clean,True,see,20261016-134130,see now they dog sun,see,hit,33,1120,see,recordings\adultm\20261016-134130\see__r1.wav,"[[""see"", true, 33]]"
+vosk-grammar,clean,True,cat,20261016-134130,cat look sit go too,cat,hit,402,510,cat,recordings\adultm\20261016-134130\cat__r2.wav,"[[""cat"", true, 402]]"
+vosk-grammar,clean,True,help,20261016-134130,run top all help one,help,hit,483,430,help,recordings\adultm\20261016-134130\help__r2.wav,"[[""help"", true, 483]]"
+vosk-grammar,clean,True,a,20261016-134130,was here pig cup a,a,hit,572,580,a,recordings\adultm\20261016-134130\a__r1.wav,"[[""a"", true, 572]]"
+vosk-grammar,clean,True,eat,20261016-134130,want and eat was red,eat,hit,602,550,eat,recordings\adultm\20261016-134130\eat__r2.wav,"[[""eat"", true, 602]]"
+vosk-grammar,clean,True,dog,20261016-134130,said help down want dog,dog,hit,543,370,dog,recordings\adultm\20261016-134130\dog__r2.wav,"[[""dog"", true, 543]]"
+vosk-grammar,clean,True,can,20261016-134130,bug saw ride can mop,can,hit,522,390,can,recordings\adultm\20261016-134130\can__r1.wav,"[[""can"", true, 522]]"
+vosk-grammar,clean,True,bug,20261016-134130,map yes bug jump dig,bug,hit,703,450,bug,recordings\adultm\20261016-134130\bug__r2.wav,"[[""bug"", true, 703]]"
+vosk-grammar,clean,False,map,20261016-134130,but this go down hot,,rejected,,390,,recordings\adultm\20261016-134130\map__r2.wav,[]
+vosk-grammar,clean,False,a,20261016-134130,this play who new see,,rejected,,650,,recordings\adultm\20261016-134130\a__r2.wav,[]
+vosk-grammar,clean,False,eat,20261016-134130,help too look sit ride,,rejected,,550,,recordings\adultm\20261016-134130\eat__r2.wav,[]
+vosk-grammar,clean,False,saw,20261016-134130,on cap sit too top,,rejected,,910,,recordings\adultm\20261016-134130\saw__r1.wav,[]
+vosk-grammar,clean,False,want,20261016-134130,with eat we cap on,,rejected,,730,,recordings\adultm\20261016-134130\want__r2.wav,[]
+vosk-grammar,clean,False,pig,20261016-134130,log come can yes my,,rejected,,490,,recordings\adultm\20261016-134130\pig__r2.wav,[]
+vosk-grammar,clean,False,where,20261016-134130,we here said fox go,,rejected,,410,,recordings\adultm\20261016-134130\where__r2.wav,[]
+vosk-grammar,clean,False,no,20261016-134130,cap we hot ten two,,rejected,,2120,,recordings\adultm\20261016-134130\no__r1.wav,[]
+vosk-grammar,clean,False,dog,20261016-134130,two three four bug wig,,rejected,,600,,recordings\adultm\20261016-134130\dog__r1.wav,[]
+vosk-grammar,clean,False,two,20261016-134130,top go funny a where,,rejected,,510,,recordings\adultm\20261016-134130\two__r1.wav,[]
+vosk-grammar,clean,False,blue,20261016-134130,cap this she sit red,,rejected,,260,,recordings\adultm\20261016-134130\blue__r2.wav,[]
+vosk-grammar,clean,False,sun,20261016-134130,too come big one want,,rejected,,740,,recordings\adultm\20261016-134130\sun__r2.wav,[]
+vosk-grammar,clean,False,where,20261016-134130,down come play out this,,rejected,,420,,recordings\adultm\20261016-134130\where__r1.wav,[]
+vosk-grammar,clean,False,red,20261016-134130,sit blue log my who,,rejected,,430,,recordings\adultm\20261016-134130\red__r2.wav,[]
+vosk-grammar,clean,False,ride,20261016-134130,here map two pen up,,rejected,,450,,recordings\adultm\20261016-134130\ride__r1.wav,[]
+vosk-grammar,clean,False,ride,20261016-134130,you down cat big saw,,rejected,,970,,recordings\adultm\20261016-134130\ride__r2.wav,[]
+vosk-grammar,clean,False,with,20261016-134130,help cup a new big,,rejected,,410,,recordings\adultm\20261016-134130\with__r2.wav,[]
+vosk-grammar,clean,False,come,20261016-134130,big they hat i cap,cap,false_accept,593,320,cap,recordings\adultm\20261016-134130\come__r1.wav,"[[""cap"", true, 593]]"
+vosk-grammar,clean,False,this,20261016-134130,no please all wig eat,,rejected,,760,,recordings\adultm\20261016-134130\this__r1.wav,[]
+vosk-grammar,clean,False,what,20261016-134130,and yes sit with now,,rejected,,1420,,recordings\adultm\20261016-134130\what__r1.wav,[]
+vosk-grammar,clean,False,bug,20261016-134130,yellow can saw the she,,rejected,,900,,recordings\adultm\20261016-134130\bug__r1.wav,[]
+vosk-grammar,clean,False,good,20261016-134130,cap see cup three who,,rejected,,560,,recordings\adultm\20261016-134130\good__r2.wav,[]
+vosk-grammar,clean,False,bug,20261016-134130,down i come all a,,rejected,,350,,recordings\adultm\20261016-134130\bug__r3.wav,[]
+vosk-grammar,clean,False,hen,20261016-134130,hat with blue log the,,rejected,,1000,,recordings\adultm\20261016-134130\hen__r1.wav,[]
+vosk-grammar,clean,False,she,20261016-134130,two they log blue wig,,rejected,,330,,recordings\adultm\20261016-134130\she__r2.wav,[]
+vosk-grammar,clean,False,fox,20261016-134130,run now top bug good,,rejected,,530,,recordings\adultm\20261016-134130\fox__r1.wav,[]
+vosk-grammar,clean,False,cup,20261016-134130,good dog fox go please,,rejected,,260,,recordings\adultm\20261016-134130\cup__r1.wav,[]
+vosk-grammar,clean,False,one,20261016-134130,out with mat my bug,,rejected,,800,,recordings\adultm\20261016-134130\one__r1.wav,[]
+vosk-grammar,clean,False,who,20261016-134130,yes no she red little,,rejected,,880,,recordings\adultm\20261016-134130\who__r2.wav,[]
+vosk-grammar,clean,False,we,20261016-134130,map mop on a look,,rejected,,290,,recordings\adultm\20261016-134130\we__r1.wav,[]
+vosk-grammar,clean,False,a,20261016-134130,who yellow two fox mop,,rejected,,580,,recordings\adultm\20261016-134130\a__r1.wav,[]
+vosk-grammar,clean,False,you,20261016-134130,no hen run jump bug,,rejected,,470,,recordings\adultm\20261016-134130\you__r2.wav,[]
+vosk-grammar,clean,False,but,20261016-134130,play come what where they,,rejected,,430,,recordings\adultm\20261016-134130\but__r2.wav,[]
+vosk-grammar,clean,False,log,20261016-134130,hen you too help up,,rejected,,470,,recordings\adultm\20261016-134130\log__r2.wav,[]
+vosk-grammar,clean,False,blue,20261016-134130,play with please yellow saw,,rejected,,490,,recordings\adultm\20261016-134130\blue__r1.wav,[]
+vosk-grammar,clean,False,they,20261016-134130,cap fox cup please this,,rejected,,490,,recordings\adultm\20261016-134130\they__r1.wav,[]
+vosk-grammar,clean,False,go,20261016-134130,come hot with bat top,,rejected,,1160,,recordings\adultm\20261016-134130\go__r2.wav,[]
+vosk-grammar,clean,False,my,20261016-134130,the down log you come,,rejected,,340,,recordings\adultm\20261016-134130\my__r2.wav,[]
+vosk-grammar,clean,False,all,20261016-134130,wig cat bat big bug,,rejected,,440,,recordings\adultm\20261016-134130\all__r2.wav,[]
+vosk-grammar,clean,False,bat,20261016-134130,on with look down come,,rejected,,460,,recordings\adultm\20261016-134130\bat__r2.wav,[]
+vosk-grammar,clean,False,she,20261016-134130,like please i the funny,,rejected,,820,,recordings\adultm\20261016-134130\she__r1.wav,[]
+vosk-grammar,clean,False,too,20261016-134130,are blue want who look,,rejected,,770,,recordings\adultm\20261016-134130\too__r1.wav,[]
+vosk-grammar,clean,False,the,20261016-134130,sun new hen you a,,rejected,,890,,recordings\adultm\20261016-134130\the__r1.wav,[]
+vosk-grammar,clean,False,want,20261016-134130,red please ride three dog,,rejected,,300,,recordings\adultm\20261016-134130\want__r1.wav,[]
+vosk-grammar,clean,False,this,20261016-134130,help i funny bat they,,rejected,,450,,recordings\adultm\20261016-134130\this__r2.wav,[]
+vosk-grammar,clean,False,with,20261016-134130,can ride come ten and,,rejected,,340,,recordings\adultm\20261016-134130\with__r1.wav,[]
+vosk-grammar,clean,False,wig,20261016-134130,bug play one i four,,rejected,,740,,recordings\adultm\20261016-134130\wig__r2.wav,[]
+vosk-grammar,clean,False,funny,20261016-134130,see she log fox mat,,rejected,,350,,recordings\adultm\20261016-134130\funny__r2.wav,[]
+vosk-grammar,clean,False,my,20261016-134130,look top go on cup,,rejected,,370,,recordings\adultm\20261016-134130\my__r1.wav,[]
+vosk-grammar,clean,False,the,20261016-134130,hot dog mop wig too,,rejected,,280,,recordings\adultm\20261016-134130\the__r2.wav,[]
+vosk-grammar,clean,False,i,20261016-134130,new she run little come,,rejected,,510,,recordings\adultm\20261016-134130\I__r2.wav,[]
+vosk-grammar,clean,False,yellow,20261016-134130,two up and out sun,,rejected,,380,,recordings\adultm\20261016-134130\yellow__r2.wav,[]
+vosk-grammar,clean,False,blue,20261016-134130,see i please sun big,,rejected,,490,,recordings\adultm\20261016-134130\blue__r3.wav,[]
+vosk-grammar,clean,False,jump,20261016-134130,cat two good hen cap,,rejected,,340,,recordings\adultm\20261016-134130\jump__r2.wav,[]
+vosk-grammar,clean,False,i,20261016-134130,now yes hen all but,,rejected,,1700,,recordings\adultm\20261016-134130\I__r1.wav,[]
+vosk-grammar,clean,False,jump,20261016-134130,two my out all cat,,rejected,,740,,recordings\adultm\20261016-134130\jump__r1.wav,[]
+vosk-grammar,clean,False,what,20261016-134130,bat funny with hat play,,rejected,,570,,recordings\adultm\20261016-134130\what__r2.wav,[]
+vosk-grammar,clean,False,four,20261016-134130,log one play dog ride,,rejected,,430,,recordings\adultm\20261016-134130\four__r2.wav,[]
+vosk-grammar,clean,False,big,20261016-134130,what are we the want,,rejected,,1250,,recordings\adultm\20261016-134130\big__r1.wav,[]
+vosk-grammar,clean,False,but,20261016-134130,good dig now help look,,rejected,,840,,recordings\adultm\20261016-134130\but__r1.wav,[]
+vosk-grammar,clean,False,too,20261016-134130,yellow was look they and,,rejected,,370,,recordings\adultm\20261016-134130\too__r2.wav,[]
+vosk-grammar,clean,False,play,20261016-134130,big this good map dog,,rejected,,960,,recordings\adultm\20261016-134130\play__r1.wav,[]
+vosk-grammar,clean,False,funny,20261016-134130,saw you where like eat,,rejected,,590,,recordings\adultm\20261016-134130\funny__r1.wav,[]
+vosk-grammar,clean,False,dog,20261016-134130,run and we she good,,rejected,,370,,recordings\adultm\20261016-134130\dog__r2.wav,[]
+vosk-grammar,clean,False,we,20261016-134130,like said with sit one,with,false_accept,493,660,with,recordings\adultm\20261016-134130\we__r2.wav,"[[""with"", true, 493]]"
+vosk-grammar,clean,False,one,20261016-134130,four little sit play was,was,false_accept,83,830,was,recordings\adultm\20261016-134130\one__r2.wav,"[[""was"", true, 83]]"
+vosk-grammar,clean,False,can,20261016-134130,one here up and sun,,rejected,,390,,recordings\adultm\20261016-134130\can__r1.wav,[]
+vosk-grammar,clean,False,little,20261016-134130,bat where come big mat,,rejected,,580,,recordings\adultm\20261016-134130\little__r2.wav,[]
+vosk-grammar,clean,False,all,20261016-134130,dog now little blue my,,rejected,,300,,recordings\adultm\20261016-134130\all__r1.wav,[]
+vosk-grammar,clean,False,sun,20261016-134130,this four you cap what,,rejected,,940,,recordings\adultm\20261016-134130\sun__r1.wav,[]
+vosk-grammar,clean,False,log,20261016-134130,mop little yellow my see,mop,false_accept,83,1360,mop,recordings\adultm\20261016-134130\log__r1.wav,"[[""mop"", true, 83]]"
+vosk-grammar,clean,False,yes,20261016-134130,hen play where the new,,rejected,,480,,recordings\adultm\20261016-134130\yes__r1.wav,[]
+vosk-grammar,clean,False,please,20261016-134130,little one i help want,,rejected,,460,,recordings\adultm\20261016-134130\please__r1.wav,[]
+vosk-grammar,clean,False,look,20261016-134130,play wig funny one like,,rejected,,1140,,recordings\adultm\20261016-134130\look__r1.wav,[]
+vosk-grammar,clean,False,ten,20261016-134130,funny who bug and my,,rejected,,400,,recordings\adultm\20261016-134130\ten__r2.wav,[]
+vosk-grammar,clean,False,on,20261016-134130,ten cup i was play,i,false_accept,553,360,i,recordings\adultm\20261016-134130\on__r2.wav,"[[""i"", true, 553]]"
+vosk-grammar,clean,False,four,20261016-134130,three here come mop was,,rejected,,610,,recordings\adultm\20261016-134130\four__r1.wav,[]
+vosk-grammar,clean,False,big,20261016-134130,see yes two who down,,rejected,,420,,recordings\adultm\20261016-134130\big__r2.wav,[]
+vosk-grammar,clean,False,pig,20261016-134130,ride mop the play they,,rejected,,620,,recordings\adultm\20261016-134130\pig__r1.wav,[]
+vosk-grammar,clean,False,out,20261016-134130,ten new a ride two,,rejected,,490,,recordings\adultm\20261016-134130\out__r1.wav,[]
+vosk-grammar,clean,False,on,20261016-134130,cat yes out jump one,,rejected,,380,,recordings\adultm\20261016-134130\on__r1.wav,[]
+vosk-grammar,clean,False,can,20261016-134130,all are with blue look,,rejected,,490,,recordings\adultm\20261016-134130\can__r2.wav,[]
+vosk-grammar,clean,False,go,20261016-134130,this play sun run was,,rejected,,1150,,recordings\adultm\20261016-134130\go__r1.wav,[]
+vosk-grammar,clean,False,top,20261016-134130,jump we come saw please,,rejected,,1320,,recordings\adultm\20261016-134130\top__r2.wav,[]
+vosk-grammar,clean,False,was,20261016-134130,you too sun see said,,rejected,,410,,recordings\adultm\20261016-134130\was__r2.wav,[]
+vosk-grammar,clean,False,now,20261016-134130,good can want no please,no,false_accept,582,330,no,recordings\adultm\20261016-134130\now__r1.wav,"[[""no"", true, 582]]"
+vosk-grammar,clean,False,like,20261016-134130,new funny want we here,,rejected,,910,,recordings\adultm\20261016-134130\like__r2.wav,[]
+vosk-grammar,clean,False,fox,20261016-134130,play big cup see with,,rejected,,460,,recordings\adultm\20261016-134130\fox__r2.wav,[]
+vosk-grammar,clean,False,mat,20261016-134130,said you all are come,,rejected,,430,,recordings\adultm\20261016-134130\mat__r1.wav,[]
+vosk-grammar,clean,False,cat,20261016-134130,fox see down yellow here,,rejected,,410,,recordings\adultm\20261016-134130\cat__r1.wav,[]
+vosk-grammar,clean,False,dig,20261016-134130,this was top sun good,,rejected,,370,,recordings\adultm\20261016-134130\dig__r1.wav,[]
+vosk-grammar,clean,False,help,20261016-134130,play go bat little mop,,rejected,,780,,recordings\adultm\20261016-134130\help__r1.wav,[]
+vosk-grammar,clean,False,cup,20261016-134130,blue hen run and the,,rejected,,350,,recordings\adultm\20261016-134130\cup__r2.wav,[]
+vosk-grammar,clean,False,cat,20261016-134130,log blue jump big little,,rejected,,510,,recordings\adultm\20261016-134130\cat__r2.wav,[]
+vosk-grammar,clean,False,sit,20261016-134130,but new log two see,,rejected,,350,,recordings\adultm\20261016-134130\sit__r2.wav,[]
+vosk-grammar,clean,False,dig,20261016-134130,top and log saw now,,rejected,,360,,recordings\adultm\20261016-134130\dig__r2.wav,[]
+vosk-grammar,clean,False,cap,20261016-134130,said wig a help new,help,false_accept,533,380,help,recordings\adultm\20261016-134130\cap__r1.wav,"[[""help"", true, 533]]"
+vosk-grammar,clean,False,mop,20261016-134130,dog saw sit but pig,,rejected,,700,,recordings\adultm\20261016-134130\mop__r2.wav,[]
+vosk-grammar,clean,False,you,20261016-134130,bat sit pen mop like,,rejected,,490,,recordings\adultm\20261016-134130\you__r1.wav,[]
+vosk-grammar,clean,False,hot,20261016-134130,hen down where mat cat,cat,false_accept,712,440,cat,recordings\adultm\20261016-134130\hot__r2.wav,"[[""cat"", true, 712]]"
+vosk-grammar,clean,False,_other,20261016-134130,please hot said pig red,,rejected,,670,,recordings\adultm\20261016-134130\_other__r1.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,ten jump you down look,,rejected,,350,,recordings\adultm\20261016-134130\_other__r1_10.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,up hot dog down cat,,rejected,,340,,recordings\adultm\20261016-134130\_other__r1_2.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,no all ride four wig,no,false_accept,563,590,no,recordings\adultm\20261016-134130\_other__r1_3.wav,"[[""no"", true, 563]]"
+vosk-grammar,clean,False,_other,20261016-134130,two play cup but who,,rejected,,360,,recordings\adultm\20261016-134130\_other__r1_4.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,mop i down pig said,,rejected,,280,,recordings\adultm\20261016-134130\_other__r1_5.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,play are saw pen good,,rejected,,1060,,recordings\adultm\20261016-134130\_other__r1_6.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,dig come my hat map,come,false_accept,602,790,come,recordings\adultm\20261016-134130\_other__r1_7.wav,"[[""come"", true, 602]]"
+vosk-grammar,clean,False,_other,20261016-134130,new big sit hen funny,,rejected,,390,,recordings\adultm\20261016-134130\_other__r1_8.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,good wig want top jump,,rejected,,290,,recordings\adultm\20261016-134130\_other__r1_9.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,big blue yellow dig mop,mop,false_accept,563,350,mop,recordings\adultm\20261016-134130\_other__r2.wav,"[[""mop"", true, 563]]"
+vosk-grammar,clean,False,_other,20261016-134130,run i cat pen see,,rejected,,470,,recordings\adultm\20261016-134130\_other__r2_10.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,blue out ten up two,,rejected,,660,,recordings\adultm\20261016-134130\_other__r2_2.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,look help who big good,,rejected,,430,,recordings\adultm\20261016-134130\_other__r2_3.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,go bug pen little pig,,rejected,,750,,recordings\adultm\20261016-134130\_other__r2_4.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,three too eat like a,,rejected,,290,,recordings\adultm\20261016-134130\_other__r2_5.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,wig four like eat yes,,rejected,,950,,recordings\adultm\20261016-134130\_other__r2_6.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,said you here they fox,,rejected,,580,,recordings\adultm\20261016-134130\_other__r2_7.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,mat new bug here big,,rejected,,330,,recordings\adultm\20261016-134130\_other__r2_8.wav,[]
+vosk-grammar,clean,False,_other,20261016-134130,sun dig funny on they,,rejected,,590,,recordings\adultm\20261016-134130\_other__r2_9.wav,[]

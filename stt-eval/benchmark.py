@@ -38,6 +38,17 @@ import dataset as ds
 import matcher
 from engines import ENGINES, MODELS_DIR, SAMPLE_RATE, make_engine
 
+REPO = Path(__file__).resolve().parent.parent
+
+
+def repo_rel(p) -> str:
+    """Path relative to the repo (forward slashes), so results that get
+    committed don't carry the local user's home folder."""
+    try:
+        return Path(p).resolve().relative_to(REPO).as_posix()
+    except (ValueError, OSError, TypeError):
+        return str(p)
+
 CHUNK = int(0.02 * SAMPLE_RATE)
 LEAD_S, TRAIL_S = 0.4, 1.2
 
@@ -72,6 +83,7 @@ def run_trial(engine, audio, onscreen):
     compute = 0.0
     first = None
     texts = []
+    log = []  # every event: (text, final, done_at, matched word); lets replay_matcher.py re-match
     n = len(audio)
     for i in range(0, n + CHUNK, CHUNK):
         chunk = audio[i : i + CHUNK]
@@ -83,11 +95,12 @@ def run_trial(engine, audio, onscreen):
         done_at = max(done_at, arrive) + dt
         for ev in evs:
             texts.append(ev.text)
+            log.append((ev.text, ev.final, done_at, ev.match.word if ev.match else None))
             if first is None and ev.match is not None:
                 first = (ev, done_at)
         if not len(chunk):
             break
-    return first, texts, compute
+    return first, texts, compute, log
 
 
 CONDITIONS = {
@@ -115,11 +128,19 @@ def main():
     ap.add_argument("--beam", type=int, default=4, help="beam width (\"-hot\" engines)")
     ap.add_argument("--sound-alike", action="store_true",
                     help="also accept on-screen words within one phoneme (game default)")
+    ap.add_argument("--sound-alike-mode", default="any", choices=["any", "no-onset", "extra-only"],
+                    help="which near misses --sound-alike accepts (see matcher.py)")
+    ap.add_argument("--sight-words", nargs="+", default=[],
+                    help="words with no audio; one of them replaces a distractor on every screen, "
+                         "so a model that makes up function words (\"the\") fires on it")
+    ap.add_argument("--hard-negatives", action="store_true",
+                    help="negative trials show the words that sound most like the spoken one")
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--out", default="results")
     args = ap.parse_args()
 
     matcher.SOUND_ALIKE = args.sound_alike
+    matcher.SOUND_ALIKE_MODE = args.sound_alike_mode
     root = Path(args.speech_commands)
     clips = ds.recordings(Path(args.recordings)) if args.recordings else ds.speech_commands(root)
     noises = ds.background_noise(root)
@@ -130,7 +151,7 @@ def main():
     vocab = sorted({c.word for c in clips})
     if len(vocab) < args.onscreen + 1:
         sys.exit(f"need at least {args.onscreen + 1} distinct words, found {vocab}")
-    print(f"{len(clips)} clips, {len(vocab)} words, models in {MODELS_DIR}", file=sys.stderr)
+    print(f"{len(clips)} clips, {len(vocab)} words, models in {repo_rel(MODELS_DIR)}", file=sys.stderr)
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -145,11 +166,12 @@ def main():
         for cname in args.conditions:
             cond = CONDITIONS[cname]
             rng = random.Random(args.seed)  # same trials for every engine
+            rng_x = random.Random(args.seed + 1)  # stress options; leaves the base trials alone
             n_neg = int(args.trials * args.negatives)
             plan = [(True, c) for c in rng.sample(clips, min(args.trials, len(clips)))]
             plan += [(False, c) for c in rng.sample(clips, min(n_neg, len(clips)))]
             plan += [(False, c) for c in other_clips]
-            stats = dict(hit=0, wrong=0, none=0, pos=0, neg=0, false_accept=0)
+            stats = dict(hit=0, wrong=0, none=0, pos=0, neg=0, false_accept=0, double=0)
             lats, audio_s, compute_s = [], 0.0, 0.0
             for k, (positive, clip) in enumerate(plan):
                 try:
@@ -161,11 +183,18 @@ def main():
                     onscreen = others + [clip.word]
                 else:
                     onscreen = rng.sample([w for w in vocab if w != clip.word], args.onscreen)
+                    if args.hard_negatives:
+                        onscreen = ds.distractors(clip.word, vocab, args.onscreen, True, rng_x)
+                if args.sight_words:  # replaces one distractor, never the spoken word
+                    others = [w for w in onscreen if w != clip.word]
+                    onscreen[onscreen.index(rng_x.choice(others))] = rng_x.choice(args.sight_words)
                 rng.shuffle(onscreen)
-                first, texts, compute = run_trial(eng, audio, onscreen)
+                first, texts, compute, log = run_trial(eng, audio, onscreen)
                 audio_s += len(audio) / SAMPLE_RATE
                 compute_s += compute
                 fired = first[0].match.word if first else None
+                n_fires = sum(m is not None for *_, m in log)
+                stats["double"] += n_fires > 1
                 lat = (first[1] - s_end) if first else None
                 if positive:
                     stats["pos"] += 1
@@ -187,7 +216,8 @@ def main():
                                  speaker=clip.speaker, onscreen=" ".join(onscreen), fired=fired or "",
                                  outcome=outcome, latency_ms=None if lat is None else round(lat * 1000),
                                  speech_ms=round((s_end - s_start) * 1000),
-                                 text=" | ".join(texts), file=str(clip.path)))
+                                 text=" | ".join(texts), file=repo_rel(clip.path),
+                                 events=json.dumps([[t, f, round((d - s_end) * 1000)] for t, f, d, _ in log])))
                 if (k + 1) % 50 == 0:
                     print(f"  {name}/{cname}: {k + 1}/{len(plan)}", file=sys.stderr)
             pos = max(stats["pos"], 1)
@@ -200,43 +230,47 @@ def main():
                 latency_p50_ms=statistics.median(lat_ms) if lat_ms else None,
                 latency_p90_ms=float(np.percentile(lat_ms, 90)) if lat_ms else None,
                 early_fire_pct=100 * sum(l < 0 for l in lat_ms) / max(len(lat_ms), 1),
+                double_fire_pct=100 * stats["double"] / max(stats["pos"] + stats["neg"], 1),
                 rtf=compute_s / audio_s, load_s=t_load,
             )
             summary.append(s)
             print(fmt_row(s), file=sys.stderr)
 
-    with open(out / f"trials-{tag}.csv", "w", newline="") as f:
+    with open(out / f"trials-{tag}.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()
         w.writerows(rows)
-    (out / f"summary-{tag}.json").write_text(json.dumps(dict(args=vars(args), summary=summary), indent=2))
+    (out / f"summary-{tag}.json").write_text(json.dumps(dict(args={k: repo_rel(v) if k in ("speech_commands", "recordings", "out") and v else v for k, v in vars(args).items()}, summary=summary), indent=2))
     table = markdown(summary, args)
-    (out / f"summary-{tag}.md").write_text(table)
+    (out / f"summary-{tag}.md").write_text(table, encoding="utf-8")
     print(table)
 
 
 def fmt_row(s):
     lat = "-" if s["latency_p50_ms"] is None else f"{s['latency_p50_ms']:.0f}/{s['latency_p90_ms']:.0f}ms"
     return (f"{s['engine']:>16} {s['condition']:>8} hit {s['hit_pct']:5.1f}% wrong {s['wrong_word_pct']:4.1f}% "
-            f"none {s['no_fire_pct']:4.1f}% FA {s['false_accept_pct']:4.1f}% lat p50/p90 {lat} RTF {s['rtf']:.3f}")
+            f"none {s['no_fire_pct']:4.1f}% FA {s['false_accept_pct']:4.1f}% 2x {s['double_fire_pct']:4.1f}% "
+            f"lat p50/p90 {lat} RTF {s['rtf']:.3f}")
 
 
 def markdown(summary, args):
     hdr = ("| engine | cond | hit % | wrong word % | no fire % | false accept % | "
-           "latency p50 | latency p90 | fired before word end % | RTF |\n"
-           "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|\n")
+           "latency p50 | latency p90 | fired before word end % | fired twice % | RTF |\n"
+           "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n")
     body = ""
     for s in summary:
         p50 = "-" if s["latency_p50_ms"] is None else f"{s['latency_p50_ms']:.0f} ms"
         p90 = "-" if s["latency_p90_ms"] is None else f"{s['latency_p90_ms']:.0f} ms"
         body += (f"| {s['engine']} | {s['condition']} | {s['hit_pct']:.1f} | {s['wrong_word_pct']:.1f} | "
                  f"{s['no_fire_pct']:.1f} | {s['false_accept_pct']:.1f} | {p50} | {p90} | "
-                 f"{s['early_fire_pct']:.0f} | {s['rtf']:.3f} |\n")
+                 f"{s['early_fire_pct']:.0f} | {s['double_fire_pct']:.1f} | {s['rtf']:.3f} |\n")
     note = (f"\n{args.trials} positive trials per row, {args.onscreen} words on screen"
             f"{' (hard distractors)' if args.hard else ''}, {args.threads} threads, "
             f"VAD hang-over {args.silence}s, streaming endpoint {args.trailing}s, "
             f"hotword score {args.hot_score}, beam {args.beam}"
-            f"{', sound-alike matching' if args.sound_alike else ''}.\n")
+            f"{f', sound-alike matching ({args.sound_alike_mode})' if args.sound_alike else ''}"
+            f"{', hard negatives' if args.hard_negatives else ''}"
+            f"{', sight-word distractors ' + ' '.join(args.sight_words) if args.sight_words else ''}.\n")
     return hdr + body + note
 
 

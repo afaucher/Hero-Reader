@@ -13,7 +13,9 @@ so whichever model wins can be embedded in Godot without Python.
 
 from __future__ import annotations
 
+import json
 import os
+import shutil
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -188,7 +190,7 @@ class Vocab:
         scores make it spell hotwords letter by letter, which never matches.)
         """
         out = Path(self.path).with_name("_hotwords_bpe.vocab")
-        out.write_text("".join(f"{t}\t-1\n" for t in self.ordered))
+        out.write_text("".join(f"{t}\t-1\n" for t in self.ordered), encoding="utf-8")
         return str(out)
 
 
@@ -241,7 +243,7 @@ class KwsEngine(Engine):
         # The C++ side insists on a keywords file; real keywords come per stream.
         dummy = MODELS_DIR / model_dir / "_default_keywords.txt"
         if not dummy.exists():
-            dummy.write_text(" ".join(self.vocab.encode("hello")) + " @hello\n")
+            dummy.write_text(" ".join(self.vocab.encode("hello")) + " @hello\n", encoding="utf-8")
         self.kws = sherpa_onnx.KeywordSpotter(
             tokens=self.tokens,
             encoder=_p(model_dir, encoder),
@@ -341,6 +343,105 @@ class VadOfflineEngine(Engine):
 
 
 # ---------------------------------------------------------------------------
+# Vosk (Kaldi), the engine behind gdvosk. Not sherpa-onnx: the `vosk` package
+# is imported only when a vosk engine is built, and lives in its own venv
+# (docs/REPRODUCE.md). "vosk-grammar" restricts decoding to the on-screen words
+# plus [unk], gdvosk's closed-vocabulary mode; "vosk" is open vocabulary.
+# ---------------------------------------------------------------------------
+
+
+class VoskSession(Session):
+    def __init__(self, eng: "VoskEngine", onscreen):
+        self.eng = eng
+        self.matcher = WordMatcher(onscreen, fuzzy=eng.fuzzy)
+        if eng.grammar:  # words missing from the model's lexicon are dropped by Vosk
+            words = [w.lower() for w in onscreen]
+            self.rec = eng.vosk.KaldiRecognizer(eng.model, SAMPLE_RATE,
+                                                json.dumps(words + ["[unk]"]))
+        else:
+            self.rec = eng.vosk.KaldiRecognizer(eng.model, SAMPLE_RATE)
+        self.rec.SetWords(True)  # per-word confidence in final results
+        self.fired = False
+        self.last_text = ""
+
+    def _text(self, js: str, key: str) -> str:
+        r = json.loads(js)
+        if key == "text" and self.eng.min_conf > 0:  # drop low-confidence words
+            r[key] = " ".join(w["word"] for w in r.get("result", []) if w["conf"] >= self.eng.min_conf)
+        return r.get(key, "").replace("[unk]", "").strip()
+
+    def _final(self, text: str) -> list[Event]:
+        events = []
+        if not self.fired and text:
+            events.append(Event(self.matcher.match(text, final=True), text, True))
+        self.fired = False
+        self.last_text = ""
+        return events
+
+    def feed(self, samples):
+        pcm = (np.clip(samples, -1, 1) * 32767).astype("<i2").tobytes()
+        if self.rec.AcceptWaveform(pcm):  # endpoint reached
+            return self._final(self._text(self.rec.Result(), "text"))
+        if self.eng.grammar:
+            # A grammar-mode partial is always forced onto some on-screen word,
+            # often before the word is over, so only the endpointed result counts.
+            return []
+        text = self._text(self.rec.PartialResult(), "partial")
+        if text != self.last_text:
+            self.last_text = text
+            if not self.fired:
+                m = self.matcher.match(text, final=False)
+                if m:
+                    self.fired = True
+                    return [Event(m, text, False)]
+        return []
+
+    def flush(self):
+        return self._final(self._text(self.rec.FinalResult(), "text"))
+
+
+class VoskEngine(Engine):
+    streaming = True
+
+    def __init__(self, name, model_dir, grammar, trailing=0.3, min_conf=0.0, fuzzy=False):
+        try:
+            import vosk
+        except ImportError as e:
+            raise ImportError("vosk engines need `pip install vosk` in a separate venv "
+                              "(see docs/REPRODUCE.md)") from e
+        vosk.SetLogLevel(-1)
+        self.name = name
+        self.vosk = vosk
+        self.grammar = grammar
+        self.min_conf = min_conf
+        self.fuzzy = fuzzy
+        path = MODELS_DIR / model_dir
+        if not path.exists():
+            raise FileNotFoundError(f"{path} (run: python tools/setup.py --with models-eval)")
+        self.model = vosk.Model(str(self._with_endpoint(path, trailing)))
+
+    def session(self, onscreen):
+        return VoskSession(self, onscreen)
+
+    @staticmethod
+    def _with_endpoint(path: Path, trailing: float) -> Path:
+        """Model copy whose endpoint silence (rule 2) matches the streaming engines'.
+
+        The vosk Python API (0.3.45) only reads endpointing from conf/model.conf.
+        """
+        conf = (path / "conf" / "model.conf").read_text()
+        key = "--endpoint.rule2.min-trailing-silence="
+        if f"{key}{trailing}\n" in conf:
+            return path
+        out = path.with_name(f"{path.name}-rule2-{trailing}")
+        if not out.exists():
+            shutil.copytree(path, out)
+            lines = [f"{key}{trailing}" if ln.startswith(key) else ln for ln in conf.splitlines()]
+            (out / "conf" / "model.conf").write_text("\n".join(lines) + "\n")
+        return out
+
+
+# ---------------------------------------------------------------------------
 # Registry
 # ---------------------------------------------------------------------------
 
@@ -350,6 +451,7 @@ ZIP20 = "sherpa-onnx-streaming-zipformer-en-20M-2023-02-17"
 KROKO = "sherpa-onnx-streaming-zipformer-en-kroko-2025-08-06"
 NEMO80 = "sherpa-onnx-nemo-streaming-fast-conformer-transducer-en-80ms-int8"
 KWS = "sherpa-onnx-kws-zipformer-gigaspeech-3.3M-2024-01-01"
+VOSK = "vosk-model-small-en-us-0.15"
 
 
 def _whisper(size, threads):
@@ -434,6 +536,10 @@ def make_engine(name: str, threads: int = 2, silence: float = 0.25,
                          "decoder-epoch-12-avg-2-chunk-16-left-64.int8.onnx",
                          "joiner-epoch-12-avg-2-chunk-16-left-64.int8.onnx",
                          num_threads=threads)
+    if name in ("vosk", "vosk-grammar"):
+        # min_conf tuned on seed 11 (the benchmark uses seed 7); see docs/stt-evaluation.md
+        return VoskEngine(name, VOSK, grammar=name == "vosk-grammar", trailing=trailing,
+                          min_conf=0.9 if name == "vosk-grammar" else 0.0)
     if name.startswith("whisper-"):
         return VadOfflineEngine(name, _whisper(name.split("-", 1)[1], threads), silence)
     if name.startswith("moonshine2-"):
@@ -450,7 +556,7 @@ def make_engine(name: str, threads: int = 2, silence: float = 0.25,
 
 ENGINES = [
     "zipformer", "zipformer-hot", "zipformer20m", "kroko", "kroko-hot", "nemo80",
-    "kws",
+    "kws", "vosk", "vosk-grammar",
     "whisper-tiny.en", "whisper-base.en", "whisper-small.en",
     "moonshine-tiny", "moonshine-base", "moonshine2-tiny", "moonshine2-base",
     "parakeet-110m", "parakeet-110m-hot", "parakeet-0.6b", "parakeet-0.6b-hot",

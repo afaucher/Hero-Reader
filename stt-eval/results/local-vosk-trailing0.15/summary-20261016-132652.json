@@ -1,0 +1,41 @@
+{
+  "args": {
+    "engines": [
+      "vosk-grammar"
+    ],
+    "speech_commands": "third_party\\data\\speech_commands",
+    "recordings": null,
+    "conditions": [
+      "clean"
+    ],
+    "trials": 300,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.25,
+    "trailing": 0.15,
+    "hot_score": 2.0,
+    "beam": 4,
+    "sound_alike": true,
+    "seed": 7,
+    "out": "results/local-vosk-trailing0.15"
+  },
+  "summary": [
+    {
+      "engine": "vosk-grammar",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 96.28378378378379,
+      "wrong_word_pct": 0.6756756756756757,
+      "no_fire_pct": 3.0405405405405403,
+      "false_accept_pct": 5.405405405405405,
+      "latency_p50_ms": 442.19179999839986,
+      "latency_p90_ms": 562.19668000096,
+      "early_fire_pct": 1.4035087719298245,
+      "rtf": 0.01309489855994453,
+      "load_s": 0.387652799996431
+    }
+  ]
+}

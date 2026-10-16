@@ -1,0 +1,8 @@
+| engine | cond | hit % | wrong word % | no fire % | false accept % | latency p50 | latency p90 | fired before word end % | fired twice % | RTF |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| zipformer-hot | clean | 92.9 | 0.0 | 7.1 | 0.0 | 402 ms | 560 ms | 0 | 0.0 | 0.044 |
+
+400 positive trials per row, 5 words on screen, 2 threads, VAD hang-over 0.25s, streaming endpoint 0.3s, hotword score 3.0, beam 8, sound-alike matching (any).
+
+14 clips, 14 words, models in godot/models
+   zipformer-hot    clean hit  92.9% wrong  0.0% none  7.1% FA  0.0% 2x  0.0% lat p50/p90 402/560ms RTF 0.044

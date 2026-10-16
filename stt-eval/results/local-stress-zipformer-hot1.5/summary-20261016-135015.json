@@ -1,0 +1,56 @@
+{
+  "args": {
+    "engines": [
+      "zipformer-hot"
+    ],
+    "speech_commands": "third_party\\data\\speech_commands",
+    "recordings": null,
+    "conditions": [
+      "clean"
+    ],
+    "trials": 300,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": true,
+    "threads": 2,
+    "silence": 0.25,
+    "trailing": 0.3,
+    "hot_score": 1.5,
+    "beam": 8,
+    "sound_alike": true,
+    "sound_alike_mode": "any",
+    "sight_words": [
+      "the",
+      "look",
+      "my",
+      "me",
+      "you",
+      "and",
+      "is",
+      "it",
+      "see",
+      "said"
+    ],
+    "hard_negatives": true,
+    "seed": 7,
+    "out": "results/local-stress-zipformer-hot1.5"
+  },
+  "summary": [
+    {
+      "engine": "zipformer-hot",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 79.39189189189189,
+      "wrong_word_pct": 2.027027027027027,
+      "no_fire_pct": 18.58108108108108,
+      "false_accept_pct": 5.405405405405405,
+      "latency_p50_ms": 453.7703000073088,
+      "latency_p90_ms": 701.9817400031026,
+      "early_fire_pct": 3.404255319148936,
+      "double_fire_pct": 2.4324324324324325,
+      "rtf": 0.05022770106382664,
+      "load_s": 1.8953935000026831
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+engine,condition,positive,word,speaker,onscreen,fired,outcome,latency_ms,speech_ms,text,file,events
+parakeet-110m-hot,clean,True,little,20261016-134952-usable,big little down dog ride,little,hit,396,570,Little.,stt-eval/recordings/8f/20261016-134952-usable/little__r1.wav,"[[""Little."", true, 396]]"
+parakeet-110m-hot,clean,True,dog,20261016-134952-usable,down ride but ten dog,dog,hit,351,430,dog,stt-eval/recordings/8f/20261016-134952-usable/dog__r1.wav,"[[""dog"", true, 351]]"
+parakeet-110m-hot,clean,True,look,20261016-134952-usable,run we big look down,look,hit,221,560,look.,stt-eval/recordings/8f/20261016-134952-usable/look__r1.wav,"[[""look."", true, 221]]"
+parakeet-110m-hot,clean,True,run,20261016-134952-usable,dog run down little hen,,none,,810,,stt-eval/recordings/8f/20261016-134952-usable/run__r1.wav,[]
+parakeet-110m-hot,clean,True,big,20261016-134952-usable,red two little look big,big,hit,239,980,big.,stt-eval/recordings/8f/20261016-134952-usable/big__r1.wav,"[[""big."", true, 239]]"
+parakeet-110m-hot,clean,True,but,20261016-134952-usable,look but down we red,,none,,290,,stt-eval/recordings/8f/20261016-134952-usable/but__r1.wav,[]
+parakeet-110m-hot,clean,True,red,20261016-134952-usable,two we little red run,,none,,1500,Rad.,stt-eval/recordings/8f/20261016-134952-usable/red__r1.wav,"[[""Rad."", true, -6]]"
+parakeet-110m-hot,clean,True,two,20261016-134952-usable,two ten but run mop,two,hit,367,250,two.,stt-eval/recordings/8f/20261016-134952-usable/two__r1.wav,"[[""two."", true, 367]]"
+parakeet-110m-hot,clean,True,hen,20261016-134952-usable,ten hen mop look two,hen,hit,333,690,hen?,stt-eval/recordings/8f/20261016-134952-usable/hen__r1.wav,"[[""hen?"", true, 333]]"
+parakeet-110m-hot,clean,True,ride,20261016-134952-usable,mop down hen ride big,ride,hit,404,540,ride.,stt-eval/recordings/8f/20261016-134952-usable/ride__r1.wav,"[[""ride."", true, 404]]"
+parakeet-110m-hot,clean,True,mop,20261016-134952-usable,look dog but red mop,mop,hit,345,600,mop?,stt-eval/recordings/8f/20261016-134952-usable/mop__r1.wav,"[[""mop?"", true, 345]]"
+parakeet-110m-hot,clean,True,we,20261016-134952-usable,two little ten we look,we,hit,384,580,we,stt-eval/recordings/8f/20261016-134952-usable/we__r1.wav,"[[""we"", true, 384]]"
+parakeet-110m-hot,clean,True,ten,20261016-134952-usable,down we ten run big,ten,hit,350,430,ten.,stt-eval/recordings/8f/20261016-134952-usable/ten__r1.wav,"[[""ten."", true, 350]]"
+parakeet-110m-hot,clean,True,down,20261016-134952-usable,mop look dog ride down,down,hit,478,690,Down.,stt-eval/recordings/8f/20261016-134952-usable/down__r1.wav,"[[""Down."", true, 478]]"
+parakeet-110m-hot,clean,False,look,20261016-134952-usable,ride ten we run mop,,rejected,,560,Look.,stt-eval/recordings/8f/20261016-134952-usable/look__r1.wav,"[[""Look."", true, 243]]"
+parakeet-110m-hot,clean,False,but,20261016-134952-usable,dog two red big hen,,rejected,,290,,stt-eval/recordings/8f/20261016-134952-usable/but__r1.wav,[]
+parakeet-110m-hot,clean,False,down,20261016-134952-usable,run but ride big dog,,rejected,,690,,stt-eval/recordings/8f/20261016-134952-usable/down__r1.wav,[]
+parakeet-110m-hot,clean,False,two,20261016-134952-usable,hen run ride dog little,,rejected,,250,Two.,stt-eval/recordings/8f/20261016-134952-usable/two__r1.wav,"[[""Two."", true, 389]]"
+parakeet-110m-hot,clean,False,red,20261016-134952-usable,dog we but hen mop,,rejected,,1500,Brad.,stt-eval/recordings/8f/20261016-134952-usable/red__r1.wav,"[[""Brad."", true, -68]]"
+parakeet-110m-hot,clean,False,we,20261016-134952-usable,dog big ten red down,,rejected,,580,We,stt-eval/recordings/8f/20261016-134952-usable/we__r1.wav,"[[""We"", true, 385]]"
+parakeet-110m-hot,clean,False,big,20261016-134952-usable,ride look ten little dog,,rejected,,980,Big.,stt-eval/recordings/8f/20261016-134952-usable/big__r1.wav,"[[""Big."", true, 279]]"
+parakeet-110m-hot,clean,False,ride,20261016-134952-usable,two run ten look down,,rejected,,540,Right.,stt-eval/recordings/8f/20261016-134952-usable/ride__r1.wav,"[[""Right."", true, 403]]"
+parakeet-110m-hot,clean,False,hen,20261016-134952-usable,we two little red down,,rejected,,690,Hen.,stt-eval/recordings/8f/20261016-134952-usable/hen__r1.wav,"[[""Hen."", true, 373]]"
+parakeet-110m-hot,clean,False,mop,20261016-134952-usable,two red but we down,,rejected,,600,Mock.,stt-eval/recordings/8f/20261016-134952-usable/mop__r1.wav,"[[""Mock."", true, 344]]"
+parakeet-110m-hot,clean,False,run,20261016-134952-usable,little mop ride ten but,,rejected,,810,,stt-eval/recordings/8f/20261016-134952-usable/run__r1.wav,[]
+parakeet-110m-hot,clean,False,dog,20261016-134952-usable,ten we look mop but,,rejected,,430,Dog?,stt-eval/recordings/8f/20261016-134952-usable/dog__r1.wav,"[[""Dog?"", true, 312]]"
+parakeet-110m-hot,clean,False,little,20261016-134952-usable,dog red big two we,,rejected,,570,Little.,stt-eval/recordings/8f/20261016-134952-usable/little__r1.wav,"[[""Little."", true, 395]]"
+parakeet-110m-hot,clean,False,ten,20261016-134952-usable,dog ride big we red,,rejected,,430,ten,stt-eval/recordings/8f/20261016-134952-usable/ten__r1.wav,"[[""ten"", true, 371]]"
+parakeet-110m-hot,clean,False,_other,20261016-134952-usable,big two red down hen,,rejected,,800,Uh huh.,stt-eval/recordings/8f/20261016-134952-usable/_other__r1.wav,"[[""Uh huh."", true, 45]]"
+parakeet-110m-hot,clean,False,_other,20261016-134952-usable,ten big little mop ride,,rejected,,3060,,stt-eval/recordings/8f/20261016-134952-usable/_other__r1_2.wav,[]
+parakeet-110m-hot,clean,False,_other,20261016-134952-usable,we big mop red dog,,rejected,,800,Huh.,stt-eval/recordings/8f/20261016-134952-usable/_other__r1_3.wav,"[[""Huh."", true, 172]]"
+parakeet-110m-hot,clean,False,_other,20261016-134952-usable,red ride but ten mop,,rejected,,1960,"One, one, one, one, one.",stt-eval/recordings/8f/20261016-134952-usable/_other__r1_4.wav,"[[""One, one, one, one, one."", true, -63]]"

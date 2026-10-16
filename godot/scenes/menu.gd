@@ -2,6 +2,8 @@ extends Control
 ## Dev launcher: pick a tool. (The real title screen comes later.)
 
 const TOOLS := [
+	["Play: Missile Command", "res://scenes/game/missile_command.tscn"],
+	["Word match  (live view of what the mic hears and how it matches)", "res://scenes/match_viz.tscn"],
 	["Speech test  (read words, see zaps + latency)", "res://scenes/stt_test.tscn"],
 	["Record voices  (calibration takes for the benchmark)", "res://scenes/recorder.tscn"],
 ]

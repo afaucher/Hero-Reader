@@ -8,10 +8,23 @@ checklist for a local Claude Code session (or a human) on the family PC.
 Read `docs/stt-evaluation.md` first for the why. TL;DR:
 - **Two co-finalists**, both presets in the game and both running through the
   `WordListener` GDExtension (`native/hero_listen`):
-  - **`parakeet-110m-hot`** (current default): NVIDIA Parakeet-TDT 110M behind a
-    Silero VAD. Tightest latency and best in noise.
-  - **`zipformer-hot`**: streaming. Led on the child-voice proxy and is half the size.
+  - **`zipformer-hot`** (current default, hotword score 2): streaming. Led on the
+    child-voice proxy and on real adult voice, and is half the size.
+  - **`parakeet-110m-hot`**: NVIDIA Parakeet-TDT 110M behind a Silero VAD.
+    Tightest latency and best in noise, but missed many short words on real voice.
 - **Real kid recordings decide between them.** That is the main job of this handoff.
+
+> **Default changed (2026-10-16, provisional until the kid recordings).** The game
+> now loads `zipformer-hot` at hotword score 2 (first entry of `PRESETS` in
+> `godot/addons/hero_listen/hero_speech.gd`), and the C++ matcher's sound-alike
+> rule is "extra-only": a near miss counts only if it adds one sound after the
+> same first sound ("cats" for "cat"), so "hat" and "that" no longer zap "cat".
+> The game spawners also never bring back a word within 2 s of its zap, so a late
+> repeat recognition can't hit a fresh copy. **To switch back:** move
+> `parakeet-110m-hot` to the top of `PRESETS`. For the old, looser matching,
+> add `"sound_alike": "any"` (or `"no-onset"`) to a preset. Word match lets you
+> pick either preset from its menu. Until `stt-eval/matcher.py` flips its default
+> too, pass `--sound-alike-mode extra-only` to `benchmark.py` to match the game.
 
 ## 1. Set up (Windows PC)
 
@@ -49,6 +62,15 @@ Run the project (`godot --path godot`). The dev menu opens; choose **Speech test
 Five words show. Read one, and it flashes "ZAP" with the latency since the voice stopped.
 Try the presets in the drop-down.
 
+For *why* it fired (or didn't), choose **Word match** instead. It shows the
+mic level and the voice lamp, the model's live hypothesis (partials grey, finals
+white), and per word card how that hypothesis matched (exact, homophone,
+sound-alike, waiting) with phoneme distance. Words come from a real World, and
+zapped words are replaced the way the spawner will do it. Without a mic,
+`tools/make_tts_clips.ps1` renders Windows TTS clips and
+`godot --path godot --script res://tests/viz_demo.gd -- --clips <dir>` plays them
+into the scene and saves screenshots to `user://viz_demo`.
+
 Things to note:
 - Does it fire on the right word?
 - Does a wrong word or a cough fire anything? It shouldn't.
@@ -72,11 +94,34 @@ Speakers available:
 | 16f | teen voice |
 | 42m | adult male |
 | 44f | trained voice, gives the ideal-reader ceiling |
-| Nora (6f) | if she's up for it: even one round is gold |
+| Nora | if she's up for it: even one round is gold |
 
 Recordings go to `%APPDATA%\Godot\app_userdata\Hero Reader\recordings\<age><gender>\<session>\`
-with a `manifest.csv` and `session.json`. They stay on the PC: copy them to
-`stt-eval/recordings/` (git-ignored) and never commit them.
+with a `manifest.csv` and `session.json`. They stay on the PC and are never committed.
+
+**Before a session with the kids:**
+- Mic gain: after a test take, the recorder's stats line shows `last take -NN dB`. Aim
+  for about -20 to -10 dB on normal speech. Below -30, turn up the gain dial (HyperX
+  QuadCast S: on the bottom of the mic) or move closer; "a little loud" means lean back.
+- The trigger ignores clicks, room hum and the first 0.3 s after a word appears, and
+  only ends a take after 1 s of quiet. An "um" just before the word stays in the
+  same take, and a slow "c... a... t" stays one take. If a take still goes wrong,
+  press **R** right away (redo), or **S** to skip the word. **SPACE** pauses.
+- If a reader goes off script (reads a different word, chats), pause, or exclude the
+  session afterwards (below). Labels must match the audio, or the numbers are noise.
+
+**After each session**, copy and benchmark. This is safe to run any number of times:
+it never overwrites a take or a result. Redone takes move to `stt-eval/recordings-trash/`,
+and each run gets its own folder under `stt-eval/results/calib/<speaker>/<session>/<time>/`
+plus a row in `stt-eval/results/calib/runs.csv`:
+```
+python tools/collect_recordings.py --bench      # copy, check levels, benchmark new sessions
+python tools/collect_recordings.py --report     # latest numbers per speaker
+python tools/collect_recordings.py --exclude 8f/<session> "went off script"
+```
+`stt-eval/recordings/excluded.csv` lists sessions that stay on disk but are left out of
+every benchmark. Two are excluded so far: the first low-gain adult take, and an 8f
+session whose labels were shifted by one take under the old recorder trigger.
 
 ## 4. Benchmark the real voices
 
@@ -125,10 +170,35 @@ All the follow-ups so far, with where each can be done.
 | 6 | Android build of the extension (NDK) + `RECORD_AUDIO` permission + model download-on-first-run | local or CI | libs pinned (`--platform android`); NDK blocked in the cloud |
 | 7 | iOS: build sherpa-onnx xcframework from source | Mac | later |
 | 8 | CI (GitHub Actions) building the extension for Windows/Linux/Android so nobody needs a compiler | cloud | not started |
-| 9 | Game loop: falling words, laser, shields, levels and Worlds from `docs/game-design.md` | **local** | next big task |
+| 9 | Game loop: falling words, laser, shields, levels and Worlds from `docs/game-design.md` | **local** | first playable: Missile Command (below) |
 | 10 | Art: expression variants per character, plus enemy and scenario sprites | cloud or local | style + 3 portraits done |
-| 11 | Decisions only you can make: corgi's name, Nora's suit color and bangs, the 10 questions at the end of `docs/game-design.md` | you | open |
+| 11 | Decisions only you can make: Nora's suit color and bangs (the 10 design questions are answered in `docs/game-design.md` §12; corgi is Rex for now) | you | partly done |
 | 12 | Publish `docs/stt-evaluation.md` as a shareable web page | cloud | on request |
+
+### Missile Command (first playable)
+
+Dev menu → **Play: Missile Command** (`godot/scenes/game/`). It uses the real mic
+through WordListener (default preset).
+- **Start screen:** the parent picks the reading level, World, level and speed.
+- **During play:** words fall at the §3.1 curve and spawn from the World's shuffle bag,
+  with no duplicates and no `confusable` pairs on screen. `voice_started` charges the
+  cannon, and `word_heard` fires a laser and a sparkle burst and adds +1 star.
+- **Results:** Next level / Replay / Menu. When shields reach 0, the
+  "Shields need a recharge!" panel shows Try again.
+
+**House rule (2026-10-16), which overrides the design doc:** wrong, duplicate or
+off-screen recognitions change nothing. A word leaves only when it is read. A word
+that reaches the bottom costs 1 shield pip once, then hovers above its dome until
+it is read, and its landing spot stays taken.
+
+**Not done yet:** star word, sounds, Scenario resource/skins, the miss-beam animation,
+progress saving.
+
+**Dev aids:**
+- Type a word and press Enter to zap it.
+- Command-line options: `-- --autostart --no-mic --shot <png> --shot-after <s>`.
+
+**Test:** `godot --headless --path godot --script res://tests/missile_command_test.gd`.
 
 ## 7. Other open threads
 
@@ -136,7 +206,7 @@ All the follow-ups so far, with where each can be done.
   as possible.
   - Drafts: `godot/art/characters/*.svg` and `godot/art/cast_v2.png`.
   - Style guide: `godot/art/STYLE.md`.
-  - Still open: the corgi's name (maybe Nora picks), Nora's suit color, and her
+  - Still open: Nora's suit color and her
     bang direction.
   - Reference photos must stay out of the repo (`art/reference/` is git-ignored).
 - **Game design:** `docs/game-design.md`.

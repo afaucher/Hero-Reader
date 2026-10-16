@@ -373,21 +373,23 @@ Teacher export: CSV per word and per attempt.
   Edit `build_levels.py`, then run `python3 build_levels.py`. The build fails if a word
   is missing from `pron_dict.txt`, is duplicated within a level, or is a single letter.
 
-## 12. Open questions for you
+## 12. Decisions (2026-10-16)
 
-1. **Corgi's name:** let Nora pick from a list, or fix one name now?
-2. **World-to-scenario mapping:** a fixed scenario per World, or does the child choose
-   any unlocked scenario?
-3. **Level 5 Big Finale:** keep it, or keep all 5 levels identical apart from speed?
-4. **Saying the word after a base hit:** this needs a recorded or TTS voice for about 1,000
-   words. Is offline TTS acceptable, or should it be recorded audio?
-5. **Unlocks:** strictly sequential Worlds, or all Worlds of a reading level open from
-   the start?
-6. **Number of levels per World:** 5, or 4 for the pre-K levels (L0-L1)?
-7. **L0 grouping:** one vowel per World (current; dense in sound-alikes, which the
-   spawner handles), or mixed vowels from the start?
-8. **Placement quick check:** wanted, or does the parent always pick?
-9. **Two-player / sibling mode:** words split by screen side? (Recognition would need
-   to know which child spoke, so it's probably out of scope.)
-10. **Reward economy:** should stars buy anything (ship colors, corgi hats), or stay as
-    a pure tally?
+The ten open questions, answered:
+
+| # | Question | Decision |
+|---|---|---|
+| 1 | Corgi's name | **Rex** for now; can still change later. |
+| 2 | World-to-scenario mapping | **Fixed, then free:** the first play of a World uses its fixed scenario; replays may use any unlocked scenario. |
+| 3 | Level 5 Big Finale | **Dropped.** All 5 levels of a World are the same apart from speed. |
+| 4 | Saying the word after a base hit | **Skipped for now.** No word playback; revisit later (offline TTS or recordings). |
+| 5 | Unlocks | **All open:** every World of a reading level is playable from the start. |
+| 6 | Levels per World | **5 everywhere**, pre-K included. |
+| 7 | L0 grouping | **One vowel per World** (current); the spawner keeps sound-alikes apart. |
+| 8 | Placement quick check | **Parent picks** the reading level; no placement test. |
+| 9 | Two-player / sibling mode | **Out of scope.** |
+| 10 | Reward economy | **Pure tally:** stars just count up and buy nothing. |
+| 11 | Misreads and duplicate recognitions | **No effect.** A wrong word, an off-list word, or a repeat recognition of a word already zapped changes nothing. A word leaves the screen only when it is read correctly; words stay until they are gotten. |
+
+Earlier sections may still describe the Big Finale, sequential unlocks or star
+purchases; this table overrides them.

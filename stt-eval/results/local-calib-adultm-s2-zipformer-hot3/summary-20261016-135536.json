@@ -1,0 +1,45 @@
+{
+  "args": {
+    "engines": [
+      "zipformer-hot"
+    ],
+    "speech_commands": "third_party\\data\\speech_commands",
+    "recordings": "recordings/adultm/20261016-134130",
+    "conditions": [
+      "clean"
+    ],
+    "trials": 400,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.25,
+    "trailing": 0.3,
+    "hot_score": 3.0,
+    "beam": 8,
+    "sound_alike": true,
+    "sound_alike_mode": "any",
+    "sight_words": [],
+    "hard_negatives": false,
+    "seed": 7,
+    "out": "results/local-calib-adultm-s2-zipformer-hot3"
+  },
+  "summary": [
+    {
+      "engine": "zipformer-hot",
+      "condition": "clean",
+      "trials": 157,
+      "negatives": 120,
+      "hit_pct": 96.17834394904459,
+      "wrong_word_pct": 1.2738853503184713,
+      "no_fire_pct": 2.5477707006369426,
+      "false_accept_pct": 4.166666666666667,
+      "latency_p50_ms": 272.6727999886498,
+      "latency_p90_ms": 622.0378999999957,
+      "early_fire_pct": 13.907284768211921,
+      "double_fire_pct": 9.747292418772563,
+      "rtf": 0.050910205127553884,
+      "load_s": 2.031720700004371
+    }
+  ]
+}

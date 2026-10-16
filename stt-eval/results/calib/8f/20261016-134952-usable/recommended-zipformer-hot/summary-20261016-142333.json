@@ -1,0 +1,45 @@
+{
+  "args": {
+    "engines": [
+      "zipformer-hot"
+    ],
+    "speech_commands": "third_party/data/speech_commands",
+    "recordings": "stt-eval/recordings/8f/20261016-134952-usable",
+    "conditions": [
+      "clean"
+    ],
+    "trials": 400,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.25,
+    "trailing": 0.3,
+    "hot_score": 2.0,
+    "beam": 8,
+    "sound_alike": true,
+    "sound_alike_mode": "extra-only",
+    "sight_words": [],
+    "hard_negatives": false,
+    "seed": 7,
+    "out": "stt-eval/results/calib/8f/20261016-134952-usable/recommended-zipformer-hot"
+  },
+  "summary": [
+    {
+      "engine": "zipformer-hot",
+      "condition": "clean",
+      "trials": 14,
+      "negatives": 18,
+      "hit_pct": 92.85714285714286,
+      "wrong_word_pct": 0.0,
+      "no_fire_pct": 7.142857142857143,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 431.3860999990722,
+      "latency_p90_ms": 559.5971799968975,
+      "early_fire_pct": 0.0,
+      "double_fire_pct": 0.0,
+      "rtf": 0.043305242115906466,
+      "load_s": 1.9101463999977568
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "args": {
+    "engines": [
+      "zipformer-hot"
+    ],
+    "speech_commands": "third_party\\data\\speech_commands",
+    "recordings": null,
+    "conditions": [
+      "clean",
+      "noise10",
+      "child"
+    ],
+    "trials": 300,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.25,
+    "trailing": 0.3,
+    "hot_score": 1.5,
+    "beam": 8,
+    "sound_alike": true,
+    "sound_alike_mode": "any",
+    "sight_words": [],
+    "hard_negatives": false,
+    "seed": 7,
+    "out": "results/local-events-zipformer-hot1.5"
+  },
+  "summary": [
+    {
+      "engine": "zipformer-hot",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 81.08108108108108,
+      "wrong_word_pct": 0.6756756756756757,
+      "no_fire_pct": 18.243243243243242,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 455.56984999991244,
+      "latency_p90_ms": 703.0474099976709,
+      "early_fire_pct": 3.75,
+      "double_fire_pct": 2.1621621621621623,
+      "rtf": 0.05691675426763757,
+      "load_s": 1.921892400001525
+    },
+    {
+      "engine": "zipformer-hot",
+      "condition": "noise10",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 72.97297297297297,
+      "wrong_word_pct": 1.6891891891891893,
+      "no_fire_pct": 25.33783783783784,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 416.1915999997291,
+      "latency_p90_ms": 706.3720500058844,
+      "early_fire_pct": 3.240740740740741,
+      "double_fire_pct": 2.1621621621621623,
+      "rtf": 0.058076257072452085,
+      "load_s": 1.921892400001525
+    },
+    {
+      "engine": "zipformer-hot",
+      "condition": "child",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 77.36486486486487,
+      "wrong_word_pct": 0.6756756756756757,
+      "no_fire_pct": 21.95945945945946,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 492.4167999892961,
+      "latency_p90_ms": 709.8948800060901,
+      "early_fire_pct": 1.7467248908296944,
+      "double_fire_pct": 5.945945945945946,
+      "rtf": 0.04858833141483254,
+      "load_s": 1.921892400001525
+    }
+  ]
+}

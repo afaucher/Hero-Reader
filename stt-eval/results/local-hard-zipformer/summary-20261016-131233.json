@@ -1,0 +1,41 @@
+{
+  "args": {
+    "engines": [
+      "zipformer-hot"
+    ],
+    "speech_commands": "third_party\\data\\speech_commands",
+    "recordings": null,
+    "conditions": [
+      "clean"
+    ],
+    "trials": 300,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": true,
+    "threads": 2,
+    "silence": 0.25,
+    "trailing": 0.3,
+    "hot_score": 3.0,
+    "beam": 8,
+    "sound_alike": true,
+    "seed": 7,
+    "out": "results/local-hard-zipformer"
+  },
+  "summary": [
+    {
+      "engine": "zipformer-hot",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 78.37837837837837,
+      "wrong_word_pct": 4.054054054054054,
+      "no_fire_pct": 17.56756756756757,
+      "false_accept_pct": 1.3513513513513513,
+      "latency_p50_ms": 371.5386999968906,
+      "latency_p90_ms": 641.6211199987446,
+      "early_fire_pct": 6.4655172413793105,
+      "rtf": 0.042299717949953464,
+      "load_s": 1.7636244000022998
+    }
+  ]
+}

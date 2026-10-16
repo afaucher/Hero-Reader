@@ -49,6 +49,8 @@ class WordListener : public Node {
   //   beam:        beam width when hotwords are on (default 8)
   //   hotwords_score: boost (default 3.0 streaming, 1.5 vad_offline)
   //   pron_dict:   pronunciation dictionary enabling sound-alike matches
+  //   sound_alike: which near misses count: "extra-only" (default), "no-onset"
+  //                or "any" (see WordMatcher::set_sound_alike_mode)
   //   threads:     inference threads (default 2)
   bool load_model(const Dictionary &config);
   bool is_loaded() const { return loaded_; }
@@ -78,9 +80,11 @@ class WordListener : public Node {
 
  private:
   struct Event {
-    int type;  // 0 = word, 1 = other speech, 2 = voice start
+    int type;  // 0 = word, 1 = other speech, 2 = voice start, 3 = hypothesis
     std::string word, text;
     double latency_ms;
+    bool final = false;                            // hypothesis only
+    std::vector<hero::WordMatcher::WordScore> detail;  // hypothesis only
   };
   using Clock = std::chrono::steady_clock;
 
@@ -90,6 +94,7 @@ class WordListener : public Node {
   void new_stream();
   std::string hotwords_string() const;
   void emit_event(int type, const std::string &word, const std::string &text);
+  void emit_hypothesis(const std::string &text, bool final);
   void enqueue_16k(const float *x, int n);
   void stop_worker();
 

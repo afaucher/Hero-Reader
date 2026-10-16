@@ -1,0 +1,45 @@
+{
+  "args": {
+    "engines": [
+      "parakeet-110m-hot"
+    ],
+    "speech_commands": "third_party\\data\\speech_commands",
+    "recordings": "recordings/adultm/20261016-134130",
+    "conditions": [
+      "clean"
+    ],
+    "trials": 400,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.2,
+    "trailing": 0.3,
+    "hot_score": 2.0,
+    "beam": 8,
+    "sound_alike": true,
+    "sound_alike_mode": "any",
+    "sight_words": [],
+    "hard_negatives": false,
+    "seed": 7,
+    "out": "results/local-calib-adultm-s2-parakeet-hot2"
+  },
+  "summary": [
+    {
+      "engine": "parakeet-110m-hot",
+      "condition": "clean",
+      "trials": 157,
+      "negatives": 120,
+      "hit_pct": 84.71337579617834,
+      "wrong_word_pct": 1.910828025477707,
+      "no_fire_pct": 13.375796178343949,
+      "false_accept_pct": 2.5,
+      "latency_p50_ms": 309.90280000085477,
+      "latency_p90_ms": 362.5164600013522,
+      "early_fire_pct": 15.789473684210526,
+      "double_fire_pct": 0.0,
+      "rtf": 0.017163072593422993,
+      "load_s": 0.7594863999984227
+    }
+  ]
+}

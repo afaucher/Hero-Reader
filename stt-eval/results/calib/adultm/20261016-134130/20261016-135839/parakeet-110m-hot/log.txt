@@ -1,0 +1,13 @@
+| engine | cond | hit % | wrong word % | no fire % | false accept % | latency p50 | latency p90 | fired before word end % | fired twice % | RTF |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| parakeet-110m-hot | clean | 79.6 | 1.9 | 18.5 | 2.5 | 356 ms | 411 ms | 15 | 0.0 | 0.023 |
+
+400 positive trials per row, 5 words on screen, 2 threads, VAD hang-over 0.25s, streaming endpoint 0.3s, hotword score 1.5, beam 8, sound-alike matching (any).
+
+157 clips, 77 words, models in godot\models
+  parakeet-110m-hot/clean: 50/277
+  parakeet-110m-hot/clean: 100/277
+  parakeet-110m-hot/clean: 150/277
+  parakeet-110m-hot/clean: 200/277
+  parakeet-110m-hot/clean: 250/277
+parakeet-110m-hot    clean hit  79.6% wrong  1.9% none 18.5% FA  2.5% 2x  0.0% lat p50/p90 356/411ms RTF 0.023

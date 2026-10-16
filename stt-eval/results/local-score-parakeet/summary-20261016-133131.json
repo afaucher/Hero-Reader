@@ -1,0 +1,73 @@
+{
+  "args": {
+    "engines": [
+      "parakeet-110m-score"
+    ],
+    "speech_commands": "third_party\\data\\speech_commands",
+    "recordings": null,
+    "conditions": [
+      "clean",
+      "noise10",
+      "child"
+    ],
+    "trials": 300,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.2,
+    "trailing": 0.3,
+    "hot_score": 2.0,
+    "beam": 4,
+    "sound_alike": true,
+    "seed": 7,
+    "out": "results/local-score-parakeet"
+  },
+  "summary": [
+    {
+      "engine": "parakeet-110m-score",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 87.16216216216216,
+      "wrong_word_pct": 1.3513513513513513,
+      "no_fire_pct": 11.486486486486486,
+      "false_accept_pct": 8.108108108108109,
+      "latency_p50_ms": 350.6722999997437,
+      "latency_p90_ms": 424.99892999429727,
+      "early_fire_pct": 3.488372093023256,
+      "rtf": 0.030973244246037864,
+      "load_s": 1.1280222999921534
+    },
+    {
+      "engine": "parakeet-110m-score",
+      "condition": "noise10",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 83.10810810810811,
+      "wrong_word_pct": 2.027027027027027,
+      "no_fire_pct": 14.864864864864865,
+      "false_accept_pct": 5.405405405405405,
+      "latency_p50_ms": 416.8469000037293,
+      "latency_p90_ms": 578.9429000028758,
+      "early_fire_pct": 1.6260162601626016,
+      "rtf": 0.03170148597836753,
+      "load_s": 1.1280222999921534
+    },
+    {
+      "engine": "parakeet-110m-score",
+      "condition": "child",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 85.47297297297297,
+      "wrong_word_pct": 1.3513513513513513,
+      "no_fire_pct": 13.175675675675675,
+      "false_accept_pct": 6.756756756756757,
+      "latency_p50_ms": 366.5332999976818,
+      "latency_p90_ms": 428.6147399968468,
+      "early_fire_pct": 0.3952569169960474,
+      "rtf": 0.03135042982099432,
+      "load_s": 1.1280222999921534
+    }
+  ]
+}

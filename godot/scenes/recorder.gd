@@ -17,9 +17,23 @@ extends Control
 ## stt-eval/benchmark.py --recordings <folder> reads these directly.
 
 const SAMPLE_RATE := 16000
-const PREROLL_S := 0.35
-const TAIL_SILENCE_S := 0.6
-const MAX_TAKE_S := 4.0
+const PREROLL_S := 0.5
+# A take starts only after START_VOICED_S of continuous voice that began after
+# at least QUIET_BEFORE_S of quiet, and not within WORD_GUARD_S of the word
+# appearing. A click, a breath or the tail of the previous word won't start one.
+const START_VOICED_S := 0.1
+const QUIET_BEFORE_S := 0.25
+const WORD_GUARD_S := 0.3
+# Kids sound words out ("c... a... t"), so a take ends only after a long pause.
+# An "um" followed by the word within that pause stays in the same take.
+const TAIL_SILENCE_S := 1.0
+const MAX_TAKE_S := 6.0
+# Takes with less voice than this (a bump, a cough onset) are dropped and the
+# same word stays up.
+const MIN_VOICED_S := 0.1
+# Voice must be this loud whatever the noise floor (the floor can read as 0
+# when the mic gain is low): RMS of about -55 dBFS, 5 dB over quiet room hum.
+const MIN_VOICE_ENERGY := 3e-6
 const NEXT_WORD_DELAY_S := 0.6
 const AGES := ["4", "5", "6", "7", "8", "9", "10", "11", "12", "13-17", "adult"]
 const GENDERS := {"F": "f", "M": "m", "Other": "x"}
@@ -47,6 +61,13 @@ var take_started_ms := 0
 var quiet_s := 0.0
 var noise_floor := 1e-5
 var peak := 0.0
+var voiced_run_s := 0.0  # WAITING: continuous voice so far
+var quiet_run_s := 0.0   # WAITING: continuous quiet so far
+var quiet_before_s := 0.0  # quiet that preceded the current voiced run
+var voiced_total_s := 0.0  # RECORDING: voice in this take
+var since_word_s := 0.0  # audio heard since the current word appeared
+var recordings_root := "user://recordings"  # tests point this elsewhere
+var last_peak := -1.0  # peak of the last saved take, shown as dBFS
 
 @onready var setup_box: VBoxContainer = $VBox/Setup
 @onready var age_row: HBoxContainer = $VBox/Setup/Ages
@@ -120,7 +141,7 @@ func _start_session() -> void:
 	for o in data.get("others", []):
 		words.append("_other:" + o)
 	var stamp := Time.get_datetime_string_from_system().replace(":", "").replace("-", "").replace("T", "-")
-	session_dir = "user://recordings/%s%s/%s" % [age, gender, stamp]
+	session_dir = "%s/%s%s/%s" % [recordings_root, age, gender, stamp]
 	DirAccess.make_dir_recursive_absolute(session_dir)
 	var meta := {
 		"age": age, "gender": gender, "word_list": list_id, "started": Time.get_datetime_string_from_system(),
@@ -149,6 +170,8 @@ func _next_word() -> void:
 		word_label.modulate = Color.WHITE
 		info.text = "Read the word out loud."
 	_update_stats()
+	since_word_s = 0.0
+	voiced_run_s = 0.0
 	state = State.WAITING
 
 
@@ -166,7 +189,8 @@ func handle_block(block: PackedFloat32Array) -> void:
 		e += x * x
 	e /= max(1, block.size())
 	meter.value = clampf(sqrt(e) * 800.0, 0.0, 100.0)
-	var voiced: bool = e > maxf(noise_floor * 10.0, 2e-6)
+	var voiced: bool = e > maxf(noise_floor * 10.0, MIN_VOICE_ENERGY)
+	var dt := float(block.size()) / SAMPLE_RATE
 	match state:
 		State.WAITING:
 			if not voiced:
@@ -176,19 +200,34 @@ func handle_block(block: PackedFloat32Array) -> void:
 			if ring.size() > keep:
 				ring = ring.slice(ring.size() - keep)
 			if voiced:
+				if voiced_run_s == 0.0:
+					quiet_before_s = quiet_run_s
+				voiced_run_s += dt
+				quiet_run_s = 0.0
+			else:
+				quiet_run_s += dt
+				voiced_run_s = 0.0
+			since_word_s += dt
+			if voiced_run_s >= START_VOICED_S and quiet_before_s >= QUIET_BEFORE_S and since_word_s >= WORD_GUARD_S:
 				take = ring.duplicate()
 				take_started_ms = Time.get_ticks_msec()
 				quiet_s = 0.0
 				peak = 0.0
+				voiced_total_s = voiced_run_s
 				state = State.RECORDING
 				word_label.modulate = Color(1.0, 0.55, 0.5)
 		State.RECORDING:
 			take.append_array(block)
 			for x in block:
 				peak = maxf(peak, absf(x))
-			quiet_s = 0.0 if voiced else quiet_s + float(block.size()) / SAMPLE_RATE
+			if voiced:
+				voiced_total_s += dt
+			quiet_s = 0.0 if voiced else quiet_s + dt
 			if quiet_s >= TAIL_SILENCE_S or take.size() >= MAX_TAKE_S * SAMPLE_RATE:
-				_save_take()
+				if voiced_total_s < MIN_VOICED_S:
+					_drop_take()
+				else:
+					_save_take()
 		_:
 			pass
 
@@ -204,6 +243,16 @@ func _to_16k(frames: PackedVector2Array) -> PackedFloat32Array:
 		resample_pos += step
 	resample_pos = maxf(0.0, resample_pos - frames.size())
 	return out
+
+
+func _drop_take() -> void:
+	# Too little voice to be a word: keep the same word up and listen again.
+	take = PackedFloat32Array()
+	ring = PackedFloat32Array()
+	voiced_run_s = 0.0
+	quiet_run_s = TAIL_SILENCE_S  # we just heard a long pause
+	word_label.modulate = Color.WHITE
+	state = State.WAITING
 
 
 func _save_take() -> void:
@@ -225,8 +274,18 @@ func _save_take() -> void:
 	last_take_word = current
 	takes += 1
 	ring = PackedFloat32Array()
+	quiet_run_s = TAIL_SILENCE_S  # the take ended on a long pause
 	word_label.modulate = Color(0.4, 1.0, 0.6)
-	info.text = "Got it!"
+	# Level check per take, so a quiet reader or a clipped take shows up
+	# during the session rather than in the benchmark afterwards.
+	if peak >= 0.99:
+		info.text = "Got it! (a little loud: lean back a bit)"
+	elif peak < 0.03:
+		info.text = "Got it! (a little closer to the mic next time)"
+	else:
+		info.text = "Got it!"
+	last_peak = peak
+	_update_stats()
 	state = State.BETWEEN
 	get_tree().create_timer(NEXT_WORD_DELAY_S).timeout.connect(func():
 		if state == State.BETWEEN:
@@ -276,7 +335,11 @@ func _finish() -> void:
 
 
 func _update_stats() -> void:
-	stats.text = "round %d  |  %d takes this session  |  SPACE pause  R redo  S skip  ESC finish" % [round_no, takes]
+	var level := ""
+	if last_peak >= 0.0:
+		level = "last take %d dB  |  " % roundi(20.0 * log(maxf(last_peak, 1e-5)) / log(10.0))
+	stats.text = "round %d  |  %d takes this session  |  %sSPACE pause  R redo  S skip  ESC finish" % [
+		round_no, takes, level]
 
 
 static func _write_wav(path: String, samples: PackedFloat32Array) -> void:

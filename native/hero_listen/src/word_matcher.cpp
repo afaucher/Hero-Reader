@@ -83,10 +83,17 @@ bool WordMatcher::load_pron_dict(const std::string &path) {
 
 bool WordMatcher::has_pron_dict() { return !pron().empty(); }
 
+bool WordMatcher::set_sound_alike_mode(const std::string &mode) {
+  if (mode != "any" && mode != "no-onset" && mode != "extra-only") return false;
+  mode_ = mode;
+  return true;
+}
+
 std::string WordMatcher::sound_alike(const std::vector<std::string> &toks) const {
   // Accept the on-screen word whose pronunciation is within one phoneme of a
   // heard word. Short (1-2 phoneme) words only tolerate one *extra* sound
   // ("true" for "two"), never a substitution ("go" must not match "no").
+  // mode_ narrows this further (see set_sound_alike_mode). Ties -> no match.
   int best_d = 99;
   std::string best;
   bool tie = false;
@@ -102,6 +109,9 @@ std::string WordMatcher::sound_alike(const std::vector<std::string> &toks) const
       int limit = pw->size() <= 2 ? 0 : 1;
       if (pw->size() == 2 && pt->size() == 3 && d == 1) limit = 1;
       if (d > limit) continue;
+      // A different first sound is a misread, not a near miss.
+      if (d && mode_ != "any" && (*pt)[0] != (*pw)[0]) continue;
+      if (d && mode_ == "extra-only" && pt->size() != pw->size() + 1) continue;
       if (d < best_d) {
         best_d = d;
         best = w;
@@ -179,6 +189,51 @@ std::vector<std::string> WordMatcher::match_all(const std::string &text, bool fi
   if (out.empty() && final && has_pron_dict()) {
     std::string w = sound_alike(toks);
     if (!w.empty()) out.push_back(w);
+  }
+  return out;
+}
+
+std::vector<WordMatcher::WordScore> WordMatcher::explain(const std::string &text, bool final) const {
+  auto join = [](const std::vector<std::string> *ps) {
+    std::string s;
+    if (ps) {
+      for (const auto &p : *ps) s += (s.empty() ? "" : " ") + p;
+    }
+    return s;
+  };
+  auto toks = tokenize(text);
+  auto matched = match_all(text, final);
+  std::vector<WordScore> out;
+  for (const auto &w : words_) {
+    WordScore s;
+    s.word = w;
+    std::string lw = w;
+    for (auto &ch : lw) ch = static_cast<char>(std::tolower(static_cast<unsigned char>(ch)));
+    std::string cw = canon(lw);
+    for (size_t i = 0; i < toks.size(); ++i) {
+      if (canon(toks[i]) != cw) continue;
+      s.token = toks[i];
+      s.kind = toks[i] == lw ? "exact" : "homophone";
+      if (!final && i + 1 == toks.size() && prefix_ambiguous(cw)) s.kind = "wait";
+      break;
+    }
+    const auto *pw = phones(lw);
+    s.word_phones = join(pw);
+    if (pw) {
+      for (const auto &t : toks) {
+        const auto *pt = phones(t);
+        if (!pt) continue;
+        int d = edit_distance(*pt, *pw);
+        if (s.distance < 0 || d < s.distance) {
+          s.distance = d;
+          if (s.kind.empty()) s.token = t;
+        }
+      }
+      if (!s.token.empty()) s.token_phones = join(phones(s.token));
+    }
+    bool fired = std::find(matched.begin(), matched.end(), w) != matched.end();
+    if (fired && s.kind.empty()) s.kind = "sound_alike";
+    out.push_back(std::move(s));
   }
   return out;
 }

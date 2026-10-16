@@ -14,6 +14,11 @@ from pathlib import Path
 # Sound-alike matching (same rules as the game's C++ matcher). Set from
 # benchmark.py --sound-alike; needs godot/data/pron_dict.txt (tools/setup.py).
 SOUND_ALIKE = False
+# Which near misses sound-alike accepts (benchmark.py --sound-alike-mode):
+#   "any":        the original rule (one phoneme off; 1-2 phoneme words: one extra sound)
+#   "no-onset":   same, but the first sound must match ("hat" no longer counts as "cat")
+#   "extra-only": only one extra sound after the first ("cats" for "cat", "true" for "two")
+SOUND_ALIKE_MODE = "any"
 PRON_DICT = Path(__file__).parent.parent / "godot" / "data" / "pron_dict.txt"
 _PRON: dict[str, list[str]] = {}
 
@@ -149,6 +154,10 @@ class WordMatcher:
                 if len(pw) == 2 and len(pt) == 3 and d == 1:
                     limit = 1
                 if d > limit:
+                    continue
+                if d and SOUND_ALIKE_MODE != "any" and pt[0] != pw[0]:
+                    continue  # a different first sound is a misread, not a near miss
+                if d and SOUND_ALIKE_MODE == "extra-only" and len(pt) != len(pw) + 1:
                     continue
                 if d < best_d:
                     best_d, best, tie = d, Match(w, tok, "fuzzy"), False

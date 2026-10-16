@@ -91,6 +91,10 @@ bool WordListener::load_model(const Dictionary &cfg) {
   if (!pron_dict.empty() && !hero::WordMatcher::load_pron_dict(pron_dict)) {
     UtilityFunctions::push_warning("WordListener: could not read pron_dict ", pron_dict.c_str());
   }
+  std::string sound_alike = str(cfg, "sound_alike", "extra-only");
+  if (!matcher_.set_sound_alike_mode(sound_alike)) {
+    UtilityFunctions::push_warning("WordListener: unknown sound_alike mode ", sound_alike.c_str());
+  }
   std::string bpe_vocab = hotwords_ ? ensure_bpe_vocab(tokens, &upper_tokens_) : "";
 
   if (kind == "streaming") {
@@ -320,6 +324,14 @@ void WordListener::emit_event(int type, const std::string &word, const std::stri
   events_.push_back({type, word, text, latency});
 }
 
+void WordListener::emit_hypothesis(const std::string &text, bool final) {
+  Event e{3, "", text, (now_us() - last_voice_us_.load()) / 1000.0};
+  e.final = final;
+  e.detail = matcher_.explain(text, final);
+  std::lock_guard<std::mutex> lk(ev_mu_);
+  events_.push_back(std::move(e));
+}
+
 void WordListener::worker_loop() {
   std::vector<float> chunk;
   while (true) {
@@ -392,6 +404,7 @@ void WordListener::process_streaming(const float *x, int n) {
     SherpaOnnxDestroyOnlineRecognizerResult(r);
     if (text != last_text_) {
       last_text_ = text;
+      emit_hypothesis(text, false);
       for (const auto &w : matcher_.match_all(text, false)) {
         if (std::find(fired_.begin(), fired_.end(), w) != fired_.end()) continue;
         fired_.push_back(w);
@@ -401,6 +414,7 @@ void WordListener::process_streaming(const float *x, int n) {
     }
     if (SherpaOnnxOnlineStreamIsEndpoint(online_, ostream_)) {
       if (!last_text_.empty()) {
+        emit_hypothesis(last_text_, true);
         bool any = false;
         for (const auto &w : matcher_.match_all(last_text_, true)) {
           if (std::find(fired_.begin(), fired_.end(), w) != fired_.end()) continue;
@@ -466,6 +480,7 @@ void WordListener::process_vad(const float *x, int n) {
     SherpaOnnxDestroyOfflineRecognizerResult(r);
     SherpaOnnxDestroyOfflineStream(s);
     if (text.empty()) continue;
+    emit_hypothesis(text, true);
     auto words = matcher_.match_all(text, true);
     for (const auto &w : words) {
       words_heard_++;
@@ -489,6 +504,19 @@ void WordListener::poll() {
       emit_signal("word_heard", String::utf8(e.word.c_str()), String::utf8(e.text.c_str()), e.latency_ms);
     } else if (e.type == 1) {
       emit_signal("heard_other", String::utf8(e.text.c_str()));
+    } else if (e.type == 3) {
+      Array detail;
+      for (const auto &s : e.detail) {
+        Dictionary d;
+        d["word"] = String::utf8(s.word.c_str());
+        d["kind"] = String::utf8(s.kind.c_str());
+        d["token"] = String::utf8(s.token.c_str());
+        d["distance"] = s.distance;
+        d["word_phones"] = String::utf8(s.word_phones.c_str());
+        d["token_phones"] = String::utf8(s.token_phones.c_str());
+        detail.push_back(d);
+      }
+      emit_signal("hypothesis", String::utf8(e.text.c_str()), e.final, detail);
     } else {
       emit_signal("voice_started");
     }
@@ -532,4 +560,10 @@ void WordListener::_bind_methods() {
                         PropertyInfo(Variant::FLOAT, "latency_ms")));
   ADD_SIGNAL(MethodInfo("heard_other", PropertyInfo(Variant::STRING, "heard_text")));
   ADD_SIGNAL(MethodInfo("voice_started"));
+  // Every change in what the model thinks it heard (streaming partials, and
+  // the final text of each utterance), with per-on-screen-word match detail
+  // (see WordMatcher::WordScore). For debug views; game logic uses word_heard.
+  ADD_SIGNAL(MethodInfo("hypothesis", PropertyInfo(Variant::STRING, "text"),
+                        PropertyInfo(Variant::BOOL, "final"),
+                        PropertyInfo(Variant::ARRAY, "detail")));
 }

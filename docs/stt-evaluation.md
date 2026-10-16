@@ -1,8 +1,18 @@
 # Speech-to-text for Hero Reader: evaluation and recommendation
 
-*October 2026. Reproduce everything with `docs/REPRODUCE.md`. Next steps on a real PC are in `HANDOFF.md`.*
+*October 2026. Reproduce everything with `docs/REPRODUCE.md`. Next steps on a real PC are in `HANDOFF.md`.
+Re-checked on the local PC in October 2026 (uncontended latency, Moonshine, Vosk grammar mode, kid-speech
+weights, candidate scoring, matcher rules) and on the first real-mic voice; see "Local PC re-evaluation (2026-10)".
+**Recommendation changed (provisional, pending kid recordings): `zipformer-hot` is now the default**, at
+hotword score 2 with the "extra-only" sound-alike rule; see "Real voice: adult male, PC mic".*
 
 ## TL;DR
+
+> **Update, 2026-10-16:** on the first real-microphone voice, an adult male, the
+> Zipformer hit 95.5% against Parakeet's 80–85%, at equal wrong-word and false-accept
+> rates. `zipformer-hot` is therefore the provisional default until the kid recordings
+> are in. The bullets below are the original Speech Commands analysis. See "Real voice:
+> adult male, PC mic".
 
 - **Use [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) inside Godot through our own small
   GDExtension (`WordListener`, in `native/hero_listen`).** It is MIT/Apache, active, and runs
@@ -65,7 +75,7 @@ directly, so treat the details as approximate.
 | Plugin | Engine | State | Fit |
 |---|---|---|---|
 | [godot-whisper](https://github.com/appsinacup/godot-whisper) | whisper.cpp | Active, Godot 4.3+, Win/Linux/macOS/Android prebuilt, MIT | No grammar/vocabulary constraint exposed; not truly streaming; open issues on short words and hallucinating on silence. Whisper was also weaker and slower in our tests. |
-| [gdvosk](https://github.com/Nihlus/gdvosk) | Vosk (Kaldi) | Small single-maintainer project, Godot 4.5+ | Real grammar mode (closed vocabulary) and streaming. But Vosk is dated (adult-trained, project barely active), and changing the word list means re-creating the recognizer. Not benchmarked: the Vosk model host was blocked from the cloud sandbox. Worth a local A/B if curious. |
+| [gdvosk](https://github.com/Nihlus/gdvosk) | Vosk (Kaldi) | Small single-maintainer project, Godot 4.5+ | Real grammar mode (closed vocabulary) and streaming. But Vosk is dated (adult-trained, project barely active). Benchmarked locally in Oct 2026: grammar mode hits 94–96% but false-accepts 5–8% of off-screen words, at ~570 ms latency (see the local re-evaluation). A calibration candidate. |
 | sherpa-onnx | ONNX Runtime | No maintained Godot ASR plugin | Best engine fit (below). We wrote the ~600-line GDExtension ourselves. |
 
 ### Why sherpa-onnx
@@ -218,6 +228,253 @@ Also verified in Godot:
   five words. With hotwords and sound-alike matching, most "almost right"
   transcriptions still land on the right word.
 
+## Local PC re-evaluation (2026-10)
+
+These are the items the cloud session could not do, run on the family PC: a Ryzen 9
+7950X3D (16 cores) on Windows 11, Python 3.14, sherpa-onnx 1.13.8, 2 inference threads,
+with the machine otherwise idle (under 5% total CPU) and **one run at a time**. The
+trials are the same seed-7 trials as the cloud runs, checked row by row. Commands are
+in `REPRODUCE.md` §6 and the raw results in `stt-eval/results/local-*`.
+
+| Engine | Condition | Hit % | Wrong word % | False accept % | Latency p50 / p90 |
+|---|---|---:|---:|---:|---|
+| **parakeet-110m-hot** (default; VAD 0.2 s, hot 1.5, beam 8, sound-alike) | clean | 80.7 | 0.3 | 0.0 | **320 / 389 ms** |
+| | noise 10 dB | 75.7 | 1.4 | 1.4 | 391 / 537 ms |
+| | child proxy | 74.7 | 1.0 | 2.7 | 339 / 396 ms |
+| | clean, hard distractors | 79.4 | 2.7 | 0.0 | 321 / 394 ms |
+| **zipformer-hot** (streaming; hot 3, beam 8, sound-alike) | clean | 81.8 | 0.3 | 0.0 | 371 / 662 ms |
+| | noise 10 dB | 73.3 | 2.0 | 0.0 | 371 / 641 ms |
+| | child proxy | 79.4 | 0.3 | 0.0 | 401 / 667 ms |
+| | clean, hard distractors | 78.4 | 4.1 | 1.4 | 372 / 642 ms |
+| **vosk-grammar** (Vosk small-en 0.15, grammar = on-screen words + `[unk]`, word confidence ≥ 0.9, endpoint 0.3 s) | clean | **96.3** | 0.7 | 5.4 | 572 / 702 ms |
+| | noise 10 dB | **94.3** | 0.0 | 6.8 | 542 / 692 ms |
+| | child proxy | **93.6** | 0.0 | 8.1 | 582 / 712 ms |
+| | clean, hard distractors | 93.2 | 1.7 | 5.4 | 572 / 702 ms |
+| | clean, endpoint 0.15 s | 96.3 | 0.7 | 5.4 | 442 / 562 ms |
+| vosk (same model, open vocabulary + matcher) | clean / noise / child | 77.7 / 70.3 / 75.7 | 0.3–1.0 | 0–1.4 | 221–275 / 463–770 ms |
+| parakeet-110m-score (prototype: candidate scoring, below) | clean | 87.2 | 1.4 | 8.1 | 351 / 425 ms |
+| | noise 10 dB | 83.1 | 2.0 | 5.4 | 417 / 579 ms |
+| | child proxy | 85.5 | 1.4 | 6.8 | 367 / 429 ms |
+
+300 positive trials per row, of which 296 have usable audio, and 74 negative trials.
+**One negative trial is 1.35 points of false accept**, so treat those columns as ±5
+points. Pooled over the three conditions, false accepts were 3/222 for Parakeet, 0/222
+for Zipformer, 15/222 for vosk-grammar and 15/222 for candidate scoring.
+
+What each item showed:
+
+1. **Uncontended latency:** Parakeet is 320/389 ms (it was 352/423 ms on the cloud
+   container), and the Zipformer is 371/662 ms. The Zipformer's ~650 ms p90 tail is
+   structural, not contention. RTF is 0.018 for Parakeet and 0.042 for the Zipformer.
+   Accuracy reproduced to within ±1.1 points; 2–5 trials per run flip, from int8 kernel
+   differences between the Xeon and the Ryzen.
+2. **Moonshine re-test: no newer export exists.** The newest sherpa-onnx Moonshine
+   assets in the `asr-models` release are still the 2026-02-27 ones we tested; we
+   checked all 499 assets on 2026-10-16. Upstream's 2026-07-30 "improved quantization"
+   (commit db54672c) re-quantized only its *streaming* English models. Those use a
+   five-file layout that sherpa-onnx's `from_moonshine_v2` cannot load. Upstream's
+   non-streaming tiny-en files are byte-identical to the export we tested, so our
+   Moonshine numbers stand.
+3. **Vosk grammar mode (HANDOFF #4)** is the surprise.
+   - **Why it scores so high:** restricting Kaldi's decoder to the five on-screen
+     words turns recognition into a forced choice. It hits 94–96% in every
+     condition, including the child proxy, with ≤0.7% wrong words, against 75–82%
+     for the finalists.
+   - **Costs:**
+     - **False accepts:** 5–8% of off-screen words are zapped as an on-screen word.
+       Word confidence barely separates them; thresholds 0.85–1.0 give the same
+       result on the seed-11 tuning trials.
+     - **Latency:** 570/700 ms with the same 0.3 s endpoint as the Zipformer, and
+       440/560 ms at 0.15 s.
+     - **Firing early:** grammar-mode partial results are forced onto some on-screen
+       word mid-utterance (60% false accepts in a smoke test), so only the
+       endpointed result can be used.
+     - **A second runtime:** it is Kaldi, not sherpa-onnx.
+   - The open-vocabulary Vosk is no better than our finalists.
+4. **Kid-speech weights (checked 2026-10-16): open, but not usable here yet.**
+   - **What was released:** DrivenData published `drivendata/pasketti-word` on
+     Hugging Face (2026-10-02), a Qwen3-ASR-1.7B full fine-tune with 17% WER on kids,
+     4.1 GB, under the use-restricted bigcode-openrail-m licence. They also published
+     `drivendata/pasketti-phonetic` (2026-10-06), a WavLM-Large CTC model that
+     outputs IPA, not words.
+   - **Winners' weights:** a few winners published their own, all Qwen3-ASR-1.7B,
+     WavLM, or partial NeMo checkpoints without a complete `.nemo`.
+   - **Why none was benchmarked:** none has a sherpa-onnx export. sherpa-onnx 1.13.8
+     can load Qwen3-ASR, but only via an unverified third-party ONNX conversion. A
+     1.7B LLM-decoder model is also far outside our latency and mobile budget. No
+     kid-tuned Parakeet or Zipformer exists.
+5. **Candidate scoring prototype** (`stt-eval/candidate_scoring.py`).
+   - **How it works:** for each of the five words, the Parakeet transducer gives
+     log P(word | audio), summed over TDT alignments, and the best word fires if it
+     is close to the free transcript's score and clear of the runner-up.
+   - **Tuning:** thresholds were tuned on seed 11 to the same ~5% false-accept level
+     as vosk-grammar.
+   - **Result:** it gains 4–11 points of hits over hotword + matcher (87/83/86%) at
+     the cost of 5–8% false accepts and 1.4–2% wrong words. That is a clearly worse
+     trade than Vosk's grammar at the same false-accept rate. At the finalists'
+     ~1% false-accept level it gains little (seed-11 sweep in `tune_closed_set.py`).
+
+### Follow-up: matcher strictness and Zipformer hotword strength
+
+The live Godot test with Windows TTS clips (`godot/tests/tts_match_test.gd`) found two
+kinds of false zap:
+- **Onset swaps:** "what's that" zapped "cat", and "HAT" zapped "cat".
+- **Made-up words from Zipformer at hotword score 3:** "BANANA THE", "um" heard as
+  "OF THE", and second fires about 1.2 s after the first.
+
+To measure both, `benchmark.py` now logs every recognizer event per trial. Partial
+results only fire on exact matches, so recognition does not depend on the matcher, and
+`replay_matcher.py` recomputes each trial's decision under any sound-alike rule. Its
+"any" replay reproduces the benchmark's own numbers exactly. The rules compared:
+
+- **exact:** homophones only.
+- **any:** the current rule, one phoneme off.
+- **no-onset:** the first sound must match.
+- **extra-only:** only one added sound after the first, as in "cats" for "cat" or
+  "true" for "two".
+
+The new **stress set** combines three options:
+- `--hard`: sound-alike distractors.
+- `--hard-negatives`: the off-screen spoken word has its closest-sounding words on
+  screen, which is the misread case.
+- `--sight-words`: one of the, look, my, me, you, and, is, it, see, said is always on
+  screen, so made-up function words can fire.
+
+Results are in `results/local-events-*` and `results/local-stress-*`.
+
+| Config | Rule | Hits clean / noise / child | Stress: wrong word | Stress: false accept | Fired twice (std / stress) | Latency p50 / p90 (clean) |
+|---|---|---|---:|---:|---:|---|
+| parakeet-110m-hot | exact | 79.4 / 73.3 / 70.6 | 2.4 | 1.4 | 0 / 0 | 327 / 400 ms |
+| | any (current) | 80.7 / 75.7 / 74.7 | 2.7 | **6.8** | | |
+| | no-onset | 79.7 / 75.3 / 73.3 | 2.7 | 2.7 | | |
+| | extra-only | 79.4 / 74.3 / 72.3 | 2.7 | 1.4 | | |
+| zipformer-hot, hot 3 | any | 81.8 / 73.3 / 79.4 | 3.4 | 6.8 | **5.9–8.4 / 8.6** | 376 / 667 ms |
+| | extra-only | 79.4 / 69.3 / 76.7 | 3.4 | 5.4 | | |
+| zipformer-hot, hot 2 | any | 81.1 / 74.0 / 78.4 | 2.4 | 5.4 | 3.0–8.4 / 3.8 | 421 / 706 ms |
+| | extra-only | 78.4 / 69.9 / 75.3 | 2.4 | 2.7 | | |
+| zipformer-hot, hot 1.5 | any | 81.1 / 73.0 / 77.4 | 2.0 | 5.4 | 2.2–5.9 / 2.4 | 456 / 702 ms |
+| | extra-only | 78.4 / 68.9 / 74.0 | 2.0 | 2.7 | | |
+| vosk-grammar | (any rule) | 96.3 / 94.3 / 93.6 | 1.4 | **16.2** | 0 / 0 | 573 / 703 ms |
+
+These runs had about 7% background CPU from other work, so RTF is about 30% higher
+than in the table above. Latency is within 10 ms for Parakeet, but Zipformer's rose
+about 5–10%. Stress false accepts are out of 74 trials, so one trial is 1.35 points.
+
+**What the game's own word lists say.** `replay_matcher.py --wordlists` checks every
+pair among the 816 words in `godot/data/wordlists/levels`:
+
+| Rule | Words for which some other game word is accepted | Accepted misreads per word | Examples |
+|---|---:|---:|---|
+| any (current) | 72% | 3.9 | bat→cat, at→cat, bag→big, dig→dog, bed→red |
+| no-onset | 63% | 2.0 | cab→cat, can→cat, bag→big, rid→red |
+| extra-only | 12% | 0.15 | sunny→sun, tube→two |
+
+Conclusions:
+- **(a) Sound-alike rule.**
+  - **"any" accepts real misreads.** On the stress set it is where most false
+    accepts come from: 6.8% for Parakeet, against 1.4% with exact matching.
+  - **"no-onset" only half fixes it.** It still accepts vowel and final-sound swaps
+    (big/bag, cat/cab), the commonest CVC decoding errors.
+  - **"extra-only" does fix it.** On the word lists it drops accepted misreads from
+    3.9 to 0.15 per word, and on the stress set it brings false accepts back to the
+    exact-match level.
+  - **Cost:** 1.3–2.4 points of hits for Parakeet and about 3 points for the
+    Zipformer.
+  - **Proposal:** make **extra-only the default ("strict") rule** and keep "any" as
+    the parent-settings "friendly" option (section 5, item 6), in both
+    `matcher.py` and `word_matcher.cpp`. The extra rule is a few lines in
+    `matcher.py`: a non-zero distance must keep the first phoneme and be a single
+    insertion.
+  - **Kid recordings settle the cost.** `replay_matcher.py` rescores a calibration
+    run under every rule without re-recognizing. Kids' articulation substitutions
+    such as w/r and f/th are onset swaps too, so the cost may be higher on real kids.
+- **(b) Zipformer hotword score.**
+  - **What score 3 does:** the Zipformer re-fires after its endpoint in 6–9% of
+    trials. Mostly it repeats the same word (77 of 80 at score 3), because a
+    boosted decode of the trailing silence makes the word up again. A few fires
+    land on a different word (GO|DOG, LEFT|ME), and those occur only at score 3.
+  - **Score 2:** halves the double fires and removes the different-word ones, for
+    about 1 point of hits and +45 ms p50.
+  - **Score 1.5:** cuts double fires to about 2%, but costs +80 ms p50, for hit rates
+    that are unchanged within noise.
+  - **Parakeet behind the VAD never double-fired** (0 of 1,480 trials).
+  - **Data limitation:** Speech Commands clips have no chatter, so "um → OF THE"
+    style inventions show up only as 1–2 sight-word fires per 370 trials. The live
+    TTS test is the better evidence there.
+  - **Proposal:** run `zipformer-hot` at **score 2**, and have the game ignore a
+    repeat of the word it just zapped within ~1.5 s.
+
+*On Speech Commands alone, the recommendation after this follow-up was "unchanged":
+Parakeet as the default, the Zipformer at hotword score 2, and sound-alike "extra-only".
+The first real-mic voice, below, changed the default.*
+
+**Vosk grammar mode is a third candidate for the kid calibration** (not adopted). It cut
+misses from ~20% to ~5%. Adopting it means accepting zaps on off-screen words: 5–8% in
+general, 16% when the off-screen word sounds like an on-screen one, and 9% on real voice
+(below). It also means ~200 ms more latency and a second runtime. The calibration
+benchmark already supports it: `--engines vosk-grammar`, from the Vosk venv.
+
+### Real voice: adult male, PC mic (2026-10-16)
+
+This is the first real-microphone data: session `adultm/20261016-134130`, recorded with
+the Godot recorder on a HyperX QuadCast S. It covers 2 rounds of the calibration list,
+which is 77 words and 157 clips, plus 20 `_other` clips (um, coughs, "what's that
+word?"). Each clip is used once as a positive.
+
+The run had 5 words on screen and 120 negatives: 100 words that were not on screen,
+plus the 20 `_other` clips. The earlier low-gain session is left out. Commands are in
+`REPRODUCE.md` §6, and results in `results/local-calib-adultm-s2-*`. Hit / wrong word /
+false accept % are given under the current ("any") and the proposed ("extra-only")
+sound-alike rule.
+
+| Config | Normal screens: any | Normal: extra-only | Hard distractors: extra-only | Fired twice | Latency p50 / p90 |
+|---|---|---|---|---:|---|
+| parakeet-110m-hot, hot 1.5 | 80.3 / 1.9 / 2.5 | 79.0 / 1.3 / 0.8 | 80.9 / 3.2 / 1.7 | 0 | 309 / 364 ms |
+| parakeet-110m-hot, hot 2 | 84.7 / 1.9 / 2.5 | 83.4 / 1.3 / 0.8 | 83.4 / 3.8 / 2.5 | 0 | 310 / 363 ms |
+| parakeet-0.6b-hot, hot 1.5 | 80.9 / 3.8 / 7.5 | 77.7 / 3.2 / 6.7 | 72.0 / 10.2 / 14.2 | 0.7 | 379 / 435 ms |
+| **zipformer-hot, hot 3** | 96.2 / 1.3 / 4.2 | **96.2 / 0.6 / 0.8** | 89.8 / 5.1 / 1.7 | 9.0 | 273 / 622 ms |
+| **zipformer-hot, hot 2** | 95.5 / 0.6 / 4.2 | **95.5 / 0.6 / 0.8** | 90.4 / 3.8 / 1.7 | 10.5 | 327 / 637 ms |
+| zipformer-hot, hot 1.5 | 96.2 / 0.6 / 4.2 | 95.5 / 0.6 / 0.8 | 89.8 / 3.8 / 1.7 | 6.9 | 387 / 646 ms |
+| vosk-grammar | 98.7 / 0.0 / 9.2 | (same) | 91.7 / 0.0 / 9.2 | 0 | 533 / 663 ms |
+
+What it shows:
+- **On a real voice the Zipformer is far better than Parakeet: 95–96% hits vs
+  80–85%.** One clip is 0.64 points, so the gap is 18–25 clips.
+  - **Parakeet's misses** are mostly empty transcripts for short words (bug, dig, the,
+    but, hat, all). The rest are near-word guesses biased to common words and questions:
+    want→"What?", run→"When?", sun→"Son.", log→"Lock.".
+  - **Not the VAD's fault:** decoding the whole clip without the VAD gives the same
+    ~77%.
+  - **The larger Parakeet 0.6B is worse.**
+  - **This matches the child proxy,** which the Zipformer also led (79 vs 74%), so it
+    is now two independent signals against one (Speech Commands).
+- **"extra-only" is confirmed.** It cuts false accepts from 4.2% to 0.8% for the
+  Zipformer and from 2.5% to 0.8% for Parakeet, at no hit cost for the Zipformer.
+  - **Hard screens:** extra-only *raises* Zipformer hits (86.6→89.8%), because "any"
+    let a sound-alike distractor fire first.
+  - **The one remaining false accept** is the `_other` prompt "I don't know", heard as
+    "know", a homophone of an on-screen "no".
+- **Hotword score barely matters for the Zipformer on this voice:** 95.5–96.2% at
+  1.5 / 2 / 3. Lower scores cost latency: 273 → 327 → 387 ms p50.
+  - **Score 2** had fewer wrong words on hard screens (3.8 vs 5.1%), and on Speech
+    Commands it removed the different-word double fires.
+- **Double fires (7–10%) are all same-word repeats on this data,** so the game's
+  dedupe (ignore a repeat of the just-zapped word for ~1.5 s) removes them.
+- **The Zipformer's latency tail** (p90 ~630 ms) is unchanged; its median (273–327 ms)
+  is better than Parakeet's.
+
+**Recommendation: changed to `zipformer-hot` as the default preset (provisional until
+the kid recordings), with hotword score 2, the "extra-only" sound-alike rule and a
+~1.5 s same-word dedupe in the game.**
+- **Why:** on the first real-mic voice it hit 95.5% against Parakeet's 80–85%, with the
+  same 0.6% wrong words and 0.8% false accepts. It also led on the child proxy.
+- **What it gives up:**
+  - a longer latency tail (p90 ~630 vs ~360 ms);
+  - more double fires, which the dedupe handles;
+  - about 2 points in 10 dB noise on Speech Commands.
+- **What stays:** `parakeet-110m-hot` remains a preset. This is one adult speaker, so
+  the 8f and 6f recordings decide whether it sticks; if kids reverse it, switch back.
+
 ## 5. Design implications for the game
 
 1. **Never put sound-alikes on screen together** at early levels (cat/hat/cap, on/one,
@@ -274,12 +531,12 @@ Also verified in Godot:
    settles Parakeet vs Zipformer.
 2. If kid hit rate is under 90%, try these, cheapest first:
    - tune the hotword score and VAD silence on the calibration data;
-   - **candidate scoring:** instead of transcribing, score each of the 5 on-screen words
-     against the audio (forced alignment / transducer log-likelihood) and pick the best
-     above a threshold. This is the principled closed-set solution;
-   - **watch the April 2026 DrivenData "On Top of Pasketti" kids-ASR winners.** Open
-     weights are promised for fall 2026. A child-fine-tuned Parakeet would drop
-     straight into this pipeline.
+   - **closed-set decoding:** Vosk grammar mode (94–96% hits on this data, 5–8% false
+     accepts) is already a benchmark engine. Parakeet candidate scoring
+     (`stt-eval/candidate_scoring.py`) was a weaker trade in the local re-evaluation;
+   - **watch the DrivenData "On Top of Pasketti" kids-ASR models.** As of 2026-10-16 the
+     open weights are Qwen3-ASR-1.7B and WavLM models without sherpa-onnx exports. A
+     child-fine-tuned Parakeet or Zipformer would drop straight into this pipeline.
 3. Port to Android once the PC game loop exists.
 
 ## Sources (Oct 2026 survey)

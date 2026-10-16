@@ -1,0 +1,56 @@
+{
+  "args": {
+    "engines": [
+      "vosk-grammar"
+    ],
+    "speech_commands": "third_party\\data\\speech_commands",
+    "recordings": null,
+    "conditions": [
+      "clean"
+    ],
+    "trials": 300,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": true,
+    "threads": 2,
+    "silence": 0.25,
+    "trailing": 0.3,
+    "hot_score": 2.0,
+    "beam": 4,
+    "sound_alike": true,
+    "sound_alike_mode": "any",
+    "sight_words": [
+      "the",
+      "look",
+      "my",
+      "me",
+      "you",
+      "and",
+      "is",
+      "it",
+      "see",
+      "said"
+    ],
+    "hard_negatives": true,
+    "seed": 7,
+    "out": "results/local-stress-vosk-grammar"
+  },
+  "summary": [
+    {
+      "engine": "vosk-grammar",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 93.24324324324324,
+      "wrong_word_pct": 1.3513513513513513,
+      "no_fire_pct": 5.405405405405405,
+      "false_accept_pct": 16.216216216216218,
+      "latency_p50_ms": 572.6214500103381,
+      "latency_p90_ms": 702.5860999958242,
+      "early_fire_pct": 0.7246376811594203,
+      "double_fire_pct": 0.0,
+      "rtf": 0.014708472317642544,
+      "load_s": 0.3443422999989707
+    }
+  ]
+}

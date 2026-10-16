@@ -8,22 +8,27 @@ extends RefCounted
 
 ## Same short names as stt-eval/engines.py so benchmark results map 1:1.
 ## The first entry is the default (see docs/stt-evaluation.md for why).
+## zipformer-hot at hotword score 2 won on real (adult) voice; it stays
+## provisional until the kid recordings are in. To switch back, move
+## parakeet-110m-hot to the top.
+## Every preset uses the "extra-only" sound-alike rule unless it sets
+## "sound_alike" ("no-onset" or the looser "any").
 const PRESETS := {
-	"parakeet-110m-hot": {
-		"kind": "vad_offline", "family": "transducer", "hotwords": true,
-		"hotwords_score": 1.5, "beam": 8, "model_type": "nemo_transducer",
-		"dir": "sherpa-onnx-nemo-parakeet_tdt_transducer_110m-en-36000-int8",
-		"encoder": "encoder.int8.onnx", "decoder": "decoder.int8.onnx",
-		"joiner": "joiner.int8.onnx", "tokens": "tokens.txt",
-	},
 	"zipformer-hot": {
-		"hotwords_score": 3.0, "beam": 8,
+		"hotwords_score": 2.0, "beam": 8,
 		"kind": "streaming", "hotwords": true,
 		"dir": "sherpa-onnx-streaming-zipformer-en-2023-06-26",
 		"encoder": "encoder-epoch-99-avg-1-chunk-16-left-128.int8.onnx",
 		"decoder": "decoder-epoch-99-avg-1-chunk-16-left-128.int8.onnx",
 		"joiner": "joiner-epoch-99-avg-1-chunk-16-left-128.int8.onnx",
 		"tokens": "tokens.txt",
+	},
+	"parakeet-110m-hot": {
+		"kind": "vad_offline", "family": "transducer", "hotwords": true,
+		"hotwords_score": 1.5, "beam": 8, "model_type": "nemo_transducer",
+		"dir": "sherpa-onnx-nemo-parakeet_tdt_transducer_110m-en-36000-int8",
+		"encoder": "encoder.int8.onnx", "decoder": "decoder.int8.onnx",
+		"joiner": "joiner.int8.onnx", "tokens": "tokens.txt",
 	},
 	"zipformer20m": {
 		"kind": "streaming", "hotwords": false,

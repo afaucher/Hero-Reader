@@ -1,0 +1,45 @@
+{
+  "args": {
+    "engines": [
+      "vosk-grammar"
+    ],
+    "speech_commands": "third_party\\data\\speech_commands",
+    "recordings": "recordings/adultm/20261016-134130",
+    "conditions": [
+      "clean"
+    ],
+    "trials": 400,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.25,
+    "trailing": 0.3,
+    "hot_score": 2.0,
+    "beam": 4,
+    "sound_alike": true,
+    "sound_alike_mode": "any",
+    "sight_words": [],
+    "hard_negatives": false,
+    "seed": 7,
+    "out": "results/local-calib-adultm-s2-vosk-grammar"
+  },
+  "summary": [
+    {
+      "engine": "vosk-grammar",
+      "condition": "clean",
+      "trials": 157,
+      "negatives": 120,
+      "hit_pct": 98.72611464968153,
+      "wrong_word_pct": 0.0,
+      "no_fire_pct": 1.2738853503184713,
+      "false_accept_pct": 9.166666666666666,
+      "latency_p50_ms": 532.6221000007354,
+      "latency_p90_ms": 662.7388799997047,
+      "early_fire_pct": 7.096774193548387,
+      "double_fire_pct": 0.0,
+      "rtf": 0.014282090130555878,
+      "load_s": 0.34396230000129435
+    }
+  ]
+}

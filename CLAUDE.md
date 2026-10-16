@@ -38,10 +38,11 @@ On Windows, run `--build` from an "x64 Native Tools Command Prompt for VS"
 ## Common commands
 
 ```sh
-godot --path godot                                    # dev menu: Speech test / Record voices
+godot --path godot                                    # dev menu: Word match / Speech test / Record voices
 godot --headless --path godot --script res://tests/headless_wav_test.gd -- \
-      --clips third_party/data/speech_commands --n 40 # end-to-end check in Godot
-godot --headless --path godot --script res://tests/recorder_test.gd -- third_party/data/speech_commands
+      --clips "$PWD/third_party/data/speech_commands" --n 40  # end-to-end check (absolute path)
+godot --headless --path godot --script res://tests/recorder_test.gd  # recorder trigger scenarios (TTS clips)
+python tools/collect_recordings.py --bench            # family recordings: copy + benchmark, append-only
 cd stt-eval && .venv/bin/python benchmark.py --engines parakeet-110m-hot zipformer-hot \
       --hot-score 1.5 --beam 8 --sound-alike --trials 300  # see docs/REPRODUCE.md
 ```

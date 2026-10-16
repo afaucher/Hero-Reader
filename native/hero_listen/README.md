@@ -7,15 +7,23 @@ It wraps the [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) C API
 ```gdscript
 var listener := WordListener.new()
 add_child(listener)
-listener.load_model(HeroSpeech.config_for("parakeet-110m-hot"))
+listener.load_model(HeroSpeech.config_for("zipformer-hot"))
 listener.set_words(["cat", "dog", "sun"])          # whatever is on screen now
 listener.word_heard.connect(func(word, heard, latency_ms): blast(word))
 listener.heard_other.connect(func(heard): show_miss())  # no penalty, "try again"
 listener.voice_started.connect(func(): charge_laser())  # instant feedback
+# debug views: every change in what the model heard, with per-word match detail
+listener.hypothesis.connect(func(text, final, detail): show(text, detail))
 # each frame: listener.push_frames(capture.get_buffer(n), AudioServer.get_mix_rate())
 ```
 
-See `godot/scenes/stt_test.gd` for the full microphone setup.
+See `godot/scenes/stt_test.gd` for the full microphone setup, and
+`godot/scenes/match_viz.gd` for the `hypothesis` signal. Each `detail` entry is
+`{word, kind, token, distance, word_phones, token_phones}`: `kind` is `exact`,
+`homophone`, `sound_alike`, `wait` (partial that could still grow into a longer
+word) or empty, and `distance` is the phoneme edit distance to the closest
+heard token (-1 if not in the pronunciation dictionary). It is diagnostic only:
+`word_heard` alone decides what fires, so `stt-eval/matcher.py` has no counterpart.
 
 ## Build
 
@@ -76,4 +84,5 @@ Hotword boosting writes a small `_hotwords_bpe.vocab` next to the model's
 | `hotwords_score`, `beam` | hotword boost / beam width | 3.0 streaming, 1.5 offline / 8 |
 | `vad_model`, `min_silence`, `preroll` | Silero VAD file, hang-over seconds, lead-in seconds | `0.25`, `0.25` |
 | `pron_dict` | CMU-style dictionary enabling sound-alike matches (`godot/data/pron_dict.txt`) | off |
+| `sound_alike` | which near misses count: `extra-only` (one added sound after the same first sound: "cats" for "cat"), `no-onset` or `any` (same as `stt-eval/matcher.py` `SOUND_ALIKE_MODE`) | `extra-only` |
 | `threads` | inference threads | 2 |

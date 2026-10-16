@@ -136,3 +136,91 @@ These are worth knowing if you change the code.
    until more audio or end of input arrives, so it is excluded despite its good accuracy.
 5. **`zipformer20m`** outputs nothing in this harness, with int8 or fp32 weights alike.
    It was not investigated further.
+6. **Hotword runs crashed on Windows** with `UnicodeEncodeError`. The generated
+   `_hotwords_bpe.vocab` holds "▁" pieces, and Python before 3.15 writes text in the
+   ANSI code page by default. `engines.py` and `benchmark.py` now write UTF-8 explicitly.
+
+## 6. Local PC re-evaluation (October 2026)
+
+| | |
+|---|---|
+| Machine | AMD Ryzen 9 7950X3D (16 cores / 32 threads), Windows 11, otherwise idle (< 5% CPU during runs) |
+| Python | 3.14.2; `stt-eval/.venv` with sherpa-onnx 1.13.8, numpy 2.5, scipy 1.18 |
+| Vosk venv | separate, so `stt-eval/.venv` keeps its pins: `third_party/venv-vosk` with vosk 0.3.45, onnxruntime 1.31, sherpa-onnx 1.13.8 |
+| Threads | 2 per sherpa-onnx engine; Vosk is single-threaded |
+
+Every run below ran alone, one after another, so latency and RTF are uncontended.
+
+```sh
+python tools/setup.py --only dataset models-eval   # adds vosk-model-small-en-us-0.15 (pinned)
+python -m venv third_party/venv-vosk                # git-ignored; Windows: third_party\venv-vosk\Scripts\python
+third_party/venv-vosk/bin/pip install vosk==0.3.45 sherpa-onnx==1.13.8 numpy scipy soundfile onnxruntime
+cd stt-eval
+PY=.venv/bin/python; VPY=../third_party/venv-vosk/bin/python   # Scripts\python.exe on Windows
+
+# 1. finalists, uncontended
+$PY benchmark.py --engines parakeet-110m-hot --hot-score 1.5 --beam 8 --sound-alike --silence 0.2 \
+  --trials 300 --conditions clean noise10 child --out results/local-final-parakeet
+$PY benchmark.py --engines zipformer-hot --hot-score 3 --beam 8 --sound-alike \
+  --trials 300 --conditions clean noise10 child --out results/local-final-zipformer
+$PY benchmark.py --engines parakeet-110m-hot --hot-score 1.5 --beam 8 --sound-alike --silence 0.2 --hard \
+  --trials 300 --out results/local-hard-parakeet
+$PY benchmark.py --engines zipformer-hot --hot-score 3 --beam 8 --sound-alike --hard \
+  --trials 300 --out results/local-hard-zipformer
+
+# 2. Vosk: grammar mode (on-screen words + [unk]) and open vocabulary
+$VPY benchmark.py --engines vosk-grammar vosk --sound-alike --trials 300 \
+  --conditions clean noise10 child --out results/local-vosk
+$VPY benchmark.py --engines vosk-grammar --sound-alike --hard --trials 300 --out results/local-hard-vosk
+$VPY benchmark.py --engines vosk-grammar --sound-alike --trailing 0.15 --trials 300 --out results/local-vosk-trailing0.15
+
+# 3. candidate scoring prototype (Parakeet TDT log-likelihood of each on-screen word)
+$VPY candidate_scoring.py --check 150      # numpy frontend vs sherpa-onnx: 117/150 identical, rest mostly punctuation
+$VPY candidate_scoring.py --engines parakeet-110m-score --sound-alike --silence 0.2 --trials 300 \
+  --conditions clean noise10 child --out results/local-score-parakeet
+
+# thresholds for vosk-grammar (min_conf 0.9) and candidate scoring (reject 6, margin 3),
+# picked on seed 11 so the seed-7 results above are not tuned on themselves
+$VPY tune_closed_set.py vosk-grammar
+$VPY tune_closed_set.py parakeet-110m-score
+
+# 4. follow-up: matcher rules and Zipformer hotword strength (events logged per trial)
+$PY benchmark.py --engines parakeet-110m-hot --hot-score 1.5 --beam 8 --sound-alike --silence 0.2   --trials 300 --conditions clean noise10 child --out results/local-events-parakeet
+for h in 3 2 1.5; do $PY benchmark.py --engines zipformer-hot --hot-score $h --beam 8 --sound-alike   --trials 300 --conditions clean noise10 child --out results/local-events-zipformer-hot$h; done
+STRESS="--trials 300 --hard --hard-negatives --sight-words the look my me you and is it see said"
+$PY benchmark.py --engines parakeet-110m-hot --hot-score 1.5 --beam 8 --sound-alike --silence 0.2 $STRESS   --out results/local-stress-parakeet
+for h in 3 2 1.5; do $PY benchmark.py --engines zipformer-hot --hot-score $h --beam 8 --sound-alike $STRESS   --out results/local-stress-zipformer-hot$h; done
+$VPY benchmark.py --engines vosk-grammar --sound-alike $STRESS --out results/local-stress-vosk-grammar
+$PY replay_matcher.py "results/local-events-*/trials-*.csv" "results/local-stress-*/trials-*.csv"
+$PY replay_matcher.py --wordlists          # misreads each rule accepts among the game's words
+
+# 5. real voice: adult male session (git-ignored recordings in stt-eval/recordings/adultm/)
+REC="--recordings recordings/adultm/20261016-134130 --trials 400 --onscreen 5 --sound-alike"
+O=results/local-calib-adultm-s2
+for H in "" "--hard"; do S=${H:+-hard}
+  $PY benchmark.py $REC $H --engines parakeet-110m-hot --hot-score 1.5 --beam 8 --silence 0.2 --out $O-parakeet-hot1.5$S
+  $PY benchmark.py $REC $H --engines parakeet-110m-hot --hot-score 2 --beam 8 --silence 0.2 --out $O-parakeet-hot2$S
+  $PY benchmark.py $REC $H --engines parakeet-0.6b-hot --hot-score 1.5 --beam 8 --silence 0.2 --out $O-parakeet0.6b-hot1.5$S
+  for h in 3 2 1.5; do $PY benchmark.py $REC $H --engines zipformer-hot --hot-score $h --beam 8 --out $O-zipformer-hot$h$S; done
+  $VPY benchmark.py $REC $H --engines vosk-grammar --out $O-vosk-grammar$S
+done
+$PY replay_matcher.py "$O-*/trials-*.csv"  # per-rule numbers in the real-voice table
+```
+
+Notes:
+- **Replaying matcher rules:** `--sight-words`, `--hard-negatives` and the `events`
+  column do not change the default trials. The stress options draw from their own
+  random stream, which was checked row by row. The follow-up runs had about 7%
+  background CPU load from other work, so their RTF is about 30% higher.
+- **Vosk endpointing:** the vosk 0.3.45 Python API reads endpointing only from
+  `conf/model.conf`. `VoskEngine` makes a copy of the model (`…-rule2-<s>`, under
+  `godot/models`) with `rule2.min-trailing-silence` set to `--trailing`, the same
+  value the sherpa streaming engines use.
+- **Vosk grammar mode** decides on the endpointed result only. Its partial results
+  are forced onto an on-screen word mid-utterance.
+- **Same trials as the cloud runs:** the `local-final-*` and `local-hard-*` trials
+  match the cloud `final-*` runs row for row (word, speaker, on-screen set). They differ
+  in 0–5 outcomes per run because the int8 kernels differ between the CPUs.
+- **Moonshine and kid-speech models:** no new model was pinned. No newer sherpa-onnx
+  Moonshine export exists, and the Pasketti kid-speech weights have no sherpa-onnx
+  export (status as of 2026-10-16 in `docs/stt-evaluation.md`).
