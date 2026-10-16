@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+# Build:  scons platform=linux target=template_debug
+#   SHERPA_ONNX_DIR  prebuilt sherpa-onnx shared release for the platform
+#                    (https://github.com/k2-fsa/sherpa-onnx/releases)
+#   GODOT_CPP_DIR    godot-cpp checkout (tag godot-4.5-stable)
+import os
+
+godot_cpp = os.environ.get("GODOT_CPP_DIR", "../../deps/godot-cpp")
+sherpa = os.environ.get("SHERPA_ONNX_DIR", "../../deps/sherpa-onnx")
+env = SConscript(os.path.join(godot_cpp, "SConstruct"))
+
+env.Append(CPPPATH=["src", os.path.join(sherpa, "include")])
+env.Append(LIBPATH=[os.path.join(sherpa, "lib")])
+env.Append(LIBS=["sherpa-onnx-c-api"])
+if env["platform"] in ("linux", "android"):
+    env.Append(LINKFLAGS=["-Wl,-rpath,'$$ORIGIN'"])
+elif env["platform"] == "macos":
+    env.Append(LINKFLAGS=["-Wl,-rpath,@loader_path"])
+
+out = "../../godot/addons/hero_listen/bin/"
+sources = Glob("src/*.cpp")
+lib = env.SharedLibrary(
+    out + "libhero_listen{}{}".format(env["suffix"], env["SHLIBSUFFIX"]), source=sources)
+Default(lib)

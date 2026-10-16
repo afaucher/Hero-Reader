@@ -1,0 +1,118 @@
+{
+  "args": {
+    "engines": [
+      "zipformer-hot",
+      "kroko-hot"
+    ],
+    "speech_commands": "data/speech_commands",
+    "recordings": null,
+    "conditions": [
+      "clean",
+      "noise10",
+      "child"
+    ],
+    "trials": 300,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.25,
+    "trailing": 0.3,
+    "hot_score": 3.0,
+    "beam": 8,
+    "seed": 7,
+    "out": "results/finalists-streaming"
+  },
+  "summary": [
+    {
+      "engine": "zipformer-hot",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 78.04054054054055,
+      "wrong_word_pct": 0.0,
+      "no_fire_pct": 21.95945945945946,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 384.749439000061,
+      "latency_p90_ms": 652.2018170000083,
+      "early_fire_pct": 6.4935064935064934,
+      "rtf": 0.08680497719368481,
+      "load_s": 2.890272916000413
+    },
+    {
+      "engine": "zipformer-hot",
+      "condition": "noise10",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 68.91891891891892,
+      "wrong_word_pct": 2.027027027027027,
+      "no_fire_pct": 29.054054054054053,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 355.5002820001773,
+      "latency_p90_ms": 621.5225687000585,
+      "early_fire_pct": 5.392156862745098,
+      "rtf": 0.08861504368580957,
+      "load_s": 2.890272916000413
+    },
+    {
+      "engine": "zipformer-hot",
+      "condition": "child",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 75.67567567567568,
+      "wrong_word_pct": 0.33783783783783783,
+      "no_fire_pct": 23.986486486486488,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 410.54434649983875,
+      "latency_p90_ms": 678.1400442002486,
+      "early_fire_pct": 2.232142857142857,
+      "rtf": 0.08834166309667386,
+      "load_s": 2.890272916000413
+    },
+    {
+      "engine": "kroko-hot",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 84.79729729729729,
+      "wrong_word_pct": 0.33783783783783783,
+      "no_fire_pct": 14.864864864864865,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 558.3664369999132,
+      "latency_p90_ms": 1292.930454999805,
+      "early_fire_pct": 0.0,
+      "rtf": 0.040889216680496346,
+      "load_s": 3.135233373999654
+    },
+    {
+      "engine": "kroko-hot",
+      "condition": "noise10",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 81.41891891891892,
+      "wrong_word_pct": 0.6756756756756757,
+      "no_fire_pct": 17.905405405405407,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 561.5429839999887,
+      "latency_p90_ms": 1292.9810790001284,
+      "early_fire_pct": 0.0,
+      "rtf": 0.03958418023571106,
+      "load_s": 3.135233373999654
+    },
+    {
+      "engine": "kroko-hot",
+      "condition": "child",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 84.45945945945945,
+      "wrong_word_pct": 0.33783783783783783,
+      "no_fire_pct": 15.202702702702704,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 608.9548200000736,
+      "latency_p90_ms": 1258.465210199733,
+      "early_fire_pct": 0.0,
+      "rtf": 0.03989255702269192,
+      "load_s": 3.135233373999654
+    }
+  ]
+}

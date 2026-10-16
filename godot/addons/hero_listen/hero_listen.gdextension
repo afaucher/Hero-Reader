@@ -1,0 +1,35 @@
+[configuration]
+
+entry_symbol = "hero_listen_init"
+compatibility_minimum = "4.5"
+reloadable = false
+
+[libraries]
+
+linux.debug.x86_64 = "res://addons/hero_listen/bin/libhero_listen.linux.template_debug.x86_64.so"
+linux.release.x86_64 = "res://addons/hero_listen/bin/libhero_listen.linux.template_release.x86_64.so"
+windows.debug.x86_64 = "res://addons/hero_listen/bin/libhero_listen.windows.template_debug.x86_64.dll"
+windows.release.x86_64 = "res://addons/hero_listen/bin/libhero_listen.windows.template_release.x86_64.dll"
+macos.debug = "res://addons/hero_listen/bin/libhero_listen.macos.template_debug.universal.dylib"
+macos.release = "res://addons/hero_listen/bin/libhero_listen.macos.template_release.universal.dylib"
+android.debug.arm64 = "res://addons/hero_listen/bin/libhero_listen.android.template_debug.arm64.so"
+android.release.arm64 = "res://addons/hero_listen/bin/libhero_listen.android.template_release.arm64.so"
+
+[dependencies]
+
+linux.x86_64 = {
+"res://addons/hero_listen/bin/libsherpa-onnx-c-api.so": "",
+"res://addons/hero_listen/bin/libonnxruntime.so": ""
+}
+windows.x86_64 = {
+"res://addons/hero_listen/bin/sherpa-onnx-c-api.dll": "",
+"res://addons/hero_listen/bin/onnxruntime.dll": ""
+}
+macos = {
+"res://addons/hero_listen/bin/libsherpa-onnx-c-api.dylib": "",
+"res://addons/hero_listen/bin/libonnxruntime.dylib": ""
+}
+android.arm64 = {
+"res://addons/hero_listen/bin/android/arm64-v8a/libsherpa-onnx-c-api.so": "",
+"res://addons/hero_listen/bin/android/arm64-v8a/libonnxruntime.so": ""
+}

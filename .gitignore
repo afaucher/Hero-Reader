@@ -1,0 +1,21 @@
+# Speech models and datasets are large; fetch them with stt-eval/download_models.py
+stt-eval/models
+stt-eval/data
+godot/models
+# Personal voice recordings (e.g. your kids) never leave your machine
+stt-eval/recordings
+# Reference photos of real people stay local
+art/reference/
+godot/art/reference/
+# Python
+__pycache__/
+*.pyc
+.venv/
+# Godot
+godot/.godot/
+godot/addons/hero_listen/bin/*
+!godot/addons/hero_listen/bin/.gitkeep
+# Native build outputs
+native/**/*.o
+native/**/*.os
+native/**/.sconsign*.dblite

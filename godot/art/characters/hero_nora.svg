@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Hero Nora: Hero Reader "Cosmic Storybook" style.
+       Flat shapes, 6px navy outlines, one cel-shade tone per material. -->
+  <defs>
+    <radialGradient id="bgN" cx="50%" cy="40%" r="65%">
+      <stop offset="0" stop-color="#5A3F9A"/>
+      <stop offset="1" stop-color="#1B1F4B"/>
+    </radialGradient>
+    <clipPath id="frameN"><circle cx="256" cy="256" r="244"/></clipPath>
+  </defs>
+  <g stroke="#141836" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="256" cy="256" r="244" fill="url(#bgN)"/>
+    <g clip-path="url(#frameN)" stroke="none">
+      <circle cx="90" cy="120" r="3" fill="#FFF4DC"/>
+      <circle cx="430" cy="110" r="3.5" fill="#FFF4DC"/>
+      <circle cx="60" cy="260" r="2.5" fill="#FFF4DC"/>
+      <path d="M110 70 l6 14 14 6 -14 6 -6 14 -6 -14 -14 -6 14 -6z" fill="#FFC93C"/>
+      <path d="M424 230 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="#2EC4B6"/>
+      <circle cx="400" cy="420" r="80" fill="#FF7A45" opacity=".16"/>
+    </g>
+
+    <g clip-path="url(#frameN)">
+      <!-- long wavy hair, back layer (falls behind shoulders) -->
+      <path d="M150 210 C130 270 140 330 120 380 C110 410 128 440 112 470 L210 470 L200 300 Z
+               M362 210 C382 270 372 330 392 380 C402 410 384 440 400 470 L302 470 L312 300 Z" fill="#D4A653"/>
+      <path d="M140 208 C120 140 170 82 256 82 C342 82 392 140 372 208 C380 260 376 300 368 330 L144 330 C136 300 132 260 140 208 Z" fill="#D4A653"/>
+
+      <!-- flight suit: plum with pale stripes, teal collar -->
+      <path d="M78 520 C86 430 150 396 206 388 L306 388 C362 396 426 430 434 520 Z" fill="#9B5D8C"/>
+      <g fill="none" stroke="#C99BBE" stroke-width="5" stroke-linecap="butt">
+        <path d="M96 466 C140 446 180 440 210 440"/><path d="M302 440 C332 440 372 446 416 466"/>
+        <path d="M88 492 C134 470 178 464 210 464"/><path d="M302 464 C334 464 378 470 424 492"/>
+      </g>
+      <path d="M206 384 L256 436 L306 384 L320 410 L256 470 L192 410 Z" fill="#2EC4B6"/>
+      <!-- long side locks in front of shoulders -->
+      <path d="M150 210 C134 262 166 300 146 344 C128 384 160 408 140 470 C150 476 168 470 176 462 C190 430 192 396 180 368 C168 336 196 300 182 262 C178 246 180 230 182 220 Z" fill="#F0CB72"/>
+      <path d="M362 210 C378 262 346 300 366 344 C384 384 352 408 372 470 C362 476 344 470 336 462 C322 430 320 396 332 368 C344 336 316 300 330 262 C334 246 332 230 330 220 Z" fill="#F0CB72"/>
+      <g fill="none" stroke="#C9A04A" stroke-width="4">
+        <path d="M160 270 C170 296 156 320 160 340"/><path d="M160 372 C172 392 160 410 162 426"/>
+        <path d="M352 270 C342 296 356 320 352 340"/><path d="M352 372 C340 392 352 410 350 426"/>
+      </g>
+      <!-- hero badge: open book with a star -->
+      <circle cx="256" cy="490" r="24" fill="#FFC93C"/>
+      <g transform="translate(-94 28)"><path d="M334 458 C340 452 348 452 350 458 C352 452 360 452 366 458 L366 474 C360 470 352 470 350 474 C348 470 340 470 334 474 Z" fill="#FFF4DC" stroke-width="3"/>
+      <path d="M350 440 l2.5 5 5.5 .8 -4 3.8 1 5.4 -5-2.6 -5 2.6 1-5.4 -4-3.8 5.5-.8z" fill="#FF7A45" stroke-width="2"/></g>
+
+    </g>
+
+    <!-- neck -->
+    <path d="M226 330 L226 392 C242 404 270 404 286 392 L286 330 Z" fill="#F1C7A8"/>
+
+    <!-- face: round, soft chin -->
+    <path d="M170 218 C170 150 210 120 256 120 C302 120 342 150 342 218 L340 258 C336 314 298 352 256 356 C214 352 176 314 172 258 Z" fill="#FBD9BE"/>
+
+    <!-- cheeks -->
+    <ellipse cx="200" cy="290" rx="20" ry="12" fill="#F7A8A0" stroke="none" opacity=".75"/>
+    <ellipse cx="312" cy="290" rx="20" ry="12" fill="#F7A8A0" stroke="none" opacity=".75"/>
+
+    <!-- big determined grin -->
+    <path d="M222 300 C232 330 280 330 290 300 C270 308 242 308 222 300 Z" fill="#FFFFFF" stroke-width="5"/>
+    <path d="M236 318 C246 326 266 326 276 318" fill="none" stroke="#F28B82" stroke-width="5"/>
+
+    <!-- small button nose -->
+    <path d="M250 262 C252 272 262 272 264 262" fill="none" stroke-width="5"/>
+
+    <!-- eyes: big, bright, a little mischievous -->
+    <g>
+      <path d="M192 242 C198 222 230 222 236 242 C230 258 198 258 192 242 Z" fill="#FFFFFF" stroke-width="5"/>
+      <path d="M276 242 C282 222 314 222 320 242 C314 258 282 258 276 242 Z" fill="#FFFFFF" stroke-width="5"/>
+      <circle cx="216" cy="243" r="11" fill="#7A93B0" stroke="none"/>
+      <circle cx="296" cy="243" r="11" fill="#7A93B0" stroke="none"/>
+      <circle cx="216" cy="244" r="6" fill="#141836" stroke="none"/>
+      <circle cx="296" cy="244" r="6" fill="#141836" stroke="none"/>
+      <circle cx="221" cy="237" r="4" fill="#FFFFFF" stroke="none"/>
+      <circle cx="301" cy="237" r="4" fill="#FFFFFF" stroke="none"/>
+      <path d="M192 242 C198 224 230 224 236 240" fill="none" stroke-width="7"/>
+      <path d="M276 240 C282 224 314 224 320 242" fill="none" stroke-width="7"/>
+    </g>
+    <!-- brows: set and ready -->
+    <path d="M196 206 C206 198 222 198 232 204" fill="none" stroke="#B88A3A" stroke-width="7"/>
+    <path d="M280 204 C290 198 306 198 316 206" fill="none" stroke="#B88A3A" stroke-width="7"/>
+
+    <!-- bangs: long, swept across from her right to left -->
+    <path d="M160 236 C150 170 192 112 262 110 C318 108 354 140 356 196 C358 220 352 236 346 246
+             C344 214 334 196 320 186 C312 210 296 222 280 228 C290 210 292 192 288 178
+             C262 196 226 200 196 196 C186 210 180 226 178 250 C170 246 164 242 160 236 Z" fill="#F0CB72"/>
+    <g fill="none" stroke="#C9A04A" stroke-width="4">
+      <path d="M206 142 C236 128 276 128 306 140"/>
+      <path d="M196 170 C226 160 262 160 290 168"/>
+      <path d="M318 150 C330 162 336 176 338 196"/>
+    </g>
+    <path d="M226 120 C246 112 272 112 290 118" fill="none" stroke="#FFF0B8" stroke-width="6"/>
+    <g fill="none" stroke="#141836" stroke-width="3">
+      <path d="M300 112 C318 100 336 104 346 96"/>
+      <path d="M186 150 C176 136 166 132 156 134"/>
+      <path d="M340 236 C350 250 348 266 356 276"/>
+    </g>
+
+    <!-- comms headset (matches the Commander's) -->
+    <rect x="140" y="252" width="24" height="40" rx="10" fill="#2EC4B6"/>
+    <path d="M152 292 C160 318 186 330 210 326" fill="none" stroke="#141836" stroke-width="5"/>
+    <circle cx="214" cy="326" r="7" fill="#FF7A45" stroke-width="4"/>
+  </g>
+</svg>

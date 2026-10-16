@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Corgi sidekick: Hero Reader "Cosmic Storybook" style.
+       Pembroke orange-and-white, big ears, red collar, star tag, space goggles. -->
+  <defs>
+    <radialGradient id="bgC" cx="50%" cy="40%" r="65%">
+      <stop offset="0" stop-color="#2F6F8F"/>
+      <stop offset="1" stop-color="#1B1F4B"/>
+    </radialGradient>
+    <clipPath id="frameC"><circle cx="256" cy="256" r="244"/></clipPath>
+  </defs>
+  <g stroke="#141836" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="256" cy="256" r="244" fill="url(#bgC)"/>
+    <g clip-path="url(#frameC)" stroke="none">
+      <circle cx="80" cy="150" r="3" fill="#FFF4DC"/>
+      <circle cx="440" cy="300" r="3" fill="#FFF4DC"/>
+      <circle cx="420" cy="96" r="2.5" fill="#FFF4DC"/>
+      <path d="M96 300 l5 12 12 5 -12 5 -5 12 -5 -12 -12 -5 12 -5z" fill="#FFC93C"/>
+    </g>
+
+    <g clip-path="url(#frameC)">
+      <!-- chest fluff -->
+      <path d="M120 520 C130 420 180 380 256 380 C332 380 382 420 392 520 Z" fill="#FFF4DC"/>
+      <path d="M150 520 C160 450 200 418 256 418 C312 418 352 450 362 520" fill="none" stroke="#E8DCC4" stroke-width="4"/>
+    </g>
+
+    <!-- ears: tall, pointed, pink inside -->
+    <path d="M150 210 C128 150 130 84 148 46 C190 70 222 112 236 150 Z" fill="#F08A3C"/>
+    <path d="M160 180 C150 140 152 102 160 80 C186 100 204 126 212 152 Z" fill="#F7B4B0" stroke-width="4"/>
+    <path d="M362 210 C384 150 382 84 364 46 C322 70 290 112 276 150 Z" fill="#F08A3C"/>
+    <path d="M352 180 C362 140 360 102 352 80 C326 100 308 126 300 152 Z" fill="#F7B4B0" stroke-width="4"/>
+
+    <!-- head -->
+    <path d="M136 250 C132 180 184 134 256 134 C328 134 380 180 376 250 C374 310 330 362 256 366 C182 362 138 310 136 250 Z" fill="#F08A3C"/>
+    <!-- white blaze + muzzle -->
+    <path d="M240 140 C236 180 230 220 214 248 C186 262 176 300 196 330 C214 356 240 366 256 366 C272 366 298 356 316 330 C336 300 326 262 298 248 C282 220 276 180 272 140 Z" fill="#FFF4DC"/>
+    <!-- cheek shading -->
+    <path d="M150 280 C160 316 184 342 212 354" fill="none" stroke="#D9712B" stroke-width="5"/>
+    <path d="M362 280 C352 316 328 342 300 354" fill="none" stroke="#D9712B" stroke-width="5"/>
+
+    <!-- eyes: big and friendly -->
+    <ellipse cx="198" cy="236" rx="17" ry="19" fill="#141836" stroke="none"/>
+    <ellipse cx="314" cy="236" rx="17" ry="19" fill="#141836" stroke="none"/>
+    <circle cx="204" cy="229" r="6" fill="#FFFFFF" stroke="none"/>
+    <circle cx="320" cy="229" r="6" fill="#FFFFFF" stroke="none"/>
+    <circle cx="193" cy="244" r="2.5" fill="#FFFFFF" stroke="none"/>
+    <circle cx="309" cy="244" r="2.5" fill="#FFFFFF" stroke="none"/>
+    <!-- brows -->
+    <path d="M180 206 C190 200 204 200 212 204" fill="none" stroke="#B85E22" stroke-width="5"/>
+    <path d="M300 204 C308 200 322 200 332 206" fill="none" stroke="#B85E22" stroke-width="5"/>
+
+    <!-- nose + happy open mouth with tongue -->
+    <path d="M236 280 C236 268 276 268 276 280 C276 294 262 300 256 300 C250 300 236 294 236 280 Z" fill="#141836"/>
+    <path d="M248 276 C252 273 258 273 262 276" fill="none" stroke="#5A6080" stroke-width="3"/>
+    <path d="M256 300 L256 312" fill="none" stroke-width="5"/>
+    <path d="M220 312 C232 344 280 344 292 312 C280 318 232 318 220 312 Z" fill="#7A2E3A" stroke-width="5"/>
+    <path d="M240 326 C242 346 270 346 272 326 C262 330 250 330 240 326 Z" fill="#F28B82" stroke-width="4"/>
+
+    <!-- space goggles pushed up on the head -->
+    <path d="M150 176 C190 150 322 150 362 176" fill="none" stroke="#141836" stroke-width="10"/>
+    <circle cx="214" cy="160" r="24" fill="#2EC4B6"/>
+    <circle cx="298" cy="160" r="24" fill="#2EC4B6"/>
+    <circle cx="214" cy="160" r="13" fill="#9DEDE4" stroke-width="4"/>
+    <circle cx="298" cy="160" r="13" fill="#9DEDE4" stroke-width="4"/>
+    <path d="M206 152 l6 -4" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <path d="M290 152 l6 -4" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+
+    <!-- red collar with star tag (from the costume's red strap) -->
+    <path d="M176 362 C220 392 292 392 336 362 L344 384 C296 418 216 418 168 384 Z" fill="#E0413A"/>
+    <circle cx="256" cy="414" r="20" fill="#FFC93C"/>
+    <path d="M256 400 l4.4 9 10 1.3 -7.3 6.8 1.9 9.8 -9-5 -9 5 1.9-9.8 -7.3-6.8 10-1.3z" fill="#FF7A45" stroke-width="2.5"/>
+  </g>
+</svg>
