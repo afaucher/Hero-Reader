@@ -17,6 +17,9 @@ class WordMatcher {
   // For partial hypotheses (final=false) the last token is only accepted if
   // no other on-screen word starts with it ("on" could still become "one").
   std::string match(const std::string &text, bool final) const;
+  // Every distinct on-screen word in `text`, in spoken order (a child may
+  // read several words in one breath). Same partial-result rule as match().
+  std::vector<std::string> match_all(const std::string &text, bool final) const;
 
   static std::vector<std::string> tokenize(const std::string &text);
   static std::string canon(const std::string &word);

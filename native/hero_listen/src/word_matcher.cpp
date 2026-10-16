@@ -166,4 +166,21 @@ std::string WordMatcher::match(const std::string &text, bool final) const {
   return "";
 }
 
+std::vector<std::string> WordMatcher::match_all(const std::string &text, bool final) const {
+  std::vector<std::string> out;
+  auto toks = tokenize(text);
+  for (size_t i = 0; i < toks.size(); ++i) {
+    auto it = by_canon_.find(canon(toks[i]));
+    if (it == by_canon_.end()) continue;
+    bool is_last = i + 1 == toks.size();
+    if (!final && is_last && prefix_ambiguous(it->first)) continue;
+    if (std::find(out.begin(), out.end(), it->second) == out.end()) out.push_back(it->second);
+  }
+  if (out.empty() && final && has_pron_dict()) {
+    std::string w = sound_alike(toks);
+    if (!w.empty()) out.push_back(w);
+  }
+  return out;
+}
+
 }  // namespace hero

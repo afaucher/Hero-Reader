@@ -1,0 +1,41 @@
+{
+  "args": {
+    "engines": [
+      "parakeet-110m-hot"
+    ],
+    "speech_commands": "data/speech_commands",
+    "recordings": null,
+    "conditions": [
+      "clean"
+    ],
+    "trials": 300,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.2,
+    "trailing": 0.3,
+    "hot_score": 1.5,
+    "beam": 8,
+    "sound_alike": true,
+    "seed": 7,
+    "out": "results/final-silence0.2"
+  },
+  "summary": [
+    {
+      "engine": "parakeet-110m-hot",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 81.08108108108108,
+      "wrong_word_pct": 0.33783783783783783,
+      "no_fire_pct": 18.58108108108108,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 351.6054465003801,
+      "latency_p90_ms": 422.56586689949114,
+      "early_fire_pct": 3.3333333333333335,
+      "rtf": 0.0357356740106873,
+      "load_s": 1.1021923680000327
+    }
+  ]
+}

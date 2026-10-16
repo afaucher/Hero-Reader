@@ -215,23 +215,28 @@ void WordListener::new_stream() {
     ostream_ = SherpaOnnxCreateOnlineStream(online_);
   }
   last_text_.clear();
-  fired_ = false;
+  fired_.clear();
+  hotwords_stale_ = false;
 }
 
 void WordListener::set_words(const PackedStringArray &words) {
+  // Called whenever words spawn or get zapped. It must NOT reset the audio
+  // pipeline: the child may be halfway through reading a word.
   std::vector<std::string> w;
   for (int i = 0; i < words.size(); ++i) w.emplace_back(words[i].utf8().get_data());
   {
     std::lock_guard<std::mutex> lk(mu_);
-    pending_words_ = std::move(w);
+    pending_words_ = w;
+    current_words_ = std::move(w);
     words_dirty_ = true;
   }
   cv_.notify_all();
 }
 
 PackedStringArray WordListener::get_words() const {
+  std::lock_guard<std::mutex> lk(mu_);
   PackedStringArray out;
-  for (const auto &w : matcher_.words()) out.push_back(String::utf8(w.c_str()));
+  for (const auto &w : current_words_) out.push_back(String::utf8(w.c_str()));
   return out;
 }
 
@@ -326,7 +331,7 @@ void WordListener::worker_loop() {
       if (words_dirty_) {
         matcher_.set_words(pending_words_);
         words_dirty_ = false;
-        do_reset = true;  // a new screen: forget the half-heard previous word
+        hotwords_stale_ = hotwords_;
       }
       if (reset_) {
         reset_ = false;
@@ -370,6 +375,9 @@ void WordListener::worker_loop() {
 }
 
 void WordListener::process_streaming(const float *x, int n) {
+  // Hotwords are fixed per stream, so after the on-screen words change the
+  // stream is rebuilt -- but only while nobody is mid-word.
+  if (hotwords_stale_ && last_text_.empty()) new_stream();
   // Feed in 20 ms steps so partial results are checked as often as a game
   // frame would deliver audio.
   const int step = kSampleRate / 50;
@@ -384,29 +392,31 @@ void WordListener::process_streaming(const float *x, int n) {
     SherpaOnnxDestroyOnlineRecognizerResult(r);
     if (text != last_text_) {
       last_text_ = text;
-      if (!fired_) {
-        std::string w = matcher_.match(text, false);
-        if (!w.empty()) {
-          fired_ = true;
-          words_heard_++;
-          emit_event(0, w, text);
-        }
+      for (const auto &w : matcher_.match_all(text, false)) {
+        if (std::find(fired_.begin(), fired_.end(), w) != fired_.end()) continue;
+        fired_.push_back(w);
+        words_heard_++;
+        emit_event(0, w, text);
       }
     }
     if (SherpaOnnxOnlineStreamIsEndpoint(online_, ostream_)) {
-      if (!fired_ && !last_text_.empty()) {
-        std::string w = matcher_.match(last_text_, true);
-        if (!w.empty()) {
+      if (!last_text_.empty()) {
+        bool any = false;
+        for (const auto &w : matcher_.match_all(last_text_, true)) {
+          if (std::find(fired_.begin(), fired_.end(), w) != fired_.end()) continue;
+          any = true;
           words_heard_++;
           emit_event(0, w, last_text_);
-        } else {
+        }
+        if (!any && fired_.empty()) {
           other_heard_++;
           emit_event(1, "", last_text_);
         }
       }
       SherpaOnnxOnlineStreamReset(online_, ostream_);
       last_text_.clear();
-      fired_ = false;
+      fired_.clear();
+      if (hotwords_stale_) new_stream();
     }
   }
 }
@@ -456,11 +466,12 @@ void WordListener::process_vad(const float *x, int n) {
     SherpaOnnxDestroyOfflineRecognizerResult(r);
     SherpaOnnxDestroyOfflineStream(s);
     if (text.empty()) continue;
-    std::string w = matcher_.match(text, true);
-    if (!w.empty()) {
+    auto words = matcher_.match_all(text, true);
+    for (const auto &w : words) {
       words_heard_++;
       emit_event(0, w, text);
-    } else {
+    }
+    if (words.empty()) {
       other_heard_++;
       emit_event(1, "", text);
     }

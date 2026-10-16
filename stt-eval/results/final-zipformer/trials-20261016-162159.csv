@@ -1,0 +1,1111 @@
+engine,condition,positive,word,speaker,onscreen,fired,outcome,latency_ms,speech_ms,text,file
+zipformer-hot,clean,True,one,e0c782d5,visual no left yes one,one,hit,171,550,ONE,data/speech_commands/one/e0c782d5_nohash_3.wav
+zipformer-hot,clean,True,dog,893705bb,two dog forward follow tree,,none,,850,THOUGH,data/speech_commands/dog/893705bb_nohash_1.wav
+zipformer-hot,clean,True,up,3d86b69a,five up dog on house,,none,,610,OH,data/speech_commands/up/3d86b69a_nohash_0.wav
+zipformer-hot,clean,True,eight,8494fba8,eight wow five left tree,eight,hit,684,390,EIGHT,data/speech_commands/eight/8494fba8_nohash_0.wav
+zipformer-hot,clean,True,tree,a4e8a997,two up tree right three,tree,hit,805,270,TREE,data/speech_commands/tree/a4e8a997_nohash_1.wav
+zipformer-hot,clean,True,yes,94de6a6a,yes visual right up bed,yes,hit,-212,970,YES,data/speech_commands/yes/94de6a6a_nohash_4.wav
+zipformer-hot,clean,True,bed,f0ae7203,left eight follow bed five,bed,hit,595,770,BED,data/speech_commands/bed/f0ae7203_nohash_0.wav
+zipformer-hot,clean,True,seven,82d0d3ba,follow seven nine tree up,,none,,910,SE | VEN,data/speech_commands/seven/82d0d3ba_nohash_0.wav
+zipformer-hot,clean,True,five,6736bc64,cat up five happy off,five,hit,507,560,FIVE,data/speech_commands/five/6736bc64_nohash_1.wav
+zipformer-hot,clean,True,cat,6021f08b,down left cat no eight,cat,hit,741,1000,CAP,data/speech_commands/cat/6021f08b_nohash_0.wav
+zipformer-hot,clean,True,six,95ba4996,bird six left follow no,six,hit,173,900,SIX,data/speech_commands/six/95ba4996_nohash_0.wav
+zipformer-hot,clean,True,nine,b11a05d2,happy house nine one on,nine,hit,572,460,NINE,data/speech_commands/nine/b11a05d2_nohash_0.wav
+zipformer-hot,clean,True,eight,beb458a4,no bed backward bird eight,eight,hit,494,550,E | EIGHT,data/speech_commands/eight/beb458a4_nohash_2.wav
+zipformer-hot,clean,True,learn,87070229,visual eight up zero learn,learn,hit,518,520,LE | LEARN,data/speech_commands/learn/87070229_nohash_2.wav
+zipformer-hot,clean,True,two,d962e5ac,right two learn happy follow,,none,,550,OH,data/speech_commands/two/d962e5ac_nohash_1.wav
+zipformer-hot,clean,True,visual,4c6167ca,four nine two visual dog,visual,hit,523,530,VISUAL,data/speech_commands/visual/4c6167ca_nohash_5.wav
+zipformer-hot,clean,True,tree,6736bc64,left bird wow tree off,tree,hit,-19,740,TRE | TREE,data/speech_commands/tree/6736bc64_nohash_0.wav
+zipformer-hot,clean,True,left,5e3dde6b,seven right left no stop,left,hit,330,720,LEFT,data/speech_commands/left/5e3dde6b_nohash_0.wav
+zipformer-hot,clean,True,learn,bfd26d6b,seven learn backward three go,learn,hit,608,450,LEARN,data/speech_commands/learn/bfd26d6b_nohash_0.wav
+zipformer-hot,clean,True,visual,e0c782d5,nine visual down backward forward,visual,hit,726,610,VISUAL,data/speech_commands/visual/e0c782d5_nohash_1.wav
+zipformer-hot,clean,True,cat,e5e54cee,one eight left four cat,cat,hit,864,870,CAT,data/speech_commands/cat/e5e54cee_nohash_1.wav
+zipformer-hot,clean,True,five,c518d1b1,up on bird four five,five,hit,494,850,FIVE,data/speech_commands/five/c518d1b1_nohash_1.wav
+zipformer-hot,clean,True,go,692a88e6,follow go bed down bird,go,hit,301,470,GO | GO,data/speech_commands/go/692a88e6_nohash_3.wav
+zipformer-hot,clean,True,nine,9a7c1f83,left zero nine no bed,nine,hit,120,910,NINE,data/speech_commands/nine/9a7c1f83_nohash_3.wav
+zipformer-hot,clean,True,four,4c6167ca,yes nine dog four no,four,hit,110,670,FOUR | FOUR,data/speech_commands/four/4c6167ca_nohash_1.wav
+zipformer-hot,clean,True,four,cfbedff9,on yes four dog three,four,hit,227,500,FOUR,data/speech_commands/four/cfbedff9_nohash_1.wav
+zipformer-hot,clean,True,five,dcb57584,five forward one no backward,one,wrong,1195,550,WHAT,data/speech_commands/five/dcb57584_nohash_0.wav
+zipformer-hot,clean,True,tree,af405b69,zero off house tree wow,tree,hit,265,460,TRE | TREE,data/speech_commands/tree/af405b69_nohash_0.wav
+zipformer-hot,clean,True,five,893705bb,five yes bed down on,,none,,910,THOUGHT,data/speech_commands/five/893705bb_nohash_0.wav
+zipformer-hot,clean,True,five,189cbabe,down three five dog learn,five,hit,761,620,FIVE,data/speech_commands/five/189cbabe_nohash_1.wav
+zipformer-hot,clean,True,up,692a88e6,six learn five up zero,up,hit,403,680,UP,data/speech_commands/up/692a88e6_nohash_3.wav
+zipformer-hot,clean,True,cat,af130f12,zero tree cat one visual,cat,hit,723,340,CAT,data/speech_commands/cat/af130f12_nohash_0.wav
+zipformer-hot,clean,True,nine,5eb5fc74,seven nine five right backward,nine,hit,775,300,NI | NINE,data/speech_commands/nine/5eb5fc74_nohash_3.wav
+zipformer-hot,clean,True,eight,8769c34c,no on stop eight dog,eight,hit,557,490,EIGHT,data/speech_commands/eight/8769c34c_nohash_0.wav
+zipformer-hot,clean,True,on,a7216980,no on eight cat up,,none,,570,OH,data/speech_commands/on/a7216980_nohash_0.wav
+zipformer-hot,clean,True,go,beb458a4,go up off house right,go,hit,201,530,GO,data/speech_commands/go/beb458a4_nohash_4.wav
+zipformer-hot,clean,True,three,c7dc7278,down visual two cat three,three,hit,341,410,THREE,data/speech_commands/three/c7dc7278_nohash_1.wav
+zipformer-hot,clean,True,visual,c7dc7278,cat visual follow four yes,,none,,560,BE SURE,data/speech_commands/visual/c7dc7278_nohash_1.wav
+zipformer-hot,clean,True,dog,af130f12,tree nine no dog one,dog,hit,493,590,DOG,data/speech_commands/dog/af130f12_nohash_1.wav
+zipformer-hot,clean,True,on,84d1e469,dog on house zero learn,on,hit,137,580,ON,data/speech_commands/on/84d1e469_nohash_1.wav
+zipformer-hot,clean,True,go,563aa4e6,go happy nine house down,go,hit,491,280,GO | GO,data/speech_commands/go/563aa4e6_nohash_2.wav
+zipformer-hot,clean,True,five,1528225c,house no bed five two,five,hit,455,930,FIVE,data/speech_commands/five/1528225c_nohash_0.wav
+zipformer-hot,clean,True,one,c9b5ff26,seven zero no one cat,one,hit,439,960,ONE | ONE,data/speech_commands/one/c9b5ff26_nohash_3.wav
+zipformer-hot,clean,True,on,bfd26d6b,three no left on tree,on,hit,382,330,ON,data/speech_commands/on/bfd26d6b_nohash_2.wav
+zipformer-hot,clean,True,wow,e1469561,zero yes two wow bird,,none,,460,WELL,data/speech_commands/wow/e1469561_nohash_0.wav
+zipformer-hot,clean,True,bed,47d01978,four bed left nine five,bed,hit,757,330,BED,data/speech_commands/bed/47d01978_nohash_0.wav
+zipformer-hot,clean,True,five,c22d3f18,left backward forward bird five,five,hit,646,760,FIVE,data/speech_commands/five/c22d3f18_nohash_2.wav
+zipformer-hot,clean,True,five,210f3aa9,up five eight follow no,five,hit,453,910,FIVE,data/speech_commands/five/210f3aa9_nohash_0.wav
+zipformer-hot,clean,True,four,db24628d,four no left backward one,four,hit,329,430,FOUR,data/speech_commands/four/db24628d_nohash_2.wav
+zipformer-hot,clean,True,wow,cd85758f,tree bed on wow left,,none,,400,WELL,data/speech_commands/wow/cd85758f_nohash_0.wav
+zipformer-hot,clean,True,seven,d962e5ac,seven down up nine learn,,none,,630,SIR EMMON,data/speech_commands/seven/d962e5ac_nohash_1.wav
+zipformer-hot,clean,True,bed,210f3aa9,stop bed house tree two,bed,hit,626,430,BED,data/speech_commands/bed/210f3aa9_nohash_0.wav
+zipformer-hot,clean,True,on,893705bb,zero one on happy learn,,none,,620,OH,data/speech_commands/on/893705bb_nohash_7.wav
+zipformer-hot,clean,True,tree,9dc1889e,learn tree two go zero,tree,hit,355,390,TRE | TREE,data/speech_commands/tree/9dc1889e_nohash_0.wav
+zipformer-hot,clean,True,five,e49428d9,five two cat four bed,five,hit,575,500,FIVE,data/speech_commands/five/e49428d9_nohash_3.wav
+zipformer-hot,clean,True,cat,4c7c95de,follow seven go cat eight,cat,hit,475,580,CAT,data/speech_commands/cat/4c7c95de_nohash_0.wav
+zipformer-hot,clean,True,off,47d01978,off stop one three seven,off,hit,481,890,OFF,data/speech_commands/off/47d01978_nohash_1.wav
+zipformer-hot,clean,True,nine,d91a159e,nine six two down off,nine,hit,233,780,NINE,data/speech_commands/nine/d91a159e_nohash_1.wav
+zipformer-hot,clean,True,six,a1533da4,up six yes cat down,six,hit,43,720,SIX,data/speech_commands/six/a1533da4_nohash_0.wav
+zipformer-hot,clean,True,yes,dcb57584,one yes wow six bed,yes,hit,1023,350,YE | YES,data/speech_commands/yes/dcb57584_nohash_0.wav
+zipformer-hot,clean,True,two,f2e59fea,bird dog two wow stop,two,hit,21,750,TWO | TWO,data/speech_commands/two/f2e59fea_nohash_0.wav
+zipformer-hot,clean,True,one,91b03183,stop bird no one seven,one,hit,84,1000,ONE,data/speech_commands/one/91b03183_nohash_2.wav
+zipformer-hot,clean,True,down,e49428d9,dog left bed down five,,none,,450,NONE,data/speech_commands/down/e49428d9_nohash_3.wav
+zipformer-hot,clean,True,house,5ff3f9a1,backward zero house follow go,house,hit,332,720,HOUSE,data/speech_commands/house/5ff3f9a1_nohash_0.wav
+zipformer-hot,clean,True,zero,a60a09cf,six one down visual zero,zero,hit,277,800,ZERO,data/speech_commands/zero/a60a09cf_nohash_2.wav
+zipformer-hot,clean,True,three,b83c1acf,yes dog two bird three,three,hit,-150,550,THREE,data/speech_commands/three/b83c1acf_nohash_1.wav
+zipformer-hot,clean,True,left,9a7c1f83,left down no house dog,left,hit,409,1000,LEFT,data/speech_commands/left/9a7c1f83_nohash_3.wav
+zipformer-hot,clean,True,no,0cb74144,wow learn two follow no,no,hit,134,570,NO,data/speech_commands/no/0cb74144_nohash_0.wav
+zipformer-hot,clean,True,left,cfde27ba,left on no off stop,left,hit,242,470,LEFT,data/speech_commands/left/cfde27ba_nohash_0.wav
+zipformer-hot,clean,True,backward,0cb74144,house backward four nine on,,none,,490,BACK | WARD,data/speech_commands/backward/0cb74144_nohash_1.wav
+zipformer-hot,clean,True,five,5e3dde6b,wow bird eight five left,five,hit,590,820,FIVE,data/speech_commands/five/5e3dde6b_nohash_0.wav
+zipformer-hot,clean,True,three,f9643d42,bird off learn three six,three,hit,661,410,THREE,data/speech_commands/three/f9643d42_nohash_1.wav
+zipformer-hot,clean,True,yes,d9e9f554,nine go up yes six,yes,hit,367,650,YE | YES,data/speech_commands/yes/d9e9f554_nohash_1.wav
+zipformer-hot,clean,True,six,ef2a3cfb,right six forward stop bird,six,hit,124,580,SIX,data/speech_commands/six/ef2a3cfb_nohash_0.wav
+zipformer-hot,clean,True,zero,aa80f517,zero six backward tree one,,none,,520,VERE,data/speech_commands/zero/aa80f517_nohash_3.wav
+zipformer-hot,clean,True,two,c9e251d2,yes two dog tree zero,two,hit,617,440,TWO,data/speech_commands/two/c9e251d2_nohash_0.wav
+zipformer-hot,clean,True,three,9a356ab9,two four tree three no,three,hit,-226,960,THREE,data/speech_commands/three/9a356ab9_nohash_1.wav
+zipformer-hot,clean,True,off,37dca74f,six off bed stop two,off,hit,660,360,OFF,data/speech_commands/off/37dca74f_nohash_4.wav
+zipformer-hot,clean,True,backward,aa80f517,backward up go follow bed,backward,hit,486,590,BACKWARD,data/speech_commands/backward/aa80f517_nohash_4.wav
+zipformer-hot,clean,True,go,18f8afd5,four cat backward follow go,go,hit,250,470,GO | GO,data/speech_commands/go/18f8afd5_nohash_3.wav
+zipformer-hot,clean,True,yes,c9b5ff26,seven six yes four forward,yes,hit,272,470,YES,data/speech_commands/yes/c9b5ff26_nohash_4.wav
+zipformer-hot,clean,True,visual,d962e5ac,visual happy eight stop zero,,none,,600,MIDHERDIN,data/speech_commands/visual/d962e5ac_nohash_1.wav
+zipformer-hot,clean,True,no,a1533da4,no cat down four three,no,hit,362,670,NO,data/speech_commands/no/a1533da4_nohash_0.wav
+zipformer-hot,clean,True,zero,e49428d9,go bird three house zero,,none,,430,CYRIL,data/speech_commands/zero/e49428d9_nohash_2.wav
+zipformer-hot,clean,True,dog,587f3271,bird nine house four dog,dog,hit,462,620,DOG,data/speech_commands/dog/587f3271_nohash_1.wav
+zipformer-hot,clean,True,six,68dd409e,three six two wow on,six,hit,46,700,SIX,data/speech_commands/six/68dd409e_nohash_0.wav
+zipformer-hot,clean,True,visual,893705bb,bed up go backward visual,,none,,480,,data/speech_commands/visual/893705bb_nohash_2.wav
+zipformer-hot,clean,True,eight,ca4d5368,yes happy tree eight wow,eight,hit,557,490,EIGHT,data/speech_commands/eight/ca4d5368_nohash_3.wav
+zipformer-hot,clean,True,backward,893705bb,visual cat backward eight stop,,none,,800,BACK,data/speech_commands/backward/893705bb_nohash_5.wav
+zipformer-hot,clean,True,on,f17d21b5,three follow bed on cat,,none,,770,OH,data/speech_commands/on/f17d21b5_nohash_1.wav
+zipformer-hot,clean,True,five,1acc97de,dog go on five left,five,hit,439,590,FIVE,data/speech_commands/five/1acc97de_nohash_1.wav
+zipformer-hot,clean,True,one,3b4f8f24,one wow yes nine forward,one,hit,129,950,ONE | ONE,data/speech_commands/one/3b4f8f24_nohash_3.wav
+zipformer-hot,clean,True,zero,5c8af87a,six zero happy bird go,zero,hit,656,430,ZERO,data/speech_commands/zero/5c8af87a_nohash_1.wav
+zipformer-hot,clean,True,zero,893705bb,five four nine stop zero,zero,hit,891,790,HERO,data/speech_commands/zero/893705bb_nohash_7.wav
+zipformer-hot,clean,True,forward,beb458a4,forward eight no stop tree,forward,hit,318,720,FOR | FORWARD,data/speech_commands/forward/beb458a4_nohash_4.wav
+zipformer-hot,clean,True,six,4c6167ca,learn visual six right down,six,hit,217,500,SIX,data/speech_commands/six/4c6167ca_nohash_0.wav
+zipformer-hot,clean,True,five,fb7eb481,right five left bird backward,five,hit,575,470,FIVE,data/speech_commands/five/fb7eb481_nohash_2.wav
+zipformer-hot,clean,True,house,5744b6a7,house follow zero stop cat,house,hit,615,450,HOUSE,data/speech_commands/house/5744b6a7_nohash_0.wav
+zipformer-hot,clean,True,tree,422d3197,on seven tree eight learn,tree,hit,391,660,TRE | TREE,data/speech_commands/tree/422d3197_nohash_0.wav
+zipformer-hot,clean,True,bed,c518d1b1,forward bed go yes stop,bed,hit,416,1000,BED,data/speech_commands/bed/c518d1b1_nohash_0.wav
+zipformer-hot,clean,True,stop,893705bb,dog stop eight forward no,stop,hit,607,450,STOP,data/speech_commands/stop/893705bb_nohash_2.wav
+zipformer-hot,clean,True,tree,a591c2ea,zero left four tree visual,tree,hit,136,920,TRE,data/speech_commands/tree/a591c2ea_nohash_1.wav
+zipformer-hot,clean,True,cat,0cb74144,nine dog go cat happy,cat,hit,577,490,CAT,data/speech_commands/cat/0cb74144_nohash_0.wav
+zipformer-hot,clean,True,one,c9b5ff26,happy one on go two,one,hit,577,470,ONE,data/speech_commands/one/c9b5ff26_nohash_0.wav
+zipformer-hot,clean,True,five,cfde27ba,three up five wow backward,five,hit,434,960,FIVE,data/speech_commands/five/cfde27ba_nohash_0.wav
+zipformer-hot,clean,True,two,6021f08b,learn nine five two bird,two,hit,-177,930,TWO,data/speech_commands/two/6021f08b_nohash_0.wav
+zipformer-hot,clean,True,three,cfbedff9,off nine house three up,three,hit,128,610,THREE,data/speech_commands/three/cfbedff9_nohash_1.wav
+zipformer-hot,clean,True,seven,a2473d62,happy seven three four one,seven,hit,685,700,SEVEN,data/speech_commands/seven/a2473d62_nohash_0.wav
+zipformer-hot,clean,True,zero,1fe4c891,learn bed backward two zero,zero,hit,556,510,ZERO,data/speech_commands/zero/1fe4c891_nohash_0.wav
+zipformer-hot,clean,True,right,d0faf7e4,forward bed bird right four,right,hit,194,520,RIGHT,data/speech_commands/right/d0faf7e4_nohash_1.wav
+zipformer-hot,clean,True,house,4c7c95de,bed follow bird house forward,house,hit,411,620,HOUSE,data/speech_commands/house/4c7c95de_nohash_0.wav
+zipformer-hot,clean,True,zero,1acc97de,stop dog zero happy six,zero,hit,486,530,ZERO,data/speech_commands/zero/1acc97de_nohash_4.wav
+zipformer-hot,clean,True,no,9a69672b,yes on no down bird,no,hit,316,730,NO,data/speech_commands/no/9a69672b_nohash_3.wav
+zipformer-hot,clean,True,off,daf230ac,off nine seven up right,off,hit,747,610,OFF,data/speech_commands/off/daf230ac_nohash_1.wav
+zipformer-hot,clean,True,happy,b7e9f841,yes on right stop happy,happy,hit,372,690,HAPPY,data/speech_commands/happy/b7e9f841_nohash_1.wav
+zipformer-hot,clean,True,six,e41a903b,cat eight yes seven six,six,hit,257,460,SIX,data/speech_commands/six/e41a903b_nohash_3.wav
+zipformer-hot,clean,True,cat,b83c1acf,cat up house go backward,cat,hit,245,890,CAT,data/speech_commands/cat/b83c1acf_nohash_0.wav
+zipformer-hot,clean,True,nine,5170b77f,zero eight six go nine,nine,hit,631,400,NINE,data/speech_commands/nine/5170b77f_nohash_1.wav
+zipformer-hot,clean,True,three,4c6167ca,zero four learn three house,three,hit,241,820,THREE,data/speech_commands/three/4c6167ca_nohash_5.wav
+zipformer-hot,clean,True,go,91b03183,tree go eight six down,go,hit,455,590,GO,data/speech_commands/go/91b03183_nohash_0.wav
+zipformer-hot,clean,True,left,1b4c9b89,left four no three up,left,hit,615,800,LEFT,data/speech_commands/left/1b4c9b89_nohash_2.wav
+zipformer-hot,clean,True,up,43fc47a7,one forward visual up four,up,hit,258,790,UP,data/speech_commands/up/43fc47a7_nohash_2.wav
+zipformer-hot,clean,True,up,24ad3ebe,follow wow left right up,up,hit,528,890,UP,data/speech_commands/up/24ad3ebe_nohash_0.wav
+zipformer-hot,clean,True,six,0d53e045,one forward seven six left,six,hit,468,300,SIX,data/speech_commands/six/0d53e045_nohash_1.wav
+zipformer-hot,clean,True,backward,189cbabe,five house three backward go,backward,hit,580,510,BACKWARD,data/speech_commands/backward/189cbabe_nohash_0.wav
+zipformer-hot,clean,True,no,85834399,happy eight off no house,no,hit,312,420,NO | NO,data/speech_commands/no/85834399_nohash_0.wav
+zipformer-hot,clean,True,two,1b4c9b89,two off wow learn up,,none,,640,DO,data/speech_commands/two/1b4c9b89_nohash_4.wav
+zipformer-hot,clean,True,up,5e3dde6b,learn left tree two up,,none,,680,OPE,data/speech_commands/up/5e3dde6b_nohash_3.wav
+zipformer-hot,clean,True,on,3b4f8f24,right up on nine wow,,none,,300,AH,data/speech_commands/on/3b4f8f24_nohash_0.wav
+zipformer-hot,clean,True,stop,f9643d42,up stop yes wow nine,stop,hit,402,640,STOP,data/speech_commands/stop/f9643d42_nohash_2.wav
+zipformer-hot,clean,True,go,b83c1acf,three go eight zero backward,go,hit,289,430,GO,data/speech_commands/go/b83c1acf_nohash_4.wav
+zipformer-hot,clean,True,two,aa80f517,happy wow eight seven two,two,hit,351,380,TWO | TWO,data/speech_commands/two/aa80f517_nohash_2.wav
+zipformer-hot,clean,True,on,6b889021,two stop wow on seven,on,hit,327,720,ON | ON,data/speech_commands/on/6b889021_nohash_0.wav
+zipformer-hot,clean,True,stop,0c40e715,nine no stop cat three,,none,,370,BAH,data/speech_commands/stop/0c40e715_nohash_0.wav
+zipformer-hot,clean,True,visual,837a0f64,tree visual eight nine seven,visual,hit,599,450,VISUAL,data/speech_commands/visual/837a0f64_nohash_1.wav
+zipformer-hot,clean,True,zero,2aa787cf,zero four house three visual,zero,hit,479,590,ZERO,data/speech_commands/zero/2aa787cf_nohash_0.wav
+zipformer-hot,clean,True,seven,b49caed3,forward learn seven six two,seven,hit,697,680,SEVEN,data/speech_commands/seven/b49caed3_nohash_2.wav
+zipformer-hot,clean,True,left,e1469561,learn six left three off,,none,,990,LE | APT,data/speech_commands/left/e1469561_nohash_2.wav
+zipformer-hot,clean,True,dog,af8b2f2c,backward nine off dog six,dog,hit,445,580,DOG,data/speech_commands/dog/af8b2f2c_nohash_0.wav
+zipformer-hot,clean,True,learn,837a0f64,forward stop learn down one,learn,hit,501,560,LEARN,data/speech_commands/learn/837a0f64_nohash_1.wav
+zipformer-hot,clean,True,no,d5b963aa,backward six dog no house,no,hit,262,440,NO,data/speech_commands/no/d5b963aa_nohash_0.wav
+zipformer-hot,clean,True,dog,cd85758f,visual left six dog happy,dog,hit,590,460,DOG,data/speech_commands/dog/cd85758f_nohash_0.wav
+zipformer-hot,clean,True,left,bb05582b,house happy zero one left,left,hit,267,470,LEFT,data/speech_commands/left/bb05582b_nohash_1.wav
+zipformer-hot,clean,True,left,c9b5ff26,two five left learn no,left,hit,445,580,LEFT,data/speech_commands/left/c9b5ff26_nohash_3.wav
+zipformer-hot,clean,True,right,44715c1c,right wow zero forward left,right,hit,411,620,RIGHT,data/speech_commands/right/44715c1c_nohash_0.wav
+zipformer-hot,clean,True,down,189cbabe,right down wow zero on,down,hit,192,550,DOWN | DOWN,data/speech_commands/down/189cbabe_nohash_1.wav
+zipformer-hot,clean,True,forward,f2e59fea,bird stop forward happy bed,,none,,300,FOUR,data/speech_commands/forward/f2e59fea_nohash_0.wav
+zipformer-hot,clean,True,wow,e41a903b,tree wow forward house bird,wow,hit,611,440,WOW,data/speech_commands/wow/e41a903b_nohash_0.wav
+zipformer-hot,clean,True,stop,a1533da4,stop yes house up off,stop,hit,420,650,STOP,data/speech_commands/stop/a1533da4_nohash_0.wav
+zipformer-hot,clean,True,three,e49428d9,off seven tree three zero,three,hit,309,390,THREE,data/speech_commands/three/e49428d9_nohash_2.wav
+zipformer-hot,clean,True,right,1f653d27,five happy zero right seven,right,hit,391,670,RIGHT,data/speech_commands/right/1f653d27_nohash_0.wav
+zipformer-hot,clean,True,dog,9e2ce5e3,one cat five dog tree,dog,hit,1083,300,DAWN,data/speech_commands/dog/9e2ce5e3_nohash_1.wav
+zipformer-hot,clean,True,visual,87070229,forward visual down house stop,visual,hit,846,510,VISUAL,data/speech_commands/visual/87070229_nohash_0.wav
+zipformer-hot,clean,True,yes,c9e251d2,eight bird yes tree go,yes,hit,852,590,YE | YES,data/speech_commands/yes/c9e251d2_nohash_0.wav
+zipformer-hot,clean,True,seven,f2e59fea,seven bird go on two,,none,,540,SE | VEN,data/speech_commands/seven/f2e59fea_nohash_4.wav
+zipformer-hot,clean,True,off,3b4f8f24,two five off bird tree,off,hit,544,480,OFF,data/speech_commands/off/3b4f8f24_nohash_0.wav
+zipformer-hot,clean,True,five,e41a903b,five eight yes two down,five,hit,669,360,FIVE,data/speech_commands/five/e41a903b_nohash_1.wav
+zipformer-hot,clean,True,one,a6f2fd71,down one house five backward,one,hit,255,480,ONE,data/speech_commands/one/a6f2fd71_nohash_2.wav
+zipformer-hot,clean,True,go,4845bb10,cat nine go visual happy,go,hit,69,950,GO,data/speech_commands/go/4845bb10_nohash_0.wav
+zipformer-hot,clean,True,yes,97f4c236,visual nine cat yes zero,yes,hit,207,850,YES,data/speech_commands/yes/97f4c236_nohash_0.wav
+zipformer-hot,clean,True,off,a7216980,zero four one three off,,none,,590,O | H,data/speech_commands/off/a7216980_nohash_4.wav
+zipformer-hot,clean,True,cat,964e8cfd,yes follow cat go four,,none,,450,GAP,data/speech_commands/cat/964e8cfd_nohash_0.wav
+zipformer-hot,clean,True,on,8fe67225,seven visual three on no,on,hit,255,530,ON,data/speech_commands/on/8fe67225_nohash_2.wav
+zipformer-hot,clean,True,up,5b1db3ee,forward on two up left,,none,,650,AH,data/speech_commands/up/5b1db3ee_nohash_0.wav
+zipformer-hot,clean,True,up,4c841771,one visual off up backward,up,hit,-188,970,UP,data/speech_commands/up/4c841771_nohash_0.wav
+zipformer-hot,clean,True,up,1fe4c891,zero forward up off no,up,hit,767,980,UP,data/speech_commands/up/1fe4c891_nohash_0.wav
+zipformer-hot,clean,True,up,cfbedff9,learn happy on up cat,up,hit,419,310,UP,data/speech_commands/up/cfbedff9_nohash_2.wav
+zipformer-hot,clean,True,bed,a2473d62,three eight backward wow bed,bed,hit,805,620,BED,data/speech_commands/bed/a2473d62_nohash_0.wav
+zipformer-hot,clean,True,down,4620dc14,house yes no down right,down,hit,231,500,DOWN,data/speech_commands/down/4620dc14_nohash_0.wav
+zipformer-hot,clean,True,four,beb458a4,tree six on stop four,four,hit,367,650,FOUR,data/speech_commands/four/beb458a4_nohash_2.wav
+zipformer-hot,clean,True,up,03401e93,up six down wow eight,up,hit,123,620,UP,data/speech_commands/up/03401e93_nohash_0.wav
+zipformer-hot,clean,True,tree,f0ae7203,tree no eight bird bed,tree,hit,714,660,TREE,data/speech_commands/tree/f0ae7203_nohash_1.wav
+zipformer-hot,clean,True,wow,2fa39636,eight no up two wow,wow,hit,638,740,WOW,data/speech_commands/wow/2fa39636_nohash_0.wav
+zipformer-hot,clean,True,tree,022cd682,stop go down tree happy,tree,hit,382,1000,TRE | E,data/speech_commands/tree/022cd682_nohash_1.wav
+zipformer-hot,clean,True,nine,aa80f517,five nine dog tree zero,,none,,470,NAK,data/speech_commands/nine/aa80f517_nohash_0.wav
+zipformer-hot,clean,True,two,ca4d5368,four three two go visual,two,hit,215,480,TWO,data/speech_commands/two/ca4d5368_nohash_3.wav
+zipformer-hot,clean,True,no,3d86b69a,six nine cat bird no,no,hit,426,590,NO,data/speech_commands/no/3d86b69a_nohash_2.wav
+zipformer-hot,clean,True,happy,03401e93,happy right forward eight cat,happy,hit,587,770,HAPPY,data/speech_commands/happy/03401e93_nohash_0.wav
+zipformer-hot,clean,True,zero,e49428d9,zero wow eight six one,,none,,440,CYRIL,data/speech_commands/zero/e49428d9_nohash_1.wav
+zipformer-hot,clean,True,off,8c7f81df,visual left off three four,,none,,360,AH,data/speech_commands/off/8c7f81df_nohash_1.wav
+zipformer-hot,clean,True,cat,a8e25ebb,down cat go stop left,cat,hit,843,200,CAT,data/speech_commands/cat/a8e25ebb_nohash_0.wav
+zipformer-hot,clean,True,bed,6021f08b,seven bed down right visual,bed,hit,125,980,BED,data/speech_commands/bed/6021f08b_nohash_0.wav
+zipformer-hot,clean,True,right,fdb5155e,cat seven right learn go,right,hit,697,700,RIGHT | RIGHT,data/speech_commands/right/fdb5155e_nohash_2.wav
+zipformer-hot,clean,True,five,aa80f517,bed two nine five four,,none,,760,BESIDE HER,data/speech_commands/five/aa80f517_nohash_2.wav
+zipformer-hot,clean,True,yes,9a7c1f83,eight one yes zero visual,yes,hit,765,1000,YE | YES,data/speech_commands/yes/9a7c1f83_nohash_5.wav
+zipformer-hot,clean,True,bed,c781f251,yes no bed follow on,bed,hit,561,870,BED,data/speech_commands/bed/c781f251_nohash_0.wav
+zipformer-hot,clean,True,zero,63f7a489,stop zero left eight off,zero,hit,931,780,Z | ERO RU,data/speech_commands/zero/63f7a489_nohash_3.wav
+zipformer-hot,clean,True,off,893705bb,off visual seven bed follow,,none,,720,O | H,data/speech_commands/off/893705bb_nohash_3.wav
+zipformer-hot,clean,True,eight,e1469561,eight stop two bird up,,none,,760,,data/speech_commands/eight/e1469561_nohash_0.wav
+zipformer-hot,clean,True,tree,83957201,happy tree learn down go,tree,hit,456,980,TREE,data/speech_commands/tree/83957201_nohash_2.wav
+zipformer-hot,clean,True,nine,e41a903b,happy nine one backward follow,nine,hit,609,460,NI | NINE,data/speech_commands/nine/e41a903b_nohash_0.wav
+zipformer-hot,clean,True,off,db24628d,zero off on down seven,off,hit,648,750,OFF,data/speech_commands/off/db24628d_nohash_2.wav
+zipformer-hot,clean,True,seven,b11a05d2,seven left bird stop go,seven,hit,809,540,SEVEN,data/speech_commands/seven/b11a05d2_nohash_0.wav
+zipformer-hot,clean,True,dog,a591c2ea,visual dog six follow down,dog,hit,189,900,DOG,data/speech_commands/dog/a591c2ea_nohash_3.wav
+zipformer-hot,clean,True,four,50033893,eight visual zero on four,four,hit,430,1000,FOUR | FOUR,data/speech_commands/four/50033893_nohash_0.wav
+zipformer-hot,clean,True,left,ea356919,go learn left nine down,left,hit,497,540,LEFT,data/speech_commands/left/ea356919_nohash_0.wav
+zipformer-hot,clean,True,zero,03401e93,eight zero happy nine bed,,none,,840,TSODO,data/speech_commands/zero/03401e93_nohash_1.wav
+zipformer-hot,clean,True,off,692a88e6,bird off six eight go,off,hit,452,560,OFF,data/speech_commands/off/692a88e6_nohash_1.wav
+zipformer-hot,clean,True,zero,8fe67225,five learn follow zero three,zero,hit,759,590,Z | ERO,data/speech_commands/zero/8fe67225_nohash_3.wav
+zipformer-hot,clean,True,down,6f2f57c1,three two bed go down,down,hit,209,820,DOWN,data/speech_commands/down/6f2f57c1_nohash_2.wav
+zipformer-hot,clean,True,go,bb05582b,up seven tree nine go,go,hit,230,500,GO | GO,data/speech_commands/go/bb05582b_nohash_4.wav
+zipformer-hot,clean,True,happy,5eb5fc74,six up happy nine forward,happy,hit,835,210,HAPPY,data/speech_commands/happy/5eb5fc74_nohash_1.wav
+zipformer-hot,clean,True,six,e1469561,one happy bed six up,six,hit,-1,810,SIX,data/speech_commands/six/e1469561_nohash_1.wav
+zipformer-hot,clean,True,down,d91a159e,five no off down bird,down,hit,107,970,DOWN | DOWN,data/speech_commands/down/d91a159e_nohash_0.wav
+zipformer-hot,clean,True,down,37dca74f,one down six on follow,down,hit,461,370,DOWN,data/speech_commands/down/37dca74f_nohash_1.wav
+zipformer-hot,clean,True,down,d0faf7e4,wow visual follow four down,down,hit,400,710,DOWN,data/speech_commands/down/d0faf7e4_nohash_2.wav
+zipformer-hot,clean,True,one,4c6167ca,no one down left off,one,hit,125,670,ONE | ONE,data/speech_commands/one/4c6167ca_nohash_1.wav
+zipformer-hot,clean,True,learn,6379c6a2,wow learn stop one yes,,none,,200,LEP,data/speech_commands/learn/6379c6a2_nohash_0.wav
+zipformer-hot,clean,True,dog,563aa4e6,house tree dog three left,dog,hit,541,850,DOG,data/speech_commands/dog/563aa4e6_nohash_0.wav
+zipformer-hot,clean,True,bed,6021f08b,bed on right off zero,bed,hit,506,530,BED,data/speech_commands/bed/6021f08b_nohash_1.wav
+zipformer-hot,clean,True,zero,f2e59fea,dog up seven cat zero,,none,,540,ZEAL,data/speech_commands/zero/f2e59fea_nohash_1.wav
+zipformer-hot,clean,True,stop,91b03183,right learn stop forward two,stop,hit,544,840,STO | STOP,data/speech_commands/stop/91b03183_nohash_2.wav
+zipformer-hot,clean,True,down,cd85758f,off yes down five forward,down,hit,445,620,DOWN,data/speech_commands/down/cd85758f_nohash_0.wav
+zipformer-hot,clean,True,no,f2e59fea,two no tree zero forward,no,hit,347,410,NO,data/speech_commands/no/f2e59fea_nohash_4.wav
+zipformer-hot,clean,True,yes,3d86b69a,stop seven yes off three,yes,hit,215,870,YES,data/speech_commands/yes/3d86b69a_nohash_0.wav
+zipformer-hot,clean,True,right,bfd26d6b,on visual go right forward,right,hit,243,520,RIGHT,data/speech_commands/right/bfd26d6b_nohash_3.wav
+zipformer-hot,clean,True,nine,bb05582b,right left nine seven house,nine,hit,703,670,NI | NINE,data/speech_commands/nine/bb05582b_nohash_0.wav
+zipformer-hot,clean,True,yes,893705bb,yes on zero two stop,,none,,530,THIS,data/speech_commands/yes/893705bb_nohash_3.wav
+zipformer-hot,clean,True,zero,8769c34c,backward dog zero learn eight,zero,hit,660,750,HERO,data/speech_commands/zero/8769c34c_nohash_0.wav
+zipformer-hot,clean,True,dog,a8e25ebb,two house dog zero tree,dog,hit,853,530,DOG,data/speech_commands/dog/a8e25ebb_nohash_0.wav
+zipformer-hot,clean,True,on,67961766,dog one stop right on,on,hit,469,990,ON,data/speech_commands/on/67961766_nohash_0.wav
+zipformer-hot,clean,True,eight,8c7f81df,on two learn go eight,eight,hit,572,490,EIGHT,data/speech_commands/eight/8c7f81df_nohash_1.wav
+zipformer-hot,clean,True,yes,893705bb,bird tree seven yes eight,yes,hit,602,790,YES,data/speech_commands/yes/893705bb_nohash_2.wav
+zipformer-hot,clean,True,three,6736bc64,tree backward bed three eight,three,hit,29,690,THREE,data/speech_commands/three/6736bc64_nohash_1.wav
+zipformer-hot,clean,True,four,f9643d42,four five forward house two,four,hit,278,430,FOUR,data/speech_commands/four/f9643d42_nohash_0.wav
+zipformer-hot,clean,True,learn,f9643d42,up zero wow learn four,,none,,600,LE,data/speech_commands/learn/f9643d42_nohash_1.wav
+zipformer-hot,clean,True,stop,37fc5d97,seven stop four no left,stop,hit,266,770,STOP,data/speech_commands/stop/37fc5d97_nohash_2.wav
+zipformer-hot,clean,True,yes,2796ac50,up happy stop yes seven,yes,hit,110,980,YES,data/speech_commands/yes/2796ac50_nohash_0.wav
+zipformer-hot,clean,True,seven,692a88e6,learn seven left cat visual,seven,hit,402,680,SEVEN,data/speech_commands/seven/692a88e6_nohash_4.wav
+zipformer-hot,clean,True,no,c7dc7278,two backward wow one no,no,hit,226,880,NO | NO,data/speech_commands/no/c7dc7278_nohash_1.wav
+zipformer-hot,clean,True,zero,422d3197,learn tree stop zero on,,none,,790,CYRIL,data/speech_commands/zero/422d3197_nohash_0.wav
+zipformer-hot,clean,True,nine,0fa1e7a9,three six nine go four,nine,hit,424,630,NINE,data/speech_commands/nine/0fa1e7a9_nohash_1.wav
+zipformer-hot,clean,True,yes,0cb74144,three stop right yes five,yes,hit,107,640,YES,data/speech_commands/yes/0cb74144_nohash_2.wav
+zipformer-hot,clean,True,on,5ff3f9a1,on three off happy wow,on,hit,154,580,ON,data/speech_commands/on/5ff3f9a1_nohash_1.wav
+zipformer-hot,clean,True,six,cfde27ba,forward six left bed right,six,hit,193,540,SIX,data/speech_commands/six/cfde27ba_nohash_0.wav
+zipformer-hot,clean,True,bird,e41a903b,go wow visual bird nine,bird,hit,353,420,BIR | BIRD,data/speech_commands/bird/e41a903b_nohash_0.wav
+zipformer-hot,clean,True,four,587f3271,learn four yes one left,four,hit,270,480,FOUR | FOUR,data/speech_commands/four/587f3271_nohash_2.wav
+zipformer-hot,clean,True,nine,dcb57584,nine house tree stop left,,none,,440,NOT,data/speech_commands/nine/dcb57584_nohash_0.wav
+zipformer-hot,clean,True,off,beb458a4,bed off forward one three,off,hit,653,440,OFF,data/speech_commands/off/beb458a4_nohash_4.wav
+zipformer-hot,clean,True,follow,ea37ca08,follow right eight house left,follow,hit,422,340,FOLLOW,data/speech_commands/follow/ea37ca08_nohash_0.wav
+zipformer-hot,clean,True,left,9a69672b,dog learn left one down,left,hit,275,500,LEFT,data/speech_commands/left/9a69672b_nohash_2.wav
+zipformer-hot,clean,True,up,d103dd6e,up follow seven three wow,up,hit,237,530,UP,data/speech_commands/up/d103dd6e_nohash_0.wav
+zipformer-hot,clean,True,nine,0cb74144,bed two nine wow left,nine,hit,565,540,NI | NINE,data/speech_commands/nine/0cb74144_nohash_1.wav
+zipformer-hot,clean,True,follow,893705bb,five off follow left on,,none,,680,ALL ALONE,data/speech_commands/follow/893705bb_nohash_3.wav
+zipformer-hot,clean,True,yes,e41a903b,on yes stop forward happy,yes,hit,396,370,YES,data/speech_commands/yes/e41a903b_nohash_2.wav
+zipformer-hot,clean,True,six,cfbedff9,seven nine up six zero,six,hit,199,550,SIX,data/speech_commands/six/cfbedff9_nohash_3.wav
+zipformer-hot,clean,True,zero,893705bb,zero cat bird left five,,none,,680,CLARA,data/speech_commands/zero/893705bb_nohash_2.wav
+zipformer-hot,clean,True,eight,964c7c9e,tree eight left down off,eight,hit,1192,200,EIGHTH,data/speech_commands/eight/964c7c9e_nohash_0.wav
+zipformer-hot,clean,True,eight,f2e59fea,up eight cat learn forward,eight,hit,629,440,E | EIGHT,data/speech_commands/eight/f2e59fea_nohash_1.wav
+zipformer-hot,clean,True,three,e49428d9,four cat three nine left,three,hit,492,360,THREE,data/speech_commands/three/e49428d9_nohash_0.wav
+zipformer-hot,clean,True,down,b2e2773a,down house forward one zero,down,hit,180,610,DOWN | DOWN,data/speech_commands/down/b2e2773a_nohash_0.wav
+zipformer-hot,clean,True,stop,e1469561,on visual seven stop follow,stop,hit,479,1000,STOP,data/speech_commands/stop/e1469561_nohash_4.wav
+zipformer-hot,clean,True,follow,f2e59fea,go five up four follow,follow,hit,279,440,FOLLOW,data/speech_commands/follow/f2e59fea_nohash_0.wav
+zipformer-hot,clean,True,off,d962e5ac,stop off zero on backward,,none,,450,O,data/speech_commands/off/d962e5ac_nohash_3.wav
+zipformer-hot,clean,True,zero,18f8afd5,zero on up five happy,,none,,480,ZIDO,data/speech_commands/zero/18f8afd5_nohash_4.wav
+zipformer-hot,clean,True,two,e0c782d5,dog four off two six,two,hit,255,480,TWO,data/speech_commands/two/e0c782d5_nohash_3.wav
+zipformer-hot,clean,True,zero,8625475c,eight nine right zero yes,zero,hit,403,670,ZERO,data/speech_commands/zero/8625475c_nohash_1.wav
+zipformer-hot,clean,True,seven,aef8dcf5,seven off nine six down,seven,hit,553,520,SEVEN,data/speech_commands/seven/aef8dcf5_nohash_0.wav
+zipformer-hot,clean,True,backward,8fe67225,on stop tree backward four,,none,,550,BACK | WARD,data/speech_commands/backward/8fe67225_nohash_1.wav
+zipformer-hot,clean,True,nine,a6f2fd71,right nine three six go,nine,hit,463,580,NI | NINE,data/speech_commands/nine/a6f2fd71_nohash_1.wav
+zipformer-hot,clean,True,bed,ad6a46f1,dog cat nine five bed,bed,hit,7,800,BED,data/speech_commands/bed/ad6a46f1_nohash_0.wav
+zipformer-hot,clean,True,nine,d0faf7e4,zero four one up nine,nine,hit,333,690,NINE,data/speech_commands/nine/d0faf7e4_nohash_1.wav
+zipformer-hot,clean,True,down,2796ac50,tree down visual eight forward,down,hit,-167,880,DOWN,data/speech_commands/down/2796ac50_nohash_0.wav
+zipformer-hot,clean,True,follow,c7dc7278,follow up stop bird backward,follow,hit,347,380,FOLLOW,data/speech_commands/follow/c7dc7278_nohash_0.wav
+zipformer-hot,clean,True,bird,f297e878,seven visual backward bird down,bird,hit,448,1000,BIRD,data/speech_commands/bird/f297e878_nohash_0.wav
+zipformer-hot,clean,True,nine,aa80f517,nine six yes happy visual,nine,hit,585,460,NINE,data/speech_commands/nine/aa80f517_nohash_4.wav
+zipformer-hot,clean,True,down,94de6a6a,four tree cat down eight,,none,,1000,OH NO,data/speech_commands/down/94de6a6a_nohash_3.wav
+zipformer-hot,clean,True,four,97f4c236,follow one seven yes four,four,hit,202,850,FOUR,data/speech_commands/four/97f4c236_nohash_3.wav
+zipformer-hot,clean,True,off,91b03183,down two off forward stop,,none,,710,O | H,data/speech_commands/off/91b03183_nohash_1.wav
+zipformer-hot,clean,True,right,bb05582b,learn right go nine five,right,hit,542,830,RIGHT,data/speech_commands/right/bb05582b_nohash_0.wav
+zipformer-hot,clean,True,down,beb458a4,no zero house left down,down,hit,501,520,DOWN,data/speech_commands/down/beb458a4_nohash_4.wav
+zipformer-hot,clean,True,zero,e71b4ce6,dog follow up tree zero,zero,hit,519,930,ZERO,data/speech_commands/zero/e71b4ce6_nohash_1.wav
+zipformer-hot,clean,True,four,63f7a489,house four yes go tree,four,hit,-200,1000,FOUR,data/speech_commands/four/63f7a489_nohash_1.wav
+zipformer-hot,clean,True,learn,e49428d9,learn stop bird cat nine,learn,hit,615,420,LEARN,data/speech_commands/learn/e49428d9_nohash_4.wav
+zipformer-hot,clean,True,go,f2e59fea,house up down follow go,go,hit,310,420,GO | GO,data/speech_commands/go/f2e59fea_nohash_0.wav
+zipformer-hot,clean,True,seven,b97c9f77,seven backward nine right stop,,none,,970,SE | VEN,data/speech_commands/seven/b97c9f77_nohash_3.wav
+zipformer-hot,clean,True,follow,db24628d,six eight right bird follow,follow,hit,253,460,FOLLOW,data/speech_commands/follow/db24628d_nohash_1.wav
+zipformer-hot,clean,True,down,af8b2f2c,house visual six bed down,down,hit,388,360,DOWN,data/speech_commands/down/af8b2f2c_nohash_0.wav
+zipformer-hot,clean,True,no,1b4c9b89,five no go nine dog,no,hit,-37,760,NO | NO,data/speech_commands/no/1b4c9b89_nohash_4.wav
+zipformer-hot,clean,True,two,220ee1ef,backward no two visual nine,two,hit,922,130,TU,data/speech_commands/two/220ee1ef_nohash_0.wav
+zipformer-hot,clean,True,four,cd85758f,bird four happy dog tree,four,hit,262,770,FOUR,data/speech_commands/four/cd85758f_nohash_1.wav
+zipformer-hot,clean,True,bird,5744b6a7,stop left seven down bird,bird,hit,474,260,BIR | BIRD,data/speech_commands/bird/5744b6a7_nohash_0.wav
+zipformer-hot,clean,True,learn,3b4f8f24,house learn four wow stop,learn,hit,612,750,LEARN,data/speech_commands/learn/3b4f8f24_nohash_2.wav
+zipformer-hot,clean,True,up,893705bb,yes up learn right backward,up,hit,265,820,UP,data/speech_commands/up/893705bb_nohash_11.wav
+zipformer-hot,clean,True,down,e1469561,dog four off three down,down,hit,302,780,DOWN,data/speech_commands/down/e1469561_nohash_1.wav
+zipformer-hot,clean,True,up,d103dd6e,six up eight happy two,,none,,120,A | AH,data/speech_commands/up/d103dd6e_nohash_1.wav
+zipformer-hot,clean,True,learn,ea37ca08,nine seven stop six learn,,none,,950,LUCK,data/speech_commands/learn/ea37ca08_nohash_0.wav
+zipformer-hot,clean,True,no,881583a6,no left right stop yes,no,hit,-17,750,NO,data/speech_commands/no/881583a6_nohash_0.wav
+zipformer-hot,clean,True,no,fb7eb481,wow no backward tree visual,no,hit,303,490,NO,data/speech_commands/no/fb7eb481_nohash_0.wav
+zipformer-hot,clean,True,go,6e916de8,go dog seven one no,go,hit,309,420,GO,data/speech_commands/go/6e916de8_nohash_0.wav
+zipformer-hot,clean,True,eight,e1469561,eight wow six up dog,,none,,780,IT,data/speech_commands/eight/e1469561_nohash_3.wav
+zipformer-hot,clean,True,forward,87070229,off nine forward go bed,forward,hit,583,480,FORWARD,data/speech_commands/forward/87070229_nohash_4.wav
+zipformer-hot,clean,True,down,5c8af87a,nine down five on house,down,hit,185,550,DOWN,data/speech_commands/down/5c8af87a_nohash_3.wav
+zipformer-hot,clean,True,dog,0f250098,dog down backward forward seven,dog,hit,621,400,DOG,data/speech_commands/dog/0f250098_nohash_1.wav
+zipformer-hot,clean,True,off,893705bb,house off bed right zero,,none,,870,O,data/speech_commands/off/893705bb_nohash_1.wav
+zipformer-hot,clean,True,forward,f9643d42,bird seven down zero forward,forward,hit,537,500,FOR | FORWARD,data/speech_commands/forward/f9643d42_nohash_0.wav
+zipformer-hot,clean,False,down,5e3dde6b,seven cat two bed right,,rejected,,440,DOWN,data/speech_commands/down/5e3dde6b_nohash_3.wav
+zipformer-hot,clean,False,zero,3b4f8f24,forward six two down seven,,rejected,,830,ZERO,data/speech_commands/zero/3b4f8f24_nohash_2.wav
+zipformer-hot,clean,False,no,3f170018,nine one yes bird wow,,rejected,,670,NO,data/speech_commands/no/3f170018_nohash_0.wav
+zipformer-hot,clean,False,on,8625475c,yes nine eight stop backward,,rejected,,930,ON,data/speech_commands/on/8625475c_nohash_0.wav
+zipformer-hot,clean,False,on,d9e9f554,five follow house go cat,,rejected,,660,ON,data/speech_commands/on/d9e9f554_nohash_2.wav
+zipformer-hot,clean,False,go,db24628d,four visual six bed nine,,rejected,,470,GO,data/speech_commands/go/db24628d_nohash_0.wav
+zipformer-hot,clean,False,right,f297e878,bed house one eight wow,,rejected,,980,PROPRITE,data/speech_commands/right/f297e878_nohash_0.wav
+zipformer-hot,clean,False,right,b49caed3,two bed learn cat three,,rejected,,400,RIGHT,data/speech_commands/right/b49caed3_nohash_0.wav
+zipformer-hot,clean,False,yes,b49caed3,one learn seven two house,,rejected,,680,YES,data/speech_commands/yes/b49caed3_nohash_0.wav
+zipformer-hot,clean,False,go,0cb74144,one off on follow yes,,rejected,,500,GO,data/speech_commands/go/0cb74144_nohash_3.wav
+zipformer-hot,clean,False,two,8ec6dab6,house cat four visual one,,rejected,,510,TWO,data/speech_commands/two/8ec6dab6_nohash_0.wav
+zipformer-hot,clean,False,follow,18f8afd5,one five bed up forward,,rejected,,510,FOLLOW,data/speech_commands/follow/18f8afd5_nohash_4.wav
+zipformer-hot,clean,False,nine,4c6167ca,tree four eight wow six,,rejected,,850,NINE,data/speech_commands/nine/4c6167ca_nohash_5.wav
+zipformer-hot,clean,False,eight,563aa4e6,bird backward house nine forward,,rejected,,900,E | EIGHT,data/speech_commands/eight/563aa4e6_nohash_0.wav
+zipformer-hot,clean,False,left,85d2ac4b,right cat five dog bed,,rejected,,890,LOOK,data/speech_commands/left/85d2ac4b_nohash_1.wav
+zipformer-hot,clean,False,nine,90b94017,forward six learn go five,,rejected,,430,NINE,data/speech_commands/nine/90b94017_nohash_0.wav
+zipformer-hot,clean,False,three,db24628d,no nine backward dog go,,rejected,,680,THREE,data/speech_commands/three/db24628d_nohash_0.wav
+zipformer-hot,clean,False,six,fb7eb481,one stop no backward two,,rejected,,610,SIX,data/speech_commands/six/fb7eb481_nohash_0.wav
+zipformer-hot,clean,False,left,8625475c,tree two off up right,,rejected,,670,LEFT,data/speech_commands/left/8625475c_nohash_0.wav
+zipformer-hot,clean,False,five,b97c9f77,three two backward four nine,,rejected,,740,FIVE,data/speech_commands/five/b97c9f77_nohash_2.wav
+zipformer-hot,clean,False,one,9b3ea809,happy five cat down bird,,rejected,,920,ONE,data/speech_commands/one/9b3ea809_nohash_0.wav
+zipformer-hot,clean,False,stop,aa80f517,yes wow three right backward,,rejected,,450,STOP,data/speech_commands/stop/aa80f517_nohash_0.wav
+zipformer-hot,clean,False,on,4fd1443e,no right nine learn dog,,rejected,,630,ON,data/speech_commands/on/4fd1443e_nohash_1.wav
+zipformer-hot,clean,False,visual,87070229,dog learn six forward house,,rejected,,500,VISU,data/speech_commands/visual/87070229_nohash_1.wav
+zipformer-hot,clean,False,go,370844f7,right forward wow happy bird,,rejected,,800,GO | GO,data/speech_commands/go/370844f7_nohash_0.wav
+zipformer-hot,clean,False,cat,475b61f1,five four no stop three,,rejected,,90,CAP,data/speech_commands/cat/475b61f1_nohash_0.wav
+zipformer-hot,clean,False,zero,64f1c742,five up three wow off,,rejected,,980,ZERO,data/speech_commands/zero/64f1c742_nohash_0.wav
+zipformer-hot,clean,False,house,ca4d5368,nine seven three zero stop,,rejected,,450,HOUSE,data/speech_commands/house/ca4d5368_nohash_0.wav
+zipformer-hot,clean,False,five,a7216980,one cat no off happy,,rejected,,480,FAR,data/speech_commands/five/a7216980_nohash_0.wav
+zipformer-hot,clean,False,yes,2d82a556,follow zero down two happy,,rejected,,860,YES,data/speech_commands/yes/2d82a556_nohash_0.wav
+zipformer-hot,clean,False,visual,fb7eb481,tree six bird off two,,rejected,,660,VISUAL,data/speech_commands/visual/fb7eb481_nohash_0.wav
+zipformer-hot,clean,False,six,9a69672b,house happy dog follow stop,,rejected,,660,SAKES,data/speech_commands/six/9a69672b_nohash_4.wav
+zipformer-hot,clean,False,go,37dca74f,tree zero two bed eight,,rejected,,500,GO,data/speech_commands/go/37dca74f_nohash_3.wav
+zipformer-hot,clean,False,yes,9a7c1f83,three wow dog go up,,rejected,,550,YES | S,data/speech_commands/yes/9a7c1f83_nohash_3.wav
+zipformer-hot,clean,False,dog,fe1916ba,tree bird house seven on,,rejected,,970,DOG,data/speech_commands/dog/fe1916ba_nohash_1.wav
+zipformer-hot,clean,False,yes,964e8cfd,down eight dog zero backward,,rejected,,900,YES,data/speech_commands/yes/964e8cfd_nohash_2.wav
+zipformer-hot,clean,False,six,b83c1acf,cat follow yes forward two,,rejected,,710,SIX,data/speech_commands/six/b83c1acf_nohash_2.wav
+zipformer-hot,clean,False,right,94de6a6a,no nine one three down,,rejected,,570,RIGHT,data/speech_commands/right/94de6a6a_nohash_3.wav
+zipformer-hot,clean,False,two,6f2f57c1,stop cat on left up,,rejected,,540,TWO,data/speech_commands/two/6f2f57c1_nohash_0.wav
+zipformer-hot,clean,False,wow,4290ca61,cat six visual house zero,,rejected,,530,WOW,data/speech_commands/wow/4290ca61_nohash_1.wav
+zipformer-hot,clean,False,off,893705bb,dog cat wow right backward,,rejected,,870,OH,data/speech_commands/off/893705bb_nohash_6.wav
+zipformer-hot,clean,False,right,bb05582b,off happy visual wow house,,rejected,,990,WHY,data/speech_commands/right/bb05582b_nohash_1.wav
+zipformer-hot,clean,False,dog,3b4f8f24,up follow forward cat happy,,rejected,,550,DOG,data/speech_commands/dog/3b4f8f24_nohash_0.wav
+zipformer-hot,clean,False,no,893705bb,house zero on four learn,,rejected,,840,NO,data/speech_commands/no/893705bb_nohash_2.wav
+zipformer-hot,clean,False,go,d0faf7e4,eight two cat down house,,rejected,,820,GO,data/speech_commands/go/d0faf7e4_nohash_0.wav
+zipformer-hot,clean,False,down,c7dc7278,go cat four forward bird,,rejected,,370,GONE,data/speech_commands/down/c7dc7278_nohash_0.wav
+zipformer-hot,clean,False,off,e0c782d5,right forward one house nine,,rejected,,650,OFF,data/speech_commands/off/e0c782d5_nohash_2.wav
+zipformer-hot,clean,False,go,f0ae7203,house forward left on down,,rejected,,460,GO,data/speech_commands/go/f0ae7203_nohash_0.wav
+zipformer-hot,clean,False,on,9a7c1f83,bird six five tree seven,,rejected,,670,ON,data/speech_commands/on/9a7c1f83_nohash_3.wav
+zipformer-hot,clean,False,tree,f428ca69,happy zero seven bed down,,rejected,,540,TREE,data/speech_commands/tree/f428ca69_nohash_0.wav
+zipformer-hot,clean,False,one,d5b963aa,no yes learn on follow,,rejected,,430,ONE,data/speech_commands/one/d5b963aa_nohash_3.wav
+zipformer-hot,clean,False,yes,cfbedff9,right forward on go cat,,rejected,,490,YES,data/speech_commands/yes/cfbedff9_nohash_0.wav
+zipformer-hot,clean,False,yes,d0faf7e4,go five six on dog,,rejected,,1000,YES,data/speech_commands/yes/d0faf7e4_nohash_7.wav
+zipformer-hot,clean,False,on,b97c9f77,tree two bird eight wow,,rejected,,980,ON,data/speech_commands/on/b97c9f77_nohash_4.wav
+zipformer-hot,clean,False,down,0fa1e7a9,backward go stop eight seven,,rejected,,640,DOWN,data/speech_commands/down/0fa1e7a9_nohash_0.wav
+zipformer-hot,clean,False,happy,af405b69,forward zero nine eight five,,rejected,,490,HAPPY,data/speech_commands/happy/af405b69_nohash_0.wav
+zipformer-hot,clean,False,on,bfd26d6b,bird four happy stop nine,,rejected,,330,ON,data/speech_commands/on/bfd26d6b_nohash_2.wav
+zipformer-hot,clean,False,cat,83957201,dog nine backward five zero,,rejected,,640,CAT,data/speech_commands/cat/83957201_nohash_0.wav
+zipformer-hot,clean,False,left,1b4c9b89,no up forward four bed,,rejected,,820,LEFT,data/speech_commands/left/1b4c9b89_nohash_3.wav
+zipformer-hot,clean,False,wow,b97c9f77,learn cat house left dog,,rejected,,990,WELL,data/speech_commands/wow/b97c9f77_nohash_0.wav
+zipformer-hot,clean,False,stop,f264e0df,right down go on wow,,rejected,,440,STOP,data/speech_commands/stop/f264e0df_nohash_0.wav
+zipformer-hot,clean,False,eight,c22d3f18,down nine two bird four,,rejected,,770,IT,data/speech_commands/eight/c22d3f18_nohash_1.wav
+zipformer-hot,clean,False,bed,6e916de8,left house down seven learn,,rejected,,880,BED,data/speech_commands/bed/6e916de8_nohash_0.wav
+zipformer-hot,clean,False,six,d0faf7e4,happy two stop cat dog,,rejected,,550,SIX,data/speech_commands/six/d0faf7e4_nohash_2.wav
+zipformer-hot,clean,False,house,f2e59fea,zero no cat follow one,,rejected,,580,HOUSE,data/speech_commands/house/f2e59fea_nohash_0.wav
+zipformer-hot,clean,False,five,c9b5ff26,nine follow no left dog,,rejected,,550,FIVE,data/speech_commands/five/c9b5ff26_nohash_4.wav
+zipformer-hot,clean,False,eight,fdb5155e,cat down three seven tree,,rejected,,330,EIGHT,data/speech_commands/eight/fdb5155e_nohash_0.wav
+zipformer-hot,clean,False,tree,80c45ed6,backward zero on five bed,,rejected,,440,TREAT,data/speech_commands/tree/80c45ed6_nohash_1.wav
+zipformer-hot,clean,False,two,ca4d5368,right forward house seven down,,rejected,,450,DO,data/speech_commands/two/ca4d5368_nohash_1.wav
+zipformer-hot,clean,False,one,f292725f,visual no seven down go,,rejected,,570,ONE,data/speech_commands/one/f292725f_nohash_0.wav
+zipformer-hot,clean,False,off,ffa76c4a,forward seven three go no,,rejected,,370,OH,data/speech_commands/off/ffa76c4a_nohash_1.wav
+zipformer-hot,clean,False,six,a4383927,zero one four on happy,,rejected,,510,SEEK,data/speech_commands/six/a4383927_nohash_1.wav
+zipformer-hot,clean,False,off,4c6167ca,nine wow left six eight,,rejected,,440,OFF,data/speech_commands/off/4c6167ca_nohash_5.wav
+zipformer-hot,clean,False,yes,5c8af87a,dog right no off up,,rejected,,700,YES,data/speech_commands/yes/5c8af87a_nohash_0.wav
+zipformer-hot,noise10,True,one,e0c782d5,visual no left yes one,one,hit,187,550,ONE,data/speech_commands/one/e0c782d5_nohash_3.wav
+zipformer-hot,noise10,True,dog,893705bb,follow visual dog two tree,,none,,850,THOUGH,data/speech_commands/dog/893705bb_nohash_1.wav
+zipformer-hot,noise10,True,up,3d86b69a,up house forward on five,,none,,610,AH | F,data/speech_commands/up/3d86b69a_nohash_0.wav
+zipformer-hot,noise10,True,eight,8494fba8,five go zero eight tree,eight,hit,691,390,EIGHT,data/speech_commands/eight/8494fba8_nohash_0.wav
+zipformer-hot,noise10,True,tree,a4e8a997,seven two tree right happy,tree,hit,488,270,TRE | AT,data/speech_commands/tree/a4e8a997_nohash_1.wav
+zipformer-hot,noise10,True,yes,94de6a6a,up visual stop yes bed,yes,hit,-160,970,YES,data/speech_commands/yes/94de6a6a_nohash_4.wav
+zipformer-hot,noise10,True,bed,f0ae7203,no bed off eight five,bed,hit,615,770,BED,data/speech_commands/bed/f0ae7203_nohash_0.wav
+zipformer-hot,noise10,True,seven,82d0d3ba,seven zero tree nine forward,,none,,910,SE | VEN,data/speech_commands/seven/82d0d3ba_nohash_0.wav
+zipformer-hot,noise10,True,five,6736bc64,dog bed five off up,five,hit,480,560,FIVE,data/speech_commands/five/6736bc64_nohash_1.wav
+zipformer-hot,noise10,True,cat,6021f08b,backward follow wow seven cat,cat,hit,785,1000,CAP,data/speech_commands/cat/6021f08b_nohash_0.wav
+zipformer-hot,noise10,True,six,95ba4996,four nine six five left,six,hit,249,900,SIX,data/speech_commands/six/95ba4996_nohash_0.wav
+zipformer-hot,noise10,True,nine,b11a05d2,go on house nine visual,nine,hit,640,460,NINE,data/speech_commands/nine/b11a05d2_nohash_0.wav
+zipformer-hot,noise10,True,eight,beb458a4,eight house yes bed nine,eight,hit,472,550,EIGHT,data/speech_commands/eight/beb458a4_nohash_2.wav
+zipformer-hot,noise10,True,learn,87070229,left tree learn one house,learn,hit,523,520,LEARN,data/speech_commands/learn/87070229_nohash_2.wav
+zipformer-hot,noise10,True,two,d962e5ac,follow two cat dog backward,,none,,550,EARL,data/speech_commands/two/d962e5ac_nohash_1.wav
+zipformer-hot,noise10,True,visual,4c6167ca,left visual stop off bird,visual,hit,529,530,VISUAL,data/speech_commands/visual/4c6167ca_nohash_5.wav
+zipformer-hot,noise10,True,tree,6736bc64,right one tree nine six,tree,hit,6,740,TRE | TREE,data/speech_commands/tree/6736bc64_nohash_0.wav
+zipformer-hot,noise10,True,left,5e3dde6b,seven backward left three down,,none,,720,WARMTH,data/speech_commands/left/5e3dde6b_nohash_0.wav
+zipformer-hot,noise10,True,learn,bfd26d6b,no learn down backward forward,,none,,450,FLORID,data/speech_commands/learn/bfd26d6b_nohash_0.wav
+zipformer-hot,noise10,True,visual,e0c782d5,visual down learn stop forward,visual,hit,759,610,VISUAL,data/speech_commands/visual/e0c782d5_nohash_1.wav
+zipformer-hot,noise10,True,cat,e5e54cee,bird forward up four cat,cat,hit,902,870,CAT,data/speech_commands/cat/e5e54cee_nohash_1.wav
+zipformer-hot,noise10,True,five,c518d1b1,forward bird stop five eight,five,hit,591,850,FIVE,data/speech_commands/five/c518d1b1_nohash_1.wav
+zipformer-hot,noise10,True,go,692a88e6,zero go no nine backward,go,hit,307,470,GO | GO,data/speech_commands/go/692a88e6_nohash_3.wav
+zipformer-hot,noise10,True,nine,9a7c1f83,dog left no nine yes,,none,,910,MAINE,data/speech_commands/nine/9a7c1f83_nohash_3.wav
+zipformer-hot,noise10,True,four,4c6167ca,on yes four dog three,four,hit,33,670,FOUR,data/speech_commands/four/4c6167ca_nohash_1.wav
+zipformer-hot,noise10,True,four,cfbedff9,backward four follow yes one,four,hit,228,500,FOUR,data/speech_commands/four/cfbedff9_nohash_1.wav
+zipformer-hot,noise10,True,five,dcb57584,wow zero follow on five,,none,,550,WHAT,data/speech_commands/five/dcb57584_nohash_0.wav
+zipformer-hot,noise10,True,tree,af405b69,wow tree off visual dog,tree,hit,234,460,TRE | TREE,data/speech_commands/tree/af405b69_nohash_0.wav
+zipformer-hot,noise10,True,five,893705bb,stop five down no four,,none,,910,THOUGHT,data/speech_commands/five/893705bb_nohash_0.wav
+zipformer-hot,noise10,True,five,189cbabe,five tree bed go zero,,none,,620,I,data/speech_commands/five/189cbabe_nohash_1.wav
+zipformer-hot,noise10,True,up,692a88e6,up stop tree forward seven,up,hit,101,680,UP,data/speech_commands/up/692a88e6_nohash_3.wav
+zipformer-hot,noise10,True,cat,af130f12,cat house tree follow seven,cat,hit,681,340,CAT,data/speech_commands/cat/af130f12_nohash_0.wav
+zipformer-hot,noise10,True,nine,5eb5fc74,nine up dog three stop,nine,hit,808,300,NI | NINE,data/speech_commands/nine/5eb5fc74_nohash_3.wav
+zipformer-hot,noise10,True,eight,8769c34c,eight four on nine off,eight,hit,545,490,EIGHT,data/speech_commands/eight/8769c34c_nohash_0.wav
+zipformer-hot,noise10,True,on,a7216980,house tree down on cat,,none,,570,OH,data/speech_commands/on/a7216980_nohash_0.wav
+zipformer-hot,noise10,True,go,beb458a4,on cat go follow zero,,none,,530,NO,data/speech_commands/go/beb458a4_nohash_4.wav
+zipformer-hot,noise10,True,three,c7dc7278,tree left nine three on,three,hit,684,410,THREE,data/speech_commands/three/c7dc7278_nohash_1.wav
+zipformer-hot,noise10,True,visual,c7dc7278,dog visual house zero learn,,none,,560,MEANWHILE,data/speech_commands/visual/c7dc7278_nohash_1.wav
+zipformer-hot,noise10,True,dog,af130f12,dog happy nine house eight,dog,hit,463,590,DOG,data/speech_commands/dog/af130f12_nohash_1.wav
+zipformer-hot,noise10,True,on,84d1e469,happy two on bed three,on,hit,183,580,ON,data/speech_commands/on/84d1e469_nohash_1.wav
+zipformer-hot,noise10,True,go,563aa4e6,off stop cat go zero,go,hit,443,280,GO | GO,data/speech_commands/go/563aa4e6_nohash_2.wav
+zipformer-hot,noise10,True,five,1528225c,up one five visual tree,five,hit,446,930,FIVE,data/speech_commands/five/1528225c_nohash_0.wav
+zipformer-hot,noise10,True,one,c9b5ff26,backward yes zero one dog,one,hit,463,960,ONE | ONE,data/speech_commands/one/c9b5ff26_nohash_3.wav
+zipformer-hot,noise10,True,on,bfd26d6b,eight wow down forward on,on,hit,375,330,ON,data/speech_commands/on/bfd26d6b_nohash_2.wav
+zipformer-hot,noise10,True,wow,e1469561,on bird follow nine wow,,none,,460,WELL,data/speech_commands/wow/e1469561_nohash_0.wav
+zipformer-hot,noise10,True,bed,47d01978,three bed no one house,bed,hit,728,330,BED,data/speech_commands/bed/47d01978_nohash_0.wav
+zipformer-hot,noise10,True,five,c22d3f18,nine five right yes bed,five,hit,600,760,FIVE,data/speech_commands/five/c22d3f18_nohash_2.wav
+zipformer-hot,noise10,True,five,210f3aa9,five down two no left,five,hit,457,910,FIVE,data/speech_commands/five/210f3aa9_nohash_0.wav
+zipformer-hot,noise10,True,four,db24628d,stop tree four seven two,four,hit,321,430,FOUR,data/speech_commands/four/db24628d_nohash_2.wav
+zipformer-hot,noise10,True,wow,cd85758f,visual happy wow learn on,wow,hit,375,400,WOW,data/speech_commands/wow/cd85758f_nohash_0.wav
+zipformer-hot,noise10,True,seven,d962e5ac,zero seven two learn go,,none,,630,SIR EMMA,data/speech_commands/seven/d962e5ac_nohash_1.wav
+zipformer-hot,noise10,True,bed,210f3aa9,four two dog bed happy,bed,hit,636,430,BED | RARE,data/speech_commands/bed/210f3aa9_nohash_0.wav
+zipformer-hot,noise10,True,on,893705bb,seven on down happy four,on,hit,402,620,ON,data/speech_commands/on/893705bb_nohash_7.wav
+zipformer-hot,noise10,True,tree,9dc1889e,tree right visual stop six,tree,hit,665,390,TREE,data/speech_commands/tree/9dc1889e_nohash_0.wav
+zipformer-hot,noise10,True,five,e49428d9,six five two follow learn,,none,,500,BUT,data/speech_commands/five/e49428d9_nohash_3.wav
+zipformer-hot,noise10,True,cat,4c7c95de,yes visual cat stop house,cat,hit,504,580,CAT,data/speech_commands/cat/4c7c95de_nohash_0.wav
+zipformer-hot,noise10,True,off,47d01978,tree off left two bird,,none,,890,ASH,data/speech_commands/off/47d01978_nohash_1.wav
+zipformer-hot,noise10,True,nine,d91a159e,dog happy stop nine seven,nine,hit,305,780,NINE,data/speech_commands/nine/d91a159e_nohash_1.wav
+zipformer-hot,noise10,True,six,a1533da4,no on backward one six,six,hit,81,720,SIX,data/speech_commands/six/a1533da4_nohash_0.wav
+zipformer-hot,noise10,True,yes,dcb57584,nine visual yes stop two,,none,,350,YE,data/speech_commands/yes/dcb57584_nohash_0.wav
+zipformer-hot,noise10,True,two,f2e59fea,left wow two forward one,two,hit,6,750,TWO | TWO,data/speech_commands/two/f2e59fea_nohash_0.wav
+zipformer-hot,noise10,True,one,91b03183,one left two dog four,one,hit,132,1000,ONE,data/speech_commands/one/91b03183_nohash_2.wav
+zipformer-hot,noise10,True,down,e49428d9,eight no down five dog,no,wrong,277,450,NO,data/speech_commands/down/e49428d9_nohash_3.wav
+zipformer-hot,noise10,True,house,5ff3f9a1,house go follow left two,house,hit,305,720,HOUSE,data/speech_commands/house/5ff3f9a1_nohash_0.wav
+zipformer-hot,noise10,True,zero,a60a09cf,zero nine no six happy,zero,hit,273,800,ZERO,data/speech_commands/zero/a60a09cf_nohash_2.wav
+zipformer-hot,noise10,True,three,b83c1acf,happy three off one dog,three,hit,-168,550,THREE,data/speech_commands/three/b83c1acf_nohash_1.wav
+zipformer-hot,noise10,True,left,9a7c1f83,eight bird left wow backward,left,hit,419,1000,LEFT,data/speech_commands/left/9a7c1f83_nohash_3.wav
+zipformer-hot,noise10,True,no,0cb74144,cat happy learn five no,no,hit,194,570,NO,data/speech_commands/no/0cb74144_nohash_0.wav
+zipformer-hot,noise10,True,left,cfde27ba,visual backward left no go,left,hit,246,470,LEFT,data/speech_commands/left/cfde27ba_nohash_0.wav
+zipformer-hot,noise10,True,backward,0cb74144,learn no backward cat four,,none,,490,BACK | WARD,data/speech_commands/backward/0cb74144_nohash_1.wav
+zipformer-hot,noise10,True,five,5e3dde6b,dog one five stop happy,five,hit,640,820,FIVE,data/speech_commands/five/5e3dde6b_nohash_0.wav
+zipformer-hot,noise10,True,three,f9643d42,eight three forward down tree,three,hit,669,410,THREE,data/speech_commands/three/f9643d42_nohash_1.wav
+zipformer-hot,noise10,True,yes,d9e9f554,cat tree on yes seven,yes,hit,424,650,YE | YES,data/speech_commands/yes/d9e9f554_nohash_1.wav
+zipformer-hot,noise10,True,six,ef2a3cfb,six backward tree up house,six,hit,116,580,SIX,data/speech_commands/six/ef2a3cfb_nohash_0.wav
+zipformer-hot,noise10,True,zero,aa80f517,visual follow four zero six,,none,,520,HERE,data/speech_commands/zero/aa80f517_nohash_3.wav
+zipformer-hot,noise10,True,two,c9e251d2,four three two six down,two,hit,634,440,TWO,data/speech_commands/two/c9e251d2_nohash_0.wav
+zipformer-hot,noise10,True,three,9a356ab9,three zero dog stop eight,three,hit,-223,960,THREE,data/speech_commands/three/9a356ab9_nohash_1.wav
+zipformer-hot,noise10,True,off,37dca74f,off cat down four three,off,hit,674,360,OFF,data/speech_commands/off/37dca74f_nohash_4.wav
+zipformer-hot,noise10,True,backward,aa80f517,cat backward learn tree go,backward,hit,443,590,BACKWARD,data/speech_commands/backward/aa80f517_nohash_4.wav
+zipformer-hot,noise10,True,go,18f8afd5,house bird right go five,go,hit,269,470,GO | GO,data/speech_commands/go/18f8afd5_nohash_3.wav
+zipformer-hot,noise10,True,yes,c9b5ff26,on left yes stop two,,none,,470,YE,data/speech_commands/yes/c9b5ff26_nohash_4.wav
+zipformer-hot,noise10,True,visual,d962e5ac,wow zero backward visual left,,none,,600,THE YEARLY,data/speech_commands/visual/d962e5ac_nohash_1.wav
+zipformer-hot,noise10,True,no,a1533da4,no up follow dog six,no,hit,391,670,NO,data/speech_commands/no/a1533da4_nohash_0.wav
+zipformer-hot,noise10,True,zero,e49428d9,down follow one cat zero,,none,,430,SUE,data/speech_commands/zero/e49428d9_nohash_2.wav
+zipformer-hot,noise10,True,dog,587f3271,zero follow dog house forward,dog,hit,459,620,DOG,data/speech_commands/dog/587f3271_nohash_1.wav
+zipformer-hot,noise10,True,six,68dd409e,nine one six four no,six,hit,699,700,FIX,data/speech_commands/six/68dd409e_nohash_0.wav
+zipformer-hot,noise10,True,visual,893705bb,one six visual left nine,,none,,480,ME,data/speech_commands/visual/893705bb_nohash_2.wav
+zipformer-hot,noise10,True,eight,ca4d5368,right go eight off three,eight,hit,540,490,EIGHT,data/speech_commands/eight/ca4d5368_nohash_3.wav
+zipformer-hot,noise10,True,backward,893705bb,stop visual five no backward,backward,hit,570,800,BACKWARD,data/speech_commands/backward/893705bb_nohash_5.wav
+zipformer-hot,noise10,True,on,f17d21b5,on seven stop forward down,,none,,770,HANS,data/speech_commands/on/f17d21b5_nohash_1.wav
+zipformer-hot,noise10,True,five,1acc97de,right backward five one no,,none,,590,WHY,data/speech_commands/five/1acc97de_nohash_1.wav
+zipformer-hot,noise10,True,one,3b4f8f24,one stop up cat two,one,hit,150,950,ONE | ONE,data/speech_commands/one/3b4f8f24_nohash_3.wav
+zipformer-hot,noise10,True,zero,5c8af87a,seven backward eight on zero,zero,hit,621,430,ZERO,data/speech_commands/zero/5c8af87a_nohash_1.wav
+zipformer-hot,noise10,True,zero,893705bb,follow house on six zero,,none,,790,FUNERAL,data/speech_commands/zero/893705bb_nohash_7.wav
+zipformer-hot,noise10,True,forward,beb458a4,four dog forward eight visual,four,wrong,43,720,FOUR,data/speech_commands/forward/beb458a4_nohash_4.wav
+zipformer-hot,noise10,True,six,4c6167ca,six zero left seven visual,six,hit,315,500,SIX,data/speech_commands/six/4c6167ca_nohash_0.wav
+zipformer-hot,noise10,True,five,fb7eb481,happy nine go five tree,five,hit,570,470,FIVE,data/speech_commands/five/fb7eb481_nohash_2.wav
+zipformer-hot,noise10,True,house,5744b6a7,two house one go happy,house,hit,247,450,HOUSE,data/speech_commands/house/5744b6a7_nohash_0.wav
+zipformer-hot,noise10,True,tree,422d3197,tree backward stop yes up,tree,hit,747,660,TREE,data/speech_commands/tree/422d3197_nohash_0.wav
+zipformer-hot,noise10,True,bed,c518d1b1,bed no cat left five,bed,hit,409,1000,BED,data/speech_commands/bed/c518d1b1_nohash_0.wav
+zipformer-hot,noise10,True,stop,893705bb,stop off nine no up,stop,hit,700,450,STOP,data/speech_commands/stop/893705bb_nohash_2.wav
+zipformer-hot,noise10,True,tree,a591c2ea,four left tree one happy,tree,hit,567,920,TREE,data/speech_commands/tree/a591c2ea_nohash_1.wav
+zipformer-hot,noise10,True,cat,0cb74144,up cat yes bed backward,,none,,490,TAD,data/speech_commands/cat/0cb74144_nohash_0.wav
+zipformer-hot,noise10,True,one,c9b5ff26,four forward bird one dog,one,hit,255,470,ONE,data/speech_commands/one/c9b5ff26_nohash_0.wav
+zipformer-hot,noise10,True,five,cfde27ba,dog bird forward five bed,five,hit,450,960,FIVE,data/speech_commands/five/cfde27ba_nohash_0.wav
+zipformer-hot,noise10,True,two,6021f08b,left eight dog two stop,two,hit,-132,930,TWO,data/speech_commands/two/6021f08b_nohash_0.wav
+zipformer-hot,noise10,True,three,cfbedff9,three eight yes down off,three,hit,453,610,THREE,data/speech_commands/three/cfbedff9_nohash_1.wav
+zipformer-hot,noise10,True,seven,a2473d62,bed right up seven nine,seven,hit,681,700,SEVEN,data/speech_commands/seven/a2473d62_nohash_0.wav
+zipformer-hot,noise10,True,zero,1fe4c891,wow off one six zero,zero,hit,554,510,ZERO,data/speech_commands/zero/1fe4c891_nohash_0.wav
+zipformer-hot,noise10,True,right,d0faf7e4,cat eight yes six right,,none,,520,BRIDE,data/speech_commands/right/d0faf7e4_nohash_1.wav
+zipformer-hot,noise10,True,house,4c7c95de,up on backward four house,house,hit,505,620,HOUSE,data/speech_commands/house/4c7c95de_nohash_0.wav
+zipformer-hot,noise10,True,zero,1acc97de,eight yes seven go zero,zero,hit,515,530,ZERO,data/speech_commands/zero/1acc97de_nohash_4.wav
+zipformer-hot,noise10,True,no,9a69672b,zero four learn no house,no,hit,363,730,NO,data/speech_commands/no/9a69672b_nohash_3.wav
+zipformer-hot,noise10,True,off,daf230ac,tree off eight six down,,none,,610,AH,data/speech_commands/off/daf230ac_nohash_1.wav
+zipformer-hot,noise10,True,happy,b7e9f841,happy up three four left,happy,hit,413,690,HAPPY,data/speech_commands/happy/b7e9f841_nohash_1.wav
+zipformer-hot,noise10,True,six,e41a903b,one forward visual six four,six,hit,260,460,SIX,data/speech_commands/six/e41a903b_nohash_3.wav
+zipformer-hot,noise10,True,cat,b83c1acf,forward wow nine seven cat,cat,hit,247,890,CAT,data/speech_commands/cat/b83c1acf_nohash_0.wav
+zipformer-hot,noise10,True,nine,5170b77f,right forward six nine left,,none,,400,NO ONE,data/speech_commands/nine/5170b77f_nohash_1.wav
+zipformer-hot,noise10,True,three,4c6167ca,eight happy stop three four,three,hit,268,820,THREE,data/speech_commands/three/4c6167ca_nohash_5.wav
+zipformer-hot,noise10,True,go,91b03183,eight off house go learn,go,hit,507,590,GO,data/speech_commands/go/91b03183_nohash_0.wav
+zipformer-hot,noise10,True,left,1b4c9b89,left on wow learn up,,none,,800,LOVE,data/speech_commands/left/1b4c9b89_nohash_2.wav
+zipformer-hot,noise10,True,up,43fc47a7,up learn tree go two,up,hit,267,790,UP,data/speech_commands/up/43fc47a7_nohash_2.wav
+zipformer-hot,noise10,True,up,24ad3ebe,eight three up left tree,,none,,890,UGH,data/speech_commands/up/24ad3ebe_nohash_0.wav
+zipformer-hot,noise10,True,six,0d53e045,go one two six backward,six,hit,442,300,SIX,data/speech_commands/six/0d53e045_nohash_1.wav
+zipformer-hot,noise10,True,backward,189cbabe,go backward house six learn,,none,,510,BACK | WARD,data/speech_commands/backward/189cbabe_nohash_0.wav
+zipformer-hot,noise10,True,no,85834399,no bed seven stop two,no,hit,340,420,NO | NO,data/speech_commands/no/85834399_nohash_0.wav
+zipformer-hot,noise10,True,two,1b4c9b89,two five seven nine cat,,none,,640,DULL,data/speech_commands/two/1b4c9b89_nohash_4.wav
+zipformer-hot,noise10,True,up,5e3dde6b,tree up eight nine seven,,none,,680,OH,data/speech_commands/up/5e3dde6b_nohash_3.wav
+zipformer-hot,noise10,True,on,3b4f8f24,on four house tree wow,on,hit,1154,300,HONOR,data/speech_commands/on/3b4f8f24_nohash_0.wav
+zipformer-hot,noise10,True,stop,f9643d42,forward learn stop seven two,stop,hit,432,640,STOP,data/speech_commands/stop/f9643d42_nohash_2.wav
+zipformer-hot,noise10,True,go,b83c1acf,three left go off no,go,hit,357,430,GO,data/speech_commands/go/b83c1acf_nohash_4.wav
+zipformer-hot,noise10,True,two,aa80f517,no two seven on left,two,hit,405,380,TWO,data/speech_commands/two/aa80f517_nohash_2.wav
+zipformer-hot,noise10,True,on,6b889021,forward stop on down one,on,hit,404,720,ON,data/speech_commands/on/6b889021_nohash_0.wav
+zipformer-hot,noise10,True,stop,0c40e715,backward seven dog stop house,,none,,370,BAH,data/speech_commands/stop/0c40e715_nohash_0.wav
+zipformer-hot,noise10,True,visual,837a0f64,up learn seven visual go,visual,hit,629,450,VISUAL,data/speech_commands/visual/837a0f64_nohash_1.wav
+zipformer-hot,noise10,True,zero,2aa787cf,yes zero happy down on,zero,hit,465,590,ZERO,data/speech_commands/zero/2aa787cf_nohash_0.wav
+zipformer-hot,noise10,True,seven,b49caed3,two five seven learn nine,seven,hit,418,680,SEVEN,data/speech_commands/seven/b49caed3_nohash_2.wav
+zipformer-hot,noise10,True,left,e1469561,nine zero four forward left,left,hit,408,990,LEFT,data/speech_commands/left/e1469561_nohash_2.wav
+zipformer-hot,noise10,True,dog,af8b2f2c,on zero wow dog stop,dog,hit,178,580,DOG,data/speech_commands/dog/af8b2f2c_nohash_0.wav
+zipformer-hot,noise10,True,learn,837a0f64,bird learn bed seven stop,learn,hit,522,560,LEARN,data/speech_commands/learn/837a0f64_nohash_1.wav
+zipformer-hot,noise10,True,no,d5b963aa,eight two follow no seven,no,hit,287,440,NO,data/speech_commands/no/d5b963aa_nohash_0.wav
+zipformer-hot,noise10,True,dog,cd85758f,seven cat up dog no,,none,,460,DO,data/speech_commands/dog/cd85758f_nohash_0.wav
+zipformer-hot,noise10,True,left,bb05582b,zero six left house off,left,hit,907,470,LEST,data/speech_commands/left/bb05582b_nohash_1.wav
+zipformer-hot,noise10,True,left,c9b5ff26,down follow bird tree left,left,hit,791,580,LET,data/speech_commands/left/c9b5ff26_nohash_3.wav
+zipformer-hot,noise10,True,right,44715c1c,right backward bird eight happy,right,hit,396,620,RIGHT,data/speech_commands/right/44715c1c_nohash_0.wav
+zipformer-hot,noise10,True,down,189cbabe,down wow bird eight learn,down,hit,221,550,DOWN,data/speech_commands/down/189cbabe_nohash_1.wav
+zipformer-hot,noise10,True,forward,f2e59fea,follow eight backward forward stop,,none,,300,FOUR,data/speech_commands/forward/f2e59fea_nohash_0.wav
+zipformer-hot,noise10,True,wow,e41a903b,two bed wow one cat,wow,hit,277,440,WOW,data/speech_commands/wow/e41a903b_nohash_0.wav
+zipformer-hot,noise10,True,stop,a1533da4,tree dog stop visual backward,stop,hit,461,650,STOP,data/speech_commands/stop/a1533da4_nohash_0.wav
+zipformer-hot,noise10,True,three,e49428d9,yes house three forward down,three,hit,323,390,THREE,data/speech_commands/three/e49428d9_nohash_2.wav
+zipformer-hot,noise10,True,right,1f653d27,house right down five follow,right,hit,421,670,RIGHT,data/speech_commands/right/1f653d27_nohash_0.wav
+zipformer-hot,noise10,True,dog,9e2ce5e3,dog cat four stop happy,dog,hit,1074,300,DAWN,data/speech_commands/dog/9e2ce5e3_nohash_1.wav
+zipformer-hot,noise10,True,visual,87070229,cat backward bird visual nine,visual,hit,858,510,VISUAL,data/speech_commands/visual/87070229_nohash_0.wav
+zipformer-hot,noise10,True,yes,c9e251d2,on four cat yes zero,yes,hit,797,590,YE | YES,data/speech_commands/yes/c9e251d2_nohash_0.wav
+zipformer-hot,noise10,True,seven,f2e59fea,four five seven stop forward,,none,,540,SE | VEN,data/speech_commands/seven/f2e59fea_nohash_4.wav
+zipformer-hot,noise10,True,off,3b4f8f24,on seven cat no off,,none,,480,AH,data/speech_commands/off/3b4f8f24_nohash_0.wav
+zipformer-hot,noise10,True,five,e41a903b,up one nine five three,five,hit,704,360,FIVE,data/speech_commands/five/e41a903b_nohash_1.wav
+zipformer-hot,noise10,True,one,a6f2fd71,one backward nine right no,one,hit,238,480,ONE,data/speech_commands/one/a6f2fd71_nohash_2.wav
+zipformer-hot,noise10,True,go,4845bb10,six off zero forward go,go,hit,150,950,GO,data/speech_commands/go/4845bb10_nohash_0.wav
+zipformer-hot,noise10,True,yes,97f4c236,cat learn yes on three,yes,hit,261,850,YES,data/speech_commands/yes/97f4c236_nohash_0.wav
+zipformer-hot,noise10,True,off,a7216980,down six off dog learn,,none,,590,O | H,data/speech_commands/off/a7216980_nohash_4.wav
+zipformer-hot,noise10,True,cat,964e8cfd,house learn happy cat eight,,none,,450,FAC,data/speech_commands/cat/964e8cfd_nohash_0.wav
+zipformer-hot,noise10,True,on,8fe67225,zero on left forward bird,on,hit,255,530,ON,data/speech_commands/on/8fe67225_nohash_2.wav
+zipformer-hot,noise10,True,up,5b1db3ee,bed seven no one up,up,hit,466,650,UP,data/speech_commands/up/5b1db3ee_nohash_0.wav
+zipformer-hot,noise10,True,up,4c841771,nine up house zero no,up,hit,117,970,UP,data/speech_commands/up/4c841771_nohash_0.wav
+zipformer-hot,noise10,True,up,1fe4c891,right happy up bird go,up,hit,451,980,UP | UP,data/speech_commands/up/1fe4c891_nohash_0.wav
+zipformer-hot,noise10,True,up,cfbedff9,wow zero six dog up,up,hit,413,310,UP,data/speech_commands/up/cfbedff9_nohash_2.wav
+zipformer-hot,noise10,True,bed,a2473d62,tree left bed eight happy,bed,hit,802,620,BED,data/speech_commands/bed/a2473d62_nohash_0.wav
+zipformer-hot,noise10,True,down,4620dc14,no bird six down happy,down,hit,224,500,DOWN,data/speech_commands/down/4620dc14_nohash_0.wav
+zipformer-hot,noise10,True,four,beb458a4,four cat forward yes eight,four,hit,79,650,FOUR,data/speech_commands/four/beb458a4_nohash_2.wav
+zipformer-hot,noise10,True,up,03401e93,one visual eight up yes,up,hit,445,620,UP,data/speech_commands/up/03401e93_nohash_0.wav
+zipformer-hot,noise10,True,tree,f0ae7203,visual left tree stop four,tree,hit,786,660,TREE,data/speech_commands/tree/f0ae7203_nohash_1.wav
+zipformer-hot,noise10,True,wow,2fa39636,six wow dog learn follow,,none,,740,WELL,data/speech_commands/wow/2fa39636_nohash_0.wav
+zipformer-hot,noise10,True,tree,022cd682,tree right one visual learn,tree,hit,440,1000,TRE | E,data/speech_commands/tree/022cd682_nohash_1.wav
+zipformer-hot,noise10,True,nine,aa80f517,go learn visual cat nine,nine,hit,939,470,NINE,data/speech_commands/nine/aa80f517_nohash_0.wav
+zipformer-hot,noise10,True,two,ca4d5368,bed tree left two forward,,none,,480,WHO,data/speech_commands/two/ca4d5368_nohash_3.wav
+zipformer-hot,noise10,True,no,3d86b69a,yes no wow right eight,no,hit,135,590,NO | NO,data/speech_commands/no/3d86b69a_nohash_2.wav
+zipformer-hot,noise10,True,happy,03401e93,learn happy five yes on,happy,hit,584,770,HAPPY,data/speech_commands/happy/03401e93_nohash_0.wav
+zipformer-hot,noise10,True,zero,e49428d9,stop zero left eight off,,none,,440,FOUR,data/speech_commands/zero/e49428d9_nohash_1.wav
+zipformer-hot,noise10,True,off,8c7f81df,off visual seven bed follow,,none,,360,AH,data/speech_commands/off/8c7f81df_nohash_1.wav
+zipformer-hot,noise10,True,cat,a8e25ebb,learn cat up bird two,cat,hit,1185,200,CAP,data/speech_commands/cat/a8e25ebb_nohash_0.wav
+zipformer-hot,noise10,True,bed,6021f08b,house bed happy eight left,bed,hit,191,980,BED,data/speech_commands/bed/6021f08b_nohash_0.wav
+zipformer-hot,noise10,True,right,fdb5155e,on happy backward dog right,right,hit,728,700,RIGHT | RIGHT,data/speech_commands/right/fdb5155e_nohash_2.wav
+zipformer-hot,noise10,True,five,aa80f517,zero on seven five six,five,hit,365,760,FIVE,data/speech_commands/five/aa80f517_nohash_2.wav
+zipformer-hot,noise10,True,yes,9a7c1f83,yes six go left no,yes,hit,-250,1000,YES | YES,data/speech_commands/yes/9a7c1f83_nohash_5.wav
+zipformer-hot,noise10,True,bed,c781f251,six bed down visual backward,bed,hit,528,870,BED,data/speech_commands/bed/c781f251_nohash_0.wav
+zipformer-hot,noise10,True,zero,63f7a489,cat stop off zero eight,zero,hit,581,780,Z | ERO,data/speech_commands/zero/63f7a489_nohash_3.wav
+zipformer-hot,noise10,True,off,893705bb,down left follow off bed,,none,,720,MOLD,data/speech_commands/off/893705bb_nohash_3.wav
+zipformer-hot,noise10,True,eight,e1469561,five eight house no bed,,none,,760,HE WALKED,data/speech_commands/eight/e1469561_nohash_0.wav
+zipformer-hot,noise10,True,tree,83957201,bird tree seven eight go,tree,hit,414,980,TREE,data/speech_commands/tree/83957201_nohash_2.wav
+zipformer-hot,noise10,True,nine,e41a903b,follow tree off five nine,nine,hit,592,460,NI | NINE,data/speech_commands/nine/e41a903b_nohash_0.wav
+zipformer-hot,noise10,True,off,db24628d,tree wow four off bed,,none,,750,O | H,data/speech_commands/off/db24628d_nohash_2.wav
+zipformer-hot,noise10,True,seven,b11a05d2,stop right seven left tree,seven,hit,487,540,SEVEN,data/speech_commands/seven/b11a05d2_nohash_0.wav
+zipformer-hot,noise10,True,dog,a591c2ea,dog cat four six right,dog,hit,189,900,DOG,data/speech_commands/dog/a591c2ea_nohash_3.wav
+zipformer-hot,noise10,True,four,50033893,four right up happy dog,four,hit,426,1000,FOUR,data/speech_commands/four/50033893_nohash_0.wav
+zipformer-hot,noise10,True,left,ea356919,bird eight left wow off,left,hit,511,540,LEFT,data/speech_commands/left/ea356919_nohash_0.wav
+zipformer-hot,noise10,True,zero,03401e93,on zero bird off five,,none,,840,TITO,data/speech_commands/zero/03401e93_nohash_1.wav
+zipformer-hot,noise10,True,off,692a88e6,down off wow no forward,off,hit,494,560,OFF,data/speech_commands/off/692a88e6_nohash_1.wav
+zipformer-hot,noise10,True,zero,8fe67225,down off no left zero,zero,hit,428,590,ZERO,data/speech_commands/zero/8fe67225_nohash_3.wav
+zipformer-hot,noise10,True,down,6f2f57c1,house wow stop one down,down,hit,227,820,DOWN,data/speech_commands/down/6f2f57c1_nohash_2.wav
+zipformer-hot,noise10,True,go,bb05582b,house left seven three go,go,hit,193,500,AND GO,data/speech_commands/go/bb05582b_nohash_4.wav
+zipformer-hot,noise10,True,happy,5eb5fc74,happy nine off right zero,happy,hit,840,210,HAPPY,data/speech_commands/happy/5eb5fc74_nohash_1.wav
+zipformer-hot,noise10,True,six,e1469561,dog visual seven cat six,six,hit,265,810,SIX,data/speech_commands/six/e1469561_nohash_1.wav
+zipformer-hot,noise10,True,down,d91a159e,left two five down four,down,hit,97,970,DOWN | DOWN,data/speech_commands/down/d91a159e_nohash_0.wav
+zipformer-hot,noise10,True,down,37dca74f,yes five down off forward,,none,,370,THEM,data/speech_commands/down/37dca74f_nohash_1.wav
+zipformer-hot,noise10,True,down,d0faf7e4,zero follow down tree four,,none,,710,THOU,data/speech_commands/down/d0faf7e4_nohash_2.wav
+zipformer-hot,noise10,True,one,4c6167ca,visual six wow one off,one,hit,30,670,ONE,data/speech_commands/one/4c6167ca_nohash_1.wav
+zipformer-hot,noise10,True,learn,6379c6a2,backward visual learn zero three,,none,,200,LEP,data/speech_commands/learn/6379c6a2_nohash_0.wav
+zipformer-hot,noise10,True,dog,563aa4e6,dog three seven left eight,dog,hit,803,850,DO | DOG,data/speech_commands/dog/563aa4e6_nohash_0.wav
+zipformer-hot,noise10,True,bed,6021f08b,bird dog zero bed no,bed,hit,800,530,FED,data/speech_commands/bed/6021f08b_nohash_1.wav
+zipformer-hot,noise10,True,zero,f2e59fea,seven zero stop visual two,,none,,540,ZO,data/speech_commands/zero/f2e59fea_nohash_1.wav
+zipformer-hot,noise10,True,stop,91b03183,eight learn two six stop,stop,hit,169,840,STOP,data/speech_commands/stop/91b03183_nohash_2.wav
+zipformer-hot,noise10,True,down,cd85758f,visual tree seven zero down,down,hit,69,620,DOWN,data/speech_commands/down/cd85758f_nohash_0.wav
+zipformer-hot,noise10,True,no,f2e59fea,dog one five no go,no,hit,279,410,NO,data/speech_commands/no/f2e59fea_nohash_4.wav
+zipformer-hot,noise10,True,yes,3d86b69a,yes tree happy off house,yes,hit,139,870,YES,data/speech_commands/yes/3d86b69a_nohash_0.wav
+zipformer-hot,noise10,True,right,bfd26d6b,on backward two bird right,right,hit,169,520,RIGHT,data/speech_commands/right/bfd26d6b_nohash_3.wav
+zipformer-hot,noise10,True,nine,bb05582b,bed backward nine happy go,,none,,670,NI,data/speech_commands/nine/bb05582b_nohash_0.wav
+zipformer-hot,noise10,True,yes,893705bb,five forward four tree yes,yes,hit,480,530,YES,data/speech_commands/yes/893705bb_nohash_3.wav
+zipformer-hot,noise10,True,zero,8769c34c,visual cat zero two yes,,none,,750,HERE,data/speech_commands/zero/8769c34c_nohash_0.wav
+zipformer-hot,noise10,True,dog,a8e25ebb,off five bird go dog,go,wrong,480,530,GO | GO,data/speech_commands/dog/a8e25ebb_nohash_0.wav
+zipformer-hot,noise10,True,on,67961766,cat on bed three learn,on,hit,393,990,ON,data/speech_commands/on/67961766_nohash_0.wav
+zipformer-hot,noise10,True,eight,8c7f81df,bird nine go left eight,eight,hit,519,490,EIGHT,data/speech_commands/eight/8c7f81df_nohash_1.wav
+zipformer-hot,noise10,True,yes,893705bb,yes tree zero dog nine,yes,hit,543,790,YE | YES,data/speech_commands/yes/893705bb_nohash_2.wav
+zipformer-hot,noise10,True,three,6736bc64,bed left three zero tree,three,hit,4,690,THREE,data/speech_commands/three/6736bc64_nohash_1.wav
+zipformer-hot,noise10,True,four,f9643d42,four on stop tree backward,four,hit,260,430,FOUR,data/speech_commands/four/f9643d42_nohash_0.wav
+zipformer-hot,noise10,True,learn,f9643d42,up dog six five learn,,none,,600,THERE,data/speech_commands/learn/f9643d42_nohash_1.wav
+zipformer-hot,noise10,True,stop,37fc5d97,stop bird left seven up,stop,hit,240,770,STOP,data/speech_commands/stop/37fc5d97_nohash_2.wav
+zipformer-hot,noise10,True,yes,2796ac50,follow no happy down yes,yes,hit,61,980,YE | YES,data/speech_commands/yes/2796ac50_nohash_0.wav
+zipformer-hot,noise10,True,seven,692a88e6,stop left seven six four,seven,hit,332,680,SEVEN,data/speech_commands/seven/692a88e6_nohash_4.wav
+zipformer-hot,noise10,True,no,c7dc7278,house learn no follow visual,no,hit,173,880,NO,data/speech_commands/no/c7dc7278_nohash_1.wav
+zipformer-hot,noise10,True,zero,422d3197,five house follow three zero,,none,,790,CYRIL,data/speech_commands/zero/422d3197_nohash_0.wav
+zipformer-hot,noise10,True,nine,0fa1e7a9,bed nine forward one three,nine,hit,392,630,NINE,data/speech_commands/nine/0fa1e7a9_nohash_1.wav
+zipformer-hot,noise10,True,yes,0cb74144,yes one eight happy learn,yes,hit,62,640,YES,data/speech_commands/yes/0cb74144_nohash_2.wav
+zipformer-hot,noise10,True,on,5ff3f9a1,one learn on off down,one,wrong,435,580,ONE | ONE,data/speech_commands/on/5ff3f9a1_nohash_1.wav
+zipformer-hot,noise10,True,six,cfde27ba,six follow go no wow,six,hit,177,540,SIX,data/speech_commands/six/cfde27ba_nohash_0.wav
+zipformer-hot,noise10,True,bird,e41a903b,tree bird six nine wow,bird,hit,316,420,BIR | BIRD,data/speech_commands/bird/e41a903b_nohash_0.wav
+zipformer-hot,noise10,True,four,587f3271,tree left four bird go,four,hit,242,480,FOUR | FOUR,data/speech_commands/four/587f3271_nohash_2.wav
+zipformer-hot,noise10,True,nine,dcb57584,bird one go learn nine,,none,,440,NOT,data/speech_commands/nine/dcb57584_nohash_0.wav
+zipformer-hot,noise10,True,off,beb458a4,backward five on off six,off,hit,572,440,OFF,data/speech_commands/off/beb458a4_nohash_4.wav
+zipformer-hot,noise10,True,follow,ea37ca08,down learn follow six two,follow,hit,356,340,FOLLOW,data/speech_commands/follow/ea37ca08_nohash_0.wav
+zipformer-hot,noise10,True,left,9a69672b,cat visual left seven house,left,hit,190,500,LEFT,data/speech_commands/left/9a69672b_nohash_2.wav
+zipformer-hot,noise10,True,up,d103dd6e,go left nine four up,up,hit,164,530,UP,data/speech_commands/up/d103dd6e_nohash_0.wav
+zipformer-hot,noise10,True,nine,0cb74144,nine happy six two down,nine,hit,519,540,NI | NINE,data/speech_commands/nine/0cb74144_nohash_1.wav
+zipformer-hot,noise10,True,follow,893705bb,backward forward nine follow visual,,none,,680,BUT ALL ALONE,data/speech_commands/follow/893705bb_nohash_3.wav
+zipformer-hot,noise10,True,yes,e41a903b,left two five yes right,yes,hit,328,370,YES,data/speech_commands/yes/e41a903b_nohash_2.wav
+zipformer-hot,noise10,True,six,cfbedff9,five six house backward off,six,hit,149,550,SIX,data/speech_commands/six/cfbedff9_nohash_3.wav
+zipformer-hot,noise10,True,zero,893705bb,zero five up happy on,,none,,680,EUROPE,data/speech_commands/zero/893705bb_nohash_2.wav
+zipformer-hot,noise10,True,eight,964c7c9e,dog go on eight stop,eight,hit,495,200,EIGHT,data/speech_commands/eight/964c7c9e_nohash_0.wav
+zipformer-hot,noise10,True,eight,f2e59fea,no eight zero five up,eight,hit,571,440,E | EIGHT,data/speech_commands/eight/f2e59fea_nohash_1.wav
+zipformer-hot,noise10,True,three,e49428d9,left three nine off down,three,hit,331,360,THREE,data/speech_commands/three/e49428d9_nohash_0.wav
+zipformer-hot,noise10,True,down,b2e2773a,stop happy four on down,down,hit,80,610,DOWN | ON,data/speech_commands/down/b2e2773a_nohash_0.wav
+zipformer-hot,noise10,True,stop,e1469561,stop one seven three go,stop,hit,380,1000,STOP,data/speech_commands/stop/e1469561_nohash_4.wav
+zipformer-hot,noise10,True,follow,f2e59fea,nine cat follow bird no,follow,hit,250,440,FOLLOW,data/speech_commands/follow/f2e59fea_nohash_0.wav
+zipformer-hot,noise10,True,off,d962e5ac,down one zero off four,,none,,450,AH,data/speech_commands/off/d962e5ac_nohash_3.wav
+zipformer-hot,noise10,True,zero,18f8afd5,bird zero three down up,zero,hit,530,480,ZERO,data/speech_commands/zero/18f8afd5_nohash_4.wav
+zipformer-hot,noise10,True,two,e0c782d5,off two forward dog up,two,hit,209,480,TWO,data/speech_commands/two/e0c782d5_nohash_3.wav
+zipformer-hot,noise10,True,zero,8625475c,zero four stop off go,,none,,670,VERA,data/speech_commands/zero/8625475c_nohash_1.wav
+zipformer-hot,noise10,True,seven,aef8dcf5,one yes seven down wow,seven,hit,496,520,SEVEN,data/speech_commands/seven/aef8dcf5_nohash_0.wav
+zipformer-hot,noise10,True,backward,8fe67225,seven two backward one stop,,none,,550,BACK | WARD,data/speech_commands/backward/8fe67225_nohash_1.wav
+zipformer-hot,noise10,True,nine,a6f2fd71,nine visual learn happy bed,nine,hit,429,580,NI | NINE,data/speech_commands/nine/a6f2fd71_nohash_1.wav
+zipformer-hot,noise10,True,bed,ad6a46f1,stop bed two nine visual,bed,hit,261,800,BED | D,data/speech_commands/bed/ad6a46f1_nohash_0.wav
+zipformer-hot,noise10,True,nine,d0faf7e4,nine no learn five happy,nine,hit,323,690,NINE,data/speech_commands/nine/d0faf7e4_nohash_1.wav
+zipformer-hot,noise10,True,down,2796ac50,follow down wow left eight,down,hit,-180,880,DOWN | DOWN,data/speech_commands/down/2796ac50_nohash_0.wav
+zipformer-hot,noise10,True,follow,c7dc7278,wow tree five eight follow,follow,hit,318,380,FOLLOW,data/speech_commands/follow/c7dc7278_nohash_0.wav
+zipformer-hot,noise10,True,bird,f297e878,dog nine bird tree stop,bird,hit,385,1000,BIRD,data/speech_commands/bird/f297e878_nohash_0.wav
+zipformer-hot,noise10,True,nine,aa80f517,nine one house five wow,nine,hit,554,460,NINE,data/speech_commands/nine/aa80f517_nohash_4.wav
+zipformer-hot,noise10,True,down,94de6a6a,go seven down stop six,,none,,1000,OH NO,data/speech_commands/down/94de6a6a_nohash_3.wav
+zipformer-hot,noise10,True,four,97f4c236,zero six eight four bird,four,hit,162,850,FOUR,data/speech_commands/four/97f4c236_nohash_3.wav
+zipformer-hot,noise10,True,off,91b03183,off nine six left happy,,none,,710,O | F,data/speech_commands/off/91b03183_nohash_1.wav
+zipformer-hot,noise10,True,right,bb05582b,zero nine dog right five,right,hit,832,830,WHITE,data/speech_commands/right/bb05582b_nohash_0.wav
+zipformer-hot,noise10,True,down,beb458a4,no four down three off,no,wrong,171,520,NO | NO,data/speech_commands/down/beb458a4_nohash_4.wav
+zipformer-hot,noise10,True,zero,e71b4ce6,dog wow bird go zero,zero,hit,433,930,ZERO,data/speech_commands/zero/e71b4ce6_nohash_1.wav
+zipformer-hot,noise10,True,four,63f7a489,tree visual dog four left,four,hit,-259,1000,FOUR,data/speech_commands/four/63f7a489_nohash_1.wav
+zipformer-hot,noise10,True,learn,e49428d9,follow learn bird four house,,none,,420,ONE,data/speech_commands/learn/e49428d9_nohash_4.wav
+zipformer-hot,noise10,True,go,f2e59fea,yes go right backward seven,go,hit,271,420,GO | GOLD,data/speech_commands/go/f2e59fea_nohash_0.wav
+zipformer-hot,noise10,True,seven,b97c9f77,three forward seven bird no,,none,,970,SE | VEN,data/speech_commands/seven/b97c9f77_nohash_3.wav
+zipformer-hot,noise10,True,follow,db24628d,follow eight bird forward house,follow,hit,233,460,FOLLOW,data/speech_commands/follow/db24628d_nohash_1.wav
+zipformer-hot,noise10,True,down,af8b2f2c,four down seven dog one,down,hit,331,360,DOWN,data/speech_commands/down/af8b2f2c_nohash_0.wav
+zipformer-hot,noise10,True,no,1b4c9b89,yes seven stop no right,no,hit,-69,760,NO | NO,data/speech_commands/no/1b4c9b89_nohash_4.wav
+zipformer-hot,noise10,True,two,220ee1ef,wow two backward three visual,,none,,130,HUMP,data/speech_commands/two/220ee1ef_nohash_0.wav
+zipformer-hot,noise10,True,four,cd85758f,four dog seven one no,four,hit,248,770,FOUR,data/speech_commands/four/cd85758f_nohash_1.wav
+zipformer-hot,noise10,True,bird,5744b6a7,bird wow six up down,bird,hit,432,260,BIR,data/speech_commands/bird/5744b6a7_nohash_0.wav
+zipformer-hot,noise10,True,learn,3b4f8f24,off nine learn four bed,,none,,750,FLUR,data/speech_commands/learn/3b4f8f24_nohash_2.wav
+zipformer-hot,noise10,True,up,893705bb,left up happy eight off,up,hit,194,820,UP,data/speech_commands/up/893705bb_nohash_11.wav
+zipformer-hot,noise10,True,down,e1469561,house forward down seven backward,down,hit,232,780,DOWN,data/speech_commands/down/e1469561_nohash_1.wav
+zipformer-hot,noise10,True,up,d103dd6e,bed three one zero up,up,hit,894,120,A | UP,data/speech_commands/up/d103dd6e_nohash_1.wav
+zipformer-hot,noise10,True,learn,ea37ca08,bird seven down zero learn,,none,,950,LUCK,data/speech_commands/learn/ea37ca08_nohash_0.wav
+zipformer-hot,noise10,True,no,881583a6,no two seven right cat,no,hit,-60,750,NO,data/speech_commands/no/881583a6_nohash_0.wav
+zipformer-hot,noise10,True,no,fb7eb481,down up no six stop,no,hit,201,490,NO,data/speech_commands/no/fb7eb481_nohash_0.wav
+zipformer-hot,noise10,True,go,6e916de8,no yes bird one go,no,wrong,270,420,NO | GO,data/speech_commands/go/6e916de8_nohash_0.wav
+zipformer-hot,noise10,True,eight,e1469561,no forward off backward eight,eight,hit,230,780,EIGHT,data/speech_commands/eight/e1469561_nohash_3.wav
+zipformer-hot,noise10,True,forward,87070229,bed down left tree forward,forward,hit,533,480,FORWARD,data/speech_commands/forward/87070229_nohash_4.wav
+zipformer-hot,noise10,True,down,5c8af87a,stop learn no down happy,down,hit,139,550,DOWN,data/speech_commands/down/5c8af87a_nohash_3.wav
+zipformer-hot,noise10,True,dog,0f250098,six zero dog visual nine,dog,hit,610,400,DOG,data/speech_commands/dog/0f250098_nohash_1.wav
+zipformer-hot,noise10,True,off,893705bb,eight off bed backward dog,,none,,870,STRENGTH | OH,data/speech_commands/off/893705bb_nohash_1.wav
+zipformer-hot,noise10,True,forward,f9643d42,bed forward three two left,forward,hit,509,500,FOR | FORWARD,data/speech_commands/forward/f9643d42_nohash_0.wav
+zipformer-hot,noise10,False,down,5e3dde6b,learn off six up right,,rejected,,440,WELL,data/speech_commands/down/5e3dde6b_nohash_3.wav
+zipformer-hot,noise10,False,zero,3b4f8f24,down off follow no on,,rejected,,830,ZERO,data/speech_commands/zero/3b4f8f24_nohash_2.wav
+zipformer-hot,noise10,False,no,3f170018,cat visual bird house stop,,rejected,,670,I THINK | NO,data/speech_commands/no/3f170018_nohash_0.wav
+zipformer-hot,noise10,False,on,8625475c,bed backward follow five forward,,rejected,,930,ON,data/speech_commands/on/8625475c_nohash_0.wav
+zipformer-hot,noise10,False,on,d9e9f554,tree seven wow down two,,rejected,,660,ON,data/speech_commands/on/d9e9f554_nohash_2.wav
+zipformer-hot,noise10,False,go,db24628d,follow bird left up backward,,rejected,,470,GOLD,data/speech_commands/go/db24628d_nohash_0.wav
+zipformer-hot,noise10,False,right,f297e878,up five follow backward zero,,rejected,,980,RIGHT,data/speech_commands/right/f297e878_nohash_0.wav
+zipformer-hot,noise10,False,right,b49caed3,zero dog house five six,,rejected,,400,RIGHT,data/speech_commands/right/b49caed3_nohash_0.wav
+zipformer-hot,noise10,False,yes,b49caed3,cat no dog bird happy,,rejected,,680,YES,data/speech_commands/yes/b49caed3_nohash_0.wav
+zipformer-hot,noise10,False,go,0cb74144,bird two wow seven on,,rejected,,500,GO,data/speech_commands/go/0cb74144_nohash_3.wav
+zipformer-hot,noise10,False,two,8ec6dab6,stop forward backward tree left,,rejected,,510,TWO,data/speech_commands/two/8ec6dab6_nohash_0.wav
+zipformer-hot,noise10,False,follow,18f8afd5,house five cat down bird,,rejected,,510,FOLLOW,data/speech_commands/follow/18f8afd5_nohash_4.wav
+zipformer-hot,noise10,False,nine,4c6167ca,backward wow right yes seven,,rejected,,850,NINE,data/speech_commands/nine/4c6167ca_nohash_5.wav
+zipformer-hot,noise10,False,eight,563aa4e6,dog right tree off left,,rejected,,900,EIGHT,data/speech_commands/eight/563aa4e6_nohash_0.wav
+zipformer-hot,noise10,False,left,85d2ac4b,dog yes forward learn stop,,rejected,,890,LOOK,data/speech_commands/left/85d2ac4b_nohash_1.wav
+zipformer-hot,noise10,False,nine,90b94017,right go forward wow bird,,rejected,,430,NINE,data/speech_commands/nine/90b94017_nohash_0.wav
+zipformer-hot,noise10,False,three,db24628d,six nine stop eight seven,,rejected,,680,THREE,data/speech_commands/three/db24628d_nohash_0.wav
+zipformer-hot,noise10,False,six,fb7eb481,yes five off visual go,,rejected,,610,SAY,data/speech_commands/six/fb7eb481_nohash_0.wav
+zipformer-hot,noise10,False,left,8625475c,seven three no stop nine,,rejected,,670,LEFT,data/speech_commands/left/8625475c_nohash_0.wav
+zipformer-hot,noise10,False,five,b97c9f77,right happy no off one,,rejected,,740,FIVE,data/speech_commands/five/b97c9f77_nohash_2.wav
+zipformer-hot,noise10,False,one,9b3ea809,follow down zero up happy,,rejected,,920,ONE,data/speech_commands/one/9b3ea809_nohash_0.wav
+zipformer-hot,noise10,False,stop,aa80f517,nine bird up off two,,rejected,,450,STOP,data/speech_commands/stop/aa80f517_nohash_0.wav
+zipformer-hot,noise10,False,on,4fd1443e,stop house dog down seven,,rejected,,630,OLD,data/speech_commands/on/4fd1443e_nohash_1.wav
+zipformer-hot,noise10,False,visual,87070229,wow tree bed eight two,,rejected,,500,VISU,data/speech_commands/visual/87070229_nohash_1.wav
+zipformer-hot,noise10,False,go,370844f7,house backward left follow tree,,rejected,,800,GO,data/speech_commands/go/370844f7_nohash_0.wav
+zipformer-hot,noise10,False,cat,475b61f1,follow wow eight left three,,rejected,,90,KIT,data/speech_commands/cat/475b61f1_nohash_0.wav
+zipformer-hot,noise10,False,zero,64f1c742,cat wow happy right visual,,rejected,,980,ZERO,data/speech_commands/zero/64f1c742_nohash_0.wav
+zipformer-hot,noise10,False,house,ca4d5368,right forward seven cat happy,,rejected,,450,HOUSE,data/speech_commands/house/ca4d5368_nohash_0.wav
+zipformer-hot,noise10,False,five,a7216980,down right three no one,,rejected,,480,R,data/speech_commands/five/a7216980_nohash_0.wav
+zipformer-hot,noise10,False,yes,2d82a556,two nine on left stop,,rejected,,860,YES,data/speech_commands/yes/2d82a556_nohash_0.wav
+zipformer-hot,noise10,False,visual,fb7eb481,right six zero forward wow,,rejected,,660,VISUAL,data/speech_commands/visual/fb7eb481_nohash_0.wav
+zipformer-hot,noise10,False,six,9a69672b,backward bird one dog two,,rejected,,660,THANKED,data/speech_commands/six/9a69672b_nohash_4.wav
+zipformer-hot,noise10,False,go,37dca74f,cat learn tree visual wow,,rejected,,500,GO,data/speech_commands/go/37dca74f_nohash_3.wav
+zipformer-hot,noise10,False,yes,9a7c1f83,dog four go zero backward,,rejected,,550,YES,data/speech_commands/yes/9a7c1f83_nohash_3.wav
+zipformer-hot,noise10,False,dog,fe1916ba,five learn wow four go,,rejected,,970,DOG,data/speech_commands/dog/fe1916ba_nohash_1.wav
+zipformer-hot,noise10,False,yes,964e8cfd,two cat forward nine up,,rejected,,900,YES,data/speech_commands/yes/964e8cfd_nohash_2.wav
+zipformer-hot,noise10,False,six,b83c1acf,on nine learn one forward,,rejected,,710,SIX,data/speech_commands/six/b83c1acf_nohash_2.wav
+zipformer-hot,noise10,False,right,94de6a6a,forward three off one learn,,rejected,,570,RIGHT,data/speech_commands/right/94de6a6a_nohash_3.wav
+zipformer-hot,noise10,False,two,6f2f57c1,up three five right go,,rejected,,540,TWO,data/speech_commands/two/6f2f57c1_nohash_0.wav
+zipformer-hot,noise10,False,wow,4290ca61,zero off bed dog seven,,rejected,,530,WOW,data/speech_commands/wow/4290ca61_nohash_1.wav
+zipformer-hot,noise10,False,off,893705bb,one follow yes down happy,,rejected,,870,O | OH,data/speech_commands/off/893705bb_nohash_6.wav
+zipformer-hot,noise10,False,right,bb05582b,forward backward happy eight six,,rejected,,990,WHY,data/speech_commands/right/bb05582b_nohash_1.wav
+zipformer-hot,noise10,False,dog,3b4f8f24,stop nine happy seven yes,,rejected,,550,GOD,data/speech_commands/dog/3b4f8f24_nohash_0.wav
+zipformer-hot,noise10,False,no,893705bb,four wow tree bird five,,rejected,,840,NO,data/speech_commands/no/893705bb_nohash_2.wav
+zipformer-hot,noise10,False,go,d0faf7e4,stop dog follow six two,,rejected,,820,GO,data/speech_commands/go/d0faf7e4_nohash_0.wav
+zipformer-hot,noise10,False,down,c7dc7278,no four five one yes,,rejected,,370,DOWN,data/speech_commands/down/c7dc7278_nohash_0.wav
+zipformer-hot,noise10,False,off,e0c782d5,left right wow five four,,rejected,,650,OFF,data/speech_commands/off/e0c782d5_nohash_2.wav
+zipformer-hot,noise10,False,go,f0ae7203,follow learn on tree nine,,rejected,,460,GO,data/speech_commands/go/f0ae7203_nohash_0.wav
+zipformer-hot,noise10,False,on,9a7c1f83,down four zero learn house,,rejected,,670,ON,data/speech_commands/on/9a7c1f83_nohash_3.wav
+zipformer-hot,noise10,False,tree,f428ca69,learn down house five off,,rejected,,540,TREE,data/speech_commands/tree/f428ca69_nohash_0.wav
+zipformer-hot,noise10,False,one,d5b963aa,on go bird eight house,,rejected,,430,ONE,data/speech_commands/one/d5b963aa_nohash_3.wav
+zipformer-hot,noise10,False,yes,cfbedff9,down left tree bird forward,,rejected,,490,YES,data/speech_commands/yes/cfbedff9_nohash_0.wav
+zipformer-hot,noise10,False,yes,d0faf7e4,backward right learn happy dog,,rejected,,1000,YES,data/speech_commands/yes/d0faf7e4_nohash_7.wav
+zipformer-hot,noise10,False,on,b97c9f77,happy two stop cat dog,,rejected,,980,ON,data/speech_commands/on/b97c9f77_nohash_4.wav
+zipformer-hot,noise10,False,down,0fa1e7a9,zero no cat forward one,,rejected,,640,DOWN,data/speech_commands/down/0fa1e7a9_nohash_0.wav
+zipformer-hot,noise10,False,happy,af405b69,one no dog left five,,rejected,,490,HAPPY,data/speech_commands/happy/af405b69_nohash_0.wav
+zipformer-hot,noise10,False,on,bfd26d6b,tree cat three zero seven,,rejected,,330,ON,data/speech_commands/on/bfd26d6b_nohash_2.wav
+zipformer-hot,noise10,False,cat,83957201,bed backward one zero up,,rejected,,640,CAT,data/speech_commands/cat/83957201_nohash_0.wav
+zipformer-hot,noise10,False,left,1b4c9b89,down wow forward house seven,,rejected,,820,LEFT,data/speech_commands/left/1b4c9b89_nohash_3.wav
+zipformer-hot,noise10,False,wow,b97c9f77,up go down no tree,,rejected,,990,WELL,data/speech_commands/wow/b97c9f77_nohash_0.wav
+zipformer-hot,noise10,False,stop,f264e0df,right no bird go three,,rejected,,440,STOP,data/speech_commands/stop/f264e0df_nohash_0.wav
+zipformer-hot,noise10,False,eight,c22d3f18,house tree zero right one,,rejected,,770,IT,data/speech_commands/eight/c22d3f18_nohash_1.wav
+zipformer-hot,noise10,False,bed,6e916de8,wow nine six no five,,rejected,,880,BED,data/speech_commands/bed/6e916de8_nohash_0.wav
+zipformer-hot,noise10,False,six,d0faf7e4,dog right no off visual,,rejected,,550,THANKS,data/speech_commands/six/d0faf7e4_nohash_2.wav
+zipformer-hot,noise10,False,house,f2e59fea,cat stop zero bed five,,rejected,,580,HOUSE,data/speech_commands/house/f2e59fea_nohash_0.wav
+zipformer-hot,noise10,False,five,c9b5ff26,bird right yes four wow,,rejected,,550,FIVE,data/speech_commands/five/c9b5ff26_nohash_4.wav
+zipformer-hot,noise10,False,eight,fdb5155e,off nine tree bird happy,,rejected,,330,EIGHT,data/speech_commands/eight/fdb5155e_nohash_0.wav
+zipformer-hot,noise10,False,tree,80c45ed6,six one stop no zero,,rejected,,440,TREATY,data/speech_commands/tree/80c45ed6_nohash_1.wav
+zipformer-hot,noise10,False,two,ca4d5368,cat stop six on four,,rejected,,450,STILL,data/speech_commands/two/ca4d5368_nohash_1.wav
+zipformer-hot,noise10,False,one,f292725f,right nine visual eight tree,,rejected,,570,ONE,data/speech_commands/one/f292725f_nohash_0.wav
+zipformer-hot,noise10,False,off,ffa76c4a,four house two five visual,,rejected,,370,OH,data/speech_commands/off/ffa76c4a_nohash_1.wav
+zipformer-hot,noise10,False,six,a4383927,dog two stop no tree,,rejected,,510,SIX,data/speech_commands/six/a4383927_nohash_1.wav
+zipformer-hot,noise10,False,off,4c6167ca,six stop backward bird one,,rejected,,440,OFF,data/speech_commands/off/4c6167ca_nohash_5.wav
+zipformer-hot,noise10,False,yes,5c8af87a,go on five four tree,,rejected,,700,YES,data/speech_commands/yes/5c8af87a_nohash_0.wav
+zipformer-hot,child,True,one,e0c782d5,visual no left yes one,one,hit,231,460,ONE,data/speech_commands/one/e0c782d5_nohash_3.wav
+zipformer-hot,child,True,dog,893705bb,two dog forward follow tree,,none,,710,THOUGH,data/speech_commands/dog/893705bb_nohash_1.wav
+zipformer-hot,child,True,up,3d86b69a,five up dog on house,,none,,510,AH,data/speech_commands/up/3d86b69a_nohash_0.wav
+zipformer-hot,child,True,eight,8494fba8,eight wow five left tree,eight,hit,696,320,E | EIGHT,data/speech_commands/eight/8494fba8_nohash_0.wav
+zipformer-hot,child,True,tree,a4e8a997,two up tree right three,tree,hit,461,230,TRE | TREE,data/speech_commands/tree/a4e8a997_nohash_1.wav
+zipformer-hot,child,True,yes,94de6a6a,yes visual right up bed,yes,hit,-88,810,YES,data/speech_commands/yes/94de6a6a_nohash_4.wav
+zipformer-hot,child,True,bed,f0ae7203,left eight follow bed five,bed,hit,711,300,BED,data/speech_commands/bed/f0ae7203_nohash_0.wav
+zipformer-hot,child,True,seven,82d0d3ba,follow seven nine tree up,seven,hit,854,480,SEVEN,data/speech_commands/seven/82d0d3ba_nohash_0.wav
+zipformer-hot,child,True,five,6736bc64,cat up five happy off,five,hit,560,460,FIVE,data/speech_commands/five/6736bc64_nohash_1.wav
+zipformer-hot,child,True,cat,6021f08b,down left cat no eight,cat,hit,561,810,CAT,data/speech_commands/cat/6021f08b_nohash_0.wav
+zipformer-hot,child,True,six,95ba4996,bird six left follow no,six,hit,310,750,SIX,data/speech_commands/six/95ba4996_nohash_0.wav
+zipformer-hot,child,True,nine,b11a05d2,happy house nine one on,nine,hit,638,380,NINE,data/speech_commands/nine/b11a05d2_nohash_0.wav
+zipformer-hot,child,True,eight,beb458a4,no bed backward bird eight,eight,hit,569,450,E | EIGHT,data/speech_commands/eight/beb458a4_nohash_2.wav
+zipformer-hot,child,True,learn,87070229,visual eight up zero learn,learn,hit,579,440,LE | LEARN,data/speech_commands/learn/87070229_nohash_2.wav
+zipformer-hot,child,True,two,d962e5ac,right two learn happy follow,,none,,460,OH,data/speech_commands/two/d962e5ac_nohash_1.wav
+zipformer-hot,child,True,visual,4c6167ca,four nine two visual dog,visual,hit,571,440,VISUAL,data/speech_commands/visual/4c6167ca_nohash_5.wav
+zipformer-hot,child,True,tree,6736bc64,left bird wow tree off,tree,hit,360,340,TRE | TREE,data/speech_commands/tree/6736bc64_nohash_0.wav
+zipformer-hot,child,True,left,5e3dde6b,seven right left no stop,left,hit,412,600,LEFT,data/speech_commands/left/5e3dde6b_nohash_0.wav
+zipformer-hot,child,True,learn,bfd26d6b,seven learn backward three go,learn,hit,640,370,LEARN,data/speech_commands/learn/bfd26d6b_nohash_0.wav
+zipformer-hot,child,True,visual,e0c782d5,nine visual down backward forward,visual,hit,513,500,VISUAL,data/speech_commands/visual/e0c782d5_nohash_1.wav
+zipformer-hot,child,True,cat,e5e54cee,one eight left four cat,cat,hit,658,730,CAT,data/speech_commands/cat/e5e54cee_nohash_1.wav
+zipformer-hot,child,True,five,c518d1b1,up on bird four five,five,hit,315,700,FIVE,data/speech_commands/five/c518d1b1_nohash_1.wav
+zipformer-hot,child,True,go,692a88e6,follow go bed down bird,go,hit,181,530,GO | GO,data/speech_commands/go/692a88e6_nohash_3.wav
+zipformer-hot,child,True,nine,9a7c1f83,left zero nine no bed,nine,hit,250,760,NINE,data/speech_commands/nine/9a7c1f83_nohash_3.wav
+zipformer-hot,child,True,four,4c6167ca,yes nine dog four no,four,hit,167,530,FOUR,data/speech_commands/four/4c6167ca_nohash_1.wav
+zipformer-hot,child,True,four,cfbedff9,on yes four dog three,four,hit,276,420,FOUR,data/speech_commands/four/cfbedff9_nohash_1.wav
+zipformer-hot,child,True,five,dcb57584,five forward one no backward,,none,,460,BUT | BUT,data/speech_commands/five/dcb57584_nohash_0.wav
+zipformer-hot,child,True,tree,af405b69,zero off house tree wow,tree,hit,302,390,TRE | E,data/speech_commands/tree/af405b69_nohash_0.wav
+zipformer-hot,child,True,five,893705bb,five yes bed down on,,none,,220,FLAT,data/speech_commands/five/893705bb_nohash_0.wav
+zipformer-hot,child,True,five,189cbabe,down three five dog learn,five,hit,483,530,FIVE,data/speech_commands/five/189cbabe_nohash_1.wav
+zipformer-hot,child,True,up,692a88e6,six learn five up zero,up,hit,251,440,UP | UP,data/speech_commands/up/692a88e6_nohash_3.wav
+zipformer-hot,child,True,cat,af130f12,zero tree cat one visual,cat,hit,731,280,CAT,data/speech_commands/cat/af130f12_nohash_0.wav
+zipformer-hot,child,True,nine,5eb5fc74,seven nine five right backward,nine,hit,760,250,NI | NINE,data/speech_commands/nine/5eb5fc74_nohash_3.wav
+zipformer-hot,child,True,eight,8769c34c,no on stop eight dog,eight,hit,633,380,E | EIGHT,data/speech_commands/eight/8769c34c_nohash_0.wav
+zipformer-hot,child,True,on,a7216980,no on eight cat up,,none,,310,OH,data/speech_commands/on/a7216980_nohash_0.wav
+zipformer-hot,child,True,go,beb458a4,go up off house right,go,hit,253,440,GO,data/speech_commands/go/beb458a4_nohash_4.wav
+zipformer-hot,child,True,three,c7dc7278,down visual two cat three,three,hit,355,340,THREE,data/speech_commands/three/c7dc7278_nohash_1.wav
+zipformer-hot,child,True,visual,c7dc7278,cat visual follow four yes,,none,,470,BE SURE,data/speech_commands/visual/c7dc7278_nohash_1.wav
+zipformer-hot,child,True,dog,af130f12,tree nine no dog one,dog,hit,555,460,DOG,data/speech_commands/dog/af130f12_nohash_1.wav
+zipformer-hot,child,True,on,84d1e469,dog on house zero learn,,none,,480,ION,data/speech_commands/on/84d1e469_nohash_1.wav
+zipformer-hot,child,True,go,563aa4e6,go happy nine house down,go,hit,450,240,GO | GO,data/speech_commands/go/563aa4e6_nohash_2.wav
+zipformer-hot,child,True,five,1528225c,house no bed five two,five,hit,621,710,FIVE,data/speech_commands/five/1528225c_nohash_0.wav
+zipformer-hot,child,True,one,c9b5ff26,seven zero no one cat,one,hit,231,800,ONE,data/speech_commands/one/c9b5ff26_nohash_3.wav
+zipformer-hot,child,True,on,bfd26d6b,three no left on tree,on,hit,412,280,ON | ON,data/speech_commands/on/bfd26d6b_nohash_2.wav
+zipformer-hot,child,True,wow,e1469561,zero yes two wow bird,,none,,390,WELL,data/speech_commands/wow/e1469561_nohash_0.wav
+zipformer-hot,child,True,bed,47d01978,four bed left nine five,bed,hit,431,260,BED,data/speech_commands/bed/47d01978_nohash_0.wav
+zipformer-hot,child,True,five,c22d3f18,left backward forward bird five,five,hit,691,640,FIVE,data/speech_commands/five/c22d3f18_nohash_2.wav
+zipformer-hot,child,True,five,210f3aa9,up five eight follow no,five,hit,580,750,FIVE,data/speech_commands/five/210f3aa9_nohash_0.wav
+zipformer-hot,child,True,four,db24628d,four no left backward one,four,hit,374,360,FOUR,data/speech_commands/four/db24628d_nohash_2.wav
+zipformer-hot,child,True,wow,cd85758f,tree bed on wow left,,none,,340,WELL,data/speech_commands/wow/cd85758f_nohash_0.wav
+zipformer-hot,child,True,seven,d962e5ac,seven down up nine learn,,none,,510,SERENEM,data/speech_commands/seven/d962e5ac_nohash_1.wav
+zipformer-hot,child,True,bed,210f3aa9,stop bed house tree two,bed,hit,650,360,BED,data/speech_commands/bed/210f3aa9_nohash_0.wav
+zipformer-hot,child,True,on,893705bb,zero one on happy learn,on,hit,183,510,ON,data/speech_commands/on/893705bb_nohash_7.wav
+zipformer-hot,child,True,tree,9dc1889e,learn tree two go zero,tree,hit,361,330,TRE | E,data/speech_commands/tree/9dc1889e_nohash_0.wav
+zipformer-hot,child,True,five,e49428d9,five two cat four bed,five,hit,601,410,FIVE,data/speech_commands/five/e49428d9_nohash_3.wav
+zipformer-hot,child,True,cat,4c7c95de,follow seven go cat eight,cat,hit,859,480,CAN'T,data/speech_commands/cat/4c7c95de_nohash_0.wav
+zipformer-hot,child,True,off,47d01978,off stop one three seven,off,hit,616,750,OFF,data/speech_commands/off/47d01978_nohash_1.wav
+zipformer-hot,child,True,nine,d91a159e,nine six two down off,nine,hit,372,650,NINE,data/speech_commands/nine/d91a159e_nohash_1.wav
+zipformer-hot,child,True,six,a1533da4,up six yes cat down,six,hit,124,590,SIX,data/speech_commands/six/a1533da4_nohash_0.wav
+zipformer-hot,child,True,yes,dcb57584,one yes wow six bed,yes,hit,780,240,YES,data/speech_commands/yes/dcb57584_nohash_0.wav
+zipformer-hot,child,True,two,f2e59fea,bird dog two wow stop,two,hit,60,630,TWO,data/speech_commands/two/f2e59fea_nohash_0.wav
+zipformer-hot,child,True,one,91b03183,stop bird no one seven,one,hit,230,830,ONE | ONE,data/speech_commands/one/91b03183_nohash_2.wav
+zipformer-hot,child,True,down,e49428d9,dog left bed down five,,none,,360,NONE,data/speech_commands/down/e49428d9_nohash_3.wav
+zipformer-hot,child,True,house,5ff3f9a1,backward zero house follow go,house,hit,411,600,HOUSE,data/speech_commands/house/5ff3f9a1_nohash_0.wav
+zipformer-hot,child,True,zero,a60a09cf,six one down visual zero,zero,hit,445,570,ZERO,data/speech_commands/zero/a60a09cf_nohash_2.wav
+zipformer-hot,child,True,three,b83c1acf,yes dog two bird three,three,hit,-99,470,THREE,data/speech_commands/three/b83c1acf_nohash_1.wav
+zipformer-hot,child,True,left,9a7c1f83,left down no house dog,left,hit,550,830,LEFT,data/speech_commands/left/9a7c1f83_nohash_3.wav
+zipformer-hot,child,True,no,0cb74144,wow learn two follow no,no,hit,209,480,NO,data/speech_commands/no/0cb74144_nohash_0.wav
+zipformer-hot,child,True,left,cfde27ba,left on no off stop,left,hit,300,390,LEFT | LEFT,data/speech_commands/left/cfde27ba_nohash_0.wav
+zipformer-hot,child,True,backward,0cb74144,house backward four nine on,,none,,410,BACK,data/speech_commands/backward/0cb74144_nohash_1.wav
+zipformer-hot,child,True,five,5e3dde6b,wow bird eight five left,five,hit,701,680,FIVE,data/speech_commands/five/5e3dde6b_nohash_0.wav
+zipformer-hot,child,True,three,f9643d42,bird off learn three six,three,hit,351,340,THREE,data/speech_commands/three/f9643d42_nohash_1.wav
+zipformer-hot,child,True,yes,d9e9f554,nine go up yes six,yes,hit,471,540,YE | YES,data/speech_commands/yes/d9e9f554_nohash_1.wav
+zipformer-hot,child,True,six,ef2a3cfb,right six forward stop bird,six,hit,199,490,SIX,data/speech_commands/six/ef2a3cfb_nohash_0.wav
+zipformer-hot,child,True,zero,aa80f517,zero six backward tree one,,none,,440,THERE,data/speech_commands/zero/aa80f517_nohash_3.wav
+zipformer-hot,child,True,two,c9e251d2,yes two dog tree zero,two,hit,642,370,TWO,data/speech_commands/two/c9e251d2_nohash_0.wav
+zipformer-hot,child,True,three,9a356ab9,two four tree three no,three,hit,-378,780,THREE,data/speech_commands/three/9a356ab9_nohash_1.wav
+zipformer-hot,child,True,off,37dca74f,six off bed stop two,off,hit,711,300,OFF,data/speech_commands/off/37dca74f_nohash_4.wav
+zipformer-hot,child,True,backward,aa80f517,backward up go follow bed,backward,hit,519,490,BACKWARD,data/speech_commands/backward/aa80f517_nohash_4.wav
+zipformer-hot,child,True,go,18f8afd5,four cat backward follow go,go,hit,289,400,GO,data/speech_commands/go/18f8afd5_nohash_3.wav
+zipformer-hot,child,True,yes,c9b5ff26,seven six yes four forward,yes,hit,300,390,YES,data/speech_commands/yes/c9b5ff26_nohash_4.wav
+zipformer-hot,child,True,visual,d962e5ac,visual happy eight stop zero,,none,,490,BEGIN,data/speech_commands/visual/d962e5ac_nohash_1.wav
+zipformer-hot,child,True,no,a1533da4,no cat down four three,no,hit,129,560,NO | NO,data/speech_commands/no/a1533da4_nohash_0.wav
+zipformer-hot,child,True,zero,e49428d9,go bird three house zero,,none,,370,CYRIL,data/speech_commands/zero/e49428d9_nohash_2.wav
+zipformer-hot,child,True,dog,587f3271,bird nine house four dog,dog,hit,540,510,DOG,data/speech_commands/dog/587f3271_nohash_1.wav
+zipformer-hot,child,True,six,68dd409e,three six two wow on,six,hit,120,580,SIX,data/speech_commands/six/68dd409e_nohash_0.wav
+zipformer-hot,child,True,visual,893705bb,bed up go backward visual,,none,,400,WELL,data/speech_commands/visual/893705bb_nohash_2.wav
+zipformer-hot,child,True,eight,ca4d5368,yes happy tree eight wow,eight,hit,680,330,EIGHT,data/speech_commands/eight/ca4d5368_nohash_3.wav
+zipformer-hot,child,True,backward,893705bb,visual cat backward eight stop,,none,,660,BECK RAPPED,data/speech_commands/backward/893705bb_nohash_5.wav
+zipformer-hot,child,True,on,f17d21b5,three follow bed on cat,,none,,640,AH,data/speech_commands/on/f17d21b5_nohash_1.wav
+zipformer-hot,child,True,five,1acc97de,dog go on five left,five,hit,539,480,FIVE,data/speech_commands/five/1acc97de_nohash_1.wav
+zipformer-hot,child,True,one,3b4f8f24,one wow yes nine forward,one,hit,271,790,ONE | ONE,data/speech_commands/one/3b4f8f24_nohash_3.wav
+zipformer-hot,child,True,zero,5c8af87a,six zero happy bird go,zero,hit,641,370,ZERO,data/speech_commands/zero/5c8af87a_nohash_1.wav
+zipformer-hot,child,True,zero,893705bb,five four nine stop zero,zero,hit,990,660,HERO,data/speech_commands/zero/893705bb_nohash_7.wav
+zipformer-hot,child,True,forward,beb458a4,forward eight no stop tree,forward,hit,413,600,FOR | FORWARD,data/speech_commands/forward/beb458a4_nohash_4.wav
+zipformer-hot,child,True,six,4c6167ca,learn visual six right down,six,hit,280,410,SIX,data/speech_commands/six/4c6167ca_nohash_0.wav
+zipformer-hot,child,True,five,fb7eb481,right five left bird backward,five,hit,620,390,FIVE,data/speech_commands/five/fb7eb481_nohash_2.wav
+zipformer-hot,child,True,house,5744b6a7,house follow zero stop cat,house,hit,319,370,HOUSE,data/speech_commands/house/5744b6a7_nohash_0.wav
+zipformer-hot,child,True,tree,422d3197,on seven tree eight learn,tree,hit,770,560,TREE,data/speech_commands/tree/422d3197_nohash_0.wav
+zipformer-hot,child,True,bed,c518d1b1,forward bed go yes stop,bed,hit,549,830,BED,data/speech_commands/bed/c518d1b1_nohash_0.wav
+zipformer-hot,child,True,stop,893705bb,dog stop eight forward no,stop,hit,640,370,STOP,data/speech_commands/stop/893705bb_nohash_2.wav
+zipformer-hot,child,True,tree,a591c2ea,zero left four tree visual,tree,hit,90,600,TRE | TREE,data/speech_commands/tree/a591c2ea_nohash_1.wav
+zipformer-hot,child,True,cat,0cb74144,nine dog go cat happy,cat,hit,630,410,CAT,data/speech_commands/cat/0cb74144_nohash_0.wav
+zipformer-hot,child,True,one,c9b5ff26,happy one on go two,one,hit,301,390,ONE | ONE,data/speech_commands/one/c9b5ff26_nohash_0.wav
+zipformer-hot,child,True,five,cfde27ba,three up five wow backward,five,hit,580,780,FIVE,data/speech_commands/five/cfde27ba_nohash_0.wav
+zipformer-hot,child,True,two,6021f08b,learn nine five two bird,two,hit,-43,750,TWO,data/speech_commands/two/6021f08b_nohash_0.wav
+zipformer-hot,child,True,three,cfbedff9,off nine house three up,three,hit,180,510,THREE,data/speech_commands/three/cfbedff9_nohash_1.wav
+zipformer-hot,child,True,seven,a2473d62,happy seven three four one,,none,,490,SE | VEN,data/speech_commands/seven/a2473d62_nohash_0.wav
+zipformer-hot,child,True,zero,1fe4c891,learn bed backward two zero,zero,hit,591,420,ZERO,data/speech_commands/zero/1fe4c891_nohash_0.wav
+zipformer-hot,child,True,right,d0faf7e4,forward bed bird right four,right,hit,290,400,RIGHT,data/speech_commands/right/d0faf7e4_nohash_1.wav
+zipformer-hot,child,True,house,4c7c95de,bed follow bird house forward,house,hit,480,530,HOUSE,data/speech_commands/house/4c7c95de_nohash_0.wav
+zipformer-hot,child,True,zero,1acc97de,stop dog zero happy six,zero,hit,570,440,ZERO,data/speech_commands/zero/1acc97de_nohash_4.wav
+zipformer-hot,child,True,no,9a69672b,yes on no down bird,no,hit,411,620,NO,data/speech_commands/no/9a69672b_nohash_3.wav
+zipformer-hot,child,True,off,daf230ac,off nine seven up right,,none,,490,AH,data/speech_commands/off/daf230ac_nohash_1.wav
+zipformer-hot,child,True,happy,b7e9f841,yes on right stop happy,happy,hit,439,570,HA | HAPPY,data/speech_commands/happy/b7e9f841_nohash_1.wav
+zipformer-hot,child,True,six,e41a903b,cat eight yes seven six,six,hit,300,390,SIX,data/speech_commands/six/e41a903b_nohash_3.wav
+zipformer-hot,child,True,cat,b83c1acf,cat up house go backward,cat,hit,327,730,CAT,data/speech_commands/cat/b83c1acf_nohash_0.wav
+zipformer-hot,child,True,nine,5170b77f,zero eight six go nine,nine,hit,672,340,NINE,data/speech_commands/nine/5170b77f_nohash_1.wav
+zipformer-hot,child,True,three,4c6167ca,zero four learn three house,three,hit,357,680,THREE,data/speech_commands/three/4c6167ca_nohash_5.wav
+zipformer-hot,child,True,go,91b03183,tree go eight six down,go,hit,199,490,GO,data/speech_commands/go/91b03183_nohash_0.wav
+zipformer-hot,child,True,left,1b4c9b89,left four no three up,left,hit,340,670,LEFT,data/speech_commands/left/1b4c9b89_nohash_2.wav
+zipformer-hot,child,True,up,43fc47a7,one forward visual up four,up,hit,369,650,UP,data/speech_commands/up/43fc47a7_nohash_2.wav
+zipformer-hot,child,True,up,24ad3ebe,follow wow left right up,up,hit,321,740,UP,data/speech_commands/up/24ad3ebe_nohash_0.wav
+zipformer-hot,child,True,six,0d53e045,one forward seven six left,,none,,80,POOH,data/speech_commands/six/0d53e045_nohash_1.wav
+zipformer-hot,child,True,backward,189cbabe,five house three backward go,backward,hit,593,420,BACKWARD,data/speech_commands/backward/189cbabe_nohash_0.wav
+zipformer-hot,child,True,no,85834399,happy eight off no house,no,hit,364,330,NO,data/speech_commands/no/85834399_nohash_0.wav
+zipformer-hot,child,True,two,1b4c9b89,two off wow learn up,,none,,370,DULL,data/speech_commands/two/1b4c9b89_nohash_4.wav
+zipformer-hot,child,True,up,5e3dde6b,learn left tree two up,,none,,530,OH,data/speech_commands/up/5e3dde6b_nohash_3.wav
+zipformer-hot,child,True,on,3b4f8f24,right up on nine wow,,none,,240,AH,data/speech_commands/on/3b4f8f24_nohash_0.wav
+zipformer-hot,child,True,stop,f9643d42,up stop yes wow nine,stop,hit,493,530,STOP,data/speech_commands/stop/f9643d42_nohash_2.wav
+zipformer-hot,child,True,go,b83c1acf,three go eight zero backward,go,hit,335,360,GO,data/speech_commands/go/b83c1acf_nohash_4.wav
+zipformer-hot,child,True,two,aa80f517,happy wow eight seven two,two,hit,370,320,TWO | TWO,data/speech_commands/two/aa80f517_nohash_2.wav
+zipformer-hot,child,True,on,6b889021,two stop wow on seven,on,hit,409,600,ON,data/speech_commands/on/6b889021_nohash_0.wav
+zipformer-hot,child,True,stop,0c40e715,nine no stop cat three,,none,,300,BAH,data/speech_commands/stop/0c40e715_nohash_0.wav
+zipformer-hot,child,True,visual,837a0f64,tree visual eight nine seven,visual,hit,633,380,VISUAL,data/speech_commands/visual/837a0f64_nohash_1.wav
+zipformer-hot,child,True,zero,2aa787cf,zero four house three visual,zero,hit,211,480,ZERO,data/speech_commands/zero/2aa787cf_nohash_0.wav
+zipformer-hot,child,True,seven,b49caed3,forward learn seven six two,seven,hit,451,560,SEVEN,data/speech_commands/seven/b49caed3_nohash_2.wav
+zipformer-hot,child,True,left,e1469561,learn six left three off,,none,,830,LE | APT,data/speech_commands/left/e1469561_nohash_2.wav
+zipformer-hot,child,True,dog,af8b2f2c,backward nine off dog six,dog,hit,211,480,DOG,data/speech_commands/dog/af8b2f2c_nohash_0.wav
+zipformer-hot,child,True,learn,837a0f64,forward stop learn down one,learn,hit,551,460,LEARN,data/speech_commands/learn/837a0f64_nohash_1.wav
+zipformer-hot,child,True,no,d5b963aa,backward six dog no house,no,hit,320,370,NO,data/speech_commands/no/d5b963aa_nohash_0.wav
+zipformer-hot,child,True,dog,cd85758f,visual left six dog happy,dog,hit,631,380,DO | DOG,data/speech_commands/dog/cd85758f_nohash_0.wav
+zipformer-hot,child,True,left,bb05582b,house happy zero one left,left,hit,942,390,LEST,data/speech_commands/left/bb05582b_nohash_1.wav
+zipformer-hot,child,True,left,c9b5ff26,two five left learn no,left,hit,522,490,LEFT,data/speech_commands/left/c9b5ff26_nohash_3.wav
+zipformer-hot,child,True,right,44715c1c,right wow zero forward left,right,hit,492,520,RIGHT,data/speech_commands/right/44715c1c_nohash_0.wav
+zipformer-hot,child,True,down,189cbabe,right down wow zero on,down,hit,232,460,DOWN | DOWN,data/speech_commands/down/189cbabe_nohash_1.wav
+zipformer-hot,child,True,forward,f2e59fea,bird stop forward happy bed,,none,,240,FOUR,data/speech_commands/forward/f2e59fea_nohash_0.wav
+zipformer-hot,child,True,wow,e41a903b,tree wow forward house bird,,none,,360,WELL,data/speech_commands/wow/e41a903b_nohash_0.wav
+zipformer-hot,child,True,stop,a1533da4,stop yes house up off,stop,hit,520,540,STOP,data/speech_commands/stop/a1533da4_nohash_0.wav
+zipformer-hot,child,True,three,e49428d9,off seven tree three zero,three,hit,370,320,THREE,data/speech_commands/three/e49428d9_nohash_2.wav
+zipformer-hot,child,True,right,1f653d27,five happy zero right seven,right,hit,503,560,RIGHT,data/speech_commands/right/1f653d27_nohash_0.wav
+zipformer-hot,child,True,dog,9e2ce5e3,one cat five dog tree,,none,,250,GONE,data/speech_commands/dog/9e2ce5e3_nohash_1.wav
+zipformer-hot,child,True,visual,87070229,forward visual down house stop,visual,hit,581,430,VISUAL,data/speech_commands/visual/87070229_nohash_0.wav
+zipformer-hot,child,True,yes,c9e251d2,eight bird yes tree go,yes,hit,901,490,YE | YES,data/speech_commands/yes/c9e251d2_nohash_0.wav
+zipformer-hot,child,True,seven,f2e59fea,seven bird go on two,,none,,440,SE | VEN,data/speech_commands/seven/f2e59fea_nohash_4.wav
+zipformer-hot,child,True,off,3b4f8f24,two five off bird tree,off,hit,640,370,OFF,data/speech_commands/off/3b4f8f24_nohash_0.wav
+zipformer-hot,child,True,five,e41a903b,five eight yes two down,five,hit,700,310,FIVE,data/speech_commands/five/e41a903b_nohash_1.wav
+zipformer-hot,child,True,one,a6f2fd71,down one house five backward,one,hit,299,390,ONE | ONE,data/speech_commands/one/a6f2fd71_nohash_2.wav
+zipformer-hot,child,True,go,4845bb10,cat nine go visual happy,go,hit,59,630,GO,data/speech_commands/go/4845bb10_nohash_0.wav
+zipformer-hot,child,True,yes,97f4c236,visual nine cat yes zero,yes,hit,344,720,YE | YES,data/speech_commands/yes/97f4c236_nohash_0.wav
+zipformer-hot,child,True,off,a7216980,zero four one three off,,none,,490,O | H,data/speech_commands/off/a7216980_nohash_4.wav
+zipformer-hot,child,True,cat,964e8cfd,yes follow cat go four,,none,,380,FAC,data/speech_commands/cat/964e8cfd_nohash_0.wav
+zipformer-hot,child,True,on,8fe67225,seven visual three on no,on,hit,293,440,ON | ON,data/speech_commands/on/8fe67225_nohash_2.wav
+zipformer-hot,child,True,up,5b1db3ee,forward on two up left,up,hit,472,540,UP | UP,data/speech_commands/up/5b1db3ee_nohash_0.wav
+zipformer-hot,child,True,up,4c841771,one visual off up backward,up,hit,121,570,UP,data/speech_commands/up/4c841771_nohash_0.wav
+zipformer-hot,child,True,up,1fe4c891,zero forward up off no,up,hit,563,810,UP | UP,data/speech_commands/up/1fe4c891_nohash_0.wav
+zipformer-hot,child,True,up,cfbedff9,learn happy on up cat,up,hit,431,260,UP,data/speech_commands/up/cfbedff9_nohash_2.wav
+zipformer-hot,child,True,bed,a2473d62,three eight backward wow bed,bed,hit,861,520,BED,data/speech_commands/bed/a2473d62_nohash_0.wav
+zipformer-hot,child,True,down,4620dc14,house yes no down right,down,hit,281,410,DOWN,data/speech_commands/down/4620dc14_nohash_0.wav
+zipformer-hot,child,True,four,beb458a4,tree six on stop four,four,hit,464,550,FOUR,data/speech_commands/four/beb458a4_nohash_2.wav
+zipformer-hot,child,True,up,03401e93,up six down wow eight,up,hit,173,520,UP,data/speech_commands/up/03401e93_nohash_0.wav
+zipformer-hot,child,True,tree,f0ae7203,tree no eight bird bed,tree,hit,461,550,TREE,data/speech_commands/tree/f0ae7203_nohash_1.wav
+zipformer-hot,child,True,wow,2fa39636,eight no up two wow,,none,,610,WELL,data/speech_commands/wow/2fa39636_nohash_0.wav
+zipformer-hot,child,True,tree,022cd682,stop go down tree happy,tree,hit,552,830,TREE,data/speech_commands/tree/022cd682_nohash_1.wav
+zipformer-hot,child,True,nine,aa80f517,five nine dog tree zero,nine,hit,951,390,NINE,data/speech_commands/nine/aa80f517_nohash_0.wav
+zipformer-hot,child,True,two,ca4d5368,four three two go visual,go,wrong,299,400,GO | GO,data/speech_commands/two/ca4d5368_nohash_3.wav
+zipformer-hot,child,True,no,3d86b69a,six nine cat bird no,no,hit,198,500,NO | NO,data/speech_commands/no/3d86b69a_nohash_2.wav
+zipformer-hot,child,True,happy,03401e93,happy right forward eight cat,happy,hit,368,650,HAPPY,data/speech_commands/happy/03401e93_nohash_0.wav
+zipformer-hot,child,True,zero,e49428d9,zero wow eight six one,,none,,370,SUE,data/speech_commands/zero/e49428d9_nohash_1.wav
+zipformer-hot,child,True,off,8c7f81df,visual left off three four,,none,,300,AH,data/speech_commands/off/8c7f81df_nohash_1.wav
+zipformer-hot,child,True,cat,a8e25ebb,down cat go stop left,,none,,170,GET,data/speech_commands/cat/a8e25ebb_nohash_0.wav
+zipformer-hot,child,True,bed,6021f08b,seven bed down right visual,bed,hit,242,800,BED,data/speech_commands/bed/6021f08b_nohash_0.wav
+zipformer-hot,child,True,right,fdb5155e,cat seven right learn go,right,hit,442,610,RIGHT,data/speech_commands/right/fdb5155e_nohash_2.wav
+zipformer-hot,child,True,five,aa80f517,bed two nine five four,five,hit,414,640,FIVE,data/speech_commands/five/aa80f517_nohash_2.wav
+zipformer-hot,child,True,yes,9a7c1f83,eight one yes zero visual,yes,hit,871,830,YE | YES,data/speech_commands/yes/9a7c1f83_nohash_5.wav
+zipformer-hot,child,True,bed,c781f251,yes no bed follow on,bed,hit,641,720,BED,data/speech_commands/bed/c781f251_nohash_0.wav
+zipformer-hot,child,True,zero,63f7a489,stop zero left eight off,zero,hit,388,640,ZERO,data/speech_commands/zero/63f7a489_nohash_3.wav
+zipformer-hot,child,True,off,893705bb,off visual seven bed follow,,none,,600,O | H,data/speech_commands/off/893705bb_nohash_3.wav
+zipformer-hot,child,True,eight,e1469561,eight stop two bird up,,none,,630,OH,data/speech_commands/eight/e1469561_nohash_0.wav
+zipformer-hot,child,True,tree,83957201,happy tree learn down go,tree,hit,577,810,TREE,data/speech_commands/tree/83957201_nohash_2.wav
+zipformer-hot,child,True,nine,e41a903b,happy nine one backward follow,nine,hit,652,390,NI | NINE,data/speech_commands/nine/e41a903b_nohash_0.wav
+zipformer-hot,child,True,off,db24628d,zero off on down seven,,none,,620,O | H,data/speech_commands/off/db24628d_nohash_2.wav
+zipformer-hot,child,True,seven,b11a05d2,seven left bird stop go,seven,hit,576,440,SEVEN,data/speech_commands/seven/b11a05d2_nohash_0.wav
+zipformer-hot,child,True,dog,a591c2ea,visual dog six follow down,dog,hit,232,830,DO | DOG,data/speech_commands/dog/a591c2ea_nohash_3.wav
+zipformer-hot,child,True,four,50033893,eight visual zero on four,four,hit,231,830,FOUR,data/speech_commands/four/50033893_nohash_0.wav
+zipformer-hot,child,True,left,ea356919,go learn left nine down,left,hit,251,440,LEFT,data/speech_commands/left/ea356919_nohash_0.wav
+zipformer-hot,child,True,zero,03401e93,eight zero happy nine bed,,none,,700,TITO,data/speech_commands/zero/03401e93_nohash_1.wav
+zipformer-hot,child,True,off,692a88e6,bird off six eight go,off,hit,541,470,OFF,data/speech_commands/off/692a88e6_nohash_1.wav
+zipformer-hot,child,True,zero,8fe67225,five learn follow zero three,zero,hit,524,490,ZERO,data/speech_commands/zero/8fe67225_nohash_3.wav
+zipformer-hot,child,True,down,6f2f57c1,three two bed go down,down,hit,272,420,DOWN,data/speech_commands/down/6f2f57c1_nohash_2.wav
+zipformer-hot,child,True,go,bb05582b,up seven tree nine go,go,hit,260,430,GO | GO,data/speech_commands/go/bb05582b_nohash_4.wav
+zipformer-hot,child,True,happy,5eb5fc74,six up happy nine forward,happy,hit,850,170,HAPPY,data/speech_commands/happy/5eb5fc74_nohash_1.wav
+zipformer-hot,child,True,six,e1469561,one happy bed six up,six,hit,51,670,SIX,data/speech_commands/six/e1469561_nohash_1.wav
+zipformer-hot,child,True,down,d91a159e,five no off down bird,down,hit,237,800,DOWN,data/speech_commands/down/d91a159e_nohash_0.wav
+zipformer-hot,child,True,down,37dca74f,one down six on follow,down,hit,385,310,DOWN,data/speech_commands/down/37dca74f_nohash_1.wav
+zipformer-hot,child,True,down,d0faf7e4,wow visual follow four down,,none,,590,OWE,data/speech_commands/down/d0faf7e4_nohash_2.wav
+zipformer-hot,child,True,one,4c6167ca,no one down left off,one,hit,132,560,ONE | ONE,data/speech_commands/one/4c6167ca_nohash_1.wav
+zipformer-hot,child,True,learn,6379c6a2,wow learn stop one yes,,none,,160,LE | P,data/speech_commands/learn/6379c6a2_nohash_0.wav
+zipformer-hot,child,True,dog,563aa4e6,house tree dog three left,dog,hit,630,700,DOG,data/speech_commands/dog/563aa4e6_nohash_0.wav
+zipformer-hot,child,True,bed,6021f08b,bed on right off zero,bed,hit,559,450,BED,data/speech_commands/bed/6021f08b_nohash_1.wav
+zipformer-hot,child,True,zero,f2e59fea,dog up seven cat zero,,none,,450,ZEALM,data/speech_commands/zero/f2e59fea_nohash_1.wav
+zipformer-hot,child,True,stop,91b03183,right learn stop forward two,stop,hit,455,570,STOP,data/speech_commands/stop/91b03183_nohash_2.wav
+zipformer-hot,child,True,down,cd85758f,off yes down five forward,,none,,530,NONE,data/speech_commands/down/cd85758f_nohash_0.wav
+zipformer-hot,child,True,no,f2e59fea,two no tree zero forward,no,hit,349,340,NO,data/speech_commands/no/f2e59fea_nohash_4.wav
+zipformer-hot,child,True,yes,3d86b69a,stop seven yes off three,yes,hit,292,720,YES,data/speech_commands/yes/3d86b69a_nohash_0.wav
+zipformer-hot,child,True,right,bfd26d6b,on visual go right forward,right,hit,271,420,RIGHT | RIGHT,data/speech_commands/right/bfd26d6b_nohash_3.wav
+zipformer-hot,child,True,nine,bb05582b,right left nine seven house,nine,hit,452,560,NINE,data/speech_commands/nine/bb05582b_nohash_0.wav
+zipformer-hot,child,True,yes,893705bb,yes on zero two stop,yes,hit,581,440,YES,data/speech_commands/yes/893705bb_nohash_3.wav
+zipformer-hot,child,True,zero,8769c34c,backward dog zero learn eight,zero,hit,710,620,HERO,data/speech_commands/zero/8769c34c_nohash_0.wav
+zipformer-hot,child,True,dog,a8e25ebb,two house dog zero tree,dog,hit,840,170,DO | DOG,data/speech_commands/dog/a8e25ebb_nohash_0.wav
+zipformer-hot,child,True,on,67961766,dog one stop right on,on,hit,244,820,ON,data/speech_commands/on/67961766_nohash_0.wav
+zipformer-hot,child,True,eight,8c7f81df,on two learn go eight,eight,hit,600,410,E | EIGHT,data/speech_commands/eight/8c7f81df_nohash_1.wav
+zipformer-hot,child,True,yes,893705bb,bird tree seven yes eight,yes,hit,670,660,YES,data/speech_commands/yes/893705bb_nohash_2.wav
+zipformer-hot,child,True,three,6736bc64,tree backward bed three eight,three,hit,117,580,THREE,data/speech_commands/three/6736bc64_nohash_1.wav
+zipformer-hot,child,True,four,f9643d42,four five forward house two,four,hit,339,350,FOUR,data/speech_commands/four/f9643d42_nohash_0.wav
+zipformer-hot,child,True,learn,f9643d42,up zero wow learn four,learn,hit,511,500,LEARN,data/speech_commands/learn/f9643d42_nohash_1.wav
+zipformer-hot,child,True,stop,37fc5d97,seven stop four no left,stop,hit,587,430,STO | STOP,data/speech_commands/stop/37fc5d97_nohash_2.wav
+zipformer-hot,child,True,yes,2796ac50,up happy stop yes seven,yes,hit,246,810,YE | YES,data/speech_commands/yes/2796ac50_nohash_0.wav
+zipformer-hot,child,True,seven,692a88e6,learn seven left cat visual,seven,hit,469,550,SEVEN,data/speech_commands/seven/692a88e6_nohash_4.wav
+zipformer-hot,child,True,no,c7dc7278,two backward wow one no,no,hit,5,730,NO | NO,data/speech_commands/no/c7dc7278_nohash_1.wav
+zipformer-hot,child,True,zero,422d3197,learn tree stop zero on,,none,,660,CYRIL,data/speech_commands/zero/422d3197_nohash_0.wav
+zipformer-hot,child,True,nine,0fa1e7a9,three six nine go four,nine,hit,481,530,NINE,data/speech_commands/nine/0fa1e7a9_nohash_1.wav
+zipformer-hot,child,True,yes,0cb74144,three stop right yes five,yes,hit,160,530,YES,data/speech_commands/yes/0cb74144_nohash_2.wav
+zipformer-hot,child,True,on,5ff3f9a1,on three off happy wow,on,hit,220,480,ON | ON,data/speech_commands/on/5ff3f9a1_nohash_1.wav
+zipformer-hot,child,True,six,cfde27ba,forward six left bed right,six,hit,252,450,SIX,data/speech_commands/six/cfde27ba_nohash_0.wav
+zipformer-hot,child,True,bird,e41a903b,go wow visual bird nine,bird,hit,385,350,BIR | BIRD,data/speech_commands/bird/e41a903b_nohash_0.wav
+zipformer-hot,child,True,four,587f3271,learn four yes one left,four,hit,326,400,FOUR,data/speech_commands/four/587f3271_nohash_2.wav
+zipformer-hot,child,True,nine,dcb57584,nine house tree stop left,,none,,360,NOT,data/speech_commands/nine/dcb57584_nohash_0.wav
+zipformer-hot,child,True,off,beb458a4,bed off forward one three,off,hit,650,360,OFF,data/speech_commands/off/beb458a4_nohash_4.wav
+zipformer-hot,child,True,follow,ea37ca08,follow right eight house left,,none,,280,PHILIP,data/speech_commands/follow/ea37ca08_nohash_0.wav
+zipformer-hot,child,True,left,9a69672b,dog learn left one down,left,hit,274,420,LEFT | LEFT,data/speech_commands/left/9a69672b_nohash_2.wav
+zipformer-hot,child,True,up,d103dd6e,up follow seven three wow,,none,,110,AH,data/speech_commands/up/d103dd6e_nohash_0.wav
+zipformer-hot,child,True,nine,0cb74144,bed two nine wow left,nine,hit,615,450,NI | NINE,data/speech_commands/nine/0cb74144_nohash_1.wav
+zipformer-hot,child,True,follow,893705bb,five off follow left on,,none,,640,CARLO,data/speech_commands/follow/893705bb_nohash_3.wav
+zipformer-hot,child,True,yes,e41a903b,on yes stop forward happy,yes,hit,382,310,YES,data/speech_commands/yes/e41a903b_nohash_2.wav
+zipformer-hot,child,True,six,cfbedff9,seven nine up six zero,six,hit,231,460,SIX,data/speech_commands/six/cfbedff9_nohash_3.wav
+zipformer-hot,child,True,zero,893705bb,zero cat bird left five,,none,,560,CLARA,data/speech_commands/zero/893705bb_nohash_2.wav
+zipformer-hot,child,True,eight,964c7c9e,tree eight left down off,eight,hit,1170,160,EIGHTH,data/speech_commands/eight/964c7c9e_nohash_0.wav
+zipformer-hot,child,True,eight,f2e59fea,up eight cat learn forward,eight,hit,643,370,E | EIGHT,data/speech_commands/eight/f2e59fea_nohash_1.wav
+zipformer-hot,child,True,three,e49428d9,four cat three nine left,three,hit,380,310,THREE,data/speech_commands/three/e49428d9_nohash_0.wav
+zipformer-hot,child,True,down,b2e2773a,down house forward one zero,down,hit,183,510,DOWN,data/speech_commands/down/b2e2773a_nohash_0.wav
+zipformer-hot,child,True,stop,e1469561,on visual seven stop follow,stop,hit,228,830,STOP,data/speech_commands/stop/e1469561_nohash_4.wav
+zipformer-hot,child,True,follow,f2e59fea,go five up four follow,follow,hit,320,370,FOLLOW,data/speech_commands/follow/f2e59fea_nohash_0.wav
+zipformer-hot,child,True,off,d962e5ac,stop off zero on backward,,none,,370,AH,data/speech_commands/off/d962e5ac_nohash_3.wav
+zipformer-hot,child,True,zero,18f8afd5,zero on up five happy,,none,,390,Z | IDO,data/speech_commands/zero/18f8afd5_nohash_4.wav
+zipformer-hot,child,True,two,e0c782d5,dog four off two six,two,hit,289,400,TWO | TWO,data/speech_commands/two/e0c782d5_nohash_3.wav
+zipformer-hot,child,True,zero,8625475c,eight nine right zero yes,zero,hit,449,560,ZERO,data/speech_commands/zero/8625475c_nohash_1.wav
+zipformer-hot,child,True,seven,aef8dcf5,seven off nine six down,,none,,430,SE | VEN,data/speech_commands/seven/aef8dcf5_nohash_0.wav
+zipformer-hot,child,True,backward,8fe67225,on stop tree backward four,backward,hit,549,460,BACKWARD,data/speech_commands/backward/8fe67225_nohash_1.wav
+zipformer-hot,child,True,nine,a6f2fd71,right nine three six go,nine,hit,543,470,NI | NINE,data/speech_commands/nine/a6f2fd71_nohash_1.wav
+zipformer-hot,child,True,bed,ad6a46f1,dog cat nine five bed,bed,hit,394,670,BAD,data/speech_commands/bed/ad6a46f1_nohash_0.wav
+zipformer-hot,child,True,nine,d0faf7e4,zero four one up nine,nine,hit,434,580,NINE,data/speech_commands/nine/d0faf7e4_nohash_1.wav
+zipformer-hot,child,True,down,2796ac50,tree down visual eight forward,down,hit,-30,730,DOWN,data/speech_commands/down/2796ac50_nohash_0.wav
+zipformer-hot,child,True,follow,c7dc7278,follow up stop bird backward,follow,hit,380,310,FOLLOW,data/speech_commands/follow/c7dc7278_nohash_0.wav
+zipformer-hot,child,True,bird,f297e878,seven visual backward bird down,bird,hit,887,830,HEARD,data/speech_commands/bird/f297e878_nohash_0.wav
+zipformer-hot,child,True,nine,aa80f517,nine six yes happy visual,nine,hit,634,380,NI | NINE,data/speech_commands/nine/aa80f517_nohash_4.wav
+zipformer-hot,child,True,down,94de6a6a,four tree cat down eight,,none,,830,OH NO,data/speech_commands/down/94de6a6a_nohash_3.wav
+zipformer-hot,child,True,four,97f4c236,follow one seven yes four,four,hit,301,710,FOUR,data/speech_commands/four/97f4c236_nohash_3.wav
+zipformer-hot,child,True,off,91b03183,down two off forward stop,,none,,600,OF | F,data/speech_commands/off/91b03183_nohash_1.wav
+zipformer-hot,child,True,right,bb05582b,learn right go nine five,right,hit,970,690,WHITE,data/speech_commands/right/bb05582b_nohash_0.wav
+zipformer-hot,child,True,down,beb458a4,no zero house left down,down,hit,252,440,DOWN,data/speech_commands/down/beb458a4_nohash_4.wav
+zipformer-hot,child,True,zero,e71b4ce6,dog follow up tree zero,zero,hit,274,780,ZERO,data/speech_commands/zero/e71b4ce6_nohash_1.wav
+zipformer-hot,child,True,four,63f7a489,house four yes go tree,four,hit,233,830,FOUR,data/speech_commands/four/63f7a489_nohash_1.wav
+zipformer-hot,child,True,learn,e49428d9,learn stop bird cat nine,learn,hit,671,350,LEARN,data/speech_commands/learn/e49428d9_nohash_4.wav
+zipformer-hot,child,True,go,f2e59fea,house up down follow go,go,hit,334,360,GO | GO,data/speech_commands/go/f2e59fea_nohash_0.wav
+zipformer-hot,child,True,seven,b97c9f77,seven backward nine right stop,,none,,730,SE | VEN,data/speech_commands/seven/b97c9f77_nohash_3.wav
+zipformer-hot,child,True,follow,db24628d,six eight right bird follow,follow,hit,299,390,FOLLOW,data/speech_commands/follow/db24628d_nohash_1.wav
+zipformer-hot,child,True,down,af8b2f2c,house visual six bed down,down,hit,260,800,DOWN | DOWN,data/speech_commands/down/af8b2f2c_nohash_0.wav
+zipformer-hot,child,True,no,1b4c9b89,five no go nine dog,no,hit,68,630,NO,data/speech_commands/no/1b4c9b89_nohash_4.wav
+zipformer-hot,child,True,two,220ee1ef,backward no two visual nine,,none,,110,WHEW,data/speech_commands/two/220ee1ef_nohash_0.wav
+zipformer-hot,child,True,four,cd85758f,bird four happy dog tree,four,hit,359,650,FOUR,data/speech_commands/four/cd85758f_nohash_1.wav
+zipformer-hot,child,True,bird,5744b6a7,stop left seven down bird,bird,hit,471,220,BIRD,data/speech_commands/bird/5744b6a7_nohash_0.wav
+zipformer-hot,child,True,learn,3b4f8f24,house learn four wow stop,learn,hit,390,620,LEARN,data/speech_commands/learn/3b4f8f24_nohash_2.wav
+zipformer-hot,child,True,up,893705bb,yes up learn right backward,up,hit,331,680,UP | UP,data/speech_commands/up/893705bb_nohash_11.wav
+zipformer-hot,child,True,down,e1469561,dog four off three down,down,hit,392,640,DOWN,data/speech_commands/down/e1469561_nohash_1.wav
+zipformer-hot,child,True,up,d103dd6e,six up eight happy two,,none,,100,A | AH,data/speech_commands/up/d103dd6e_nohash_1.wav
+zipformer-hot,child,True,learn,ea37ca08,nine seven stop six learn,,none,,150,WHAT,data/speech_commands/learn/ea37ca08_nohash_0.wav
+zipformer-hot,child,True,no,881583a6,no left right stop yes,no,hit,160,530,NO,data/speech_commands/no/881583a6_nohash_0.wav
+zipformer-hot,child,True,no,fb7eb481,wow no backward tree visual,no,hit,280,410,NO,data/speech_commands/no/fb7eb481_nohash_0.wav
+zipformer-hot,child,True,go,6e916de8,go dog seven one no,go,hit,339,350,GO,data/speech_commands/go/6e916de8_nohash_0.wav
+zipformer-hot,child,True,eight,e1469561,eight wow six up dog,eight,hit,370,640,EIGHT,data/speech_commands/eight/e1469561_nohash_3.wav
+zipformer-hot,child,True,forward,87070229,off nine forward go bed,forward,hit,603,410,FORWARD,data/speech_commands/forward/87070229_nohash_4.wav
+zipformer-hot,child,True,down,5c8af87a,nine down five on house,down,hit,231,460,DOWN | DOWN,data/speech_commands/down/5c8af87a_nohash_3.wav
+zipformer-hot,child,True,dog,0f250098,dog down backward forward seven,dog,hit,671,340,DOG,data/speech_commands/dog/0f250098_nohash_1.wav
+zipformer-hot,child,True,off,893705bb,house off bed right zero,,none,,720,O | O,data/speech_commands/off/893705bb_nohash_1.wav
+zipformer-hot,child,True,forward,f9643d42,bird seven down zero forward,forward,hit,611,400,FOR | FORWARD,data/speech_commands/forward/f9643d42_nohash_0.wav
+zipformer-hot,child,False,down,5e3dde6b,seven cat two bed right,,rejected,,370,DOWN,data/speech_commands/down/5e3dde6b_nohash_3.wav
+zipformer-hot,child,False,zero,3b4f8f24,forward six two down seven,,rejected,,680,SIR,data/speech_commands/zero/3b4f8f24_nohash_2.wav
+zipformer-hot,child,False,no,3f170018,nine one yes bird wow,,rejected,,560,NO,data/speech_commands/no/3f170018_nohash_0.wav
+zipformer-hot,child,False,on,8625475c,yes nine eight stop backward,,rejected,,780,ON,data/speech_commands/on/8625475c_nohash_0.wav
+zipformer-hot,child,False,on,d9e9f554,five follow house go cat,,rejected,,550,ON,data/speech_commands/on/d9e9f554_nohash_2.wav
+zipformer-hot,child,False,go,db24628d,four visual six bed nine,,rejected,,400,GOLD,data/speech_commands/go/db24628d_nohash_0.wav
+zipformer-hot,child,False,right,f297e878,bed house one eight wow,,rejected,,820,FRIGHT,data/speech_commands/right/f297e878_nohash_0.wav
+zipformer-hot,child,False,right,b49caed3,two bed learn cat three,,rejected,,330,RIGHT,data/speech_commands/right/b49caed3_nohash_0.wav
+zipformer-hot,child,False,yes,b49caed3,one learn seven two house,,rejected,,580,YES,data/speech_commands/yes/b49caed3_nohash_0.wav
+zipformer-hot,child,False,go,0cb74144,one off on follow yes,,rejected,,410,GO,data/speech_commands/go/0cb74144_nohash_3.wav
+zipformer-hot,child,False,two,8ec6dab6,house cat four visual one,,rejected,,420,TWO,data/speech_commands/two/8ec6dab6_nohash_0.wav
+zipformer-hot,child,False,follow,18f8afd5,one five bed up forward,,rejected,,410,FOLLOW,data/speech_commands/follow/18f8afd5_nohash_4.wav
+zipformer-hot,child,False,nine,4c6167ca,tree four eight wow six,,rejected,,440,NINE,data/speech_commands/nine/4c6167ca_nohash_5.wav
+zipformer-hot,child,False,eight,563aa4e6,bird backward house nine forward,,rejected,,750,EIGHT,data/speech_commands/eight/563aa4e6_nohash_0.wav
+zipformer-hot,child,False,left,85d2ac4b,right cat five dog bed,,rejected,,740,LET,data/speech_commands/left/85d2ac4b_nohash_1.wav
+zipformer-hot,child,False,nine,90b94017,forward six learn go five,,rejected,,360,NINE,data/speech_commands/nine/90b94017_nohash_0.wav
+zipformer-hot,child,False,three,db24628d,no nine backward dog go,,rejected,,560,THREE,data/speech_commands/three/db24628d_nohash_0.wav
+zipformer-hot,child,False,six,fb7eb481,one stop no backward two,,rejected,,510,SIX,data/speech_commands/six/fb7eb481_nohash_0.wav
+zipformer-hot,child,False,left,8625475c,tree two off up right,,rejected,,550,LEFT,data/speech_commands/left/8625475c_nohash_0.wav
+zipformer-hot,child,False,five,b97c9f77,three two backward four nine,,rejected,,610,FIVE,data/speech_commands/five/b97c9f77_nohash_2.wav
+zipformer-hot,child,False,one,9b3ea809,happy five cat down bird,,rejected,,790,ONE,data/speech_commands/one/9b3ea809_nohash_0.wav
+zipformer-hot,child,False,stop,aa80f517,yes wow three right backward,,rejected,,380,STOP,data/speech_commands/stop/aa80f517_nohash_0.wav
+zipformer-hot,child,False,on,4fd1443e,no right nine learn dog,,rejected,,530,ON,data/speech_commands/on/4fd1443e_nohash_1.wav
+zipformer-hot,child,False,visual,87070229,dog learn six forward house,,rejected,,410,VISUAL,data/speech_commands/visual/87070229_nohash_1.wav
+zipformer-hot,child,False,go,370844f7,right forward wow happy bird,,rejected,,380,GO,data/speech_commands/go/370844f7_nohash_0.wav
+zipformer-hot,child,False,cat,475b61f1,five four no stop three,,rejected,,70,POOH,data/speech_commands/cat/475b61f1_nohash_0.wav
+zipformer-hot,child,False,zero,64f1c742,five up three wow off,,rejected,,820,ZERO,data/speech_commands/zero/64f1c742_nohash_0.wav
+zipformer-hot,child,False,house,ca4d5368,nine seven three zero stop,,rejected,,380,HOUSE,data/speech_commands/house/ca4d5368_nohash_0.wav
+zipformer-hot,child,False,five,a7216980,one cat no off happy,,rejected,,350,FIRE,data/speech_commands/five/a7216980_nohash_0.wav
+zipformer-hot,child,False,yes,2d82a556,follow zero down two happy,,rejected,,720,YES,data/speech_commands/yes/2d82a556_nohash_0.wav
+zipformer-hot,child,False,visual,fb7eb481,tree six bird off two,,rejected,,550,VISUAL,data/speech_commands/visual/fb7eb481_nohash_0.wav
+zipformer-hot,child,False,six,9a69672b,house happy dog follow stop,,rejected,,550,SAKES,data/speech_commands/six/9a69672b_nohash_4.wav
+zipformer-hot,child,False,go,37dca74f,tree zero two bed eight,,rejected,,410,GO,data/speech_commands/go/37dca74f_nohash_3.wav
+zipformer-hot,child,False,yes,9a7c1f83,three wow dog go up,,rejected,,460,S | S,data/speech_commands/yes/9a7c1f83_nohash_3.wav
+zipformer-hot,child,False,dog,fe1916ba,tree bird house seven on,,rejected,,810,DOG,data/speech_commands/dog/fe1916ba_nohash_1.wav
+zipformer-hot,child,False,yes,964e8cfd,down eight dog zero backward,,rejected,,750,YES,data/speech_commands/yes/964e8cfd_nohash_2.wav
+zipformer-hot,child,False,six,b83c1acf,cat follow yes forward two,,rejected,,590,SIX,data/speech_commands/six/b83c1acf_nohash_2.wav
+zipformer-hot,child,False,right,94de6a6a,no nine one three down,,rejected,,480,RIGHT,data/speech_commands/right/94de6a6a_nohash_3.wav
+zipformer-hot,child,False,two,6f2f57c1,stop cat on left up,,rejected,,450,TWO,data/speech_commands/two/6f2f57c1_nohash_0.wav
+zipformer-hot,child,False,wow,4290ca61,cat six visual house zero,,rejected,,440,WOW,data/speech_commands/wow/4290ca61_nohash_1.wav
+zipformer-hot,child,False,off,893705bb,dog cat wow right backward,,rejected,,720,OF,data/speech_commands/off/893705bb_nohash_6.wav
+zipformer-hot,child,False,right,bb05582b,off happy visual wow house,,rejected,,820,WHY,data/speech_commands/right/bb05582b_nohash_1.wav
+zipformer-hot,child,False,dog,3b4f8f24,up follow forward cat happy,,rejected,,630,DOG,data/speech_commands/dog/3b4f8f24_nohash_0.wav
+zipformer-hot,child,False,no,893705bb,house zero on four learn,,rejected,,700,NO,data/speech_commands/no/893705bb_nohash_2.wav
+zipformer-hot,child,False,go,d0faf7e4,eight two cat down house,,rejected,,680,GO,data/speech_commands/go/d0faf7e4_nohash_0.wav
+zipformer-hot,child,False,down,c7dc7278,go cat four forward bird,,rejected,,320,DOWN,data/speech_commands/down/c7dc7278_nohash_0.wav
+zipformer-hot,child,False,off,e0c782d5,right forward one house nine,,rejected,,540,OFF,data/speech_commands/off/e0c782d5_nohash_2.wav
+zipformer-hot,child,False,go,f0ae7203,house forward left on down,,rejected,,400,GO,data/speech_commands/go/f0ae7203_nohash_0.wav
+zipformer-hot,child,False,on,9a7c1f83,bird six five tree seven,,rejected,,560,ON,data/speech_commands/on/9a7c1f83_nohash_3.wav
+zipformer-hot,child,False,tree,f428ca69,happy zero seven bed down,,rejected,,450,TREE,data/speech_commands/tree/f428ca69_nohash_0.wav
+zipformer-hot,child,False,one,d5b963aa,no yes learn on follow,,rejected,,350,ONE,data/speech_commands/one/d5b963aa_nohash_3.wav
+zipformer-hot,child,False,yes,cfbedff9,right forward on go cat,,rejected,,380,YE | YES,data/speech_commands/yes/cfbedff9_nohash_0.wav
+zipformer-hot,child,False,yes,d0faf7e4,go five six on dog,,rejected,,830,YES,data/speech_commands/yes/d0faf7e4_nohash_7.wav
+zipformer-hot,child,False,on,b97c9f77,tree two bird eight wow,,rejected,,820,ON,data/speech_commands/on/b97c9f77_nohash_4.wav
+zipformer-hot,child,False,down,0fa1e7a9,backward go stop eight seven,,rejected,,530,DOWN,data/speech_commands/down/0fa1e7a9_nohash_0.wav
+zipformer-hot,child,False,happy,af405b69,forward zero nine eight five,,rejected,,410,HAPPY,data/speech_commands/happy/af405b69_nohash_0.wav
+zipformer-hot,child,False,on,bfd26d6b,bird four happy stop nine,,rejected,,280,ON,data/speech_commands/on/bfd26d6b_nohash_2.wav
+zipformer-hot,child,False,cat,83957201,dog nine backward five zero,,rejected,,530,CAT,data/speech_commands/cat/83957201_nohash_0.wav
+zipformer-hot,child,False,left,1b4c9b89,no up forward four bed,,rejected,,680,LOFTY,data/speech_commands/left/1b4c9b89_nohash_3.wav
+zipformer-hot,child,False,wow,b97c9f77,learn cat house left dog,,rejected,,820,WELL,data/speech_commands/wow/b97c9f77_nohash_0.wav
+zipformer-hot,child,False,stop,f264e0df,right down go on wow,,rejected,,360,STOP,data/speech_commands/stop/f264e0df_nohash_0.wav
+zipformer-hot,child,False,eight,c22d3f18,down nine two bird four,,rejected,,640,IT,data/speech_commands/eight/c22d3f18_nohash_1.wav
+zipformer-hot,child,False,bed,6e916de8,left house down seven learn,,rejected,,730,BED,data/speech_commands/bed/6e916de8_nohash_0.wav
+zipformer-hot,child,False,six,d0faf7e4,happy two stop cat dog,,rejected,,450,SIX,data/speech_commands/six/d0faf7e4_nohash_2.wav
+zipformer-hot,child,False,house,f2e59fea,zero no cat follow one,,rejected,,480,HOUSE,data/speech_commands/house/f2e59fea_nohash_0.wav
+zipformer-hot,child,False,five,c9b5ff26,nine follow no left dog,,rejected,,440,FIVE,data/speech_commands/five/c9b5ff26_nohash_4.wav
+zipformer-hot,child,False,eight,fdb5155e,cat down three seven tree,,rejected,,550,EIGHT,data/speech_commands/eight/fdb5155e_nohash_0.wav
+zipformer-hot,child,False,tree,80c45ed6,backward zero on five bed,,rejected,,370,TREE,data/speech_commands/tree/80c45ed6_nohash_1.wav
+zipformer-hot,child,False,two,ca4d5368,right forward house seven down,,rejected,,370,DO,data/speech_commands/two/ca4d5368_nohash_1.wav
+zipformer-hot,child,False,one,f292725f,visual no seven down go,,rejected,,470,ONE,data/speech_commands/one/f292725f_nohash_0.wav
+zipformer-hot,child,False,off,ffa76c4a,forward seven three go no,,rejected,,310,OH,data/speech_commands/off/ffa76c4a_nohash_1.wav
+zipformer-hot,child,False,six,a4383927,zero one four on happy,,rejected,,420,SIX,data/speech_commands/six/a4383927_nohash_1.wav
+zipformer-hot,child,False,off,4c6167ca,nine wow left six eight,,rejected,,360,OFF,data/speech_commands/off/4c6167ca_nohash_5.wav
+zipformer-hot,child,False,yes,5c8af87a,dog right no off up,,rejected,,580,YES,data/speech_commands/yes/5c8af87a_nohash_0.wav

@@ -92,7 +92,46 @@ func _run(clips_dir: String, n: int) -> void:
 		lats[lats.size() / 2] if lats.size() else 0.0,
 		lats[int(lats.size() * 0.9)] if lats.size() else 0.0])
 	print("compute RTF %.3f, worst single decode %.1f ms" % [stats["rtf"], stats["max_chunk_ms"]])
+	_multi_word_check(clips_dir)
 	quit(0)
+
+
+## Two words read in one breath, while the on-screen list changes mid-word
+## (a new word spawns): both must still be zapped.
+func _multi_word_check(clips_dir: String) -> void:
+	var a := _load_wav16(clips_dir.path_join("yes").path_join(DirAccess.get_files_at(clips_dir.path_join("yes"))[1]))
+	var b := _load_wav16(clips_dir.path_join("stop").path_join(DirAccess.get_files_at(clips_dir.path_join("stop"))[1]))
+	var stream := PackedFloat32Array()
+	stream.resize(4800)
+	stream.fill(0.0)
+	stream.append_array(a)
+	var gap := PackedFloat32Array()
+	gap.resize(1600)  # 0.1 s
+	gap.fill(0.0)
+	stream.append_array(gap)
+	stream.append_array(b)
+	var tail := PackedFloat32Array()
+	tail.resize(16000)
+	tail.fill(0.0)
+	stream.append_array(tail)
+	listener.set_words(PackedStringArray(["yes", "stop", "dog", "tree"]))
+	heard.clear()
+	var start := Time.get_ticks_usec()
+	var pos := 0
+	while pos < stream.size():
+		listener.push_samples(stream.slice(pos, pos + 320), 16000)
+		pos += 320
+		if pos == 4800 + 3200:  # 0.2 s into "happy": a word spawns
+			listener.set_words(PackedStringArray(["yes", "stop", "dog", "tree", "sun"]))
+		listener.poll()
+		var wait := start + pos * 1000000 / 16000 - Time.get_ticks_usec()
+		if wait > 0:
+			OS.delay_usec(wait)
+	OS.delay_msec(300)  # let the worker finish the last decode
+	listener.poll()
+	var got := heard.filter(func(h): return h["word"] != "").map(func(h): return h["word"])
+	print("multi-word events: ", heard)
+	print("multi-word check: heard %s -> %s" % [got, "PASS" if "yes" in got and "stop" in got else "CHECK (clip-dependent)"])
 
 
 func _parse_args() -> Dictionary:

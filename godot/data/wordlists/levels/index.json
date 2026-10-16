@@ -1,0 +1,52 @@
+{
+ "levels": [
+  {
+   "id": "L0",
+   "name": "Letter Sounds & CVC",
+   "grade": "Pre-K to K (phonics)",
+   "file": "l0-letter-sounds-cvc.json",
+   "worlds": 5,
+   "words": 163
+  },
+  {
+   "id": "L1",
+   "name": "First Sight Words",
+   "grade": "Pre-K",
+   "file": "l1-prek-sight-cvc.json",
+   "worlds": 5,
+   "words": 160
+  },
+  {
+   "id": "L2",
+   "name": "Kindergarten",
+   "grade": "K",
+   "file": "l2-kindergarten.json",
+   "worlds": 5,
+   "words": 170
+  },
+  {
+   "id": "L3",
+   "name": "Grade 1",
+   "grade": "1",
+   "file": "l3-grade1.json",
+   "worlds": 6,
+   "words": 193
+  },
+  {
+   "id": "L4",
+   "name": "Grade 2",
+   "grade": "2",
+   "file": "l4-grade2.json",
+   "worlds": 5,
+   "words": 170
+  },
+  {
+   "id": "L5",
+   "name": "Grade 3",
+   "grade": "3",
+   "file": "l5-grade3.json",
+   "worlds": 6,
+   "words": 191
+  }
+ ]
+}

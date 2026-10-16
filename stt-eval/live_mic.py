@@ -1,6 +1,6 @@
 """Live microphone test: read the words on screen, see what fires and how fast.
 
-  python live_mic.py --engine nemo80-hot --list dolch-preprimer
+  python live_mic.py --engine parakeet-110m-hot --list dolch-preprimer
 
 Shows N random words from a word list. Say one; when the engine matches it
 you get "ZAP" plus the latency from the moment your voice stopped (negative =
@@ -31,8 +31,8 @@ WORDLISTS = Path(__file__).parent.parent / "godot" / "data" / "wordlists"
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--engine", default="nemo80-hot", choices=ENGINES)
-    ap.add_argument("--list", default="dolch-preprimer", help="word list id in game-data/wordlists")
+    ap.add_argument("--engine", default="parakeet-110m-hot", choices=ENGINES)
+    ap.add_argument("--list", default="dolch-preprimer", help="word list id in godot/data/wordlists")
     ap.add_argument("--onscreen", type=int, default=5)
     ap.add_argument("--threads", type=int, default=2)
     ap.add_argument("--device", default=None, help="sounddevice input device (name or index)")
@@ -43,7 +43,10 @@ def main():
     words = json.loads((WORDLISTS / f"{args.list}.json").read_text())["words"]
     words = [w for w in words if len(w) > 1]  # "a"/"I" alone aren't reliably recognisable
     print(f"loading {args.engine}...", flush=True)
-    eng = make_engine(args.engine, threads=args.threads)
+    import matcher
+    matcher.SOUND_ALIKE = True
+    eng = make_engine(args.engine, threads=args.threads, hot_score=1.5 if "parakeet" in args.engine else 3.0,
+                      beam=8)
 
     chunk = int(0.02 * SAMPLE_RATE)
     q: queue.Queue = queue.Queue()

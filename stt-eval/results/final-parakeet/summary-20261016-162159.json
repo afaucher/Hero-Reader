@@ -1,0 +1,73 @@
+{
+  "args": {
+    "engines": [
+      "parakeet-110m-hot"
+    ],
+    "speech_commands": "data/speech_commands",
+    "recordings": null,
+    "conditions": [
+      "clean",
+      "noise10",
+      "child"
+    ],
+    "trials": 300,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.2,
+    "trailing": 0.3,
+    "hot_score": 1.5,
+    "beam": 8,
+    "sound_alike": true,
+    "seed": 7,
+    "out": "results/final-parakeet"
+  },
+  "summary": [
+    {
+      "engine": "parakeet-110m-hot",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 81.08108108108108,
+      "wrong_word_pct": 0.33783783783783783,
+      "no_fire_pct": 18.58108108108108,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 477.53951100006805,
+      "latency_p90_ms": 576.300582200056,
+      "early_fire_pct": 0.8333333333333334,
+      "rtf": 0.10083535217135743,
+      "load_s": 1.2515299650003726
+    },
+    {
+      "engine": "parakeet-110m-hot",
+      "condition": "noise10",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 75.67567567567568,
+      "wrong_word_pct": 1.3513513513513513,
+      "no_fire_pct": 22.972972972972972,
+      "false_accept_pct": 1.3513513513513513,
+      "latency_p50_ms": 582.3758995004209,
+      "latency_p90_ms": 805.2984163999611,
+      "early_fire_pct": 0.44642857142857145,
+      "rtf": 0.11815125557038844,
+      "load_s": 1.2515299650003726
+    },
+    {
+      "engine": "parakeet-110m-hot",
+      "condition": "child",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 73.64864864864865,
+      "wrong_word_pct": 0.6756756756756757,
+      "no_fire_pct": 25.675675675675677,
+      "false_accept_pct": 2.7027027027027026,
+      "latency_p50_ms": 560.8741269997518,
+      "latency_p90_ms": 675.5293802001615,
+      "early_fire_pct": 0.0,
+      "rtf": 0.1368192194532043,
+      "load_s": 1.2515299650003726
+    }
+  ]
+}

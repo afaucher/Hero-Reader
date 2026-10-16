@@ -124,7 +124,7 @@ def main():
     noises = ds.background_noise(root)
     # "_other" recordings (um, coughs, "what's that word") are never on screen:
     # they're only used as negative trials, where nothing should fire.
-    others = [c for c in clips if c.word.startswith("_")]
+    other_clips = [c for c in clips if c.word.startswith("_")]
     clips = [c for c in clips if not c.word.startswith("_")]
     vocab = sorted({c.word for c in clips})
     if len(vocab) < args.onscreen + 1:
@@ -147,7 +147,7 @@ def main():
             n_neg = int(args.trials * args.negatives)
             plan = [(True, c) for c in rng.sample(clips, min(args.trials, len(clips)))]
             plan += [(False, c) for c in rng.sample(clips, min(n_neg, len(clips)))]
-            plan += [(False, c) for c in others]
+            plan += [(False, c) for c in other_clips]
             stats = dict(hit=0, wrong=0, none=0, pos=0, neg=0, false_accept=0)
             lats, audio_s, compute_s = [], 0.0, 0.0
             for k, (positive, clip) in enumerate(plan):

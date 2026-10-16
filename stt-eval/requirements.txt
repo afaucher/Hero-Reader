@@ -1,0 +1,8 @@
+sherpa-onnx>=1.13.8
+numpy
+scipy
+soundfile
+# optional: live_mic.py / record_words.py (mic access)
+sounddevice
+# optional: rescore.py
+cmudict

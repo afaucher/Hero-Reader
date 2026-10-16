@@ -110,7 +110,7 @@ class WordListener : public Node {
 
   // worker state (guarded by mu_)
   std::thread worker_;
-  std::mutex mu_;
+  mutable std::mutex mu_;
   std::condition_variable cv_;
   std::deque<float> audio_;
   bool stop_ = false;
@@ -118,11 +118,13 @@ class WordListener : public Node {
   bool words_dirty_ = false;
   bool reset_ = false;
   std::vector<std::string> pending_words_;
+  std::vector<std::string> current_words_;  // copy for get_words() (guarded by mu_)
 
   // worker-only
   hero::WordMatcher matcher_;
   std::string last_text_;
-  bool fired_ = false;
+  std::vector<std::string> fired_;  // words already zapped this utterance
+  bool hotwords_stale_ = false;      // streaming: rebuild stream when idle
   std::vector<float> vad_carry_;
   std::vector<float> history_;  // recent 16 kHz audio for VAD lead-in
   int64_t history_start_ = 0;   // sample index of history_[0]

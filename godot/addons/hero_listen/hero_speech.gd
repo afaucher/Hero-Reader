@@ -75,7 +75,7 @@ static func config_for(preset: String, threads: int = 2) -> Dictionary:
 			cfg[k] = _usable_path(dir.path_join(p[k]))
 	if p["kind"] == "vad_offline":
 		cfg["vad_model"] = _usable_path(root.path_join("silero_vad.onnx"))
-		cfg["min_silence"] = 0.25
+		cfg["min_silence"] = 0.2
 		cfg["preroll"] = 0.25
 	cfg["threads"] = threads
 	cfg["pron_dict"] = _usable_path(PRON_DICT)

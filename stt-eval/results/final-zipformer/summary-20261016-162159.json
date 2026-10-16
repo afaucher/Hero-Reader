@@ -1,0 +1,73 @@
+{
+  "args": {
+    "engines": [
+      "zipformer-hot"
+    ],
+    "speech_commands": "data/speech_commands",
+    "recordings": null,
+    "conditions": [
+      "clean",
+      "noise10",
+      "child"
+    ],
+    "trials": 300,
+    "negatives": 0.25,
+    "onscreen": 5,
+    "hard": false,
+    "threads": 2,
+    "silence": 0.25,
+    "trailing": 0.3,
+    "hot_score": 3.0,
+    "beam": 8,
+    "sound_alike": true,
+    "seed": 7,
+    "out": "results/final-zipformer"
+  },
+  "summary": [
+    {
+      "engine": "zipformer-hot",
+      "condition": "clean",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 81.41891891891892,
+      "wrong_word_pct": 0.33783783783783783,
+      "no_fire_pct": 18.243243243243242,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 421.82934700038464,
+      "latency_p90_ms": 723.3134899994766,
+      "early_fire_pct": 4.564315352697095,
+      "rtf": 0.23910670112617988,
+      "load_s": 3.686148549999416
+    },
+    {
+      "engine": "zipformer-hot",
+      "condition": "noise10",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 73.3108108108108,
+      "wrong_word_pct": 2.027027027027027,
+      "no_fire_pct": 24.66216216216216,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 404.7094839998318,
+      "latency_p90_ms": 713.3793209998404,
+      "early_fire_pct": 4.147465437788019,
+      "rtf": 0.1896646306177272,
+      "load_s": 3.686148549999416
+    },
+    {
+      "engine": "zipformer-hot",
+      "condition": "child",
+      "trials": 296,
+      "negatives": 74,
+      "hit_pct": 79.05405405405405,
+      "wrong_word_pct": 0.33783783783783783,
+      "no_fire_pct": 20.60810810810811,
+      "false_accept_pct": 0.0,
+      "latency_p50_ms": 410.92267899991555,
+      "latency_p90_ms": 687.4574570998376,
+      "early_fire_pct": 2.1367521367521367,
+      "rtf": 0.08523904407032434,
+      "load_s": 3.686148549999416
+    }
+  ]
+}
