@@ -1,7 +1,12 @@
-# Speech models and datasets are large; fetch them with stt-eval/download_models.py
+# Third-party code, binaries, models and data are pinned in third_party/manifest.json
+# and fetched by tools/setup.py -- never committed.
+third_party/*
+!third_party/manifest.json
+godot/models
+godot/data/pron_dict.txt
 stt-eval/models
 stt-eval/data
-godot/models
+stt-eval/.venv
 # Personal voice recordings (e.g. your kids) never leave your machine
 stt-eval/recordings
 # Reference photos of real people stay local

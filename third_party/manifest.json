@@ -1,0 +1,250 @@
+{
+  "_comment": "Everything Hero Reader depends on but does not check in. Fetched by tools/setup.py, which verifies every sha256 (pinned 2026-10-16 from the downloads used in the evaluation).",
+  "components": {
+    "godot-cpp": {
+      "group": "build",
+      "description": "C++ bindings for GDExtensions (build-time only)",
+      "license": "MIT",
+      "type": "git",
+      "url": "https://github.com/godotengine/godot-cpp",
+      "ref": "godot-4.5-stable",
+      "commit": "e83fd0904c13356ed1d4c3d09f8bb9132bdc6b77",
+      "dest": "third_party/godot-cpp"
+    },
+    "sherpa-onnx": {
+      "group": "runtime",
+      "description": "Speech recognition runtime (C API) + ONNX Runtime, prebuilt",
+      "license": "Apache-2.0 (sherpa-onnx), MIT (onnxruntime)",
+      "type": "archive",
+      "version": "1.13.8",
+      "dest": "third_party/sherpa-onnx/{platform}",
+      "platforms": {
+        "linux-x64": {
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.13.8/sherpa-onnx-v1.13.8-linux-x64-shared.tar.bz2",
+          "sha256": "c0bdb7907d3a74bba1d55d22bf4d9fa75586cf1530614ebe88a27b9118e015c4",
+          "strip": 1,
+          "install": {
+            "lib/libsherpa-onnx-c-api.so": "godot/addons/hero_listen/bin/",
+            "lib/libonnxruntime.so": "godot/addons/hero_listen/bin/"
+          }
+        },
+        "windows-x64": {
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.13.8/sherpa-onnx-v1.13.8-win-x64-shared-MD-Release.tar.bz2",
+          "sha256": "3e971a04b2e0ba4dfa53d381a006367ce8c9f5f09b4ae00043e9845c2baded22",
+          "strip": 1,
+          "install": {
+            "lib/sherpa-onnx-c-api.dll": "godot/addons/hero_listen/bin/",
+            "lib/onnxruntime.dll": "godot/addons/hero_listen/bin/",
+            "lib/onnxruntime_providers_shared.dll": "godot/addons/hero_listen/bin/"
+          }
+        },
+        "macos": {
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.13.8/sherpa-onnx-v1.13.8-osx-universal2-shared.tar.bz2",
+          "sha256": "2249f97f10df7d828af1b0d10e3d1eeaa2198b60b9a999a7ed853c150181ccfd",
+          "strip": 1,
+          "install": {
+            "lib/libsherpa-onnx-c-api.dylib": "godot/addons/hero_listen/bin/",
+            "lib/libonnxruntime.dylib": "godot/addons/hero_listen/bin/"
+          }
+        },
+        "android": {
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.13.8/sherpa-onnx-v1.13.8-android.tar.bz2",
+          "sha256": "2ff63469a71cb6009aa2e3ed5f4a670f8abdcbe4bb9ffd23776afc792a6b4f44",
+          "strip": 0,
+          "install": {
+            "jniLibs/arm64-v8a/libsherpa-onnx-c-api.so": "godot/addons/hero_listen/bin/android/arm64-v8a/",
+            "jniLibs/arm64-v8a/libonnxruntime.so": "godot/addons/hero_listen/bin/android/arm64-v8a/"
+          }
+        }
+      }
+    },
+    "cmudict": {
+      "group": "runtime",
+      "description": "CMU Pronouncing Dictionary; converted to godot/data/pron_dict.txt for sound-alike matching",
+      "license": "BSD-2-Clause",
+      "type": "file",
+      "url": "https://raw.githubusercontent.com/cmusphinx/cmudict/74790861f652b15e4ac49015a90074ad62a27690/cmudict.dict",
+      "license_url": "https://raw.githubusercontent.com/cmusphinx/cmudict/74790861f652b15e4ac49015a90074ad62a27690/LICENSE",
+      "sha256": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+      "dest": "third_party/cmudict/cmudict.dict",
+      "post": "pron_dict"
+    },
+    "silero-vad": {
+      "group": "models",
+      "description": "Silero VAD (voice activity detection)",
+      "license": "MIT",
+      "type": "file",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/silero_vad.onnx",
+      "sha256": "9e2449e1087496d8d4caba907f23e0bd3f78d91fa552479bb9c23ac09cbb1fd6",
+      "dest": "godot/models/silero_vad.onnx"
+    },
+    "model-parakeet-110m": {
+      "group": "models",
+      "description": "NVIDIA Parakeet-TDT 110M English, int8 (default preset parakeet-110m-hot)",
+      "license": "CC-BY-4.0",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet_tdt_transducer_110m-en-36000-int8.tar.bz2",
+      "sha256": "f628312e9fdf8686374cb01a69425c41732529d540860311f16f37cbc32cfe9b",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-zipformer": {
+      "group": "models",
+      "description": "Streaming Zipformer English 2023-06-26 (preset zipformer-hot)",
+      "license": "Apache-2.0",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-streaming-zipformer-en-2023-06-26.tar.bz2",
+      "sha256": "639e25b578e9e997131402199419c13a941f8e4e198e2da1ce57dbf5cf401282",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-moonshine2-tiny": {
+      "group": "models-eval",
+      "description": "Moonshine v2 tiny English, quantized",
+      "license": "MIT",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-moonshine-tiny-en-quantized-2026-02-27.tar.bz2",
+      "sha256": "9ec31b342d8fa3240c3b81b8f82e1cf7e3ac467c93ca5a999b741d5887164f8d",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-moonshine2-base": {
+      "group": "models-eval",
+      "license": "MIT",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-moonshine-base-en-quantized-2026-02-27.tar.bz2",
+      "sha256": "43232c1d13013d37317163baec3135bd771a186a4356f28c889bab453bb0e891",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-moonshine-tiny": {
+      "group": "models-eval",
+      "license": "MIT",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-moonshine-tiny-en-int8.tar.bz2",
+      "sha256": "d5fe6ec4334fef36255b2a4010412cad4c007e33103fec62fb5d17cad88086f2",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-moonshine-base": {
+      "group": "models-eval",
+      "license": "MIT",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-moonshine-base-en-int8.tar.bz2",
+      "sha256": "21870cecaa2e44e4e2bf63e02d1072bed183ccd10284871353bd9d24dad14e5e",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-whisper-tiny": {
+      "group": "models-eval",
+      "license": "MIT",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-tiny.en.tar.bz2",
+      "sha256": "2bd6cf965c8bb3e068ef9fa2191387ee63a9dfa2a4e37582a8109641c20005dd",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-whisper-base": {
+      "group": "models-eval",
+      "license": "MIT",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-base.en.tar.bz2",
+      "sha256": "475bc7052ce299c007f6d5d5407ba8601f819a2867f6eecee510ed17df581542",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-nemo80": {
+      "group": "models-eval",
+      "license": "CC-BY-4.0",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-streaming-fast-conformer-transducer-en-80ms-int8.tar.bz2",
+      "sha256": "7bd33a914e93370a1ba9c2066d9e841bdcad8613fa2a00537c1ae15d851a14d8",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-parakeet-0.6b": {
+      "group": "models-eval",
+      "license": "CC-BY-4.0",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v2-int8.tar.bz2",
+      "sha256": "157c157bc51155e03e37d2466522a3a737dd9c72bb25f36eb18912964161e1ad",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-kroko": {
+      "group": "models-eval",
+      "license": "see vendor (Banafo Kroko); evaluation only",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-streaming-zipformer-en-kroko-2025-08-06.tar.bz2",
+      "sha256": "c8676e5ff9ac2a85296e53ee0fd4d5fb1db6770e7a7647166eeafe349ade6834",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-zipformer20m": {
+      "group": "models-eval",
+      "license": "Apache-2.0",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17.tar.bz2",
+      "sha256": "9c559283e8498d3fe95913c79ca1cb454bb26281ac2b102b41306c7d752765d9",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "model-kws": {
+      "group": "models-eval",
+      "license": "Apache-2.0",
+      "type": "archive",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/kws-models/sherpa-onnx-kws-zipformer-gigaspeech-3.3M-2024-01-01.tar.bz2",
+      "sha256": "f170013b4716e41b62b9bfd809687c207cef798ef9bc6534d524e17af9b6561a",
+      "strip": 0,
+      "dest": "godot/models"
+    },
+    "speech-commands": {
+      "group": "dataset",
+      "description": "Google Speech Commands v0.02 (2.3 GB) for the benchmark",
+      "license": "CC-BY-4.0",
+      "type": "archive",
+      "url": "https://storage.googleapis.com/download.tensorflow.org/data/speech_commands_v0.02.tar.gz",
+      "sha256": "af14739ee7dc311471de98f5f9d2c9191b18aedfe957f4a6ff791c709868ff58",
+      "strip": 0,
+      "dest": "third_party/data/speech_commands"
+    },
+    "godot-editor": {
+      "group": "godot",
+      "description": "Godot 4.7 editor (optional: use your own install)",
+      "license": "MIT",
+      "type": "archive",
+      "version": "4.7-stable",
+      "dest": "third_party/godot",
+      "platforms": {
+        "linux-x64": {
+          "url": "https://github.com/godotengine/godot/releases/download/4.7-stable/Godot_v4.7-stable_linux.x86_64.zip",
+          "sha256": "0b1a6c54c2c619c12e169fe9241edda4b81080b519451cec2984bf0d2c6cb73c",
+          "strip": 0
+        },
+        "windows-x64": {
+          "url": "https://github.com/godotengine/godot/releases/download/4.7-stable/Godot_v4.7-stable_win64.exe.zip",
+          "sha256": "02a5312236f4e0209c78bcb2f52135b1963e6b8888c873c9cee81459e60bcd71",
+          "strip": 0
+        },
+        "macos": {
+          "url": "https://github.com/godotengine/godot/releases/download/4.7-stable/Godot_v4.7-stable_macos.universal.zip",
+          "sha256": "a6708c336f690e0dd8abd3d587d661707f4f33ed436946a3ec000d2fb497fd6c",
+          "strip": 0
+        }
+      }
+    }
+  },
+  "groups": {
+    "runtime": "sherpa-onnx libs for this platform (installed into the Godot addon) + pronunciation dictionary",
+    "models": "recommended models: Parakeet-TDT 110M, streaming Zipformer, Silero VAD (~450 MB unpacked)",
+    "build": "godot-cpp, to compile the WordListener GDExtension",
+    "models-eval": "every other model from the evaluation (~1.3 GB)",
+    "dataset": "Speech Commands test data (2.3 GB)",
+    "godot": "Godot 4.7 editor binary"
+  },
+  "default_groups": [
+    "runtime",
+    "models",
+    "build"
+  ]
+}

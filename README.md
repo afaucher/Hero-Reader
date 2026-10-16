@@ -24,6 +24,10 @@ and fast enough**. It is done and documented:
 
 ## Start here
 
+Setup: `python tools/setup.py --venv --build` fetches every pinned third-party
+piece (models, runtime, godot-cpp) and builds the speech extension. Nothing
+third-party is checked in. Details are in `CLAUDE.md`.
+
 | If you want to… | Read |
 |---|---|
 | Know which speech model we picked and why (and the alternatives) | `docs/stt-evaluation.md`, especially §7 "Choices: where to start" |
@@ -44,3 +48,4 @@ and fast enough**. It is done and documented:
 | `godot/art/` | "Cosmic Storybook" art style guide and character SVGs |
 | `godot/data/wordlists/levels/` | 6 reading levels × 5–6 Worlds (1,047 words) with confusable pairs; `build_levels.py` regenerates them |
 | `docs/` | evaluation, reproduction steps, game design |
+| `third_party/manifest.json` | pinned URLs, versions and checksums of everything we download (`tools/setup.py`) |

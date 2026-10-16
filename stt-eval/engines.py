@@ -23,7 +23,8 @@ import sherpa_onnx
 from matcher import Match, WordMatcher
 
 SAMPLE_RATE = 16000
-MODELS_DIR = Path(os.environ.get("STT_MODELS", Path(__file__).parent / "models"))
+# Same folder the Godot project uses (filled by tools/setup.py).
+MODELS_DIR = Path(os.environ.get("STT_MODELS", Path(__file__).resolve().parent.parent / "godot" / "models"))
 
 
 @dataclass
@@ -54,7 +55,7 @@ class Engine:
 def _p(model_dir: str, name: str) -> str:
     path = MODELS_DIR / model_dir / name
     if not path.exists():
-        raise FileNotFoundError(f"{path} (run download_models.py)")
+        raise FileNotFoundError(f"{path} (run: python tools/setup.py --with models-eval)")
     return str(path)
 
 

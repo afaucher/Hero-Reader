@@ -25,23 +25,26 @@ You need:
 - godot-cpp at tag `godot-4.5-stable`
 - the sherpa-onnx shared release for your platform
 
+The easy way is `python tools/setup.py --build`. It fetches the pinned
+godot-cpp and sherpa-onnx (see `third_party/manifest.json`), copies the runtime
+libraries into `godot/addons/hero_listen/bin/`, and runs:
+
 ```sh
-git clone --depth 1 --branch godot-4.5-stable https://github.com/godotengine/godot-cpp deps/godot-cpp
-# pick the archive for your platform from
-# https://github.com/k2-fsa/sherpa-onnx/releases/tag/v1.13.8 and extract it to deps/sherpa-onnx
 cd native/hero_listen
-SHERPA_ONNX_DIR=../../deps/sherpa-onnx GODOT_CPP_DIR=../../deps/godot-cpp \
+SHERPA_ONNX_DIR=../../third_party/sherpa-onnx/<platform> GODOT_CPP_DIR=../../third_party/godot-cpp \
   scons platform=<linux|windows|macos|android> target=template_debug
 ```
 
-The library lands in `godot/addons/hero_listen/bin/`. Copy the sherpa-onnx
-runtime libraries next to it. They are listed under `[dependencies]` in
+The library lands in `godot/addons/hero_listen/bin/`, next to the sherpa-onnx
+runtime libraries. They are listed under `[dependencies]` in
 `hero_listen.gdextension`, so Godot packages them on export.
+`--platform android` fetches the arm64 libraries; the Android build itself also
+needs the NDK.
 
 | Platform | sherpa-onnx archive | Copy into `bin/` |
 |---|---|---|
 | Linux x86_64 | `sherpa-onnx-v1.13.8-linux-x64-shared.tar.bz2` | `lib/libsherpa-onnx-c-api.so`, `lib/libonnxruntime.so` |
-| Windows x86_64 | `sherpa-onnx-v1.13.8-win-x64-shared-MD-Release.tar.bz2` (MSVC) | `sherpa-onnx-c-api.dll`, `onnxruntime.dll` (link against `sherpa-onnx-c-api.lib`) |
+| Windows x86_64 | `sherpa-onnx-v1.13.8-win-x64-shared-MD-Release.tar.bz2` (MSVC) | `sherpa-onnx-c-api.dll`, `onnxruntime.dll`, `onnxruntime_providers_shared.dll` (link against `sherpa-onnx-c-api.lib`) |
 | macOS | `sherpa-onnx-v1.13.8-osx-universal2-shared.tar.bz2` | `libsherpa-onnx-c-api.dylib`, `libonnxruntime.dylib` |
 | Android arm64 | `sherpa-onnx-v1.13.8-android.tar.bz2` | `jniLibs/arm64-v8a/*.so` into `bin/android/arm64-v8a/` |
 | iOS | build `sherpa-onnx.xcframework` with `build-ios.sh` from the sherpa-onnx repo | a static GDExtension, see "Mobile" in `docs/stt-evaluation.md` |
@@ -54,7 +57,7 @@ resolves to the `.lib` import library.
 
 sherpa-onnx opens models by filesystem path. `HeroSpeech.config_for()`
 handles this for you:
-- **Editor:** files are used where they are (`HERO_MODELS` env var, or `res://models`).
+- **Editor:** files are used where they are (`res://models`, filled by `tools/setup.py`, or the `HERO_MODELS` env var).
 - **Exported builds, including mobile:** files are copied out of the package to
   `user://models` once.
 

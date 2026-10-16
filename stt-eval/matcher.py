@@ -12,7 +12,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 # Sound-alike matching (same rules as the game's C++ matcher). Set from
-# benchmark.py --sound-alike; needs godot/data/pron_dict.txt.
+# benchmark.py --sound-alike; needs godot/data/pron_dict.txt (tools/setup.py).
 SOUND_ALIKE = False
 PRON_DICT = Path(__file__).parent.parent / "godot" / "data" / "pron_dict.txt"
 _PRON: dict[str, list[str]] = {}

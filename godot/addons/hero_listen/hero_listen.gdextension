@@ -23,7 +23,8 @@ linux.x86_64 = {
 }
 windows.x86_64 = {
 "res://addons/hero_listen/bin/sherpa-onnx-c-api.dll": "",
-"res://addons/hero_listen/bin/onnxruntime.dll": ""
+"res://addons/hero_listen/bin/onnxruntime.dll": "",
+"res://addons/hero_listen/bin/onnxruntime_providers_shared.dll": ""
 }
 macos = {
 "res://addons/hero_listen/bin/libsherpa-onnx-c-api.dylib": "",

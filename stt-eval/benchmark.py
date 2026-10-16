@@ -100,7 +100,8 @@ CONDITIONS = {
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--engines", nargs="+", default=["zipformer"], help=f"any of: {' '.join(ENGINES)}")
-    ap.add_argument("--speech-commands", default="data/speech_commands")
+    ap.add_argument("--speech-commands",
+                    default=str(Path(__file__).resolve().parent.parent / "third_party" / "data" / "speech_commands"))
     ap.add_argument("--recordings", help="folder from record_words.py (overrides Speech Commands)")
     ap.add_argument("--conditions", nargs="+", default=["clean"], choices=list(CONDITIONS))
     ap.add_argument("--trials", type=int, default=200, help="positive trials per condition")

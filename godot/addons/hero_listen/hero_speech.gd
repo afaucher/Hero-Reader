@@ -52,7 +52,7 @@ const PRON_DICT := "res://data/pron_dict.txt"
 
 
 ## Where models live. Override with the HERO_MODELS environment variable
-## (handy in development: point it at stt-eval/models).
+## (default res://models is filled by tools/setup.py).
 static func models_root() -> String:
 	var env := OS.get_environment("HERO_MODELS")
 	if env != "":

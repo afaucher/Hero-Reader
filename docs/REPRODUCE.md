@@ -21,15 +21,16 @@ lower RTF and slightly lower latency there. Accuracy does not depend on speed.
 ## 1. Data and models
 
 ```sh
-cd stt-eval
-python -m venv .venv && . .venv/bin/activate      # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-python download_models.py --all --speech-commands   # ~1.5 GB of models + 2.3 GB dataset
+python tools/setup.py --venv --with models-eval dataset   # ~1.8 GB of models + 2.3 GB dataset
+. stt-eval/.venv/bin/activate                              # Windows: stt-eval\.venv\Scripts\activate
 ```
 
 - **Models** come from the sherpa-onnx GitHub releases (`asr-models`, `kws-models` tags).
-  The exact archive names are in `download_models.py`.
-- **Test audio** is Google Speech Commands v0.02 (CC-BY 4.0), using the official
+  Exact URLs and sha256 pins are in `third_party/manifest.json`. They unpack to
+  `godot/models/`, which `stt-eval` uses by default (override with `STT_MODELS`).
+- **Pronunciation dictionary:** the CMU Pronouncing Dictionary at a pinned commit,
+  converted to `godot/data/pron_dict.txt` by `tools/setup.py`.
+- **Test audio** is Google Speech Commands v0.02, unpacked to `third_party/data/speech_commands` (CC-BY 4.0), using the official
   `testing_list.txt` split: 10,598 clips, 33 words, about 2,600 mostly adult speakers.
   The proper names "marvin" and "sheila" are excluded.
 
@@ -104,20 +105,14 @@ compared with the sequential runs; accuracy is unaffected.
 ## 4. Inside Godot
 
 ```sh
-# build the extension (Linux shown; see native/hero_listen/README.md for others)
-git clone --depth 1 --branch godot-4.5-stable https://github.com/godotengine/godot-cpp deps/godot-cpp
-curl -LO https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.13.8/sherpa-onnx-v1.13.8-linux-x64-shared.tar.bz2
-tar xjf sherpa-onnx-v1.13.8-linux-x64-shared.tar.bz2 && mv sherpa-onnx-v1.13.8-linux-x64-shared deps/sherpa-onnx
-(cd native/hero_listen && SHERPA_ONNX_DIR=../../deps/sherpa-onnx GODOT_CPP_DIR=../../deps/godot-cpp \
-   scons platform=linux target=template_debug)
-cp deps/sherpa-onnx/lib/libsherpa-onnx-c-api.so deps/sherpa-onnx/lib/libonnxruntime.so godot/addons/hero_listen/bin/
-
-godot --headless --path godot --import
+python tools/setup.py --build --with godot   # runtime libs + godot-cpp + compile WordListener + Godot 4.7
+G=third_party/godot/Godot_v4.7-stable_linux.x86_64
+$G --headless --path godot --import
 # end-to-end: real WAVs streamed in real time into WordListener, 5 words on screen
-HERO_MODELS=$PWD/stt-eval/models godot --headless --path godot --script res://tests/headless_wav_test.gd -- \
-  --preset parakeet-110m-hot --clips $PWD/stt-eval/data/speech_commands --n 60
+$G --headless --path godot --script res://tests/headless_wav_test.gd -- \
+  --preset parakeet-110m-hot --clips $PWD/third_party/data/speech_commands --n 60
 # recorder: simulated session (2 rounds) -> WAVs + manifest
-godot --headless --path godot --script res://tests/recorder_test.gd -- $PWD/stt-eval/data/speech_commands
+$G --headless --path godot --script res://tests/recorder_test.gd -- $PWD/third_party/data/speech_commands
 ```
 
 ## 5. Bugs found along the way

@@ -27,7 +27,8 @@ def main():
     ap.add_argument("engine")
     ap.add_argument("--threads", type=int, default=1)
     ap.add_argument("--n", type=int, default=60)
-    ap.add_argument("--speech-commands", default="data/speech_commands")
+    ap.add_argument("--speech-commands",
+                    default=str(Path(__file__).resolve().parent.parent / "third_party" / "data" / "speech_commands"))
     args = ap.parse_args()
 
     rss0 = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024

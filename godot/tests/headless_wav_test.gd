@@ -1,7 +1,7 @@
 extends SceneTree
 ## Headless proof that WordListener works inside Godot, end to end.
 ##
-##   HERO_MODELS=/path/to/stt-eval/models \
+##   (models from tools/setup.py in godot/models; or set HERO_MODELS=/path)
 ##   godot --headless --path godot --script res://tests/headless_wav_test.gd -- \
 ##       --preset zipformer-hot --clips /path/to/speech_commands --n 40
 ##
